@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "my_recruit",
+  "project_id": "dfce4e21-8bc9-4f5c-b5cb-bf6bc5fafc87"
+}

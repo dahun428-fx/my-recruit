@@ -1,0 +1,16 @@
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+.beads/dolt/
+*.db
+.beads-credential-key
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Sensitive raw source materials — keep PII binaries out of the cloud repo.
+# Mobile/cloud pipeline works from the derived md/yaml only. Re-extract on PC.
+docs/resume-reference/sources/

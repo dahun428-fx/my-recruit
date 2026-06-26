@@ -1,0 +1,260 @@
+version: 1
+purpose: "AI-first normalized resume reference for drafting and tailoring."
+language: "ko-KR"
+
+candidate:
+  id: "jung-da-hun"
+  name: "정다훈"
+  location: "경기 구리시 인창동"
+  contact:
+    phone: "010-4346-0429"
+    email: "dahun428@naver.com"
+    sensitivity: "confirm_before_external_use"
+  location_sensitivity: "confirm_before_external_use"
+  links:
+    blog: "https://dahun429.tistory.com/"
+    github: "https://github.com/dahun428-fx"
+  positioning:
+    one_line: "프론트엔드에서 풀스택으로 확장한 Frontend-focused Product Engineer"
+    primary_role: "Frontend-focused Product Engineer"
+    secondary_roles:
+      - "프론트엔드개발자"
+      - "Full-stack Product Engineer"
+      - "웹개발자"
+    years_label:
+      preferred: "약 5년 8개월 경력"
+      caution: "2020.10 경력 시작 기준으로 2026.06 현재 약 5년 8개월. 제출처 표현 관행에 맞춰 확인."
+  industries:
+    - "AI 헬스케어"
+    - "B2B 플랫폼"
+    - "SaaS"
+    - "커머스"
+    - "데이터/모바일 서비스"
+  strengths:
+    - "React/TypeScript 기반 프론트엔드 아키텍처 설계"
+    - "AI 서비스 PoC의 실서비스 제품화"
+    - "B2B 플랫폼 내재화와 운영 구조 개선"
+    - "성능 개선, 품질 자동화, CI/CD, 운영 데이터 대시보드 구축"
+  work_style:
+    - "WBS/ETA 기반 일정 관리"
+    - "기획, AI 개발자, 백엔드, 운영 조직과 정책 조율"
+    - "월별 피드백과 인수인계를 개선 과제로 전환"
+
+skills:
+  languages:
+    - "TypeScript"
+    - "JavaScript"
+    - "Java"
+    - "PHP"
+  frontend:
+    - "React"
+    - "Next.js"
+    - "Vue 3"
+    - "React Native"
+    - "Redux"
+    - "Recoil"
+    - "TanStack Query"
+    - "RxJS"
+    - "Tailwind CSS"
+    - "SCSS"
+    - "jQuery"
+    - "i18next"
+  backend_data:
+    - "Spring Boot"
+    - "Spring Framework"
+    - "MyBatis"
+    - "REST API"
+    - "MySQL"
+    - "Oracle"
+    - "SQLite"
+  quality_ops:
+    - "Jenkins CI/CD"
+    - "GitLab CI/CD"
+    - "Playwright"
+    - "Storybook"
+    - "Jest"
+    - "ESLint"
+    - "GA4"
+    - "PostHog"
+    - "Datadog"
+    - "Google Lighthouse"
+    - "Adobe Analytics"
+  domain:
+    - "LLM 챗봇"
+    - "SSE Streaming"
+    - "Markdown Renderer"
+    - "XSS filtering"
+    - "B2B 임직원 건강 플랫폼"
+    - "건강검진 예약/건강관리 서비스"
+    - "B2B 커머스"
+    - "대용량 데이터 시각화"
+
+career:
+  - id: "job-daewoong-ai-team"
+    period: "2025.07 ~ 재직중"
+    organization: "대웅제약 AI추진팀"
+    role: "팀원 / Full-stack Product Engineer"
+    summary: "AI 서비스 제품화, 프론트엔드 아키텍처 설계, Full-stack 기능 개발, Web/App 운영 및 개발 프로세스 개선"
+    source_ids:
+      - "src-resume-20260624"
+      - "src-eval-2026-h1"
+      - "src-eval-2025"
+  - id: "job-naedam-si"
+    period: "2020.10 ~ 2025.06"
+    organization: "내담씨앤씨 SI사업부"
+    role: "대리 / 팀원"
+    summary: "B2B 쇼핑몰, React Native 앱, 생산관리 대시보드 등 웹/모바일 프론트엔드 개발"
+    source_ids:
+      - "src-resume-20260624"
+
+experiences:
+  - id: "exp-ai-health-chatbot"
+    title: "AI 건강검진 챗봇 제품화 및 플랫폼 확장"
+    period: "2025.07 ~ 2025.10"
+    organization: "대웅제약 AI추진팀"
+    category: ["AI", "frontend-architecture", "productization"]
+    role: "프론트엔드 아키텍처 설계·개발, AI/백엔드 응답 정책 조율"
+    problem: "목업 수준 AI 챗봇의 LLM 답변 지연, Markdown/표/링크 렌더링, 오류 대응, 고객사별 확장 구조 부족"
+    actions:
+      - "SSE 기반 실시간 응답과 답변 중지/재시도/오류 상태를 포함한 대화 흐름 설계"
+      - "Markdown 전용 렌더링 계층과 XSS 필터링, 404/500/LLM 오류 가드레일 적용"
+      - "React Query 캐싱, 코드 스플리팅, 이미지 최적화, HTTP/2 전환"
+      - "Base-Theme과 Config-Driven UI로 고객사별 테마/문구/기능 노출 조건 분리"
+    metrics:
+      - "metric-ai-poc-users"
+      - "metric-ai-satisfaction"
+      - "metric-ai-answer-time"
+      - "metric-ai-entry-time"
+      - "metric-ai-render-success"
+      - "metric-ai-build-period"
+    preferred_bullets:
+      - "AI 건강검진 챗봇 PoC를 실사용 가능한 서비스로 전환하고, 실사용 검증과 만족도 조사 기반의 개선 근거를 확보"
+      - "SSE 기반 실시간 응답과 Markdown 렌더링 안정화로 AI 답변 출력 시간을 10초에서 4초로 단축"
+      - "Base-Theme과 Config-Driven UI로 신규 AI 챗봇 구축 기간을 10주에서 2주로 줄일 수 있는 공통 구조 설계"
+    source_ids:
+      - "src-resume-20260624"
+      - "src-eval-2026-h1"
+      - "src-eval-2025"
+
+  - id: "exp-b2b-health-platform"
+    title: "B2B 임직원 건강 플랫폼 풀스택 내재화"
+    period: "2025.11 ~ 2026.02"
+    organization: "대웅제약 AI추진팀"
+    category: ["full-stack", "b2b-platform", "internalization"]
+    role: "서비스/데이터 구조 분석, MySQL/Spring Boot/REST API/Web/Admin 개발, WebView 앱 운영 및 CI/CD 구축"
+    problem: "외주 중심 검진 예약 서비스를 내부 개발·운영 가능한 임직원 건강 플랫폼으로 전환해야 했음"
+    actions:
+      - "기존 소스와 DB 스키마 분석, Controller/Service/Query/DB/화면 출력까지 데이터 흐름 정리"
+      - "MySQL 데이터 모델, Spring Boot 서버 로직, REST API, Web/Admin 화면 End-to-End 개발"
+      - "jQuery/Thymeleaf와 React가 공존하는 점진적 전환 구조 설계"
+      - "Jenkins 빌드/검증/배포 파이프라인과 WebView 호환성 검증 기준 수립"
+    metrics:
+      - "metric-b2b-pages-screens"
+      - "metric-b2b-new-features"
+      - "metric-b2b-client-change-response"
+    preferred_bullets:
+      - "9주 내 108개 페이지·82개 화면을 임직원 건강 플랫폼으로 전환"
+      - "건강관리 신규 기능 3건을 데이터 모델부터 서버/API/화면까지 End-to-End 개발"
+      - "고객사별 CI·메뉴·기능 노출 변경을 1주 내 대응 가능한 구조 구축"
+    source_ids:
+      - "src-resume-20260624"
+      - "src-eval-2026-h1"
+
+  - id: "exp-fe-ax-automation"
+    title: "품질·개발·운영 자동화 및 FE AX 기준 수립"
+    period: "2026년 상반기"
+    organization: "대웅제약 AI추진팀"
+    category: ["quality", "automation", "ai-development-process"]
+    role: "테스트/배포/운영 데이터 확인 절차 자동화 및 팀 개발 기준 수립"
+    problem: "수동 발화 테스트, 반복 UI 개발, 배포 전후 확인, 운영 지표 조회가 병목이 되었고 AI 생성 코드 검증 기준이 필요했음"
+    actions:
+      - "E2E 발화 테스트, LLM 응답 검증, 타입/테스트/빌드, 배포 전후 확인을 품질 흐름으로 통합"
+      - "Playwright 기반 주요 사용자 흐름과 회귀 시나리오 자동화"
+      - "Storybook 중심 컴포넌트 개발/검증 절차 수립"
+      - "GA4/PostHog 기반 운영 데이터 대시보드 구축"
+      - "AI 생성 코드의 컨텍스트 관리, 금지 패턴, 보안 위험, 검증 절차를 FE AX SOP로 문서화"
+    metrics:
+      - "metric-e2e-scenarios"
+      - "metric-qa-time"
+      - "metric-ops-check-steps"
+      - "metric-component-dev-time"
+      - "metric-planning-dev-leadtime"
+      - "metric-test-coverage"
+    preferred_bullets:
+      - "Playwright 기반 600여 건의 E2E 회귀 시나리오를 자동화해 반복 QA 시간을 3시간에서 1시간으로 축소"
+      - "운영 데이터 확인 절차를 3단계에서 1단계로 전환"
+      - "반복 컴포넌트 개발 시간을 90분에서 15분으로 단축"
+    source_ids:
+      - "src-resume-20260624"
+      - "src-eval-2026-h1"
+
+  - id: "exp-samsung-data-mobile"
+    title: "삼성물산 데이터·모바일 서비스 고도화"
+    period: "2024.10 ~ 2025.04"
+    organization: "내담씨앤씨 SI 프로젝트 / 삼성물산"
+    category: ["data-visualization", "mobile", "performance"]
+    role: "대용량 데이터 시각화, Spring REST API/데이터 연동, React Native iOS/Android 개발 및 배포"
+    actions:
+      - "Vue 3, ECharts, RealGrid 기반 대용량 데이터 화면 개발"
+      - "테이블/차트 렌더링 생명주기 분리와 Lazy Rendering 적용"
+      - "Spring REST API와 필터링/정렬 로직 설계"
+      - "React Native 앱 검색/조회 흐름 개선 및 플랫폼별 이슈 대응"
+    metrics:
+      - "metric-samsung-dashboard-render"
+      - "metric-samsung-rn-search"
+    preferred_bullets:
+      - "대용량 데이터 대시보드 렌더링 시간을 2.5초에서 1초대로 개선"
+      - "React Native 앱 검색 응답 시간을 5초에서 1초로 단축"
+    source_ids:
+      - "src-resume-20260624"
+
+  - id: "exp-misumi-commerce"
+    title: "한국미스미 글로벌 B2B 커머스 개선 및 Next.js 전환"
+    period: "2022.06 ~ 2024.10"
+    organization: "내담씨앤씨 SI 프로젝트 / 한국미스미"
+    category: ["commerce", "legacy-modernization", "performance"]
+    role: "사용자 기능 개발, PHP/jQuery 레거시 분석, Next.js 전환, 렌더링/성능/SEO/다국어/배포/모니터링 개선"
+    actions:
+      - "PHP/jQuery 기반 B2B 쇼핑몰을 React/Next.js/TypeScript 구조로 전환"
+      - "Lighthouse, Google Analytics, Adobe Analytics, Datadog 기반 성능/SEO/오류 추적 운영"
+      - "Lazy Loading, 비동기 API, 폰트 최적화 적용"
+    metrics:
+      - "metric-misumi-page-access"
+      - "metric-misumi-nextjs-loading"
+    preferred_bullets:
+      - "PHP 기반 B2B 커머스를 Next.js/React/TypeScript 구조로 전환하며 평균 로딩 속도를 개선"
+      - "페이지 접근 시간을 8초에서 2초로 단축"
+    source_ids:
+      - "src-resume-20260624"
+
+source_ids:
+  src-resume-20260624:
+    file: "sources/이력서_20260624.pdf"
+    extracted: "extracted/이력서_20260624.txt"
+    type: "existing_resume"
+  src-eval-2026-h1:
+    file: "sources/2026_상반기종합평가.xlsx"
+    extracted: "extracted/2026_상반기종합평가.md"
+    type: "performance_review"
+  src-eval-2025:
+    file: "sources/연종합평가2025_정다훈.xlsx"
+    extracted: "extracted/연종합평가2025_정다훈.md"
+    type: "performance_review"
+
+red_flags:
+  never_use_without_confirmation:
+    - "연봉 5,700만원"
+    - "생년"
+    - "성별"
+    - "주소"
+    - "연락처"
+    - "TOEIC 825점"
+    - "TOEIC 취득일/유효기간"
+    - "정보처리기사"
+    - "정보처리기사 발급일"
+  use_with_scope_note:
+    - "테스트 커버리지 98%"
+    - "답변 화면 정상 출력률 100%"
+    - "FE 에러 0건"
+    - "만족도 점수"
+    - "2025년 총 4.66억 매출"
