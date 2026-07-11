@@ -12,7 +12,6 @@ candidate:
     sensitivity: "confirm_before_external_use"
   location_sensitivity: "confirm_before_external_use"
   links:
-    blog: "https://dahun429.tistory.com/"
     github: "https://github.com/dahun428-fx"
   positioning:
     one_line: "프론트엔드에서 풀스택으로 확장한 Frontend-focused Product Engineer"

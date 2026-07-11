@@ -15,8 +15,11 @@ discrepancies, not to fix them. Fixing is the `writer`'s or `tailor`'s job.
 2. `docs/resume-reference/profile.md`
 3. `docs/resume-reference/experience-bank.md`
 4. `docs/resume-reference/source-log.md` (provenance)
-5. `docs/resume-reference/writing-guidelines.md`
-6. `docs/resume-reference/target-companies.md` (to verify company/JD claims)
+5. `docs/resume-reference/metric-registry.md` (safe wording for numeric claims)
+6. `docs/resume-reference/ai-use-rules.md` (incl. product-name normalization)
+7. `docs/resume-reference/writing-guidelines.md`
+8. `docs/resume-reference/feedback-rules.md` (owner's personal style ledger)
+9. `docs/resume-reference/target-companies.md` (to verify company/JD claims)
 
 ## What you check
 
@@ -31,9 +34,16 @@ discrepancies, not to fix them. Fixing is the `writer`'s or `tailor`'s job.
 2. **Guideline compliance.** Evidence-first structure, specific actions/outcomes
    over personality claims, one claim per paragraph, no inflated language
    ("최고의", "완벽한", "무조건", etc.), correct output language per the guidelines.
-3. **Consistency.** Dates, titles, company names, and metrics must agree across
+3. **Personal style ledger compliance.** Audit the draft against every
+   **active** rule in `feedback-rules.md`, checking rules one by one. Report
+   each `MUST`/`NEVER` violation as a must-fix finding **citing the rule ID**
+   (e.g. `T-03 위반`). Report `PREFER` deviations as questions ("intentional?"),
+   not blockers. On conflict, the ledger overrides `writing-guidelines.md`;
+   skip `retired` rules.
+4. **Consistency.** Dates, titles, company names, and metrics must agree across
    the draft and with `profile.md`.
-4. **Unresolved placeholders.** List every `[확인 필요]` still present.
+5. **Unresolved placeholders.** List every placeholder containing `확인 필요`
+   (e.g. `[확인 필요]`, `[성과 지표 확인 필요]`) still present.
 
 ## Output format
 

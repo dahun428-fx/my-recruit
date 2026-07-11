@@ -10,12 +10,12 @@ AI 서비스 PoC를 실사용 가능한 제품으로 전환해 온 프론트엔�
 (ai-use-rules.md 승인 포지셔닝 문구 / 대안: "프론트엔드에서 풀스택으로 확장한 6년차 Product Engineer")
 
 [인적사항]
-정다훈 (남 · 1991년생, 만 35세) / Frontend 중심 Product Engineer / 총 5년 9개월
+정다훈 (남 · 1991년생) / Frontend 중심 Product Engineer / 총 5년 9개월
 휴대폰: 010-4346-0429
 Email: dahun428@naver.com
 주소: 경기 구리시 인창동
 Portfolio: github.com/dahun428-fx  ·  Blog: dahun429.tistory.com
-병역: [군필] 육군 병장 (2011.09 ~ 2013.06)
+병역: [군필] 육군 병장 (2011.09~2013.06 · 문서엔 '[군필] 육군 병장'으로 축약 표기)
 ※ 연봉(5,700만원)은 제외.
 
 
@@ -56,16 +56,16 @@ Web/Admin/WebView, CI/CD까지 확장하며 운영 가능한 서비스 구조를
 4. 품질·테스트 자동화 체계 구축
    Playwright 기반 600여 건 E2E 회귀 시나리오, Storybook, Jest, 배포 전후 검증 체계를 구축해
    반복 QA 시간을 3시간 → 1시간(60%) 단축. (테스트 커버리지 98% 수준)
-   (↔ JD: 테스트 자동화 체계 / Vitest·Playwright 등)
+   (↔ JD: 테스트 자동화 체계 / Playwright·Jest 등 — JD의 Vitest는 미보유로 제외)
 
 5. React·Vue·React Native 멀티 프레임워크 및 Hybrid App 개발
    React·Next.js 웹, Vue 3 대시보드, React Native iOS/Android 앱을 모두 실무로 개발·배포.
    React Native 앱 검색 응답 시간 5초 → 1초(80%) 단축.
    (↔ JD: React·Vue 모두 실무 / Mobile Web·App / Hybrid App)
 
-6. 대규모 서비스 렌더링·성능 최적화
-   글로벌 B2B 커머스에서 React Query 캐싱·코드 스플리팅·Lazy Rendering·이미지 최적화·HTTP/2 전환으로
-   초기 진입 30초 → 6초, 평균 로딩 약 50% 개선, 대시보드 렌더링 2.5초 → 1초대(60%) 개선.
+6. 렌더링·성능 최적화 (대규모 서비스)
+   React Query 캐싱·코드 스플리팅·Lazy Rendering·이미지 최적화·HTTP/2 전환으로 AI 챗봇 초기 진입
+   30초 → 6초, 글로벌 B2B 커머스 평균 로딩 약 50%, 대용량 데이터 대시보드 렌더링 2.5초 → 1초대(60%) 개선.
    (↔ JD: 대규모 서비스 운영 / 반응형·성능)
 
 
@@ -149,6 +149,7 @@ Playwright, Jest, Storybook, ESLint, Jenkins, GitLab CI/CD, Vercel / GA4, PostHo
 
 [교육]
 2020.03 ~ 2020.09  웹 콘텐츠 개발을 위한 응용SW엔지니어링 / 중앙에이치티에이㈜
+Java 기반 웹 애플리케이션의 백엔드와 프론트엔드 개발 과정을 이수하고, Spring Framework를 활용한 팀 프로젝트를 진행했습니다.
 습득 기술: HTML5, JavaScript, jQuery, Vue.js, CSS, JSP, Java, Spring Framework, AWS,
 RESTful API, OracleDB, MariaDB, Git/GitHub, Subversion, Tomcat, Eclipse
 
@@ -239,7 +240,6 @@ Markdown·표·링크 등 비정형 응답의 안정적 렌더링·오류 대응
 - Vercel 배포 자동화, Datadog·GA·Adobe Analytics 분석·모니터링 체계 구축
 [성과]
 - 페이지 접근 시간 8초 → 2초, Next.js 전환 후 평균 로딩 약 50% 개선
-- 인터랙션 개선 후 사용자 체류 시간 32% 증가
 - 화면 개발에서 아키텍처·성능·다국어·배포·모니터링까지 책임 범위 확장
 기술: Next.js, React, TypeScript, JavaScript, Redux, RxJS, i18next, PHP, jQuery, Twig, Vercel, Datadog, Lighthouse, GA, Adobe Analytics
 

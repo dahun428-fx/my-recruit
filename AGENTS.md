@@ -115,6 +115,14 @@ Producers must follow the no-fabrication rule in
 `[확인 필요]` placeholder rather than inventing it. The `designer` follows
 `DESIGN.md` and must not alter prose.
 
+Producers (`writer`, `tailor`) must also follow the owner's personal style
+ledger `docs/resume-reference/feedback-rules.md`. On conflict with
+`writing-guidelines.md`, the ledger's active rules win (no-fabrication always
+stays supreme). `reviewer` audits drafts against every active `MUST`/`NEVER`
+ledger rule and reports violations by rule ID; `PREFER` deviations are
+reported as questions, not blockers. The ledger's own header defines how rules
+are captured, generalized, toggled (`active`/`retired`), and capped.
+
 ### Handoff playbook
 
 ```
@@ -134,6 +142,46 @@ designer   → render the final visual artifact
 `reviewer` is a same-model fact/guideline pass. It **complements, not replaces**,
 the independent-model Codex ping-pong loop (see `CLAUDE.md`), which should run as
 a final hardening pass after `reviewer`.
+
+## Portfolio Review Harness
+
+Portfolio work is a first-class workflow, separate from the resume drafting
+pipeline above. Use it when reviewing or improving portfolio HTML, PDF, image
+assets, project case studies, or portfolio summaries.
+
+The portfolio harness uses specialist subagents in `.claude/agents/`:
+
+| Agent | Role | Owns / writes | Access |
+| --- | --- | --- | --- |
+| `portfolio-curator` | Inventory portfolio files and extract project claims | review inventory in `outputs/` | read-write |
+| `portfolio-fact-checker` | Verify claims against the evidence base | -- (reports findings) | **read-only** |
+| `portfolio-story-reviewer` | Critique recruiter-facing project narrative | -- (reports findings) | **read-only** |
+| `portfolio-ux-reviewer` | Critique HTML/PDF layout, visual hierarchy, accessibility, print fit | -- (reports findings) | **read-only** |
+| `portfolio-synthesizer` | Combine findings into prioritized feedback | final review report in `outputs/` | read-write |
+
+Portfolio source files outside this repository are read-only inputs unless the
+user explicitly asks to import or edit them. Record the path and file list in
+`docs/portfolio-reference/source-materials.md` before review.
+
+Portfolio agents must follow the same no-fabrication rule as resume agents: use
+only verified facts from `docs/resume-reference/profile.md`,
+`docs/resume-reference/experience-bank.md`, and
+`docs/resume-reference/metric-registry.md`. Unsupported claims are findings, not
+permission to rewrite history.
+
+### Portfolio handoff playbook
+
+```
+portfolio-curator
+   -> portfolio-fact-checker + portfolio-story-reviewer + portfolio-ux-reviewer
+   -> portfolio-synthesizer
+   -> Claude/Codex hardening pass when the output is substantive
+```
+
+Default portfolio review reports go under `outputs/` using a dated name such as
+`portfolio-review-YYYY-MM-DD.md`. Keep raw extracted claims, critique notes, and
+final recommendations separate enough that a later agent can trace feedback back
+to the source file and evidence record.
 
 ## Cloud / Mobile Sessions (claude.ai/code)
 
@@ -171,8 +219,9 @@ job-specific application document, read the reference files under
 5. `profile.md`
 6. `experience-bank.md`
 7. `writing-guidelines.md`
-8. `target-companies.md`
-9. `source-materials.md`
-10. `source-log.md`
+8. `feedback-rules.md`
+9. `target-companies.md`
+10. `source-materials.md`
+11. `source-log.md`
 
 Also read `DESIGN.md` before creating visual or print-ready artifacts.

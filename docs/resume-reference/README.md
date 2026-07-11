@@ -14,9 +14,11 @@ documents.
 5. `experience-bank.md` - reusable project and achievement evidence.
 6. `writing-guidelines.md` - writing rules for Korean resume / cover-letter
    work.
-7. `target-companies.md` - company- or role-specific notes.
-8. `source-materials.md` - imported source files and extraction notes.
-9. `source-log.md` - provenance for facts added to this reference set.
+7. `feedback-rules.md` - the owner's personal style ledger; active rules
+   override `writing-guidelines.md` on conflict.
+8. `target-companies.md` - company- or role-specific notes.
+9. `source-materials.md` - imported source files and extraction notes.
+10. `source-log.md` - provenance for facts added to this reference set.
 
 Read `../../DESIGN.md` before creating visual, HTML, PDF, or print-ready
 artifacts. It is optional for plain-text drafting or analysis tasks.
@@ -41,6 +43,10 @@ artifacts. It is optional for plain-text drafting or analysis tasks.
 Update these files whenever new validated information appears in a chat,
 document, portfolio, or application draft. Also add a row to `source-log.md`
 describing where the information came from and which files changed.
+
+Exception: `feedback-rules.md` is updated only through its propose-then-approve
+capture process (see its header) by the top-level agent; producer subagents
+never edit it.
 
 Keep raw facts and polished phrasing separate so future drafts can be tailored
 without losing the source evidence.

@@ -3,6 +3,10 @@
 Use these rules when drafting resumes, cover letters, and self-introduction
 documents for this project.
 
+This file is the **universal principles layer**. The owner's personal style
+ledger `feedback-rules.md` sits on top of it: on conflict, the ledger's
+active rules win (the no-fabrication rule always stays supreme).
+
 ## Core Principles
 
 - Start from the target role and job posting, then select only relevant

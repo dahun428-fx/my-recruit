@@ -29,6 +29,28 @@ For any substantive task (code, design, important docs), run this loop:
 Each round, show the user what Codex raised and what was accepted vs. rejected.
 Skip the loop only for trivial or mechanical edits.
 
+## Feedback Rule Capture (선호 축적 루프)
+
+`docs/resume-reference/feedback-rules.md` is the owner's personal style
+ledger. During any resume/CV writing or revision session, run this capture
+loop:
+
+1. When the user gives corrective feedback on wording, tone, content
+   emphasis, or structure, apply the fix first.
+2. If the feedback is **generalizable** (a pattern, not a one-off typo or a
+   company-specific targeting call), immediately propose a one-line rule
+   candidate: category (어투/문장/내용/구조) + strength (MUST/NEVER/PREFER) +
+   generalized rule sentence. Ask for approval.
+3. Record **only approved** candidates in the ledger, following its header
+   rules (generalize-over-add, contradiction check, soft cap ~30 active).
+4. Before ending a substantive writing session, sweep for feedback that was
+   applied but not yet proposed as a rule, and propose the leftovers in one
+   batch.
+
+Do not propose a rule for every edit — only when a durable preference is
+visible. Visual/layout feedback goes to `DESIGN.md` (leave a one-line pointer
+in the ledger); tooling failures go to `docs/troubleshooting/`.
+
 ## Agent Team
 
 Six specialist subagents live in `.claude/agents/` (`archivist`, `writer`,
@@ -42,6 +64,25 @@ Claude-specific notes:
   report findings instead of editing drafts.
 - `reviewer` is a same-model pass and **complements** the Codex ping-pong loop
   above; run Codex as the independent-model hardening pass after `reviewer`.
+
+Portfolio review has its own subagent harness, also defined in
+`.claude/agents/`: `portfolio-curator`, `portfolio-fact-checker`,
+`portfolio-story-reviewer`, `portfolio-ux-reviewer`, and
+`portfolio-synthesizer`. The canonical roster and handoff order live in
+`AGENTS.md`.
+
+Claude-specific portfolio notes:
+
+- Run `portfolio-curator` first so every critic reviews the same inventory of
+  files, projects, and claims.
+- Run `portfolio-fact-checker`, `portfolio-story-reviewer`, and
+  `portfolio-ux-reviewer` as independent read-only critiques when possible.
+- Have `portfolio-synthesizer` merge the findings into one prioritized report in
+  `outputs/`.
+- For substantive portfolio reports or rewrites, run the Codex ping-pong loop
+  after synthesis. If the cloud/mobile session cannot use Codex, state that and
+  use the read-only critics plus `portfolio-synthesizer` as the local hardening
+  path.
 
 ## Project Skills
 

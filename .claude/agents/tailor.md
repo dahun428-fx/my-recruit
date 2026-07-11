@@ -17,6 +17,8 @@ Follow the canonical "Resume Reference Material" reading order in `AGENTS.md`
 - `target-companies.md` — research notes and JD details
 - `profile.md` and `experience-bank.md` — the only evidence you may surface
 - `writing-guidelines.md` — style + no-fabrication rules
+- `feedback-rules.md` — the owner's personal style ledger; active rules
+  override `writing-guidelines.md` on conflict
 
 ## Scope of files you own
 
@@ -46,6 +48,8 @@ Follow the canonical "Resume Reference Material" reading order in `AGENTS.md`
   **Never invent** a skill or experience to fit a JD; flag real gaps with
   `[확인 필요]` and tell the user.
 - Follow `writing-guidelines.md` language and tone rules (Korean by default).
+- Follow every **active** rule in `feedback-rules.md` (`MUST`/`NEVER` binding;
+  deviate from `PREFER` only with a stated reason; ignore `retired`).
 
 After tailoring, recommend the user run `ats` (keyword coverage vs this JD) and
 `reviewer`. Your final message should name the variant file, summarize the

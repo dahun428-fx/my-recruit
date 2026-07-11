@@ -130,6 +130,25 @@ Design priorities, in order:
 This file is the source of truth for any agent generating or editing these
 documents. Prefer the tokens above over inventing new values.
 
+## Reference implementation (start here)
+
+These tokens are abstract; the **concrete, canonical template** that realizes
+them is the most recently approved page-structured résumé:
+
+- `outputs/resume-career-cj-enm.html` — page-structured markup (fixed `.page`
+  A4 boxes, `info-box`, `page-head`, per-page `footer`, `record`, `block`,
+  `project`, `skill-block`, `achievement-list`).
+- `outputs/resume-career-cj-enm.css` — the stylesheet implementing every token
+  below.
+
+**Any new résumé/CV artifact must start by reusing this HTML structure and CSS,
+not by re-deriving a layout from the tokens.** Render it the same way it was
+produced — **headless Chrome `--print-to-pdf`** — so the fixed page boxes and
+`@media print` rules are honored. Do **not** generate the artifact from a
+generic Markdown→HTML converter and do **not** accept a PDF from a fallback
+renderer (e.g. ReportLab); either one silently produces a different, flat,
+inconsistent document. See `.claude/agents/designer.md` for the full procedure.
+
 # Colors
 
 The palette is intentionally narrow: a near-black ink, two grays for

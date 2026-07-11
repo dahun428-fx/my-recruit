@@ -199,6 +199,28 @@ facts in drafted application text.
 - Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나
 - Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일.
 
+### 비즈36.5 Node.js(Express) BFF 신규 구축 및 AI 챗봇 Python 로직 기여
+
+- Period: 2025.07 ~ 재직중 중 대웅제약 AI추진팀 기간 내 (정확한 시작월 [확인 필요])
+- Context: 대웅제약 AI추진팀 / 비즈36.5(비즈케어) B2B 헬스케어 플랫폼 및 AI 건강검진 챗봇
+- Problem: 신규 기능에서 React 프론트가 여러 백엔드 데이터를 집계·가공해 받아야 했고, AI 챗봇 응답의 프롬프트 구성·후처리 품질을 개선해야 했다.
+- Role: 프론트 전용 BFF API 신규 구축(팀 공동), AI 챗봇 서버의 Python 프롬프트·후처리 로직 기여(팀 공동)
+- Actions:
+  - 비즈36.5에서 React 프론트 전용 데이터 집계·프록시(BFF) REST API를 Node.js(Express)로 신규 구축 (기존 Spring Boot 대체가 아닌 신규 개발)
+  - 비동기 I/O 이점과 프론트–백엔드 TypeScript 스택 통일을 위해 Node를 선택
+  - AI 챗봇(Python) 서버의 프롬프트 구성·응답 후처리(Markdown/표/링크 변환 등) 로직 일부를 직접 수정·기여
+- Technologies: Node.js, Express, TypeScript, Python, REST API, SSE
+- Result:
+  - React 프론트의 다중 백엔드 데이터 연동을 단일 BFF 계층으로 단순화
+  - AI 챗봇 응답 포맷·프롬프트 품질 개선에 기여
+- Metrics:
+  - 정량 지표 미확보 (있으면 추후 추가)
+- Evidence / links:
+  - user-attested 2026-07-05 (grilling 세션에서 사용자 직접 확인)
+  - 문서 근거 미확보 — 이력서 PDF·평가 문서에는 미기재. pending documentary source.
+- Reusable keywords: Node.js, Express, BFF, TypeScript 스택 통일, 비동기 I/O, Python, LLM 프롬프트, 응답 후처리, 풀스택
+- Notes for tailoring: Node/Python이 필수·우대인 포지션(두산로보틱스 Fullstack 등)에서 사용. 반드시 "신규 BFF 구축(팀 공동)"·"Python 로직 일부 기여(팀 공동)" 범위로만 표기. "Spring Boot를 Node로 대체", "Python AI 서버 구축/개발" 같은 표현은 사실과 다르므로 금지. 정량 지표가 없으므로 수치 창작 금지.
+
 ## Achievement Fragments
 
 Use this section for short, validated bullet material that can be remixed.
@@ -223,12 +245,13 @@ Do not use these metrics in final copy until their status is changed to
 
 | Claim | Source | Status |
 | --- | --- | --- |
-| 정보처리기사 발급일 | `sources/이력서_20260624.pdf` | needs confirmation |
-| TOEIC 825점 취득일/유효기간 | `sources/이력서_20260624.pdf` | needs confirmation |
+| 정보처리기사 발급일(월) | `sources/이력서_20260624.pdf` | needs confirmation — 원본에 취득월 미표기, 특정 월 단정 금지 |
+| TOEIC 825점 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2024.05 |
+| JLPT 1급 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2018.08 |
 | 연봉 5,700만원 포함 여부 | `sources/이력서_20260624.pdf` | user confirmation required |
-| 테스트 커버리지 98%의 기준(라인/브랜치/시나리오) | `sources/이력서_20260624.pdf`, `sources/연종합평가2025_정다훈.xlsx` | scope confirmation needed |
-| 답변 화면 정상 출력률 100%의 검증 범위 | `sources/이력서_20260624.pdf`, `sources/2026_상반기종합평가.xlsx` | scope confirmation needed |
+| 테스트 커버리지 98%의 기준(라인/브랜치/시나리오) | `extracted/연종합평가2025_정다훈.md`(L68), `extracted/이력서_20260624.txt`(L200) | value confirmed as "98% 수준" — 라인/브랜치/시나리오 세부 기준은 원본 미기재이므로 "98% 수준"으로만 표기, 특정 기준 단정 금지 |
+| 답변 화면 정상 출력률 100%의 검증 범위 | `extracted/2026_상반기종합평가.md`(L10), `extracted/이력서_20260624.txt`(L129) | confirmed — 400건 기준. 사용 시 "400건 발화 검증 기준" 스코프를 항상 함께 표기 |
 | FE 에러 0건의 측정 기간/범위 | `sources/연종합평가2025_정다훈.xlsx` | scope confirmation needed |
-| 만족도 점수의 척도(5점 만점 여부) | `sources/이력서_20260624.pdf`, `sources/연종합평가2025_정다훈.xlsx` | scope confirmation needed |
+| 만족도 점수의 척도(5점 만점 여부) | `extracted/연종합평가2025_정다훈.md`(L18,25), `extracted/이력서_20260624.txt`(L127) | values confirmed (3,493명 검증, 사용성 4.18/만족도 4.06/완성도 4.05, "4점 이상" 목표). 명시적 "5점 만점" 문구는 원본에 없으므로 "5점 만점" 단정 금지 |
 | 2025년 총 4.66억 매출과 세부 항목 4.6억의 차이 | `sources/연종합평가2025_정다훈.xlsx` | reconciliation needed |
 | 2020.10~2022.05 내담씨앤씨 초기 프로젝트 상세 | `sources/이력서_20260624.pdf` | needs source detail |

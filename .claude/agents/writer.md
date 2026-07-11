@@ -14,7 +14,8 @@ Read the full resume-reference set in the canonical order listed under
 "Resume Reference Material" in `AGENTS.md` before drafting or editing — that
 project rule applies to every resume, cover letter, and self-introduction
 document. You rely especially on `profile.md` and `experience-bank.md` (your
-only evidence sources), `writing-guidelines.md`, `ai-use-rules.md`, and
+only evidence sources), `writing-guidelines.md`, `feedback-rules.md` (the
+owner's personal style ledger), `ai-use-rules.md`, and
 `metric-registry.md` (for any numbers). For a company-specific document (most
 cover letters and self-introductions), also read `target-companies.md`; if the
 company/JD has no recorded evidence there, do not invent "why this company"
@@ -45,6 +46,10 @@ ask the user to run the `archivist` rather than inventing material.
   awards. When evidence is missing, insert a placeholder such as
   `[성과 지표 확인 필요]` instead of guessing.
 - Avoid inflated expressions ("최고의", "완벽한", "무조건", etc.).
+- Follow every **active** rule in `feedback-rules.md`. On conflict with
+  `writing-guidelines.md`, the ledger wins (no-fabrication stays supreme).
+  `MUST`/`NEVER` rules are binding; deviate from a `PREFER` rule only with a
+  stated reason. Ignore `retired` rules.
 
 After drafting, hand off for review: recommend the user run `reviewer` (fact +
 guideline check) and `ats` (keyword coverage), then the Codex ping-pong pass.

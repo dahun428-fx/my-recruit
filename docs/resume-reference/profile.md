@@ -8,9 +8,9 @@ Do not add speculative positioning or unsupported claims.
 - Name: 정다훈
 - Preferred English name:
 - Location: 경기 구리시 인창동
+- Military service: 군필 — 2011.09 ~ 2013.06 육군 병장 만기제대 (`extracted/이력서_20260624.txt`로 확인됨)
 - Contact: 010-4346-0429 / dahun428@naver.com
 - Portfolio / GitHub / LinkedIn:
-  - Blog: https://dahun429.tistory.com/
   - GitHub: https://github.com/dahun428-fx
 
 ## Target Roles
@@ -48,6 +48,7 @@ Use this section for the candidate's durable professional narrative.
 - JavaScript
 - Java
 - PHP
+- Python (user-attested 2026-07-05 — AI 챗봇 서버의 프롬프트·응답 후처리 로직 일부 기여, 팀 공동. 서버 단독 구축 아님)
 
 ### Frameworks / Libraries
 
@@ -66,6 +67,7 @@ Use this section for the candidate's durable professional narrative.
 - Spring Boot
 - Spring Framework
 - MyBatis
+- Node.js (Express, user-attested 2026-07-05 — 비즈36.5에서 React 프론트 전용 BFF API 신규 구축, 팀 공동. Spring Boot 대체 아님)
 - Chart.js
 - ECharts
 - RealGrid
@@ -128,8 +130,9 @@ drafted application text.
 | --- | --- | --- | --- |
 | 2010.03 ~ 2017.02 | 성공회대학교 | 일어일본학과 졸업, 경영학과 복수전공 | 학점 3.8 / 4.5 |
 | 2010 | 여의도고등학교 | 졸업 |  |
-| 확인 필요 | 한국산업인력공단 | 정보처리기사 | 이력서 PDF 기재 |
-| 확인 필요 | TOEIC | 825점 | 이력서 PDF 기재 |
+| 확인 필요 | 한국산업인력공단 | 정보처리기사 | 이력서 PDF 기재. 취득일(월)은 원본에 미표기 — 단정 금지 |
+| 2024.05 | TOEIC | 825점 | `extracted/이력서_20260624.txt`(취득일 2024.05 명시)로 확인됨 |
+| 2018.08 | JLPT | 1급 | `extracted/이력서_20260624.txt`(취득일 2018.08 명시)로 확인됨 |
 | 확인 필요 | 해외경험 | 일본 | 이력서 PDF 기재. 자격/교육이 아니라 별도 경험으로만 사용 |
 
 ## Constraints
