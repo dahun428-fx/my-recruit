@@ -171,3 +171,45 @@ facts in drafted application text.
   [2026-07-08] 사용자 요청으로 이력서(HTML/PDF/draft)에서 "팀 공동"·"팀과 함께" 표기 전부 제거, 내담 서술의 "(주요 프로젝트: 삼성물산…
   상세는 경력기술서)" 절도 제거. 단 실제 사실은 BFF·Python 모두 팀 공동이며, experience-bank 엔트리에 기록 유지 → 면접에서 협업 여부
   질문 시 정직하게 "팀 공동" 답변. 이력서 노출 문구에서만 생략한 것이므로, "정확성 위해 팀 공동 재추가" 같은 되돌림 금지.
+
+### 쿠팡 / 쿠팡이츠 웹 플랫폼 Staff Frontend Engineer (경력)
+
+- Source job posting: [사용자 제공 JD 텍스트 기준, 2026-07-21 수집] — 쿠팡 본사 소속, 쿠팡이츠(음식 배달 O2O) 웹 플랫폼
+- Application deadline: [확인 필요]
+- Target position: Staff-level Frontend Engineer / 쿠팡이츠 웹 플랫폼 (PC·모바일 웹 아키텍처 설계·리드)
+- Required skills:
+  - 프론트엔드 엔지니어링 7년 이상
+  - 웹 아키텍처 설계·구현 2년 이상
+  - React·Vue·Node.js 등 웹 프레임워크 풍부한 지식·경험
+  - 모바일/PC 웹 솔루션 풍부한 경험
+  - 웹 애플리케이션 성능·생산성 향상 경험
+  - 컴포넌트화·모듈화 설계 깊은 지식
+- Preferred skills:
+  - 빠르게 변화하는 환경에서 다양한 팀·다중 우선순위 업무 처리
+  - E-commerce, O2O 도메인 근무 경력
+- Job scope:
+  - 쿠팡이츠 웹 플랫폼 전략·아키텍처 설계, 유연·효율적 PC/모바일 웹 아키텍처 구축
+  - Product·UX·Backend·Mobile 팀과 협업해 프로젝트 리드
+  - 새로운 고객 경험을 위한 웹 기능 구축·개발
+  - (Staff) 팀 담당 웹 제품의 품질·생산성 제고, 팀 엔지니어의 아키텍처·디자인 가이드
+- Candidate evidence to emphasize:
+  - 한국미스미 Next.js 전환·SSR/CSR 분리·성능(8초→2초, 약 50%)·다국어·모니터링 (→ 웹 아키텍처 2년+·성능·E-commerce)
+  - Config-Driven UI·Base-Theme·공통 컴포넌트·Custom Hook·Storybook (→ 컴포넌트화·모듈화)
+  - React·Next.js·Vue 3·React Native·WebView (→ React·Vue·모바일/PC 웹)
+  - Node.js(Express) BFF 신규 구축 (→ Node.js 프레임워크)
+  - Playwright 600여 건 E2E·반복 QA 3→1시간·배포 10→2분·컴포넌트 90→15분·FE AX SOP·세미나 12회·문서 48건 (→ Staff 품질·생산성·가이드)
+  - Product·UX·AI·백엔드 크로스팀 정책 조율·WBS/ETA 다중 우선순위 (→ 크로스팀 리드·빠른 환경)
+- Risks or gaps:
+  - (a) 경력 연수: 자격요건 7년 이상 대비 후보 총 경력 약 5년 9개월(2020.10~2026.07)로 약 1년 3개월 미달. 이력서에 "총 5년 9개월"로 정확 표기하고 "7년"·"7년차" 미사용. 가장 큰 서류 리스크 — 사용자 지원 여부 판단 필요. 날조 금지.
+  - (b) Staff 레벨 직접 리드/멘토링: 다른 시니어 엔지니어를 직접 기술 리드·멘토링한 명시 이력은 evidence base에 없음. 세미나 12회·FE AX SOP·팀 기준 수립으로 간접 입증. 면접 대비 필요.
+  - (c) O2O 도메인: 배달·O2O 플랫폼 직접 경력 없음(E-commerce는 미스미로 보유). 우대사항이므로 탈락 사유 아님, 면접 보완 논리 필요.
+  - (d) Node.js BFF: user-attested(2026-07-05)·문서 근거 미확보·팀 공동. 이력서에는 "신규 BFF 구축" 범위로만 노출(C-01 준수), 면접 대비 필요.
+- Keywords to include:
+  - Frontend Engineer, 웹 아키텍처, PC·모바일 웹, React, Vue 3, Node.js, 성능 최적화, 생산성,
+  - 컴포넌트화, 모듈화, Config-Driven UI, Base-Theme, Storybook, 크로스팀 협업, E-commerce, 다중 우선순위
+- Draft status: 초안 완료 — outputs/coupang-eats-full-resume-draft.md.
+  tailor 작성 → reviewer(팩트, blocking 0건)·ats(필수 5.5/6·우대 1.5/2) 통과.
+  반영: S-01 금지어 "공통 구조 확보"→"공통 컴포넌트 구조 설계", "조직 자산화"→"정착" 완화, 다중 우선순위 신호 보강,
+  E-commerce 근거 강화. needs_scope 지표(사용성 4.18·400건 출력률·커버리지 98%·매출 4.66억·FE 에러 0건)는 본문 미노출(레지스트리 준수).
+  제출 전 사용자 확인 필요: (1) 7년 갭 하에 지원 여부, (2) needs_scope 강지표 스코프 병기 복원 여부(두산판 선례), (3) 정보처리기사·TOEIC·JLPT 발급/취득일.
+  Codex 독립 검증(PC)·PDF 렌더는 다음 단계.
