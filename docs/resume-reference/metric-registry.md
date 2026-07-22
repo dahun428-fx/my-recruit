@@ -24,6 +24,7 @@ user confirmation.
 | `metric-ai-entry-time` | 초기 진입 30초 -> 6초 | confirmed | 초기 서비스 진입 시간을 30초에서 6초로 단축 | `src-resume-20260624`, `src-eval-2025` |
 | `metric-ai-render-success` | 400건 발화 검증 기준 답변 화면 정상 출력률 100% | needs_scope | Do not use externally until validation scope is confirmed. | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-ai-build-period` | 신규 AI 챗봇 구축 기간 10주 -> 2주 가능한 구조 | source_stated | 신규 AI 챗봇 구축 기간을 10주에서 2주로 줄일 수 있는 공통 구조 설계 | `src-resume-20260624`, `src-eval-2026-h1` |
+| `metric-ai-lighthouse` | Lighthouse 91점 | source_stated | AI 챗봇 화면 기준 Lighthouse 91점 (측정 페이지·조건 세부는 원본 미기재 — "AI 챗봇 화면 기준" 스코프와 함께만 사용) | `src-resume-20260624`, `src-eval-2025` |
 | `metric-b2b-pages-screens` | 9주 내 108개 페이지, 82개 화면 전환 | source_stated | 9주 내 108개 페이지·82개 화면을 임직원 건강 플랫폼으로 전환 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-b2b-new-features` | 건강관리 신규 기능 3건 End-to-End 개발 | confirmed | 신규 건강관리 기능 3건을 데이터 모델부터 화면까지 End-to-End 개발 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-b2b-client-change-response` | 고객사별 CI/메뉴/기능 변경 1주 내 대응 가능한 구조 | source_stated | 고객사별 CI·메뉴·기능 변경을 1주 내 대응 가능한 구조 구축 | `src-resume-20260624`, `src-eval-2026-h1` |
@@ -42,6 +43,7 @@ user confirmation.
 | `metric-bioage-transition` | 생체나이 고객 112처 중 93처, 83% 안정 전환 | source_stated | 생체나이 기존 고객 112처 중 93처를 안정 전환 | `src-eval-2025` |
 | `metric-fe-error-zero` | 2차 PoC 기준 FE 에러 0건 | needs_scope | Do not use externally until period and error definition are confirmed. | `src-eval-2025` |
 | `metric-jenkins-deploy-time` | Jenkins 배포 리드타임 10분 -> 2분 | confirmed | Jenkins CI/CD 배포 리드타임을 10분에서 2분으로 단축 | `src-eval-2025` |
+| `metric-http2-network-cost` | HTTP/2 전환 네트워크 비용 1,200KB -> 900KB (약 25%) | source_stated | HTTP/2 전환으로 네트워크 비용을 1,200KB에서 900KB로 절감(약 25%) | `src-eval-2025` |
 
 ## Sensitive Or Confirmation-Required Claims
 
@@ -49,6 +51,6 @@ user confirmation.
 | --- | --- | --- |
 | 연봉 5,700만원 | sensitive | External documents require user confirmation. |
 | 생년, 성별, 주소, 연락처 | sensitive | Include only when the destination explicitly requires it. |
-| 정보처리기사 | needs_confirmation | Confirm issue date/details before formal use. |
+| 정보처리기사 | confirmed | 취득월 2020.08 (user-attested 2026-07-22). 사용 가능. |
 | TOEIC 825점 | needs_confirmation | Confirm test date and validity before formal use. |
 | 일본 해외경험 | needs_confirmation | Confirm period/context before use. |

@@ -11,14 +11,28 @@ separate from final application prose.
 - Source job posting:
 - Application deadline:
 - Target position:
+- Role preset:       (fe-platform | ai-product | fullstack | fintech | commerce | ax-harness — see role-presets.md; 브리프 승인 시 확정)
 - Required skills:
 - Preferred skills:
 - Company / team signals:
+- Job scope:
 - Candidate evidence to emphasize:
 - Risks or gaps:
 - Keywords to include:
+- Screen profile:   (Balanced | AI-Product | Platform-DS | Scale-Perf — see screen-profiles.md; owner-approved)
+- Pass bar:         (optional override of the default 80)
 - Draft status:
 ```
+
+`Screen profile:` and `Pass bar:` position the `recruiter-screen` /
+`tech-screen` graders to this company (see
+`docs/resume-reference/screen-profiles.md`). They are set only with owner
+approval; an untagged entry is graded with `Balanced` at bar 80 plus a warning.
+
+`Role preset:` links the entry to a targeting preset in
+`docs/resume-reference/role-presets.md`. It is fixed when the owner approves
+the targeting brief for the company; the brief's company-specific exceptions
+are recorded in the entry so they feed back into the preset.
 
 ## Companies
 
@@ -47,6 +61,7 @@ facts in drafted application text.
   Vitest 미사용 → Jest/Playwright로 사실 표기.
 - Keywords to include: Product Engineer, React, Vue 3, TypeScript, Tailwind, TanStack Query,
   디자인 시스템, AI Agent/생성형 AI, 테스트 자동화, Hybrid App, 대규모 서비스
+- Screen profile: AI-Product   (근거: "AI로 비즈니스 문제를 해결하는 Product Engineer 지향", AI 기반 개발 혁신 job scope)
 - Draft status: 완료 — outputs/resume-career-cj-enm.{txt,html,css,pdf} (9p). reviewer+ats+Codex(2R) 통과.
   제출 전 사용자 확인 필요: 정보처리기사·TOEIC·JLPT 발급/취득일(needs_confirmation).
 
@@ -95,10 +110,11 @@ facts in drafted application text.
   - React, Vue 3, TypeScript, SPA, 성능 최적화, 코드 품질, 디자인시스템, 공통 컴포넌트, Storybook,
   - 빌드 프로세스, Jenkins, GitLab CI/CD, Vercel, 구축형 유지보수, 레거시 전환, 고객사별 배포,
   - SSE, AI 기능 도입, Playwright, 테스트 자동화, 학습·공유
+- Screen profile: Platform-DS   (근거: 협업 플랫폼 개발·운영, 디자인시스템/공통 컴포넌트 job scope, 안정적 서비스 운영 중시)
 - Draft status (경력기술서): 초안 완료 + reviewer/ats 반영 — outputs/nhn-dooray-full-resume-draft.md.
   reviewer(팩트)·ats(키워드) 통과, 지적사항 반영: 미스미 기법(폰트 최적화 환원), 다국어 언어 일반화,
   2025 근거 지표(Jenkins 10→2분)를 2026 경력기술서에서 제거, 병역 표기 정리, "구축형→고객사별 유지보수"
-  정정, 협업·커뮤니케이션 명시 보강. Codex 독립 검증(PC) 대기.
+  정정, 협업·커뮤니케이션 명시 보강. 독립 검증(Claude 서브에이전트 하드닝) 대기.
 - Draft status (자기소개서): 완료 — outputs/nhn-dooray-cover-letter-draft.md. 참고 자소서(CJ ENM판) 스타일의
   제목형 5단 서술로 작성, JD 재타깃. reviewer(팩트, must-fix 없음)·ats(자격 5/5·주요업무 4/4·우대 4/5)
   ·Codex 2R 통과. 반영: CS 근거(정보처리기사·응용SW과정) 도입부 명시, 설치형·그룹웨어 직접개발 아님 정직
@@ -172,6 +188,92 @@ facts in drafted application text.
   상세는 경력기술서)" 절도 제거. 단 실제 사실은 BFF·Python 모두 팀 공동이며, experience-bank 엔트리에 기록 유지 → 면접에서 협업 여부
   질문 시 정직하게 "팀 공동" 답변. 이력서 노출 문구에서만 생략한 것이므로, "정확성 위해 팀 공동 재추가" 같은 되돌림 금지.
 
+### 넥스트증권 / 웹 프론트엔드 개발자 (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-07-22 수집 — URL 미확인
+- Application deadline: [확인 필요]
+- Target position: 웹 프론트엔드 개발자 (경력) / 내부 백오피스 + 고객 접점 홈페이지 담당
+- Required skills:
+  - 5년 이상 혹은 그에 준하는 웹 프론트엔드 개발 경험
+  - 복잡한 데이터 구조를 다루는 관리자/운영 시스템 개발 경험 (테이블·폼·대시보드 등)
+  - 웹 성능 최적화 및 크로스 브라우저 호환성 실무 경험
+  - 주도적 커뮤니케이션·자기주도적 업무 수행
+- Preferred skills:
+  - React, TypeScript, Next.js, TanStack Query, Emotion, PNPM, Vite·ESBuild, GitHub Actions
+- Company / team signals:
+  - 내부 백오피스(원장·환전·이체 등 금융 운영 데이터 관리 및 워크플로우)
+  - 파트너·외부 연동 플랫폼 DX 설계
+  - 홈페이지 개편 및 B2C 제품 판매 플로우
+  - 금융 데이터 기반 대시보드 및 테이블 최적화
+  - 크로스 브라우저 호환성 및 반응형 웹 구현
+- Job scope:
+  1. 내부 백오피스 UI/UX 설계 및 핵심 기능 개발 (원장·환전·이체 등 운영 데이터 관리)
+  2. 파트너·외부 연동 플랫폼 DX 설계 및 구현
+  3. 홈페이지 개편 및 B2C 제품 판매 플로우 구현
+  4. 내부 사용자 피드백 기반 기능 개선·유지보수
+  5. 관리자 도구·데이터 조회·처리 인터페이스 개발
+  6. 금융 데이터 기반 대시보드·테이블 최적화
+  7. 크로스 브라우저 호환성·반응형 웹 구현
+- Candidate evidence to emphasize:
+  - 삼성물산 Vue 3·ECharts·RealGrid 대용량 데이터 대시보드(2.5초→1초대), 역할별 데이터 조회·필터·정렬 설계 → JD 최우선 요건(관리자/운영 시스템·테이블·대시보드)
+  - B2B 임직원 건강 플랫폼 Web/Admin, 신규 기능 DB→API→Web/Admin End-to-End 개발 → 관리자 도구·데이터 조회·처리 인터페이스
+  - 한국미스미 Next.js 전환 페이지 접근 8초→2초, 삼성 2.5초→1초대, AI 서비스 진입 30초→6초 → 성능 최적화
+  - WebView 호환성 검증, 반응형/크로스 브라우저 직접 명시 근거는 약함 — evidence 범위 내 인접 어필만
+  - React·Next.js·TypeScript·TanStack Query 실무 보유 → 스택 정면 매칭
+  - Config-Driven UI·Storybook·BFF(집계·프록시 REST API) → DX 인접 어필(플랫폼 DX 직접 경험은 아님)
+  - 기획·AI·백엔드·운영 조직 API 정책 조율, WBS·ETA 다중 우선순위, 운영팀 피드백 기반 개선 → 주도적 커뮤니케이션·자기주도
+  - 미스미 B2B 커머스 홈페이지 개편·상품·주문·비교·멀티다운로드 → 홈페이지 개편·B2C 판매 플로우 전이
+- Risks or gaps:
+  - 경력 연수 충족: 자격요건 5년 이상 vs 총 5년 9개월. 이력서에 "총 5년 9개월"로 정확 표기. "6년차"는 요약 산문에서만 허용, 수치 병기 금지.
+  - Emotion 무경험: 보유 스택 Tailwind CSS·SCSS로만 표기. Emotion/CSS-in-JS 경험 있는 것처럼 쓰지 말 것.
+  - Vite·ESBuild 무경험: Next.js/Lighthouse 근거 내 번들 최적화 일반 경험으로만. Vite·ESBuild 보유처럼 쓰지 말 것.
+  - PNPM·GitHub Actions 무경험: Jenkins·GitLab CI/CD 일반 경험으로 표기. PNPM·GitHub Actions 보유처럼 쓰지 말 것.
+  - 금융/증권 도메인 무경험: 운영 시스템·대시보드·데이터 조회 전이 어필. 금융 도메인 경력 창작 금지 (자격요건 아님, 탈락 사유 아님).
+  - 크로스 브라우저 직접 근거 약함: WebView 호환성 검증, Next.js 범용 SSR 구조 범위 내에서만 어필.
+  - DX(파트너/외부 연동 개발자 경험) 직접 근거 없음: Config-Driven UI·공통 컴포넌트·BFF로 인접 어필만.
+  - needs_scope 강지표(사용성 4.18·400건 출력률·커버리지 98%·매출 4.66억·FE 에러 0건)는 스코프 병기 없이 본문 강조 금지 (C-05).
+  - Node.js BFF는 "신규 BFF 구축(집계·프록시)" 범위로만 (C-01: "팀 공동" 노출 금지).
+- Keywords to include:
+  - React, TypeScript, Next.js, TanStack Query, 관리자/운영 시스템, 백오피스, 데이터 대시보드, 테이블, 폼, 성능 최적화, 크로스 브라우저, 반응형 웹, CI/CD, 주도적 커뮤니케이션, 역할별 데이터 조회, End-to-End, 홈페이지 개편
+- Draft status (이력서): 완료 — outputs/next-securities-full-resume-draft.md. tailor 작성 → reviewer(팩트, must-fix 반영: Datadog 중복·리드타임 오타·삼성물산 SI 소속 병기)·ats(필수 4/4·필수 스택 4/4) 통과. 스코어 게이트: 인사 72→86·기술 84 둘 다 PASS. Emotion·Vite·ESBuild·PNPM·GitHub Actions는 무경험으로 정직 제외. 제출 전 사용자 확인: 어학(TOEIC/JLPT) 포함 여부(넥스트증권 요구 시)·정보처리기사 2020.08 병기 완료. Codex 미사용(P-02). PDF 렌더는 다음 단계.
+- Draft status (자기소개서): 완료 — outputs/next-securities-cover-letter-draft.md. 제목형 5단(F-06). reviewer(팩트, must-fix 0)·ats(필수 7/7) 통과. 스코어 게이트: 인사 78→80.3·기술 74→81.5 둘 다 PASS(2라운드). 반영: 대시보드 스택(Vue 3·ECharts·RealGrid) 정합화, TanStack Query 실사용 서사, WebView·크로스브라우저 연결, 홈페이지·B2C 동기 축, 비즈니스 임팩트·Lazy Rendering 트레이드오프. 갭(금융 도메인·Emotion·Vite·PNPM·GitHub Actions·크로스브라우저) 정직 방어. 면접 대비: Node BFF·Python 팀 공동, DX 직접 근거 없음.
+
+### 카카오페이증권 / MTS 프론트엔드 ('제대로 투자하다') (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-07-22 수집 — URL 미확인
+- Application deadline: [확인 필요]
+- Target position: 카카오페이증권 MTS(주식 모으기·펀드·주식 선물하기·프로모션 등) 프론트엔드 개발·운영, 기술 리딩 성격
+- Required skills:
+  - 프론트엔드 7년 이상, SDLC 개발·운영·고도화
+  - React·Next.js·TypeScript·TanStack Query·웹소켓·웹뷰 기반 FE
+  - FE 3~5인 중규모 팀 리드·멘토링
+  - SSR·CSR 등 다양한 렌더링, 대규모 트래픽 대응
+  - 관측성 도구(OpenTelemetry·Grafana·OpenSearch·Sentry)
+  - 단위 테스트·e2e 테스트
+  - LLM 기반 AI 도구(Cursor·Claude) 실무 적용·팀 도입
+  - 협업 도구(Slack·Figma·Jira·Confluence)
+- Preferred skills: 트레이딩 시스템(MTS·HTS)·금융 서비스 개발, 문제 분해·주도적 실행, 실패 학습 문화, 효율성·생산성 개선, 오픈소스 기여·컨퍼런스 발표
+- Company / team signals: 소액·저경험 사용자의 금융 접근성 확대, PM·디자인·BE·FE 목적 조직, 사용성·기술 리스크 사전 예측·구조 개선의 기술 리딩
+- Candidate evidence to emphasize:
+  - 웹뷰 환경 React 화면 운영·iOS/Android 호환성 검증 (→ 웹뷰 기반 FE)
+  - SSE 기반 실시간 LLM 스트리밍·중지/재시도/오류 상태 처리 (→ 실시간, 웹소켓 인접)
+  - 미스미 Next.js SSR·CSR 전략 분리·8초→2초 (→ SSR·CSR)
+  - Playwright 600여 건 E2E·Jest 단위 테스트·커버리지 98% 수준 (→ 단위·e2e 테스트)
+  - Cursor·Claude LLM 도구 실무 적용·FE AX SOP 문서화·세미나 12회 (→ LLM 도구 팀 도입, 멘토링)
+  - Datadog·GA4·PostHog·Lighthouse 기반 지표 분석·개선 (→ 관측성 인접)
+- Risks or gaps (사용자 확정 2026-07-22 — 정직한 상향지원으로 진행):
+  - (a) 경력 7년 요구 vs 총 5년 9개월(약 1년 3개월 미달). 이력서는 "총 5년 9개월" 정확 표기, "7년차" 미사용. 자소서에서 연차 대신 경험 밀도로 상쇄. 사용자: "실경력은 모자라지만 지원."
+  - (b) 웹소켓: 실무 무경험, **사이드 프로젝트로 직접 구현·학습(user-attested 2026-07-22)**. 이력서 본문 미노출(C-06), 자소서에서만 "실무는 SSE 단방향, 웹소켓 양방향은 사이드 프로젝트로 구현·학습"으로 정직 표기. "실무 웹소켓 경험" 주장 금지.
+  - (c) FE 3~5인 팀 리드 직함 미확인. 세미나·SOP·기준 수립으로 멘토링/기술 리딩만 표기, 인원수·직함 주장 금지.
+  - (d) 금융/트레이딩 도메인 무경험(사용자 수용). 인접 역량(실시간·웹뷰·관측성·B2B 다국어/권한) 전이 어필, 도메인 경력 창작 금지.
+  - (e) 관측성 특정 도구(OpenTelemetry·Grafana·OpenSearch·Sentry) 미보유. 보유 도구(Datadog 등)로 "관측성 기반 개선" 방법론만 어필, 특정 도구 보유 위장 금지.
+  - (f) 협업 도구(Jira·Confluence·Figma·Slack) evidence base 미기재 → 이력서 미노출. 실무 사용 여부 [확인 필요].
+  - (g) needs_scope 지표(출력률 100%·커버리지 98%) — 사용자 확정 2026-07-22: 스코프 병기해 **유지**(쿠팡 전례 동일).
+- Screen profile: [미지정 — Balanced로 채점됨, 경고]. MTS 특성상 Scale-Perf 또는 AI-Product 검토 여지(소유자 승인 필요).
+- Keywords to include: React, Next.js, TypeScript, TanStack Query, 웹뷰, SSR·CSR, 실시간, SSE, 단위·e2e 테스트, Playwright, Jest, LLM 도구, Cursor, Claude, 관측성, 멘토링
+- Draft status (이력서): 완료 — outputs/kakaopay-securities-full-resume.{md,html,css,pdf} (9p, 정본 템플릿, headless Chrome 렌더). tailor 성격 작성 → reviewer(팩트, must-fix 3건 반영: 헤드라인 "금융" 삭제·"(보조)" 삭제·25% 괄호화)·ats(필수 9/12·우대 1/4) 통과. 점수 게이트: recruiter-screen 66·tech-screen 68 = 둘 다 FAIL(≥80 미달) — blocker 대부분이 구조적 실경력 갭이라 날조 없이는 80 불가, 사용자가 정직한 상향지원으로 진행 확정. 독립 검증(Claude 서브에이전트 하드닝) 대기.
+- Draft status (자기소개서): 작성 — outputs/kakaopay-securities-cover-letter-draft.md.
+
 ### 쿠팡 / 쿠팡이츠 웹 플랫폼 Staff Frontend Engineer (경력)
 
 - Source job posting: [사용자 제공 JD 텍스트 기준, 2026-07-21 수집] — 쿠팡 본사 소속, 쿠팡이츠(음식 배달 O2O) 웹 플랫폼
@@ -212,4 +314,4 @@ facts in drafted application text.
   반영: S-01 금지어 "공통 구조 확보"→"공통 컴포넌트 구조 설계", "조직 자산화"→"정착" 완화, 다중 우선순위 신호 보강,
   E-commerce 근거 강화. needs_scope 지표(사용성 4.18·400건 출력률·커버리지 98%·매출 4.66억·FE 에러 0건)는 본문 미노출(레지스트리 준수).
   제출 전 사용자 확인 필요: (1) 7년 갭 하에 지원 여부, (2) needs_scope 강지표 스코프 병기 복원 여부(두산판 선례), (3) 정보처리기사·TOEIC·JLPT 발급/취득일.
-  Codex 독립 검증(PC)·PDF 렌더는 다음 단계.
+  독립 검증(Claude 서브에이전트 하드닝)·PDF 렌더는 다음 단계.

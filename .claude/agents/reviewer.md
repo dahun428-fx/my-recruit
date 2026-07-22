@@ -21,6 +21,37 @@ discrepancies, not to fix them. Fixing is the `writer`'s or `tailor`'s job.
 8. `docs/resume-reference/feedback-rules.md` (owner's personal style ledger)
 9. `docs/resume-reference/target-companies.md` (to verify company/JD claims)
 
+## Fast lane scope (재조립 변형)
+
+If the dispatch prompt marks the draft as a **fast-lane reassembly variant**
+and names a companion `outputs/<slug>-new-prose.md` file, run three passes:
+
+1. **Integrity check — exhaustive, never sampled.** For **every content line**
+   of the draft (prose sentence, list item, heading, 직함·기간·인적사항 meta
+   line), verify the partition invariant: it either (a) matches an
+   `approved`-status line in `docs/resume-reference/canonical-lines.md`, or
+   (b) appears in the companion file (new prose in section (a), reused
+   `candidate` lines in section (b), non-prose items in section (c)). The
+   match unit is the **full bank `line:` string** (bullet-level — a
+   multi-sentence bullet matches as one unit), after normalization: strip
+   bullet markers, leading/trailing whitespace, and inline markdown emphasis
+   (`**`/`*`), unescape quoting. Compare at
+   sentence level only for text unmatched at bullet level. Report as
+   must-fix: any orphan line in neither set, any near-match (altered
+   canonical line), and any `candidate`-status match not listed in the
+   companion file. Check the bank line's `status:` field on every match — a
+   `candidate` or `retired` match never earns the exemption. Violating
+   content reverts to new-prose treatment.
+2. **Fact check.** Run check 1 of "What you check" **only** on the companion
+   file's contents (all sections). `approved` matches are exempt — except
+   **time-sensitive claims** (연차·기간·"현재" 시점 수치), which you recheck
+   against today's date even when matched.
+3. **Draft-wide checks.** Checks 2–5 of "What you check" (guidelines, style
+   ledger, consistency, placeholders) always run on the **whole draft**, fast
+   lane or not — composition-level violations survive pure reassembly.
+
+Without that marking, review the full draft as usual.
+
 ## What you check
 
 1. **Fabrication (highest priority).** For every concrete claim in the draft —
@@ -52,6 +83,6 @@ text, the file/section it relates to, the problem, and a concrete suggested fix
 (as a recommendation — you do not apply it). End with a short verdict: safe to
 proceed, or must-fix items remain.
 
-You complement, not replace, the Codex ping-pong loop (see `CLAUDE.md`): you are
-a same-model fact/guideline pass; Codex is the independent-model adversarial
-pass that should run after you.
+You complement, not replace, the adversarial verification loop (see
+`CLAUDE.md`): you are a fact/guideline pass; a fresh Claude subagent runs the
+adversarial hardening pass after you.

@@ -37,10 +37,27 @@ Follow the canonical "Resume Reference Material" reading order in `AGENTS.md`
    record the source and retrieval date in the entry template. If the JD is
    already recorded but its source or retrieval date is missing, stop and ask
    the user to supply them before tailoring. Never reconstruct a JD from memory.
-2. Map the candidate's evidence to each requirement. Identify the strongest
+2. **Targeting brief first**: select a preset from
+   `docs/resume-reference/role-presets.md` and produce the brief in its
+   template — highlight only the **exceptions** vs the preset, plus gap
+   interview items (JD requirements with no evidence in
+   `canonical-lines.md`/`experience-bank.md`). Hand the brief to the
+   orchestrator for owner approval **before** producing the variant.
+3. Map the candidate's evidence to each requirement. Identify the strongest
    matches and any genuine gaps.
-3. Produce a tailored variant: re-emphasize, reorder, and reword to foreground
-   the most relevant evidence. Recommend what to lead with.
+4. Produce a tailored variant per the approved brief. **Reassembly first**:
+   reuse `approved` lines from `docs/resume-reference/canonical-lines.md`
+   **verbatim** (pick variants by `roles` tag; reading only the relevant EXP
+   sections is fine); write new prose only where the bank has no fit. A
+   `candidate`-status line may be reused verbatim but is owner-unapproved and
+   reviewed like new prose; a `retired` line must not be reused (rewrite as
+   new prose). Recalculate time-sensitive claims (연차·기간·"현재" 수치) to
+   today's date. Save a companion `outputs/<slug>-new-prose.md` with three
+   sections: (a) every prose sentence not matching an `approved` bank line —
+   including sentences reused verbatim from a prior non-bank draft, (b)
+   reused `candidate` lines, (c) new/changed non-prose content lines (skill
+   tokens, headings, meta lines) — and **update it on every revision**
+   (fast-lane review scope — see the Resume Engine section in `AGENTS.md`).
 
 ## Hard rules
 

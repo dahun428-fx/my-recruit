@@ -7,6 +7,20 @@ This file is the canonical project guidance for all coding agents working in
 
 `my-recruit` is a project for managing the owner's resume / CV.
 
+## Process Rules
+
+All agents follow the active and probation rules in
+`docs/harness-reference/process-rules.md` — the owner's process-preference
+ledger for how agents work (reporting, procedure, delegation, confirmation).
+Probation rules are provisional but still applied; only the top-level agent
+logs `적용` history and proposes promotion. Claude loads the ledger
+automatically via a `CLAUDE.md` import; **any non-Claude agent must
+read the ledger before substantive work.** Top-level agents summarize the
+relevant active/probation rules into every subagent dispatch prompt.
+Rules marked `범위: Claude` bind only Claude sessions. Only the top-level
+agent edits rule text or state, and only with owner approval; the capture and
+lifecycle protocol lives in the ledger header and `CLAUDE.md`.
+
 ## Repository Layout
 
 `my-recruit` is **not** its own git repository. The git root is the parent
@@ -82,8 +96,9 @@ Other commands that may prompt:
 
 ## Cross-Agent Review
 
-Use `scripts/claude_review.py` when a Codex session needs an independent Claude
-review pass. The default input is scoped to this project with `git diff -- .`.
+Use `scripts/claude_review.py` when you want an independent Claude review pass
+on the working diff. The default input is scoped to this project with
+`git diff -- .`.
 
 Examples:
 
@@ -95,7 +110,7 @@ Examples:
 
 ## Agent Team
 
-This project uses a team of six specialist subagents defined in
+This project uses a team of specialist subagents defined in
 `.claude/agents/`. Each maps to one stage of the resume workflow and owns a
 narrow set of files. **Critics are read-only** (no `Write`/`Edit`); producers
 write only within their owned files. Dispatch them via the agent/Task tool.
@@ -107,6 +122,8 @@ write only within their owned files. Dispatch them via the agent/Task tool.
 | `tailor` | Adapt a draft to a specific job posting | `target-companies.md` notes, variants in `outputs/` | read-write |
 | `reviewer` | Fact-check vs evidence base; guideline critique | — (reports findings) | **read-only** |
 | `ats` | Keyword-coverage check vs a JD | — (reports findings) | **read-only** |
+| `recruiter-screen` | HR/recruiter screening score (인사담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
+| `tech-screen` | Technical hiring-manager score (기술담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
 | `designer` | Render visual / print artifacts | artifacts in `outputs/` | read-write |
 
 Producers must follow the no-fabrication rule in
@@ -136,12 +153,151 @@ reviewer + ats  → parallel read-only critique
    ↓
 (writer / tailor revise)
    ↓
+recruiter-screen + tech-screen  → SCORE GATE (parallel, read-only)
+   ↓  ← both PASS?  no → (writer / tailor revise) → re-score
+   ↓  ← both PASS?  yes ↓
 designer   → render the final visual artifact
 ```
 
 `reviewer` is a same-model fact/guideline pass. It **complements, not replaces**,
-the independent-model Codex ping-pong loop (see `CLAUDE.md`), which should run as
-a final hardening pass after `reviewer`.
+the adversarial verification loop (see `CLAUDE.md`): a fresh Claude subagent
+hardening pass that should run after `reviewer`.
+
+#### Score gate (인사·기술담당자 통과 기준)
+
+Every resume/CV draft must clear a two-grader score gate before it is treated as
+final (rendered by `designer`, or delivered to the owner as done). After
+`reviewer`/`ats` findings are addressed, dispatch **both** graders in parallel
+on the current draft:
+
+- `recruiter-screen` (인사담당자) and `tech-screen` (기술담당자) each return a
+  `0-100` score, a `PASS`/`FAIL` verdict, and blockers.
+- **Positioned to the target company.** Both graders position themselves to the
+  target company using `docs/resume-reference/screen-profiles.md`: the entry's
+  `Screen profile:` tag selects the rubric **weights**, the persona lens is
+  grounded **only** in the entry's signals/scope/skills, and company-specific
+  auto-FAIL **blockers** derive from its `Required skills` / `Risks or gaps`.
+  An entry with **no `Screen profile:` tag or `TBD` signals** is graded with
+  `Balanced` at bar 80 plus a warning.
+- **Gate = AND.** The draft passes only when **both** verdicts are `PASS`
+  (each total **≥ the entry's pass bar, default 80**, with no blockers). A
+  single `FAIL` fails the gate.
+- On failure, the orchestrator has `writer`/`tailor` fix the reported blockers
+  and re-runs both graders. Cap at **3 revision rounds**; if it still fails,
+  stop and report the remaining blockers and scores to the owner rather than
+  silently shipping a sub-threshold draft or loosening the bar.
+- The graders are **read-only** and only score persuasiveness/credibility;
+  they never override the no-fabrication rule or the `reviewer`'s fact findings.
+  A high score never excuses an unresolved fabrication flag. An **honestly
+  acknowledged** gap is a score penalty, not an auto-FAIL — the gate must never
+  pressure a draft toward fabrication.
+
+Tunable knobs: rubric weights and presets live in `screen-profiles.md`; the
+default pass bar (80) and per-company `Pass bar:` overrides are set there and in
+`target-companies.md`; the gate mode (AND / 3 rounds) lives in this section.
+New companies get a `Screen profile:` proposed by `tailor` and approved by the
+owner before it is written into the entry.
+
+## Resume Engine (재조립 엔진: 브리프 → fast lane → 2-스톱)
+
+New-company resume variants run on a reassembly engine built on two reference
+files: `docs/resume-reference/canonical-lines.md` (owner-approved sentence
+bank) and `docs/resume-reference/role-presets.md` (per-role targeting presets
++ brief template). The goal: the owner reviews **two small artifacts** (a
+targeting brief, then a new-prose diff) instead of full drafts.
+
+### Flow (자동 모드, 2-스톱)
+
+```
+JD 수집 (tailor가 target-companies.md에 기록)
+   ↓
+① 타겟팅 브리프 선승인  ← role-presets.md 프리셋 + 예외 하이라이트
+   ↓
+재조립 초안: writer/tailor가 canonical-lines.md의 approved 문장을
+   무수정 재사용 + JD에 필요한 부분만 신규 작문
+   ↓
+크리틱 (fast lane 축소 적용) → 수정 → 점수 게이트
+   ↓
+② diff 승인  ← 소유자는 companion 파일 전체를 리뷰
+   (신규 작문 + 재사용된 candidate 문장 + 신규 구조·목록 항목, 라벨 구분)
+   ↓
+designer 렌더
+```
+
+**인터뷰 모드**: 소유자가 요청하면 자동 진행 대신 JD 분석 후 섹션별로
+질문을 주도하며 항목을 하나씩 확정해 쌓는다 (프리셋이 없는 직무군이거나
+소유자가 세밀히 통제하고 싶을 때).
+
+**갭 인터뷰 (두 모드 공통)**: JD 요건 중 canonical-lines/experience-bank에
+근거가 없는 갭을 만나면 "무경험 — 제외"로 처리하기 전에 멈추고 소유자에게
+질문한다. 답변은 user-attested로 `archivist`를 통해 experience-bank에
+적재한다 — 다음 회사부터 같은 질문이 반복되지 않는다.
+
+### Fast lane (재조립 변형 축소 검증)
+
+A draft qualifies for the fast lane when it is built by reassembly: `approved`
+canonical lines reused **verbatim** plus a bounded set of new content. The
+producer (writer/tailor) must save a companion file
+`outputs/<slug>-new-prose.md` with **three sections**: (a) every newly
+written or modified prose sentence, (b) every `candidate`-status bank line
+reused — candidate lines are owner-unapproved and get the same review as new
+prose, and (c) every new or changed **non-prose content line** (skill-list
+tokens, section headings, 직함·기간·인적사항 meta lines). The companion file
+must be **updated on every revision** (critic fixes, gate-blocker fixes), not
+just at first draft.
+
+- `reviewer` (integrity check, **exhaustive, not sampled**): verify the
+  partition invariant over every **content line** of the draft (prose,
+  list item, heading, meta line) — each either (1) matches an `approved` bank
+  line, or (2) appears in the companion file. The match unit is the full bank
+  `line:` string (bullet-level; a multi-sentence bullet matches as a whole),
+  after normalization: strip bullet markers/leading whitespace and unescape
+  quoting. Sentence-level comparison applies only to text unmatched at bullet
+  level. Any orphan line, any near-match (altered canonical line), or any
+  `candidate` match not listed in section (b) is a must-fix finding and
+  reverts that content to new-prose treatment.
+- `reviewer` (fact check): full fact-check on the companion file's contents
+  only. `approved` matches are exempt — **except time-sensitive claims**
+  (연차·기간·"현재" 시점 수치), which must be rechecked against today's date
+  even when byte-matched.
+- `reviewer` (guideline/ledger/consistency/placeholder checks): run
+  **draft-wide** even in fast lane — these are composition-level properties
+  (emphasis order, cross-line date/metric agreement, MUST-rule audit) that a
+  pure reassembly can still violate. Only the fact check narrows.
+- `ats`: runs normally (keyword coverage is JD-wide, cheap).
+- Score gate: **1 round**, which **counts as round 1 of P-01's 3-round cap**.
+  On FAIL, fall back to the full lane — re-entering at the **critic stage with
+  full reviewer scope** (not just re-scoring), with up to 2 further gate
+  rounds.
+- Adversarial verification pass: companion-file contents only, single pass,
+  run **before** the score gate so accepted fixes are scored. (This is a
+  sanctioned reduction of the CLAUDE.md hardening loop for the fast lane; the
+  full lane keeps the full loop.)
+- **Final integrity re-run**: after the last draft mutation (critic fixes,
+  adversarial fixes, gate-blocker fixes), re-run the reviewer integrity check
+  before stop ② — the partition invariant must hold on the version that
+  ships, not just the first draft.
+
+**Full lane** (기존 전체 파이프라인 그대로) applies when: a new base resume is
+written, a **new EXP-NN entry** is added to `experience-bank.md` (a
+gap-interview addition to an *existing* entry does not trigger full lane — its
+sentences are new prose anyway), the draft's new-prose share exceeds ~50% of
+content lines (reused `candidate` lines do **not** count toward this share —
+they are already fully covered by companion review and stop ②), or the
+fast-lane gate FAILs. The lane call at brief time is
+**provisional**; re-check it once the draft exists and switch silently to full
+lane if the conditions say so, reporting the switch at stop ②. When in doubt,
+full lane.
+
+**승격 루프**: a variant finalized through either lane feeds back — its new
+prose is proposed for `canonical-lines.md` promotion (approval-gated,
+proposed right after the render step), and its approved brief exceptions are
+recorded in `target-companies.md` to strengthen the preset.
+
+**기록 주체**: `canonical-lines.md` and `role-presets.md` are written only by
+the **top-level orchestrator**, and only with owner approval for
+status-bearing changes (line promotion/retirement, preset edits). Subagents —
+including producers — never edit these two files; producers read them.
 
 ## Portfolio Review Harness
 
@@ -175,7 +331,7 @@ permission to rewrite history.
 portfolio-curator
    -> portfolio-fact-checker + portfolio-story-reviewer + portfolio-ux-reviewer
    -> portfolio-synthesizer
-   -> Claude/Codex hardening pass when the output is substantive
+   -> Claude subagent hardening pass when the output is substantive
 ```
 
 Default portfolio review reports go under `outputs/` using a dated name such as
@@ -187,13 +343,13 @@ to the source file and evidence record.
 
 This project can be run from the Claude mobile app via Claude Code in the cloud
 (`claude.ai/code`) against the standalone **private** GitHub repo. The cloud
-sandbox clones the repo, so the six subagents in `.claude/agents/` and the
+sandbox clones the repo, so the subagents in `.claude/agents/` and the
 project skills run there unchanged. The following rules apply **only** to cloud /
 mobile sessions, where the local PC toolchain is absent:
 
-- **Skip the Codex ping-pong loop.** The `codex` MCP server is not available in
-  the cloud sandbox. Use the `reviewer` subagent as the (same-model) hardening
-  pass instead. The Codex independent-model pass resumes on the PC.
+- **Adversarial verification still runs.** The hardening pass is a Claude
+  subagent (see `CLAUDE.md`), so it works unchanged in the cloud — no external
+  model is required.
 - **No beads.** The Dolt database lives under `refs/dolt/data` and does not
   follow the clone, so `bd` commands will not work. Do issue tracking on the PC.
 - **Deliverables as Markdown.** Save drafts to `outputs/*.md` and show the full
@@ -220,8 +376,10 @@ job-specific application document, read the reference files under
 6. `experience-bank.md`
 7. `writing-guidelines.md`
 8. `feedback-rules.md`
-9. `target-companies.md`
-10. `source-materials.md`
-11. `source-log.md`
+9. `canonical-lines.md`
+10. `role-presets.md`
+11. `target-companies.md`
+12. `source-materials.md`
+13. `source-log.md`
 
 Also read `DESIGN.md` before creating visual or print-ready artifacts.

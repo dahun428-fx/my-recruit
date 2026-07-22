@@ -1,0 +1,14 @@
+{
+  "name": "claude-continue-vscode",
+  "displayName": "Claude Continue by PID",
+  "description": "Send a one-time continue message to VS Code terminals by process ID.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js"
+}

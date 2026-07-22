@@ -95,6 +95,10 @@ Use this section for the candidate's durable professional narrative.
 - WebView
 - Vercel
 - SQLite
+- Jira (user-attested 2026-07-22 — 실무 이슈·일정 관리)
+- Confluence (user-attested 2026-07-22 — 실무 기술 문서·위키 협업)
+- Figma (user-attested 2026-07-22 — 실무 디자인 핸드오프·검수)
+- Slack (user-attested 2026-07-22 — 실무 팀 커뮤니케이션)
 
 ### Domain Knowledge
 
@@ -130,7 +134,7 @@ drafted application text.
 | --- | --- | --- | --- |
 | 2010.03 ~ 2017.02 | 성공회대학교 | 일어일본학과 졸업, 경영학과 복수전공 | 학점 3.8 / 4.5 |
 | 2010 | 여의도고등학교 | 졸업 |  |
-| 확인 필요 | 한국산업인력공단 | 정보처리기사 | 이력서 PDF 기재. 취득일(월)은 원본에 미표기 — 단정 금지 |
+| 2020.08 | 한국산업인력공단 | 정보처리기사 | 취득월 2020.08 (user-attested 2026-07-22). 원본 이력서 PDF에는 취득월 미표기였으나 소유자 확인 |
 | 2024.05 | TOEIC | 825점 | `extracted/이력서_20260624.txt`(취득일 2024.05 명시)로 확인됨 |
 | 2018.08 | JLPT | 1급 | `extracted/이력서_20260624.txt`(취득일 2018.08 명시)로 확인됨 |
 | 확인 필요 | 해외경험 | 일본 | 이력서 PDF 기재. 자격/교육이 아니라 별도 경험으로만 사용 |

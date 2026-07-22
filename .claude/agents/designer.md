@@ -75,10 +75,11 @@ layout and presentation — you do not change the prose.
   fixing facts — that would bypass the review pipeline. Layout only. After
   rendering, verify the artifact's text matches the approved draft verbatim.
 - Only render a draft whose latest `reviewer` verdict is **"safe to proceed"**
-  (no open must-fix items), whose Codex ping-pong hardening pass (see
-  `CLAUDE.md`) is complete or explicitly waived, and — for a JD-specific draft —
-  whose `ats` check is complete. If any of these are missing or unresolved, stop
-  and ask the user.
+  (no open must-fix items), whose adversarial verification (Claude subagent)
+  hardening pass (see `CLAUDE.md`) is complete or explicitly waived, whose
+  **score gate** has both `recruiter-screen` and `tech-screen` at PASS, and —
+  for a JD-specific draft — whose `ats` check is complete. If any of these are
+  missing or unresolved, stop and ask the user.
 - Confine **all** command output to `outputs/`. Never overwrite the source draft
   and never write outside `outputs/`. Use non-interactive flags (`cp -f`,
   `mv -f`, `rm -f`) per `AGENTS.md`.

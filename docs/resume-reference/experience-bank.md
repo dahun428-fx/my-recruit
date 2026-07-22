@@ -105,7 +105,8 @@ facts in drafted application text.
   - Storybook 중심의 컴포넌트 개발/검증 절차 수립
   - GA4/PostHog 기반 운영 데이터 대시보드 구축
   - AI 생성 코드의 컨텍스트 관리, 금지 패턴, 보안 위험, 검증 절차를 FE AX SOP로 문서화
-- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog
+  - Codex·Claude Code 등 AI 코딩 에이전트를 활용한 개발과, 생성 코드의 검증·금지 패턴·보안 기준 수립 (user-attested 2026-07-22 — AX본부 JD 대응 세션에서 사용자 직접 확인. 문서 근거 미확보, pending documentary source)
+- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code
 - Result:
   - QA, 운영 확인, 반복 컴포넌트 개발의 수작업 의존도를 낮추고 팀 개발 기준을 조직 자산화
 - Metrics:
@@ -245,7 +246,7 @@ Do not use these metrics in final copy until their status is changed to
 
 | Claim | Source | Status |
 | --- | --- | --- |
-| 정보처리기사 발급일(월) | `sources/이력서_20260624.pdf` | needs confirmation — 원본에 취득월 미표기, 특정 월 단정 금지 |
+| 정보처리기사 발급일(월) | `sources/이력서_20260624.pdf` | confirmed — 취득월 2020.08 (user-attested 2026-07-22). 원본 PDF는 미표기였으나 소유자 확인 |
 | TOEIC 825점 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2024.05 |
 | JLPT 1급 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2018.08 |
 | 연봉 5,700만원 포함 여부 | `sources/이력서_20260624.pdf` | user confirmation required |
