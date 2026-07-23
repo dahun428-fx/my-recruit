@@ -124,6 +124,7 @@ drafted application text.
 | 2024.10 ~ 2025.04 | 삼성물산 데이터 플랫폼/모바일 서비스 | 내담씨앤씨 SI 프로젝트 / 프론트엔드·모바일 개발 | Vue 3, ECharts, RealGrid, React Native, Spring REST API 연동 |
 | 2022.06 ~ 2024.10 | 한국미스미 글로벌 B2B 커머스 | 내담씨앤씨 SI 프로젝트 / 프론트엔드 개발 | PHP/jQuery 레거시 분석, Next.js/React/TypeScript 전환, 성능/SEO/다국어/모니터링 개선 |
 | 2020.10 ~ 2022.05 | 내담씨앤씨 초기 프로젝트 | 확인 필요 | 원본 이력서에는 내담씨앤씨 총 재직기간만 확인됨. 세부 프로젝트/성과 추가 확인 필요 |
+| 2017.03 ~ 2018.07 | 올리브영 | 매장 판매직 | IT 무관 경력 (user-attested 2026-07-23 — headhunter-advisor 인터뷰, 2017.02~2020.10 경력 공백 설명). 이력서 미기재(소유자 결정) |
 
 ## Education / Certifications
 
@@ -137,7 +138,8 @@ drafted application text.
 | 2020.08 | 한국산업인력공단 | 정보처리기사 | 취득월 2020.08 (user-attested 2026-07-22). 원본 이력서 PDF에는 취득월 미표기였으나 소유자 확인 |
 | 2024.05 | TOEIC | 825점 | `extracted/이력서_20260624.txt`(취득일 2024.05 명시)로 확인됨 |
 | 2018.08 | JLPT | 1급 | `extracted/이력서_20260624.txt`(취득일 2018.08 명시)로 확인됨 |
-| 확인 필요 | 해외경험 | 일본 | 이력서 PDF 기재. 자격/교육이 아니라 별도 경험으로만 사용 |
+| 2018.09 ~ 2019.06 | 해외경험 | 일본 워킹홀리데이 | 이력서 PDF 기재, 기간은 user-attested 2026-07-23(headhunter-advisor 인터뷰)로 확인. 자격/교육이 아니라 별도 경험으로만 사용 |
+| 2020.03 ~ 2020.09 | IT 국비지원학원 | 자바 풀스택 과정 수료 | user-attested 2026-07-23 — headhunter-advisor 인터뷰. IT 커리어 실질 출발점 |
 
 ## Constraints
 

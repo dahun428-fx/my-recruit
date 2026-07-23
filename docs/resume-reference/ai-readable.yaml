@@ -129,7 +129,7 @@ experiences:
     preferred_bullets:
       - "AI 건강검진 챗봇 PoC를 실사용 가능한 서비스로 전환하고, 실사용 검증과 만족도 조사 기반의 개선 근거를 확보"
       - "SSE 기반 실시간 응답과 Markdown 렌더링 안정화로 AI 답변 출력 시간을 10초에서 4초로 단축"
-      - "Base-Theme과 Config-Driven UI로 신규 AI 챗봇 구축 기간을 10주에서 2주로 줄일 수 있는 공통 구조 설계"
+      - "Base-Theme과 Config-Driven UI로, 챗봇 최초 구축 10주 대비 신규 고객사 온보딩 시 FE 커스터마이징 기간을 2주로 단축(FE 기준, LLM/BE 일정 별도)"
     source_ids:
       - "src-resume-20260624"
       - "src-eval-2026-h1"

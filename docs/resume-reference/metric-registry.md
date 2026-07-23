@@ -23,7 +23,7 @@ user confirmation.
 | `metric-ai-answer-time` | AI 답변 출력 10초 -> 4초 | confirmed | AI 답변 출력 시간을 10초에서 4초로 단축 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-ai-entry-time` | 초기 진입 30초 -> 6초 | confirmed | 초기 서비스 진입 시간을 30초에서 6초로 단축 | `src-resume-20260624`, `src-eval-2025` |
 | `metric-ai-render-success` | 400건 발화 검증 기준 답변 화면 정상 출력률 100% | needs_scope | Do not use externally until validation scope is confirmed. | `src-resume-20260624`, `src-eval-2026-h1` |
-| `metric-ai-build-period` | 신규 AI 챗봇 구축 기간 10주 -> 2주 가능한 구조 | source_stated | 신규 AI 챗봇 구축 기간을 10주에서 2주로 줄일 수 있는 공통 구조 설계 | `src-resume-20260624`, `src-eval-2026-h1` |
+| `metric-ai-build-period` | 신규 AI 챗봇 구축 기간 10주 -> 2주 가능한 구조 | source_stated | 챗봇 최초 구축 10주 대비, 신규 고객사(웰체크) 온보딩 시 Base-Theme 활용 FE 커스터마이징·납품 기간 2주로 단축(**FE 기준, LLM/BE 일정 별도** — user-attested 2026-07-23 headhunter-advisor 인터뷰 스코프 정정. "챗봇 전체를 2주 만에 구축"으로 쓰지 말 것) | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-ai-lighthouse` | Lighthouse 91점 | source_stated | AI 챗봇 화면 기준 Lighthouse 91점 (측정 페이지·조건 세부는 원본 미기재 — "AI 챗봇 화면 기준" 스코프와 함께만 사용) | `src-resume-20260624`, `src-eval-2025` |
 | `metric-b2b-pages-screens` | 9주 내 108개 페이지, 82개 화면 전환 | source_stated | 9주 내 108개 페이지·82개 화면을 임직원 건강 플랫폼으로 전환 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-b2b-new-features` | 건강관리 신규 기능 3건 End-to-End 개발 | confirmed | 신규 건강관리 기능 3건을 데이터 모델부터 화면까지 End-to-End 개발 | `src-resume-20260624`, `src-eval-2026-h1` |
