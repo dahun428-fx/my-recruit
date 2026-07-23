@@ -135,6 +135,10 @@ Project-native:
 
 - `resume-engine`: 새 회사 이력서 재조립 엔진 드라이버 (자동 2-스톱 /
   인터뷰 모드, 갭 인터뷰). 정본 흐름은 `AGENTS.md`의 Resume Engine 섹션.
+- `headhunter-advisor`: 헤드헌터 3인 페르소나(`headhunter-startup` /
+  `headhunter-searchfirm` / `headhunter-techlead`)가 grill-me 스타일로
+  인터뷰해 `docs/resume-reference/positioning.md`(회사-무관 포지셔닝
+  레이어)를 쌓는다. 정본 흐름은 `AGENTS.md`의 Headhunter Advisor 섹션.
 
 Imported from `dahun428-fx/my-item-skill` into `.claude/skills/`:
 

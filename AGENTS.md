@@ -299,6 +299,89 @@ the **top-level orchestrator**, and only with owner approval for
 status-bearing changes (line promotion/retirement, preset edits). Subagents —
 including producers — never edit these two files; producers read them.
 
+## Headhunter Advisor (포지셔닝 베이스 레이어)
+
+`profile.md`/`experience-bank.md`(사실) 다음, `writer`/`tailor`가 초안을 쓰기
+전에 참고하는 **회사-무관 포지셔닝 레이어**다. 매 회사 지원마다 도는
+`resume-engine`과 달리, 한 번(또는 가끔) 깊게 쌓아두고 이후 모든 초안이
+재사용한다 — `experience-bank.md`와 같은 1회성 구축 + 증분 갱신 패턴.
+결과물은 `docs/resume-reference/positioning.md`.
+
+### 페르소나 에이전트 (완전 몰입형, 개별 파일)
+
+세 개의 read-only 서브에이전트가 서로 다른 헤드헌터 관점을 연기한다. 리서치
+결과(원칙·말투·출처)는 각 에이전트 파일의 시스템 프롬프트에 **직접 박혀
+있다** — 공용 참조 파일을 조회하는 방식이 아니다(소유자가 몰입감을 위해
+선택). 리프레시하려면 해당 에이전트 파일을 직접 고친다(소유자 승인 필요).
+
+| Agent | 관점 | 대표 소스 |
+| --- | --- | --- |
+| `headhunter-startup` | 스타트업/스케일업 테크 헤드헌터 — 임팩트·오너십·확장성 | SearcHRight 블로그 등 |
+| `headhunter-searchfirm` | 정통 서치펌/대기업 인사출신 — 조직적합·커리어 서사·완성도 | 퇴사한 이형, 김나이 커리어 액셀러레이터 등 |
+| `headhunter-techlead` | 실무형 엔지니어링 리더(CTO/테크리드) — 기술 깊이·문제해결·아키텍처 판단 | 개발바닥 유튜브, 빅테크 채용 기준 등 |
+
+페르소나는 특정 인물의 1:1 재현이 아니라, 리서치한 여러 실존 소스를 종합한
+**합성 아키타입**이다. 각 페르소나 파일의 리서치 근거 절은 인용 소스의
+**공개 보도 내용**임을 명시하고, 실존 인물/채널에 대한 전기적 사실을
+독립 검증 없이 단정하지 않는다.
+
+`headhunter-techlead`만 `model: opus`(나머지 둘은 `sonnet`)인 이유:
+`tech-screen`(opus)/`recruiter-screen`(sonnet) 선례와 동일하게, 기술적
+트레이드오프 판단이 필요한 관점에만 더 무거운 모델을 쓴다.
+
+### 흐름
+
+1. **리서치 단계 (1회, 승인제)** — 소유자 지정 소스가 없으면 최상위
+   에이전트가 web search로 IT 개발자 이직/헤드헌팅 분야 신뢰할 만한 소스를
+   조사해 소유자에게 리스트를 보여주고 승인받은 뒤, 각 페르소나 에이전트
+   파일에 직접 반영한다.
+2. **인터뷰 단계 (매 실행)** — "grill-me 스타일"은 `grill-me` 스킬을 실제로
+   호출한다는 뜻이 아니라, 그 스킬의 **한 번에 하나씩 묻고 답을 받은 뒤
+   다음으로 넘어가는 진행 방식**만 차용한다는 뜻이다.
+   a. 최상위 에이전트가 이번 라운드의 인터뷰 범위(어떤 `EXP-NN`/`전체·서사`가
+      대상인지)를 먼저 확정한다 — 이 스코프가 **authoritative**하다. 3개
+      페르소나 에이전트를 병렬 호출할 때 이 스코프를 명시적으로 전달한다.
+      각 에이전트도 자체적으로 `positioning.md`를 다시 확인하지만, 이는
+      안전망일 뿐 스코프 자체를 바꾸지 않는다. **증분 기준**: 대상 직무가
+      이전 라운드와 같고 해당 `EXP-NN`에 이미 항목이 있으면 건너뛴다. 직무가
+      다르면(예: 이전엔 백엔드, 이번엔 프론트엔드) 그 항목은 재인터뷰
+      대상으로 포함하되 새 직무 관점의 `target_fit_notes`만 추가한다. 모든
+      대상이 이미 커버돼 스코프가 비면, 에이전트를 호출하지 않고 그 사실을
+      보고한 뒤 멈춘다.
+   b. 각 에이전트는 `profile.md`·`experience-bank.md`·`positioning.md`(기존
+      커버리지 확인용)·직무를 참고해 후보 질문 5-8개를 만들고, 스스로 "핵심
+      포지셔닝을 바꿀 만한 질문인가"를 평가해 상위 3개로 압축한다.
+   c. 최상위 에이전트가 3×3(최대 9개) 후보를 병합한다: 같은 `EXP-NN`을
+      묻고 실질적으로 같은 정보를 캐묻는 질문끼리만 병합 대상이며, 병합 시
+      더 구체적인 표현을 남기고 나머지 페르소나는 `source_persona`에
+      추가한다. 목표는 6-9개이지 하한선은 아니다 — 억지로 채우지 않는다.
+      병합 후 하나씩 순서대로 소유자에게 질문한다(어떤 페르소나가 왜
+      궁금해하는지 표시).
+   d. 답변마다 **사실**과 **포지셔닝/메타데이터**로 나눠 가공해 소유자에게
+      다시 보여주고 write 승인을 받는다. 답변이 `experience-bank.md`에
+      아직 없는 **완전히 새로운 경험**을 드러내면, 먼저 갭 인터뷰 방식대로
+      `archivist`가 새 항목을 적재하고, 최상위 에이전트가 `canonical-lines.md`
+      매핑에 새 `EXP-NN`을 추가 제안(승인제)한 뒤에만 그 경험을
+      `positioning.md`에서 참조한다.
+   e. Confirm 시: 새 사실은 기존 갭 인터뷰 방식대로 `archivist`를 통해
+      `experience-bank.md`에 적재한다. 포지셔닝/메타데이터는 최상위
+      에이전트가 직접 `positioning.md`에 기록한다.
+
+### 파일 소유
+
+`docs/resume-reference/positioning.md`는 `canonical-lines.md`/
+`role-presets.md`와 같은 "기록 주체" 원칙을 따른다 — 서브에이전트가 아니라
+**최상위 에이전트만** 승인받아 직접 쓴다. `EXP-NN` ID는 `canonical-lines.md`의
+매핑을 그대로 재사용한다(새 경험이 추가되면 그 파일의 매핑을 먼저 갱신).
+`experience-bank.md`에 `canonical-lines.md` 매핑이 아직 없는 항목을
+만나면(archivist가 매핑 갱신보다 먼저 새 경험을 적재했을 수 있음), 그
+항목은 인터뷰 대상에서 제외하고 매핑 추가를 소유자에게 먼저 제안한다.
+
+`writer`/`tailor`는 `positioning.md`를 표준 참조 목록(아래 "Resume Reference
+Material")에서 `experience-bank.md` 다음 순번으로 읽는다.
+
+이 스킬(`.claude/skills/headhunter-advisor/`)이 절차를 운전한다.
+
 ## Portfolio Review Harness
 
 Portfolio work is a first-class workflow, separate from the resume drafting
@@ -374,12 +457,13 @@ job-specific application document, read the reference files under
 4. `metric-registry.md`
 5. `profile.md`
 6. `experience-bank.md`
-7. `writing-guidelines.md`
-8. `feedback-rules.md`
-9. `canonical-lines.md`
-10. `role-presets.md`
-11. `target-companies.md`
-12. `source-materials.md`
-13. `source-log.md`
+7. `positioning.md`
+8. `writing-guidelines.md`
+9. `feedback-rules.md`
+10. `canonical-lines.md`
+11. `role-presets.md`
+12. `target-companies.md`
+13. `source-materials.md`
+14. `source-log.md`
 
 Also read `DESIGN.md` before creating visual or print-ready artifacts.

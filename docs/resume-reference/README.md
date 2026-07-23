@@ -12,13 +12,18 @@ documents.
 3. `metric-registry.md` - status and safe wording for numeric claims.
 4. `profile.md` - stable candidate facts, positioning, and constraints.
 5. `experience-bank.md` - reusable project and achievement evidence.
-6. `writing-guidelines.md` - writing rules for Korean resume / cover-letter
+6. `positioning.md` - company-agnostic positioning/strategy layer built by the
+   `headhunter-advisor` skill (owner-confirmed; not raw fact).
+7. `writing-guidelines.md` - writing rules for Korean resume / cover-letter
    work.
-7. `feedback-rules.md` - the owner's personal style ledger; active rules
+8. `feedback-rules.md` - the owner's personal style ledger; active rules
    override `writing-guidelines.md` on conflict.
-8. `target-companies.md` - company- or role-specific notes.
-9. `source-materials.md` - imported source files and extraction notes.
-10. `source-log.md` - provenance for facts added to this reference set.
+9. `canonical-lines.md` - owner-approved sentence bank for reassembly
+   (`EXP-NN` ID mapping lives here; `positioning.md` reuses it).
+10. `role-presets.md` - per-role targeting presets for the resume engine.
+11. `target-companies.md` - company- or role-specific notes.
+12. `source-materials.md` - imported source files and extraction notes.
+13. `source-log.md` - provenance for facts added to this reference set.
 
 Read `../../DESIGN.md` before creating visual, HTML, PDF, or print-ready
 artifacts. It is optional for plain-text drafting or analysis tasks.
@@ -46,7 +51,11 @@ describing where the information came from and which files changed.
 
 Exception: `feedback-rules.md` is updated only through its propose-then-approve
 capture process (see its header) by the top-level agent; producer subagents
-never edit it.
+never edit it. `canonical-lines.md`, `role-presets.md`, and `positioning.md`
+follow the same restriction — only the top-level agent writes them, and only
+with owner approval (see each file's own header and `AGENTS.md`'s "기록
+주체" rules); producer subagents read them but never edit them, this
+generic maintenance instruction notwithstanding.
 
 Keep raw facts and polished phrasing separate so future drafts can be tailored
 without losing the source evidence.
