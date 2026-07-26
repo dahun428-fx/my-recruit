@@ -315,3 +315,46 @@ facts in drafted application text.
   E-commerce 근거 강화. needs_scope 지표(사용성 4.18·400건 출력률·커버리지 98%·매출 4.66억·FE 에러 0건)는 본문 미노출(레지스트리 준수).
   제출 전 사용자 확인 필요: (1) 7년 갭 하에 지원 여부, (2) needs_scope 강지표 스코프 병기 복원 여부(두산판 선례), (3) 정보처리기사·TOEIC·JLPT 발급/취득일.
   독립 검증(Claude 서브에이전트 하드닝)·PDF 렌더는 다음 단계.
+
+### GS리테일 / AX본부 개발 프로젝트 (경력)
+
+- Source job posting: 스크린샷 `C:\Users\jungdahun\Pictures\화면 캡처 2026-07-22 215251.png` (GS리테일 7월 경력사원 채용 공고 화면 캡처, 2026-07-22 수집)
+- Application deadline: [확인 필요]
+- Target position: AX본부 개발 프로젝트 트랙 (채용은 시스템 운영·개발프로젝트·Pricing 3트랙 중 이 지원은 개발프로젝트)
+- Role preset: ax-harness (선택 근거: JD가 "AI 활용 프로토타입 구축·배포·운영", "과제 경험 재사용 표준화", "비개발 직군 수정·테스트 환경 설계", "하네스 엔지니어링" 등 ax-harness 신호 100% 일치. AI-product 프리셋과 유사하나, 서버리스 인프라 설계·운영 요건 및 GCP/AWS 직접 운영 요건이 ax 도메인 특수 요건으로 갭을 가짐)
+- Required skills:
+  - 경력: 최소 3년 최대 10년 이하 선호
+  - GCP·AWS 기반 개발·운영 경험
+  - DynamoDB, Lambda, S3 등 클라우드 인프라 직접 설계 및 운영 경험 보유
+  - Python·SQL 기반 데이터 분석·가공 능력
+  - Codex, Claude Code 활용 개발 및 Harness Engineering 경험 보유
+- Preferred skills: [JD 명시 없음 — 자격요건이 곧 필수요건]
+- Company / team signals:
+  - GS리테일 AX본부: 현업 문제를 AI로 검증·해결하는 조직으로 보임
+  - "비개발 직군이 직접 수정·테스트할 수 있는 환경" 강조 — 민주화·도구화 지향
+  - "과제 경험을 재사용 가능한 표준으로 정리" — 지식 자산화 중시
+  - "MECE 분해, 판정 기준 수립" — 구조적 문제 해결 방법론 명시
+  - 하네스 엔지니어링 용어 명시 — AI 코딩 에이전트 기반 개발 문화
+- Job scope:
+  1. 현업과 함께 문제 정의 및 가설 기반 검증 설계 (MECE 분해, 판정 기준 수립)
+  2. 하네스 엔지니어링 기반 프로토타입 구축 → 배포·운영
+  3. 비개발 직군이 직접 과제를 수정·테스트할 수 있는 환경 설계
+  4. 과제 경험을 재사용 가능한 표준으로 정리
+- Candidate evidence to emphasize:
+  - EXP-03: FE AX SOP·하네스 엔지니어링 기반 검증 기준 표준화, Codex·Claude Code 활용 개발 및 생성 코드 검증 절차 (→ JD 핵심: Harness Engineering, Codex·Claude Code 활용, 재사용 표준화)
+  - EXP-01: AI 건강검진 챗봇 프로토타입 → 실사용 서비스 전환·배포·운영 (→ JD: 프로토타입 구축 → 배포·운영)
+  - EXP-03: 운영 데이터 확인 절차 3단계→1단계, Storybook 기반 비개발 직군 독립 확인 환경 (→ JD: 비개발 직군 수정·테스트 환경 설계)
+  - EXP-02: Jenkins CI/CD 배포 운영, AWS 연계 WebView 운영 경험 (→ JD: AWS 기반 운영, 인접 어필)
+  - EXP-07: Python 프롬프트·응답 후처리 로직 기여, SQL·MySQL 데이터 구조 설계·쿼리 (→ JD: Python·SQL 데이터 분석·가공, 인접 어필)
+- Risks or gaps (갭 인터뷰 2026-07-24 결과 반영):
+  - [구조적 블로커 — 부분 해소] DynamoDB·Lambda·S3 직접 설계·운영: 갭 인터뷰 결과 **S3는 바이오에이지에서 활용(서버리스 환경 개발·배포·빌드), EC2도 활용**(user-attested 2026-07-24, EXP-06 적재). **DynamoDB·Lambda는 여전히 무경험** — 미주장/미기재 유지. S3·EC2 실사실 반영으로 tech 게이트가 이전 59(캡)→73으로 상승했으나, DynamoDB·Lambda·GCP 부재로 80은 날조 없이 불가.
+  - [갭 확정 — 무경험] GCP: 갭 인터뷰 결과 **GCP 무경험 확정**(user-attested 2026-07-24). 이력서 미기재. 다음 지원에서도 재질문 불요.
+  - [부분 해소] Python·데이터: 갭 인터뷰 결과 **VectorDB·RAG 구현 참여, Langchain 파인튜닝 경험, Python pandas 데이터 처리**(user-attested 2026-07-24, EXP-07 적재). 단 소유자 자평 "깊이는 깊지 않음" — "참여·기초" 톤 한정, 문서 근거 미확보(면접 대비).
+  - 경력 연수: 총 5년 9개월(2020.10~2026.07). JD 선호 범위(3~10년) 이내 — 연수 리스크 없음.
+  - Codex·Claude Code 활용 개발: EXP-03에서 확인됨 (user-attested 2026-07-22).
+  - [면접 대비] 반복 QA 수치는 이력서에 문서값 3시간→1시간 사용(실측 2h→30분은 문서 미확보). 서버리스 깊이 질문엔 S3 정적 배포 기준으로 답변. RAG/파인튜닝 모델·데이터셋 상세 정리 권장. 2020.10~2022.05 내담 초기 ~1.5년 경력기술서 공백(채우려면 소유자 확인 필요).
+- Keywords to include:
+  - Harness Engineering, AI 코딩 에이전트, Codex, Claude Code, 프로토타입 구축·배포·운영, 재사용 표준, 판정 기준, MECE, 비개발 직군 환경 설계, AWS, GCP, Python, SQL, DynamoDB, Lambda, S3
+- Screen profile: AI-Product (근거: ax-harness 프리셋의 Screen profile 제안이 AI-Product. JD가 "AI를 활용해 프로토타입을 배포·운영하고 재사용 표준으로 정리"하는 AI 제품화·하네스 엔지니어링 직무로, AI-Product 루브릭의 AI 제품화·구축 오너십·운영 깊이 축이 JD 핵심과 일치함)
+- Pass bar: 80 (default)
+- Draft status: **완료(정직한 상향지원본) — outputs/gs-retail-ax-full-resume.{md-draft,html,css,pdf} (10p, 정본 페이지 템플릿, headless Chrome 렌더).** full lane. 흐름: 갭 인터뷰(2026-07-24, S3/EC2·RAG/pandas 적재) → writer 재조립 → reviewer(팩트/무결성, must-fix 0)·ats(필수 8/13 강·2 약·3 정직갭) → 적대검증(fresh Claude, 서버리스 우산어·EC2 모순·RAG 톤 지적 반영) → 점수 게이트 **recruiter 71 / tech 73 둘 다 FAIL(bar 80, 블로커 0)** → P-01대로 구조적 블로커(GCP·DynamoDB·Lambda 실경력 부재, 날조 불가)로 3라운드 강행 대신 점수·블로커 보고, 소유자 "정직한 상향지원" 확정으로 진행 → 요약 서버리스 우산어 최종 정리 → 최종 무결성 재검(통과) → designer 렌더. companion: outputs/gs-retail-ax-new-prose.md. 이전 초안(ax-harness-engineering-resume-draft.md, 76/59캡)은 별도 파일로 보존. 자기소개서는 소유자 요청 시 이력서 확정 후 작성(서버리스·GCP 갭 정직 방어 서술). Codex 미사용(P-02). [2026-07-24 하우스 포맷 개정] 소유자 피드백 10건 반영 — 합니다체 전환·강점 볼드·요약 강점부각·섹션 재편(인적사항→요약→핵심성과→경력→기술→경력기술서→학력·교육·자격·어학)·헤드라인 축약·[주요 업무] 라벨·학력(여의도고)·교육(중앙에이치티에이) 추가. reviewer 재검 통과, designer 재렌더(12p). 이 피드백에서 하우스 규칙 승격: T-05(산문 합니다체)·F-07(섹션 순서)·F-01([주요 업무] 라벨)·F-03(헤드라인 간결) — feedback-rules.md.

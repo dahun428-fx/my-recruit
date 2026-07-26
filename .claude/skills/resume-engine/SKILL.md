@@ -10,6 +10,13 @@ description: 새 회사 이력서를 재조립 엔진으로 생산한다. 자동
 canonical verbatim)은 각 서브에이전트 파일과 참조 문서가 정본이며 여기서
 반복하지 않는다.
 
+**시작점 = base 이력서.** 새 변형의 출발 초안은 표준 정본
+`docs/resume-reference/base-resume.md`를 복제한 것이다. `writer`/`tailor`는
+백지에서 재조립하는 대신 base를 JD에 맞게 **편집**(base-resume.md 헤더의
+"가변" 레버만 이동, "불변" 유지)하고, 갭만 신규 작문한다. 렌더는
+`outputs/base-resume.{html,css}` 구조를 재사용한다(DESIGN.md 캐논).
+`canonical-lines.md`는 신규/변경 문장의 검증·승격 기준으로 계속 쓰인다.
+
 ## 모드 선택
 
 - 소유자가 "인터뷰 모드" / "수동으로" / "물어보면서 하자"라고 하면 → 인터뷰

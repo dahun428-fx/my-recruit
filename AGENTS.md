@@ -200,10 +200,19 @@ owner before it is written into the entry.
 
 ## Resume Engine (재조립 엔진: 브리프 → fast lane → 2-스톱)
 
-New-company resume variants run on a reassembly engine built on two reference
-files: `docs/resume-reference/canonical-lines.md` (owner-approved sentence
-bank) and `docs/resume-reference/role-presets.md` (per-role targeting presets
-+ brief template). The goal: the owner reviews **two small artifacts** (a
+**표준 시작점 = base 이력서 (edit-from-base).** New-company resume variants
+start from the owner's standard résumé
+`docs/resume-reference/base-resume.md` (전 섹션 확정된 base-theme 정본) and
+its render template `outputs/base-resume.{html,css}`. The default flow is to
+**copy base-resume.md and edit only its "가변" levers** to fit the JD (see the
+base-resume.md header's "새 JD로 이력서 쓰는 법" + 편집 규칙), then render by
+reusing the `base-resume.html/css` structure (DESIGN.md canonical
+implementation). The reassembly machinery below —
+`docs/resume-reference/canonical-lines.md` (owner-approved sentence bank) and
+`docs/resume-reference/role-presets.md` (per-role presets + brief template) —
+remains the **verification/promotion substrate**: new or changed prose is
+checked against the bank, and confirmed new lines feed back into base-resume.md
+and canonical-lines. The owner still reviews **two small artifacts** (a
 targeting brief, then a new-prose diff) instead of full drafts.
 
 ### Flow (자동 모드, 2-스톱)
@@ -213,15 +222,15 @@ JD 수집 (tailor가 target-companies.md에 기록)
    ↓
 ① 타겟팅 브리프 선승인  ← role-presets.md 프리셋 + 예외 하이라이트
    ↓
-재조립 초안: writer/tailor가 canonical-lines.md의 approved 문장을
-   무수정 재사용 + JD에 필요한 부분만 신규 작문
+초안 = base-resume.md 복제 → JD에 맞춰 "가변" 레버만 편집
+   (갭만 신규 작문; canonical-lines.md는 검증·승격 기준)
    ↓
 크리틱 (fast lane 축소 적용) → 수정 → 점수 게이트
    ↓
 ② diff 승인  ← 소유자는 companion 파일 전체를 리뷰
-   (신규 작문 + 재사용된 candidate 문장 + 신규 구조·목록 항목, 라벨 구분)
+   (base 대비 변경분 + 신규 작문 + 신규 구조·목록 항목, 라벨 구분)
    ↓
-designer 렌더
+designer 렌더 (base-resume.html/css 구조 재사용)
 ```
 
 **인터뷰 모드**: 소유자가 요청하면 자동 진행 대신 JD 분석 후 섹션별로

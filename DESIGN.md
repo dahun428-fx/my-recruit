@@ -133,18 +133,27 @@ documents. Prefer the tokens above over inventing new values.
 ## Reference implementation (start here)
 
 These tokens are abstract; the **concrete, canonical template** that realizes
-them is the most recently approved page-structured résumé:
+them is the owner's standard base résumé:
 
-- `outputs/resume-career-cj-enm.html` — page-structured markup (fixed `.page`
-  A4 boxes, `info-box`, `page-head`, per-page `footer`, `record`, `block`,
-  `project`, `skill-block`, `achievement-list`).
-- `outputs/resume-career-cj-enm.css` — the stylesheet implementing every token
-  below.
+- `outputs/base-resume.html` — page-structured markup (fixed `.page` A4 boxes,
+  `top-title`, `info-box`, `page-head`, per-page `footer`, `record`,
+  `record-title`, `block`, `project`, `project-title`, `skill-block`,
+  `achievement-list`/`core-item`, `major-section`). Backed by the content
+  master `docs/resume-reference/base-resume.md`.
+- `outputs/base-resume.css` — the stylesheet implementing every token below,
+  plus the review-hardening blocks (overflow-wrap, flex `min-width: 0`,
+  tabular-num dates, footer collision guards, heading hierarchy).
+
+(`outputs/resume-career-cj-enm.{html,css}` is the earlier template it grew
+from; prefer `base-resume` for anything new.)
 
 **Any new résumé/CV artifact must start by reusing this HTML structure and CSS,
 not by re-deriving a layout from the tokens.** Render it the same way it was
 produced — **headless Chrome `--print-to-pdf`** — so the fixed page boxes and
-`@media print` rules are honored. Do **not** generate the artifact from a
+`@media print` rules are honored. **Verify overflow on every render**: re-render
+with `.page { height: auto; min-height: 297mm; overflow: visible }` and confirm
+the total page count is unchanged — a fixed-height `.page` with
+`overflow: hidden` silently clips, so this check is mandatory before shipping. Do **not** generate the artifact from a
 generic Markdown→HTML converter and do **not** accept a PDF from a fallback
 renderer (e.g. ReportLab); either one silently produces a different, flat,
 inconsistent document. See `.claude/agents/designer.md` for the full procedure.
