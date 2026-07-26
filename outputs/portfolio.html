@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>정다훈 포트폴리오</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <main>
+    <!-- Page 1 : AI 건강검진 챗봇 (AI코치) -->
+    <section class="page">
+      <header class="page-head"><div><h1>포트폴리오</h1></div><span>1 / 3</span></header>
+      <article class="project">
+        <div class="project-title"><h2>AI 건강검진 챗봇 (AI코치)</h2><span>Healthcare AI Service</span></div>
+        <p class="project-headline">AI 프로토타입을 임직원 3,500여 명이 쓰는 실서비스로 — 검증 하네스와 SaaS 구조까지 완성</p>
+        <dl class="meta-row">
+          <dt>기간</dt><dd>2025.07 ~ 2025.10 (대웅제약 AI추진팀)</dd>
+          <dt>역할</dt><dd>프론트엔드 총괄 — 아키텍처 분석·설계부터 구현·테스트까지 수행, 응답 정책·AI 서버 로직 등 제품 전반의 기술 결정에 관여</dd>
+          <dt>핵심 기술</dt><dd>React · TypeScript · TanStack Query · SSE · Vitest · Playwright · Python · LLM</dd>
+          <dt>담당 범위</dt><dd>FE 전체 단독 + 백엔드·LLM 개발자와 릴레이 서버·오케스트레이션 협업</dd>
+        </dl>
+        <p class="service-intro">건강검진 결과를 사용자가 이해하고 질문할 수 있게 만드는 AI 건강 상담 서비스입니다. 검진 결과·건강 점수·만성질환 분석 등 12개 도메인과 AI 채팅(스트리밍 응답·재시도·재생성·상담 이력·피드백)을 제공합니다.</p>
+        <figure class="shot">
+          <img src="portfolio-assets/portfolio-aicoach-chat-custom.png" alt="AI코치 채팅 화면 — 검진 결과 기반 AI 상담 흐름">
+        </figure>
+        <p class="shot-caption">실서비스 채팅 화면 — 검진 결과 기반 질문, 스트리밍 답변, 병원 검색 흐름</p>
+        <div class="block"><h3>[주요 개발]</h3><ul>
+          <li><strong>AI 채팅 경험 구현</strong> — SSE 실시간 스트리밍, Markdown → 표·차트·링크 컴포넌트 렌더링 계층, XSS·LLM 오류 가드레일과 오류 4유형 분류·복구 전략</li>
+          <li><strong>검증 하네스 구축</strong> — Vitest 약 2,600케이스·Playwright E2E를 배포 필수 게이트로 편입, 판정 기준을 FE AX 표준(SOP)으로 정리해 팀 10명 전원의 개발 표준으로 정착</li>
+          <li><strong>SaaS 확장 구조</strong> — Base-Theme·Config-Driven UI(feature flag)로 고객사별 테마·기능을 운영·기획자가 직접 제어</li>
+        </ul></div>
+        <div class="block"><h3>[성과]</h3><ul>
+          <li><strong>3,493명</strong> 규모 PoC를 계획 대비 2주 조기 실서비스 전환, 실사용 발화 <strong>400여 건 검증 전체 통과</strong></li>
+          <li>AI 발화 응답 평균 <strong>2초대</strong> · Lighthouse <strong>91점</strong>, 신규 고객사 FE 커스터마이징 <strong>2주 납품</strong>(최초 구현 10주 대비)</li>
+        </ul></div>
+      </article>
+      <footer><span>정다훈 포트폴리오 · AI 건강검진 챗봇</span><span>1 / 3</span></footer>
+    </section>
+
+    <!-- Page 2 : 비즈36.5 (임직원 건강검진 통합플랫폼) -->
+    <section class="page">
+      <header class="page-head"><div><h1>포트폴리오</h1></div><span>2 / 3</span></header>
+      <article class="project">
+        <div class="project-title"><h2>비즈36.5 — 임직원 건강검진 통합플랫폼</h2><span>B2B Platform</span></div>
+        <p class="project-headline">외주에 묶여 있던 2019년 레거시를, 회사가 직접 개발·판매하는 통합플랫폼으로 재구축</p>
+        <dl class="meta-row">
+          <dt>기간</dt><dd>2025.11 ~ 2026.02 (대웅제약 AI추진팀)</dd>
+          <dt>역할</dt><dd>풀스택 총괄 — 서비스·DB 구조 분석부터 점진 전환 설계, End-to-End 개발, 배포 자동화까지</dd>
+          <dt>핵심 기술</dt><dd>React · TypeScript · Java · Spring Boot · MySQL · Node.js(Express) · Playwright · Jenkins</dd>
+          <dt>담당 범위</dt><dd>108개 페이지·82개 화면 전환 단독 수행, 신규 기능 3건 데이터 모델~화면 End-to-End</dd>
+        </dl>
+        <p class="service-intro">검진 예약·결과 확인·건강제도·사후관리를 제공하는 B2B 임직원 건강 플랫폼입니다. jQuery·Thymeleaf·Spring Boot가 강결합된 모놀리식을 화면 단위 점진 전환 구조로 현대화했습니다.</p>
+        <figure class="shot">
+          <img src="portfolio-assets/portfolio-biz365-custom.png" alt="비즈36.5 서비스 화면">
+        </figure>
+        <p class="shot-caption">통합플랫폼 서비스 화면 — 고객사별 CI·메뉴·기능 노출을 구성으로 제어</p>
+        <div class="block"><h3>[주요 개발]</h3><ul>
+          <li><strong>점진 전환 구조 설계</strong> — 전면 재작성과 장기 공존의 리스크를 저울질해 React 화면 단위 공존 구조를 직접 설계, 변경·장애 빈도 기준 우선순위로 전환</li>
+          <li><strong>풀스택 End-to-End</strong> — MySQL 데이터 모델·Spring Boot 로직·REST API·화면까지 전 구간 직접 개발, React 전용 데이터 집계 계층(Node.js) 신규 구축</li>
+          <li><strong>검증·배포 자동화</strong> — UI 회귀를 Playwright 기반 AI E2E로 자동화, FileZilla 수동 배포를 Jenkins CI/CD로 전환</li>
+        </ul></div>
+        <div class="block"><h3>[성과]</h3><ul>
+          <li><strong>108개 페이지·82개 화면을 9주 내 단독 전환</strong>, UI/UX 전면 개편 주도로 대웅제약 대상 신규 판매 매출 <strong>1.0억 원</strong> 기여</li>
+          <li>고객사별 CI·메뉴·기능 변경 <strong>1주 내 대응</strong> 구조 확보, 배포 리드타임 <strong>10분 → 2분</strong></li>
+        </ul></div>
+      </article>
+      <footer><span>정다훈 포트폴리오 · 비즈36.5 통합플랫폼</span><span>2 / 3</span></footer>
+    </section>
+
+    <!-- Page 3 : 바이오에이지 -->
+    <section class="page">
+      <header class="page-head"><div><h1>포트폴리오</h1></div><span>3 / 3</span></header>
+      <article class="project">
+        <div class="project-title"><h2>바이오에이지 — 생체나이 리포트 서비스</h2><span>Health Data Report</span></div>
+        <p class="project-headline">외주로 도입된 서비스를 내부가 직접 고치고 운영하는 서비스로 안정화</p>
+        <dl class="meta-row">
+          <dt>기간</dt><dd>2025년 (대웅제약 AI추진팀)</dd>
+          <dt>역할</dt><dd>유지보수·운영 — 외주 도입 V2 버전의 UI·데이터 운영 리스크 개선과 납품</dd>
+          <dt>핵심 기술</dt><dd>React · Next.js · Nest.js · AWS S3(정적 배포·빌드) · AWS EC2(서버 운영) · WebView · Tailwind CSS</dd>
+          <dt>담당 범위</dt><dd>UI·운영 리스크 개선, 리포트 생성 흐름(DB·API·PDF) 문제 범위 축소, 배포·운영</dd>
+        </dl>
+        <p class="service-intro">검진 데이터를 생체나이·질병 위험도 리포트로 제공하는 서비스입니다. 외주로 도입된 버전을 내부에서 유지보수·수정 가능한 상태로 안정화하고 신규 고객에 납품했습니다.</p>
+        <figure class="shot">
+          <img src="portfolio-assets/portfolio-bioage-custom.png" alt="바이오에이지 생체나이 리포트 화면">
+        </figure>
+        <p class="shot-caption">생체나이 리포트 화면 — 검진 데이터 기반 생체나이·질병 위험도 제공</p>
+        <div class="block"><h3>[주요 개발]</h3><ul>
+          <li><strong>운영 안정화</strong> — 외주 도입 V2의 UI·데이터 운영 리스크를 개선하고, 리포트 누락 시 DB → API → PDF 생성 흐름을 따라 문제 범위를 축소하는 진단 절차 정리</li>
+          <li><strong>배포·운영</strong> — AWS S3 기반 정적 배포·빌드와 EC2 서버 운영, 내부 수정·반영 가능한 구조로 정비</li>
+        </ul></div>
+        <div class="block"><h3>[성과]</h3><ul>
+          <li>기존 고객 <strong>112처 중 93처(83%) 안정 전환</strong>, 서울성모병원 납품 완료</li>
+          <li>외주 없이는 못 고치던 서비스를 내부 유지보수·수정 가능한 운영 구조로 전환</li>
+        </ul></div>
+      </article>
+      <footer><span>정다훈 포트폴리오 · 바이오에이지</span><span>3 / 3</span></footer>
+    </section>
+  </main>
+</body>
+</html>
