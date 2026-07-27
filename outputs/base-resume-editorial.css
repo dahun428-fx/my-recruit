@@ -1,0 +1,244 @@
+/*
+ * Design A - Editorial Focus
+ * Load after base-resume.css. Content and pagination markup stay unchanged.
+ */
+
+.page {
+  padding: 16mm 18mm 17mm;
+}
+
+.top-title {
+  padding-bottom: 3mm;
+  border-bottom: 1.5px solid var(--line-strong);
+}
+
+.top-title h1 {
+  max-width: 158mm;
+  font-size: 19.5pt;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.info-box {
+  grid-template-columns: 25mm 1fr;
+  min-height: 33mm;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.photo {
+  width: 25mm;
+  height: 28mm;
+  margin-top: 3.5mm;
+  border: 0;
+  object-position: 50% 18%;
+  filter: saturate(0.82);
+}
+
+.personal {
+  padding: 4.2mm 0 4.2mm 7mm;
+}
+
+.name-row h2 {
+  font-size: 12.5pt;
+}
+
+.name-row span {
+  color: var(--muted);
+  font-size: 7.4pt;
+}
+
+.contact-grid {
+  grid-template-columns: 16mm 1fr 15mm 1fr;
+  gap: 2.2mm 4mm;
+  margin-top: 4.2mm;
+  font-size: 7.5pt;
+}
+
+.section {
+  margin-top: 6.2mm;
+}
+
+.first-page .section {
+  margin-top: 4mm;
+}
+
+.section h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+  padding-bottom: 2.2mm;
+  border-bottom-color: var(--line-strong);
+  font-size: 11.5pt;
+}
+
+.section h2::before {
+  color: var(--accent);
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.first-page .section:nth-of-type(2) h2::before {
+  content: "01";
+}
+
+.first-page .section:nth-of-type(3) h2::before {
+  content: "02";
+}
+
+.copy {
+  margin-top: 3.2mm;
+}
+
+.copy p,
+.meta p {
+  font-size: 8.35pt;
+  line-height: 1.68;
+}
+
+.core-item {
+  display: grid;
+  grid-template-columns: 27mm 1fr;
+  gap: 5mm;
+  margin-top: 0;
+  padding: 3.2mm 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.core-item h3 {
+  grid-row: 1 / span 2;
+  color: var(--accent);
+  font-size: 7.4pt;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.core-item .core-chips,
+.core-item .core-evidence {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+.core-item .core-evidence {
+  margin-top: 1.2mm;
+}
+
+.achievement-list {
+  border-top: 0;
+}
+
+.achievement-list li,
+.bullet-list li {
+  font-size: 8pt;
+  line-height: 1.58;
+}
+
+.page-head {
+  padding-bottom: 4.2mm;
+  border-bottom-width: 1.5px;
+}
+
+.page-head h1 {
+  font-size: 13.8pt;
+}
+
+.page-head span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.career-section {
+  margin-top: 4.8mm;
+}
+
+.record {
+  margin-top: 4.8mm;
+  padding-bottom: 4.2mm;
+}
+
+.record-title h3 {
+  font-size: 10.2pt;
+}
+
+.record > p,
+.record .role-line {
+  font-size: 8.15pt;
+  line-height: 1.62;
+}
+
+.skill-block {
+  display: grid;
+  grid-template-columns: 30mm 1fr;
+  gap: 0 7mm;
+  margin-top: 0;
+  padding: 5mm 0;
+}
+
+.skill-block h2 {
+  grid-row: 1 / span 2;
+  font-size: 9.8pt;
+}
+
+.skill-stack {
+  margin-top: 0;
+  font-size: 7.9pt;
+}
+
+.skill-block .bullet-list {
+  grid-column: 2;
+}
+
+.project {
+  margin-top: 5.8mm;
+}
+
+.project-title {
+  margin-top: 3.2mm;
+  padding-bottom: 2.8mm;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.project-title h2 {
+  font-size: 12.2pt;
+}
+
+.block {
+  grid-template-columns: 23mm 1fr;
+  gap: 5mm;
+  margin-top: 3.8mm;
+}
+
+.block h3 {
+  color: var(--accent);
+  font-size: 7.9pt;
+}
+
+.block p,
+.block li {
+  font-size: 8.15pt;
+  line-height: 1.64;
+}
+
+.tech {
+  margin-top: 3.8mm;
+  font-size: 7.8pt;
+}
+
+.major-section {
+  margin-top: 7mm;
+}
+
+.major-section .major {
+  padding-bottom: 3.8mm;
+  font-size: 12.5pt;
+}
+
+.plain-head {
+  border-bottom-width: 1.5px;
+}
+
+footer {
+  right: 18mm;
+  left: 18mm;
+}

@@ -1,0 +1,561 @@
+:root {
+  --paper: #ffffff;
+  --canvas: #eeeeee;
+  --ink: #1f1f1f;
+  --sub: #3f4650;
+  --muted: #777777;
+  --navy: #1f3d55;
+  --line: #d7d7d7;
+  --soft: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--canvas);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+}
+
+.sample-index {
+  width: 210mm;
+  margin: 18mm auto 9mm;
+}
+
+.sample-index .eyebrow,
+.role-kicker {
+  margin: 0 0 2.5mm;
+  color: var(--navy);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.sample-index h1 {
+  margin: 0;
+  font-size: 20pt;
+  line-height: 1.3;
+}
+
+.sample-index > p:last-child {
+  margin: 3mm 0 0;
+  color: var(--sub);
+  font-size: 9pt;
+  line-height: 1.6;
+}
+
+.samples {
+  display: grid;
+  gap: 14mm;
+  padding-bottom: 18mm;
+}
+
+.sample {
+  width: 210mm;
+  margin: 0 auto;
+}
+
+.sample-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3mm;
+  color: var(--sub);
+}
+
+.sample-label strong {
+  color: var(--ink);
+  font-size: 10pt;
+}
+
+.sample-label span {
+  font-size: 8pt;
+}
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 17mm 18mm;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sheet h2,
+.sheet h3,
+.sheet h4,
+.sheet p,
+.sheet dl,
+.sheet dd {
+  margin: 0;
+}
+
+.sheet strong {
+  font-weight: 800;
+}
+
+.sheet-footer {
+  position: absolute;
+  right: 18mm;
+  bottom: 8mm;
+  left: 18mm;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.2mm;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 6.6pt;
+}
+
+/* A · Editorial Focus */
+.design-a {
+  padding-top: 16mm;
+}
+
+.design-a .identity {
+  display: grid;
+  grid-template-columns: 1fr 25mm;
+  gap: 10mm;
+  align-items: end;
+  padding-bottom: 6mm;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.design-a .identity h2 {
+  max-width: 145mm;
+  font-size: 20pt;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.design-a .identity img {
+  width: 25mm;
+  height: 31mm;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(0.82);
+}
+
+.design-a .person {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+  margin-top: 4mm;
+}
+
+.design-a .person strong {
+  font-size: 11pt;
+}
+
+.design-a .person span {
+  color: var(--muted);
+  font-size: 7.5pt;
+}
+
+.contact-line {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1.5fr;
+  gap: 6mm;
+  padding: 3.6mm 0 4.8mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-line div {
+  display: flex;
+  gap: 2.4mm;
+  min-width: 0;
+}
+
+.contact-line dt,
+.contact-line dd {
+  font-size: 7.2pt;
+  line-height: 1.4;
+}
+
+.contact-line dt {
+  color: var(--muted);
+}
+
+.contact-line dd {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.design-a .resume-section {
+  display: grid;
+  grid-template-columns: 30mm 1fr;
+  gap: 7mm;
+  padding-top: 7mm;
+}
+
+.design-a .section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+
+.design-a .section-heading span {
+  color: var(--navy);
+  font-size: 7pt;
+  font-weight: 700;
+}
+
+.design-a .section-heading h3 {
+  font-size: 10.5pt;
+}
+
+.design-a .summary-copy p {
+  font-size: 8.5pt;
+  line-height: 1.7;
+}
+
+.design-a .summary-copy p + p {
+  margin-top: 2.7mm;
+}
+
+.design-a .achievements {
+  margin-top: 1mm;
+}
+
+.impact-list {
+  border-top: 1px solid var(--ink);
+}
+
+.impact {
+  display: grid;
+  grid-template-columns: 28mm 1fr;
+  gap: 5mm;
+  padding: 4.3mm 0;
+  border-bottom: 1px solid var(--soft);
+}
+
+.impact-index {
+  color: var(--navy);
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.impact h4 {
+  margin-bottom: 1.2mm;
+  font-size: 9.2pt;
+  line-height: 1.4;
+}
+
+.impact div p {
+  color: var(--sub);
+  font-size: 8pt;
+  line-height: 1.58;
+}
+
+/* B · Structured Ledger */
+.design-b {
+  padding-top: 15mm;
+}
+
+.ledger-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-bottom: 4mm;
+  border-bottom: 2px solid var(--ink);
+}
+
+.ledger-head h2 {
+  font-size: 24pt;
+  line-height: 1;
+}
+
+.ledger-head .career {
+  color: var(--sub);
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+.statement {
+  padding: 6mm 0 5mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.statement h3 {
+  max-width: 155mm;
+  font-size: 17pt;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.statement p {
+  margin-top: 2.2mm;
+  color: var(--sub);
+  font-size: 8.4pt;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2mm 12mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.contact-grid div {
+  display: grid;
+  grid-template-columns: 19mm 1fr;
+}
+
+.contact-grid dt,
+.contact-grid dd {
+  font-size: 7.4pt;
+}
+
+.contact-grid dt {
+  color: var(--muted);
+}
+
+.contact-grid dd {
+  font-weight: 700;
+}
+
+.ledger-section {
+  display: grid;
+  grid-template-columns: 32mm 1fr;
+  gap: 7mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-section > h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  font-size: 10pt;
+}
+
+.ledger-section > h3 small {
+  color: var(--navy);
+  font-size: 7pt;
+}
+
+.ledger-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6mm;
+}
+
+.ledger-body p {
+  font-size: 8pt;
+  line-height: 1.68;
+}
+
+.evidence-table {
+  border-top: 1px solid var(--ink);
+}
+
+.evidence-table article {
+  display: grid;
+  grid-template-columns: 25mm 1fr 24mm;
+  gap: 4mm;
+  align-items: center;
+  padding: 3.7mm 0;
+  border-bottom: 1px solid var(--soft);
+}
+
+.evidence-label {
+  color: var(--navy);
+  font-size: 6.7pt;
+  font-weight: 700;
+}
+
+.evidence-table h4 {
+  font-size: 8.8pt;
+}
+
+.evidence-table div p {
+  margin-top: 1mm;
+  color: var(--sub);
+  font-size: 7.3pt;
+  line-height: 1.45;
+}
+
+.evidence-table article > strong {
+  text-align: right;
+  font-size: 8.2pt;
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger-section.tech-line {
+  padding-top: 5mm;
+}
+
+.tech-line > p {
+  color: var(--navy);
+  font-size: 7.7pt;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+/* C · Korean Classic */
+.design-c {
+  padding: 17mm 19mm;
+}
+
+.classic-title {
+  display: grid;
+  grid-template-columns: 22mm 1fr;
+  gap: 7mm;
+  align-items: start;
+  padding-bottom: 5mm;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.classic-title > p {
+  padding-top: 1.5mm;
+  color: var(--navy);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.classic-title h2 {
+  font-size: 19pt;
+  line-height: 1.3;
+}
+
+.classic-profile {
+  display: grid;
+  grid-template-columns: 27mm 1fr;
+  gap: 7mm;
+  margin-top: 6mm;
+  padding-bottom: 5mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.classic-profile img {
+  width: 27mm;
+  height: 34mm;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(0.82);
+}
+
+.classic-person h3 {
+  padding-bottom: 3mm;
+  border-bottom: 1px solid var(--soft);
+  font-size: 13pt;
+}
+
+.classic-person h3 span {
+  margin-left: 2mm;
+  color: var(--muted);
+  font-size: 7.5pt;
+  font-weight: 400;
+}
+
+.classic-person dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.6mm 8mm;
+  padding-top: 3mm;
+}
+
+.classic-person dl div {
+  display: grid;
+  grid-template-columns: 17mm 1fr;
+}
+
+.classic-person dt,
+.classic-person dd {
+  font-size: 7.4pt;
+}
+
+.classic-person dt {
+  color: var(--muted);
+}
+
+.classic-person dd {
+  font-weight: 700;
+}
+
+.classic-section {
+  display: grid;
+  grid-template-columns: 27mm 1fr;
+  gap: 7mm;
+  padding-top: 7mm;
+}
+
+.classic-section > h3 {
+  font-size: 11pt;
+}
+
+.classic-copy {
+  padding-top: 0.5mm;
+  border-top: 1px solid var(--ink);
+}
+
+.classic-copy p {
+  padding-top: 3mm;
+  font-size: 8.4pt;
+  line-height: 1.72;
+}
+
+.classic-achievements {
+  border-top: 1px solid var(--ink);
+}
+
+.classic-achievements article {
+  padding: 3.8mm 0;
+  border-bottom: 1px solid var(--soft);
+}
+
+.classic-achievements h4 {
+  font-size: 9.1pt;
+}
+
+.classic-achievements ul {
+  margin: 1.5mm 0 0;
+  padding-left: 4mm;
+}
+
+.classic-achievements li {
+  padding-left: 1mm;
+  font-size: 7.9pt;
+  line-height: 1.58;
+}
+
+.classic-achievements li + li {
+  margin-top: 0.7mm;
+}
+
+@media print {
+  html,
+  body {
+    background: var(--paper);
+  }
+
+  .sample-index,
+  .sample-label {
+    display: none;
+  }
+
+  .samples {
+    display: block;
+    padding: 0;
+  }
+
+  .sample {
+    margin: 0;
+    break-after: page;
+  }
+
+  .sheet {
+    box-shadow: none;
+  }
+}

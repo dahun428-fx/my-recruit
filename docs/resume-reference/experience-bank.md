@@ -39,6 +39,14 @@ facts in drafted application text.
   두 항목 간 상호 참조: AI코치 화면·기능 건수는 해당 항목 Metrics를 참조.
   프로젝트 목표: MVP 정의 → PoC 검증 → 10주 내 실서비스 전환.
   (user-attested 2026-07-24, grill-me base-resume 세션)
+  **[조직 구조 — user-attested 2026-07-27, 이력서 재작성 세션에서 소유자 구두
+  확인, 문서 근거 없음]**: 대웅제약 AI추진팀 내 "다나아데이터 스쿼드" 소속.
+  규모: 부서 20명 / 스쿼드 10명(EXP-03의 "FE AX SOP·Playwright 검증 체계는
+  팀원 10명 전원 채택"과 동일 스쿼드 규모 — 상호 참조). 담당 범위: 비즈36.5·
+  AI코치·바이오에이지 3개 서비스 FE 총괄 — 에스크미는 이 총괄 범위에 포함되지
+  않으며 EXP-06 기준 별도 유지보수 지원 성격으로 일관됨(모순 없음). 이 조직
+  정보는 대웅제약 재직 기간 전반의 프로젝트 항목(EXP-01/EXP-02/EXP-03/EXP-06/
+  EXP-07)에 공통 적용됨.
 - Problem: 목업 수준의 AI 건강검진 챗봇을 실사용 가능한 서비스로 고도화해야 했고, LLM 답변 지연, Markdown/표/링크 렌더링, 오류 대응, 고객사별 화면 확장 구조가 부족했다.
 - Role: 프론트엔드 유일 담당자로 FE 기술적 의사결정권을 가지고 아키텍처 설계·분석부터 구현·테스트까지 독립적으로 수행, BE/LLM 개발자와 협의하며 AI/백엔드 응답 정책 조율 및 LLM/BE 로직 일부에 참여(팀 공동 기여, 단독 구축 아님), 서비스 품질 및 확장 구조 구축 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
 - Actions:
@@ -69,21 +77,38 @@ facts in drafted application text.
     확인 예정]. (user-attested 2026-07-24, grill-me base-resume 세션)
 - Technologies: React, TypeScript, TanStack Query, Recoil, SSE, Chart.js,
   Tailwind CSS, Nginx, FastAPI [사용 위치 확인 필요], Chromatic [UI 테스트 —
-  A/B 실험 여부 확인 필요], Web Vitals [운영 방식 확인 필요]
+  A/B 실험 여부 확인 필요], Web Vitals [운영 방식 확인 필요],
+  Docker [배포 인프라 — EXP-02 Blue-Green 무중단 배포 상세 참조]
   (Nginx·FastAPI·Chromatic·Web Vitals user-attested 2026-07-24,
-  grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조)
+  grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조.
+  Docker user-attested 2026-07-27, 이력서 재작성 세션에서 소유자 구두 확인 —
+  문서 근거 없음, pending documentary source)
+  **[정정 — user-attested 2026-07-27, 소유자 갭 정정]** 이전에 이 항목에
+  임시 귀속으로 기록됐던 Nest.js·Zustand는 바이오에이지 서비스 소속임을
+  소유자가 확인해 EXP-06("2025 대웅제약 성과 평가 기반 사업 기여")으로
+  귀속 이관함 — 이 항목(EXP-01)에서는 제거. 출처는 동일하게
+  `user-attested 2026-07-27 구두 확인, 문서 근거 없음`.
 - Result:
   - PoC 수준의 AI 서비스를 실사용 가능한 AI 건강검진 챗봇으로 전환
   - 신규 AI 챗봇 반복 구축에 사용할 수 있는 공통 FE 확장 구조 확보
 - Metrics:
-  - 3,493명 규모 PoC 운영
-  - 사용성 4.18점, 서비스 만족도 4.06점, 완성도 4.05점
+  - **[활성 사용자 수 — 정정, user-attested 2026-07-27, 소유자 구두 확인, 문서
+    근거 없음]** 3,493명은 실제 활성 사용자 수(임직원 대상 실사용 규모)임을
+    소유자가 확인. 관계 정리: 2차 PoC(사용성 4.18/만족도 4.06/완성도 4.05
+    산정 모집단)를 거쳐 실서비스로 전환됐고, 전환 후 활성 사용자가 3,493명—
+    "3,493명 규모 PoC 운영"이라는 기존 표현은 이 활성 사용자 수치로 갱신함.
+  - 사용성 4.18점, 서비스 만족도 4.06점, 완성도 4.05점 (2차 PoC 검증 기준)
   - AI 답변 출력 시간 10초 -> 4초, 60% 단축
   - 초기 서비스 진입 시간 30초 -> 6초, 80% 단축
   - 400건 발화 검증 기준 답변 화면 정상 출력률 100%
   - Lighthouse 91점
   - 신규 AI 챗봇 구축 기간을 10주에서 2주로 줄일 수 있는 공통 구조 확보(원문 표현: 80% 단축 가능한 구조) — **스코프 정정(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: 10주는 챗봇 최초 구현 기간, 2주는 신규 고객사(웰체크) 입점 시 Base-Theme을 활용해 색상·CI·기능을 커스터마이징해 FE 단을 납품한 기간. 2주는 FE 납품 기준 수치이며 LLM/BE 일정은 별도로 고려되지 않았으므로, "챗봇 전체를 2주 만에 만들었다"는 식으로 확대 해석 금지
-  - 계획 대비 2주 빠르게 PoC 고도화 완료
+  - **[2주 조기 달성 대상 — 정정, user-attested 2026-07-27, 소유자 구두 확인,
+    문서 근거 없음]** 계획 대비 2주 조기 달성한 대상은 **실서비스 활성화**임을
+    소유자가 확인. 기존 "계획 대비 2주 빠르게 PoC 고도화 완료" 표현은 대상이
+    부정확했으므로 정정 — PoC 고도화 자체의 일정 단축 여부는 별도로 확인된 바
+    없다. 바로 위 "신규 AI 챗봇 구축 기간 10주→2주"(신규 고객사 FE 납품 기간)
+    항목과는 다른 사건이므로 혼동 금지.
   - AI 발화 응답 평균 2초대 — 네트워크에서 데이터 수신 기준.
     ※ 기존 "출력 시간 10초→4초"와 측정 대상이 다름: 10초→4초는 출력 완료까지의
     전체 시간 단축이고, 2초대는 네트워크 수신(첫 청크 또는 전체 수신) 기준으로
@@ -120,11 +145,24 @@ facts in drafted application text.
     추가(Nginx·FastAPI·Chromatic·Web Vitals — 상세 용도 [확인 필요]). AI 발화 응답
     평균 2초대(네트워크 수신 기준, 기존 10초→4초 출력 시간과 측정 대상 다름).
     코드베이스 실측 수치 일체(문서 근거 미확보).
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 조직
+    구조(다나아데이터 스쿼드 소속, 부서 20명/스쿼드 10명, 비즈36.5·AI코치·
+    바이오에이지 3개 서비스 FE 총괄) 및 기술 스택 추가(Docker). 문서 근거
+    없음, pending documentary source.
+  - user-attested 2026-07-27 (같은 세션, 갭 정정) — Nest.js·Zustand는
+    바이오에이지 서비스 소속으로 확인돼 EXP-06으로 귀속 이관, 이 항목에서
+    제거함.
+  - user-attested 2026-07-27 (같은 세션, 은행-이력서 불일치 정정) — (1) 3,493명은
+    실제 활성 사용자 수(임직원 대상 실사용 규모)이며, 2차 PoC 검증 모집단을
+    거쳐 실서비스로 전환된 뒤의 활성 사용자 수임을 확인. (2) 계획 대비 2주
+    조기 달성 대상은 PoC 고도화가 아닌 실서비스 활성화임을 확인. 문서 근거
+    없음, pending documentary source.
 - Reusable keywords: AI 서비스 제품화, LLM 챗봇, SSE Streaming, Markdown Renderer,
   XSS 필터링, Config-Driven UI, Base-Theme, feature flag, PoC 고도화,
   컴포넌트 추상화, 변경 이유 기반 공통화, 오류 분류 체계, 오류 처리 경계,
   Nginx, FastAPI, Chromatic, Web Vitals, LLM 릴레이, AI 오케스트레이션,
-  i18n, PostHog, GA4, Vitest, Storybook, 다국어, 코드베이스 규모
+  i18n, PostHog, GA4, Vitest, Storybook, 다국어, 코드베이스 규모, 다나아데이터
+  스쿼드, Docker
 - Notes for tailoring: AI/플랫폼/프론트엔드 아키텍처 직무에서 최우선 사례로 사용.
   `2026_상반기종합평가`는 2026년 상반기 평가 자료이므로 2025.07~2025.10 프로젝트의
   후속 안정화/확장 성과를 함께 입증하는 보조 근거로만 사용. 신규 고객사 실명 "웰체크"는
@@ -136,8 +174,24 @@ facts in drafted application text.
   소유자에게 뒷받침 자료 확인을 요청하는 것이 안전하다.
   **기술 스택 가드레일**: Nginx·FastAPI·Chromatic·Web Vitals는 추가 확인 필요([확인
   필요] 마커 참조) — 사용 위치·목적이 특정되지 않았으므로 단정 서술 금지.
+  Docker도 동일하게 구체 사용처가 [확인 필요] 상태이며 문서 근거가 없으므로
+  (user-attested 2026-07-27), 고부담 외부 문서에서는 소유자에게 뒷받침 자료
+  확인을 요청할 것. **Nest.js·Zustand는 이 항목에 없음** — 2026-07-27 소유자
+  정정으로 바이오에이지 소속임이 확인돼 EXP-06으로 이관됨. 이 항목(EXP-01)의
+  기술 스택으로 다시 추가하지 말 것.
+  **조직 구조 가드레일(user-attested 2026-07-27)**: "다나아데이터 스쿼드"·
+  부서 20명/스쿼드 10명·3개 서비스(비즈36.5·AI코치·바이오에이지) FE 총괄은
+  문서 근거 없는 소유자 구두 확인 사실이다. 총괄 범위에 에스크미는 포함되지
+  않음(EXP-06과 정합).
   **병합 노트**: AI 건강검진 챗봇=AI코치는 동일 서비스. "2025 대웅제약 성과 평가
   기반 사업 기여" 항목의 AI코치 화면·기능 수치와 연결해 사용 가능.
+  **활성 사용자·조기 달성 가드레일(user-attested 2026-07-27)**: (1) 3,493명은
+  "PoC 참여자 수"가 아니라 실서비스 전환 후 실제 활성 사용자 수(임직원 대상
+  실사용 규모)로 서술할 것 — "3,493명 규모 PoC 운영"처럼 PoC로만 한정해
+  서술하지 않는다. (2) "계획 대비 2주 조기"는 실서비스 활성화 달성 기준이며
+  PoC 고도화 완료 기준이 아니다 — 두 표현을 혼용하지 않는다. 두 정정 모두
+  문서 근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료
+  확인을 요청할 것.
 
 ### B2B 임직원 건강 플랫폼 풀스택 내재화
 
@@ -187,6 +241,12 @@ facts in drafted application text.
     "Jenkins CI/CD 배포 리드타임 10분→2분"과 동일 사건. 이중 계상 방지:
     두 항목에서 같은 수치를 각각 독립 성과처럼 표기하지 않는다.
     Jenkins 파이프라인은 본인이 직접 수행.
+  - **[배포 구조 — 개발/운영 분리, user-attested 2026-07-27, 이력서 재작성
+    세션에서 소유자 구두 확인, 문서 근거 없음]** 개발 서버는 Jenkins
+    파이프라인으로 빌드·배포하고, 운영 서버는 Docker 기반 Blue-Green 무중단
+    배포 구조로 운영. 이 Blue-Green 배포 구조는 본인이 직접 구축·수행함.
+    바로 위 [배포 자동화] 블록(FileZilla→Jenkins 전환, 리드타임 10분→2분)과
+    같은 배포 체계의 상세 구성 — 별개 사건 아님.
   - **[UI 회귀 검증 — user-attested 2026-07-25, grill-me base-resume 세션]**
     82개 화면 전환의 반복 UI 검증 대부분을 Playwright 기반 AI E2E 테스트가
     사람 대신 수행. 이 Playwright 도입은 "품질·개발·운영 자동화 및 FE AX
@@ -194,7 +254,9 @@ facts in drafted application text.
     프로젝트(EXP-02)에 적용된 것(별도 도구·사건 아님) — 두 항목 상호 참조.
     이중 계상 방지: 두 항목에서 각각 독립 도입처럼 표기하지 않는다.
 - Technologies: React, TypeScript, jQuery, Thymeleaf, Java, Spring Boot, REST API,
-  MySQL, Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright
+  MySQL, Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
+  Docker (운영 서버 Blue-Green 무중단 배포, user-attested 2026-07-27 — 문서
+  근거 없음)
 - Result:
   - 외주 의존 서비스의 기능 변경과 배포를 내부 대응 가능한 운영 구조로 전환
   - 고객사별 CI/메뉴/기능 노출 변경에 반복 대응 가능한 SaaS형 기반 확보
@@ -224,10 +286,14 @@ facts in drafted application text.
     본인이 직접 전환, 리드타임 10분→2분(EXP-06 Metrics와 동일 사건 — 이중
     계상 방지). UI 회귀 검증: Playwright AI E2E 82개 화면 자동화(EXP-03
     Playwright 도입과 동일 사건 — 이중 계상 방지).
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) —
+    배포 구조 상세: 개발 서버 Jenkins 파이프라인 빌드·배포, 운영 서버 Docker
+    기반 Blue-Green 무중단 배포(본인 직접 수행). 문서 근거 없음, pending
+    documentary source.
 - Reusable keywords: B2B 플랫폼, 풀스택 내재화, Spring Boot, MySQL, Web/Admin,
   WebView, Jenkins CI/CD, SaaS형 구조, island-loader 패턴, 점진적 SPA 전환,
   임직원 건강검진 통합플랫폼, 레거시 전면 개편, 배포 자동화, Playwright E2E,
-  비즈케어, 비즈36.5
+  비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포
 - Notes for tailoring: 풀스택/플랫폼/운영 안정화 직무에 적합. 108개 페이지·
   82개 화면 전환은 개인 단독 기여이므로 "본인이 단독으로 수행"이라는 개인
   기여 프레이밍을 사용할 수 있다. island-loader 패턴 채택은 당시 모놀리식·
@@ -242,6 +308,10 @@ facts in drafted application text.
   10분→2분은 EXP-06 Metrics와 동일 사건 — 동일 맥락에서 두 번 수치화하지
   않는다. (2) Playwright AI E2E 82개 화면 자동화는 EXP-03 Playwright 도입과
   동일 사건 — 두 항목에서 각각 독립 도입처럼 표기하지 않는다.
+  **배포 구조 가드레일(user-attested 2026-07-27)**: 개발 서버 Jenkins
+  빌드·배포 / 운영 서버 Docker 기반 Blue-Green 무중단 배포는 문서 근거 없는
+  소유자 구두 확인 사실이다. 고부담 외부 문서에서는 뒷받침 자료 확인을
+  요청할 것.
 
 ### 품질·개발·운영 자동화 및 FE AX 기준 수립
 
@@ -293,7 +363,10 @@ facts in drafted application text.
     구조 운영 — 외부 발표가 아닌 내부 공유 세미나임. 세미나 12회 수치는 "2025 대웅제약
     성과 평가 기반 사업 기여" 항목의 Actions와 동일 출처.
     (user-attested 2026-07-24, grill-me base-resume 세션)
-- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code
+- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code, Figma, Jira, Slack, Confluence, Notion
+  (Figma·Jira·Slack·Confluence·Notion은 협업 도구 — user-attested 2026-07-27,
+  이력서 재작성 세션에서 소유자 구두 확인. 대웅제약 재직 전반의 공통 협업
+  도구이며 이 프로젝트에 한정된 것은 아님, 문서 근거 없음)
 - Result:
   - QA, 운영 확인, 반복 컴포넌트 개발의 수작업 의존도를 낮추고 팀 개발 기준을 조직
     자산화
@@ -341,8 +414,12 @@ facts in drafted application text.
     (세 기록의 관계는 Metrics 주석 참조). Playwright 이력서 표기 단위 "E2E 시나리오
     5종"으로 확정, "600여 건 회귀 시나리오" 표현 이력서에서 폐기. 외부 컨퍼런스
     인사이트→사내 개발 세미나(12회) 이식 구조 확인(외부 발표 아님).
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 협업
+    도구(Figma·Jira·Slack·Confluence·Notion) 사용 확인. 문서 근거 없음, pending
+    documentary source.
 - Reusable keywords: Playwright, Storybook, FE AX, SOP, 품질 자동화, 운영 데이터
-  대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입
+  대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입, Figma, Jira,
+  Slack, Confluence, Notion, 협업 도구
 - Notes for tailoring: 생산성/품질/AI 개발 프로세스 개선을 강조할 때 사용.
   **AI 테크 리더 포지셔닝(user-attested 2026-07-25, grill-me base-resume 세션)**:
   소유자가 이 항목을 "AI 자동화 수준 + 조직 자산화 + 리더십·학습 능력 + 조직
@@ -368,7 +445,9 @@ facts in drafted application text.
 ### 삼성물산 데이터·모바일 서비스 고도화
 
 - Period: 2024.10 ~ 2025.04
-- Context: 데이터 플랫폼과 React Native 모바일 애플리케이션 고도화
+- Context: 데이터 플랫폼과 React Native 모바일 애플리케이션 고도화.
+  팀 규모: 삼성물산 프로젝트 팀원 10명 (user-attested 2026-07-27, 이력서
+  재작성 세션에서 소유자 구두 확인, 문서 근거 없음).
 - Problem: Web 대시보드의 대용량 테이블/시계열 데이터 렌더링과 모바일 앱의
   반복 API 호출 및 플랫폼별 동작 차이가 사용자 대기와 운영 부담을 만들었다.
   모바일 앱의 장비 목록·인력 목록 검색 화면은 수만 건 규모의 데이터가 한 번에
@@ -432,8 +511,12 @@ facts in drafted application text.
     플랫폼별 요구 대응 속도·공통 규칙 일관성
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
-  REST API, MyBatis, MySQL, Recoil, TanStack Query (React Query), SQLite,
+  REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
   Firebase FCM
+  **[DB 정정 — user-attested 2026-07-27, 이력서 재작성 세션]**: 삼성물산
+  프로젝트 DB는 Oracle. 기존 기록의 "MySQL" 표기는 오기였으므로 Oracle로
+  정정함(MyBatis 사용 사실은 유지, 변경 없음). 문서 근거 없음, 소유자 구두
+  확인.
 - Result:
   - 대용량 데이터 조회와 모바일 검색 체감 성능 개선
 - Metrics:
@@ -458,11 +541,15 @@ facts in drafted application text.
     경계), API 호출 사용자 행동 단위 설계(debounce·캐시·race condition 방지),
     클라이언트 필터링↔서버 검색 경계 판단, 웹/RN 공통화 범위 제한(로직·타입
     공유·UI 분리).
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 팀
+    규모(삼성물산 프로젝트 팀원 10명) 신규 확인. DB 정정: 기존 "MySQL" 표기는
+    오기이며 실제 DB는 Oracle(MyBatis는 그대로 유지). 문서 근거 없음, pending
+    documentary source.
 - Reusable keywords: 데이터 시각화, Vue 3, ECharts, RealGrid, React Native,
   REST API, Lazy Rendering, DB 인덱싱, DTO projection, 풀스택, 성능 개선,
   FlatList 가상화, 클라이언트 렌더링 최적화, 측정 기반 병목 진단,
   getItemLayout, 상태 관리 경계, React Query, debounce, race condition 방지,
-  클라이언트/서버 검색 경계, 웹/RN 공통화
+  클라이언트/서버 검색 경계, 웹/RN 공통화, Oracle
 - Notes for tailoring: 데이터 플랫폼, 모바일 앱, 대시보드 직무에 활용.
   2.5초→1초대 수치를 인용할 때는 측정 조건(데이터 규모·네트워크)이 문서로
   특정되지 않았음을 인지하고, 조건을 창작하거나 새 수치를 추가하지 않는다.
@@ -471,6 +558,10 @@ facts in drafted application text.
   재렌더링 제거를 주요 개입으로 표기하고, debounce/캐싱/서버 쿼리 개선보다
   효과가 컸다는 점을 함께 병기할 것. 서버 페이지네이션·검색 결과 개수 제한은
   미적용(향후 방향 인식)이므로 실제 구현처럼 서술하지 않는다.
+  **DB 정정 가드레일(user-attested 2026-07-27)**: 이 프로젝트의 DB는 Oracle이다
+  — 과거 기록의 "MySQL" 표기를 그대로 재사용하지 말 것. 팀 규모(10명)는 문서
+  근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료 확인을
+  요청할 것.
 
 ### 한국미스미 글로벌 B2B 커머스 개선 및 Next.js 전환
 
@@ -567,6 +658,9 @@ facts in drafted application text.
     2022.06~2024.10 기간의 3-프로젝트 구성 및 성과 수치 귀속 확정 — 8초→2초
     (유지보수·성능 개선), 50% 개선(Next.js 전환), 체류 시간 32%(기능 고도화).
     (4) RxJS 실사용 확인 — 구체적 쓰임(어느 기능·패턴) [확인 필요].
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 팀
+    규모(한국미스미 프로젝트 팀원 6명) 재확인. 기존 Role의 "본인 포함 6명
+    팀원이 수행" 기록과 일치, 변경 없음.
 - Reusable keywords: B2B 커머스, Next.js 전환, 레거시 개선, 성능 최적화, SEO,
   모니터링, 크로스보더 프로젝트, 한일 협업, React 리드, 마이그레이션,
   SSR/CSR 렌더링 경계, LCP, hydration, 렌더링 분리, 아키텍처 통일,
@@ -632,8 +726,8 @@ facts in drafted application text.
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인,
     원본 평가 문서에 없던 신규 항목)
   - 개발 세미나 12회 운영, 기술 문서 48건 축적
-- Technologies: AI코치, WebView, React, Next.js, Nest.js, AWS S3, AWS EC2,
-  서버리스 배포, Jenkins CI/CD, Storybook, PostHog, Tailwind CSS
+- Technologies: AI코치, WebView, React, Next.js, Nest.js, Zustand, AWS S3,
+  AWS EC2, 서버리스 배포, Jenkins CI/CD, Storybook, PostHog, Tailwind CSS
   - React · Next.js · Nest.js: 바이오에이지(생체나이) 서비스의 기술 스택에 포함됨
     (user-attested 2026-07-25, 포트폴리오 재작성 세션).
     [확인 필요 — 각 스택의 구체 역할: 어느 부분이 Next.js 렌더링이고 어느 부분이
@@ -642,6 +736,16 @@ facts in drafted application text.
     질문받을 수 있으므로 소유자 확인 전까지 심화 역량으로 단정하지 않는다.
     참고: 이 스택은 outputs/portfolio.pdf(2026-07-25 재작성판) 바이오에이지 페이지
     "핵심 기술" 행에 동일하게 사용됨.
+    **[귀속 재확인 — user-attested 2026-07-27, 이력서 재작성 세션]** Nest.js가
+    "백엔드 개발에 사용됨"이라는 사실이 2026-07-27 세션에서 별도로 재확인됐고,
+    소유자가 이를 바이오에이지 서비스 소속으로 명시적으로 확인함 — EXP-01에
+    임시로 기록됐던 항목을 이 항목으로 귀속 정정. 동일 사건이며 별도 사용처
+    아님(위 [확인 필요]는 "어느 부분이 렌더링/서버인지"의 세부 역할 질문으로,
+    귀속 자체는 해소됨).
+  - Zustand: 바이오에이지(생체나이) 서비스의 상태관리 라이브러리로 사용됨
+    (user-attested 2026-07-27, 이력서 재작성 세션 — 소유자 구두 확인, 문서
+    근거 없음). 원래 EXP-01에 임시 귀속으로 기록됐던 항목을 소유자 정정에
+    따라 이 항목으로 이관함. 구체 사용 화면·범위는 [확인 필요].
   - AWS S3 실사용 및 서버리스 환경 개발·배포·빌드 파이프라인 경험 확인됨
     (user-attested 2026-07-24, 바이오에이지 프로젝트).
   - AWS EC2 활용 경험 확인됨 (user-attested 2026-07-24).
@@ -655,7 +759,12 @@ facts in drafted application text.
   - 원문 세부 항목: 비즈케어 1.0억, AI코치 0.2억, 생체나이 2.5억, 에스크미 0.9억. 세부 항목 합계는 4.6억으로 총액 4.66억과 차이가 있어 외부 문서에서는 총액 또는 세부 항목 중 하나만 사용 권장
   - 생체나이 기존 고객 112처 중 93처, 83% 안정 전환
   - AI코치 신규 화면 11건, 신규 기능 13건 개발
-  - 2차 PoC 사용자 3,493명, 사용성 4.18점, 만족도 4.06점, 완성도 4.05점
+  - 2차 PoC 검증 모집단 기준 사용성 4.18점, 만족도 4.06점, 완성도 4.05점.
+    3,493명은 이 PoC를 거쳐 실서비스로 전환된 뒤의 실제 활성 사용자 수 —
+    EXP-01("AI 건강검진 챗봇 제품화 및 플랫폼 확장") Metrics의 [활성 사용자
+    수 — 정정] 항목과 동일 사건(user-attested 2026-07-27, 소유자 구두 확인,
+    문서 근거 없음). 이중 계상 방지: 두 항목에서 각각 독립 수치처럼 표기하지
+    않는다.
   - HTTP/2 전환으로 네트워크 비용 1,200KB -> 900KB, 25% 감소
   - 평균 응답 속도 1.2s -> 0.7s
   - FE 에러 0건
@@ -665,7 +774,16 @@ facts in drafted application text.
   - `sources/연종합평가2025_정다훈.xlsx`
   - `extracted/연종합평가2025_정다훈.md`
   - user-attested 2026-07-23 (headhunter-advisor 인터뷰에서 사용자 직접 확인) — 프로젝트별 기여 성격(비즈케어 UI/UX 개편 주도, 생체나이 외주 V2 유지보수·수정 후 서울성모병원 납품, 에스크미 한국 KMI 유지보수 지원, AI코치 비즈케어 파생 패키지 판매) 및 4.66억(세부 4개 항목 포함)이 개인이 아닌 조직/팀 전체 KR 목표 수치라는 확인
-- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나
+  - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인, 갭 정정) —
+    Nest.js·Zustand가 바이오에이지(생체나이) 서비스 소속임을 명시적으로 확인.
+    EXP-01("AI 건강검진 챗봇 제품화 및 플랫폼 확장")에 임시로 기록됐던 두 항목을
+    이 항목(바이오에이지)으로 귀속 이관함. 문서 근거 없음, pending documentary
+    source.
+  - user-attested 2026-07-27 (같은 세션, 은행-이력서 불일치 정정) — 3,493명은
+    2차 PoC 검증 모집단이 실서비스로 전환된 뒤의 실제 활성 사용자 수임을 확인
+    (EXP-01 Metrics [활성 사용자 수 — 정정] 항목과 동일 사건). 문서 근거 없음,
+    pending documentary source.
+- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand
 - Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다.
 
 ### 비즈36.5 Node.js(Express) BFF 신규 구축 및 AI 챗봇 Python 로직 기여
@@ -763,14 +881,18 @@ facts in drafted application text.
 
 Use this section for short, validated bullet material that can be remixed.
 
-- 3,493명 대상 AI 건강검진 챗봇 PoC를 실서비스로 전환하고, 사용성 4.18점·서비스 만족도 4.06점·완성도 4.05점을 확보했다.
+- AI 건강검진 챗봇을 PoC 검증(사용성 4.18점·서비스 만족도 4.06점·완성도 4.05점)
+  후 실서비스로 전환했고, 전환 후 임직원 대상 실제 활성 사용자 3,493명을
+  확보했다(활성 사용자 수치 정정: user-attested 2026-07-27, 문서 근거 없음).
+  계획 대비 2주 조기로 실서비스 활성화를 달성했다(user-attested 2026-07-27,
+  문서 근거 없음 — PoC 고도화 자체의 일정 단축이 아님에 유의).
 - SSE 기반 실시간 응답과 Markdown 렌더링 안정화로 AI 답변 출력 시간을 10초에서 4초로 60% 단축했다.
 - Config-Driven UI와 Base-Theme 구조로 신규 고객사(웰체크) 온보딩 시 FE 커스터마이징 납품 기간을 10주(최초 챗봇 구현 기간)에서 2주(FE 납품 기준, LLM/BE 일정 별도)로 단축 가능한 구조를 설계했다.
 - B2B 임직원 건강 플랫폼을 9주 내 108개 페이지·82개 화면으로 전환하고, 신규 건강관리 기능 3건을 End-to-End로 개발했다.
 - Playwright E2E 자동화를 단독으로 판단·도입해 600여 건의 회귀 시나리오를 자동화하고
-  무결점 빌드·배포 가능한 상태를 확보했다. 반복 QA 시간은 2시간 → 30분으로 단축됨
-  (user-attested 2026-07-23, headhunter-advisor 인터뷰 최신 실측; 원본 문서 값
-  3시간→1시간, 문서 근거 미확보).
+  무결점 빌드·배포 가능한 상태를 확보했다. 반복 QA 시간은 3시간 → 30분으로 단축됨
+  (user-attested 2026-07-24, grill-me base-resume 세션 최종 확정치; 원본 평가문서
+  값 3시간→1시간, 문서 근거 미확보 — EXP-03 Metrics 가드레일 참조).
 - 운영 데이터 확인 절차를 3단계 수작업에서 1단계 자동화 대시보드로 전환했다.
 - 반복 컴포넌트 개발 시간을 90분에서 15분으로 약 83% 단축했다.
 - 대용량 데이터 대시보드 렌더링 시간을 2.5초에서 1초대로 개선했다.

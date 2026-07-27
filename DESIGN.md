@@ -205,12 +205,53 @@ Scale (print units):
 | Meta (지원자/경력/직무) | `8.2pt` | `1.4` | `400` (value `700`) |
 | Footer | `6.8pt` | `1.4` | `400` |
 
-Emphasis:
+Emphasis — three ink tiers (2026-07-27, 인사·기술·헤드헌터 3자 자문 반영):
 
-- Inline `<strong>` uses weight `800` and keeps `{colors.text}` — emphasis is
-  **bolder ink, not a different color**. Do not color or highlight strong runs.
+| Tier | Weight | Tone | Used for |
+| --- | --- | --- | --- |
+| Body | `400` | `{colors.body}` | 서술·설명 |
+| **Label** | `700` | `{colors.body}` | 불릿 머리표·구조 표지 (`실사용 서비스 전환 —`) |
+| **Emphasis** | `800` | `{colors.text}` | 강조 예산을 쓴 곳 (수치·판단 구절) |
+
+- Emphasis is still **bolder ink, not a different color** — `<strong>` never gets
+  an accent color or a highlight. The tone axis exists only to *de-emphasize*
+  the label tier (same principle as `.stack-paren` / `.core-chips`, both `400`
+  muted), not to colorize emphasis.
+- **Two axes are mandatory, not decorative.** Verified 2026-07-27: the declared
+  `Noto Sans KR` is not installed on the authoring machine, so the PDF actually
+  embeds `AppleSDGothicNeo` in Regular/Bold/ExtraBold — `700` vs `800` does
+  render as distinct faces there. But the fallback `Malgun Gothic` ships only
+  Regular and Bold, so on Windows the weight axis **collapses to two tiers**.
+  The tone difference is what keeps the label tier readable everywhere. Never
+  ship a label tier that relies on weight alone.
+- Label tier must never carry `{colors.text}`; emphasis tier must never carry
+  `{colors.body}`. If both appear on the same line, the tier collapse is visible.
 - Use emphasis for the load-bearing phrase of a sentence (a result, a metric,
-  a capability), not for whole sentences.
+  a judgement criterion), never for whole sentences.
+
+Emphasis placement — **digest policy** (2026-07-27 소유자 지시로 갱신.
+배분 규칙은 `feedback-rules.md` C-03이 정본):
+
+기준은 개수가 아니라 **"볼드만 따라 읽으면 그 자체로 요약본이 되는가"**다.
+소유자 원문: *"bold 처리되는 부분을 읽음으로써 그냥 요약본을 읽은 것처럼
+바로 인지가 되게끔 하고싶어."*
+
+- **Each emphasis span must be a clause that carries subject + result**, not a
+  bare keyword. `2주 납품` alone leaves the reader without "2주 만에 무엇을".
+  Spans must chain into a readable digest when read in sequence.
+- **No per-page count cap.** The shipped 2026-07-27 render carries ~13–21 per
+  경력기술서 page and that is intended.
+- The **label tier stays 700 + body tone.** This is the one constraint that
+  survives — it is what fixed the original "안 읽힌다" problem. Labels must never
+  render at 800, or the digest drowns in uniform bold again.
+- **Bold-removal test still applies**: strip every `<strong>` and the sentence
+  must still read in the same order of importance. C-03 forbids markup in
+  plain-text application forms, so word order is the primary signal.
+
+*Superseded (do not restore without owner instruction)*: the earlier scarcity
+rules — one emphasis per bullet, at least half the bullets carrying none, no two
+on one line, no two consecutive bullets, page budget 4–6. These came from the
+2026-07-27 3자 자문 and were explicitly overridden the same day.
 
 # Layout
 
