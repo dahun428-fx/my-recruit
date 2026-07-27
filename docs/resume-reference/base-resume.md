@@ -163,8 +163,8 @@ FE–BE End-to-End
 
 - AI추진팀 **다나아데이터 스쿼드** (부서 20명 · 스쿼드 10명)
 - 비즈36.5·AI코치·바이오에이지 **3개 서비스 FE 총괄**
-- **신규 기능 End-to-End 개발** (FE React·Next.js / BE Node.js·Spring Boot·Nest.js·MySQL)
-- **LLM 서버 개발 협업** — 프롬프트 구성·응답 후처리 개선과 VectorDB·RAG 구축 참여 (Python·LangChain)
+- **신규 기능 End-to-End 개발** (FE React·Next.js / BE Node.js·Spring Boot·Nest.js·MySQL·PostgreSQL·MongoDB)
+- **LLM 서버 개발 협업** — **프롬프트 구성·응답 후처리 개선**과 VectorDB·RAG 구축 참여 (Python·LangChain)
 - CI/CD·테스트 자동화, 운영 서버 **Blue-Green 무중단 배포** (Jenkins·Docker·Playwright)
 - **AX 전환 리드** (Claude Code·Codex·Harness Engineering)
 
@@ -175,7 +175,7 @@ FE–BE End-to-End
 
 - 한국미스미 6명 · 삼성물산 10명 규모 프로젝트 팀에서 개발
 - 한국미스미 **Global B2B 커머스 신규 개발과 레거시 전환**, **일본 본사와 일본어 직접 협업** (PHP·jQuery → Next.js·TypeScript)
-- 삼성물산 사내 웹·앱 플랫폼 신규 개발·유지보수 (Vue 3·React Native·Spring·Oracle)
+- **삼성물산 사내 웹·앱 플랫폼 신규 개발·유지보수** (Vue 3·React Native·Spring·Oracle)
 - **대용량 데이터 처리 및 처리 소요 시간 단축** (대시보드 렌더링 2.5초 → 1초 · 수만 건 검색 응답 5초 → 1초)
 
 ---
@@ -208,7 +208,7 @@ AI 건강검진 챗봇을 10주 내에 실서비스로 올려야 했습니다. M
 - **SaaS 확장 구조 전환**
   기능별 차등 과금 요구를 아키텍처로 번역, 이미 완성된 코드베이스의 대규모 리팩토링을 감수하고 **Base-Theme·Config-Driven UI로 전환**해 운영·기획자가 고객사별 테마·기능 노출을 직접 제어하도록 구성
 - **LLM 서버 협업**
-  Python 프롬프트 구성·응답 후처리 개선과 VectorDB·RAG 구축 참여
+  **Python 프롬프트 구성·응답 후처리 개선**과 VectorDB·RAG 구축 참여
 
 #### 성과
 
@@ -221,7 +221,7 @@ AI 건강검진 챗봇을 10주 내에 실서비스로 올려야 했습니다. M
 - **품질 체계**
   Vitest 약 2,600케이스·Playwright E2E로 **반복 QA 3시간 → 30분**, PostHog·Web Vitals 기반 사용성 4.18점·만족도 4.06점 확보
 
-기술: React · TypeScript · TanStack Query · Recoil · SSE · Vitest · Storybook · Playwright · PostHog · Node.js · Nginx · Python · FastAPI · LLM
+기술: React · TypeScript · TanStack Query · Recoil · SSE · Vitest · Storybook · Playwright · PostHog · Node.js · MongoDB · Nginx · Python · FastAPI · LLM
 
 ### 2. 대웅제약 | 임직원 건강검진 통합플랫폼 구축
 
@@ -244,11 +244,11 @@ AI 건강검진 챗봇을 10주 내에 실서비스로 올려야 했습니다. M
 - **풀스택 End-to-End 개발**
   신규 건강관리 기능의 **MySQL 데이터 모델, Spring Boot 서버 로직, REST API, Web/Admin 화면까지 전 구간 직접 개발**
 - **BFF 계층 신규 구축**
-  **React 전용 데이터 집계·프록시 API를 Node.js로 구축**, 모놀리식 BE–FE 분리 전략의 일환으로 RESTful 구조 점진 도입
+  **React 전용 데이터 집계·프록시 API를 Node.js로 구축**, **모놀리식 BE–FE 분리 전략의 일환으로 RESTful 구조 점진 도입**
 - **AI 기반 회귀 검증**
   **82개 화면 전환의 UI 회귀 검증**을 Playwright 기반 AI E2E 테스트로 자동화해 반복 UI 검증을 사람 대신 수행
 - **배포 자동화**
-  FileZilla 수동 이관에 의존하던 배포를 개발 서버 Jenkins 파이프라인과 운영 서버 **Docker 기반 Blue-Green 무중단 배포**로 전환, WebView 호환성 검증 기준 수립
+  FileZilla 수동 이관에 의존하던 배포를 **개발 서버 Jenkins 파이프라인**과 운영 서버 **Docker 기반 Blue-Green 무중단 배포**로 전환, WebView 호환성 검증 기준 수립
 
 #### 성과
 
@@ -257,7 +257,7 @@ AI 건강검진 챗봇을 10주 내에 실서비스로 올려야 했습니다. M
 - **단독 풀스택 전환**
   **108개 페이지·82개 화면을 9주 내 단독 전환**, 외주 없이는 못 고치던 서비스를 내부 개발·운영 구조로 전환
 - **데이터-투-화면 E2E 오너십**
-  신규 건강관리 기능을 MySQL 모델부터 서버·API·화면까지 End-to-End 단독 개발
+  신규 건강관리 기능을 **MySQL 모델부터 서버·API·화면까지 End-to-End 단독 개발**
 - **SaaS형 상품 구조**
   고객사별 CI·메뉴·기능 노출 변경을 **1주 내 대응 가능한 구조** 확보
 - **검증·배포 자동화**
@@ -287,7 +287,7 @@ AI 코딩 에이전트를 도입하면 병목은 코드를 만드는 속도가 �
 - **공통 컴포넌트 표준화**
   **Storybook 스토리 210개**로 재사용 컴포넌트를 카탈로그화하고 기획자와 UI를 조기 확정해, 신규 화면 조립을 공통 컴포넌트 기반으로 전환
 - **운영 확인 자동화**
-  GA4·PostHog 기반 운영 데이터 대시보드 구축, 배포 전후 상태와 운영 지표를 비개발 직군도 직접 확인 가능하게 전환
+  **GA4·PostHog 기반 운영 데이터 대시보드 구축**, 배포 전후 상태와 운영 지표를 비개발 직군도 직접 확인 가능하게 전환
 - **학습의 조직 이식**
   외부 컨퍼런스·전문가 인사이트를 흡수해 **개발 세미나 12회**로 팀에 이식하고, 검증 기준·노하우를 **기술 문서 48건으로 자산화**해 신규 합류자도 같은 기준으로 개발 가능하게 정비
 
@@ -324,14 +324,14 @@ AI 코딩 에이전트를 도입하면 병목은 코드를 만드는 속도가 �
 - **모바일 목록 최적화**
   효과가 가장 컸던 **FlatList 가상화·renderItem 재렌더링 제거**를 중심으로 안정적 key 설계·getItemLayout 적용, debounce·캐싱·중복 요청 취소는 보조 개입으로 병행
 - **클라/서버 경계 설계**
-  데이터 규모를 기준으로 클라이언트 필터링과 서버 검색의 경계를 정의, 역할별 데이터 조회·표현 구조 설계
+  **데이터 규모를 기준으로 클라이언트 필터링과 서버 검색의 경계를 정의**, 역할별 데이터 조회·표현 구조 설계
 - **백엔드 응답 경량화**
-  Spring REST API의 필터링·정렬 로직 설계, **DB 인덱싱과 DTO 투영**으로 응답 경량화 직접 수행
+  **Spring REST API의 필터링·정렬 로직 설계**, **DB 인덱싱과 DTO 투영**으로 응답 경량화 직접 수행
 
 #### 성과
 
 - **대시보드 성능 개선**
-  FE 렌더링 생명주기 분리와 BE 인덱싱·DTO 투영을 양단에서 단독 적용해 **대용량 데이터 렌더링 2.5초 → 1초대 단축**
+  **FE 렌더링 생명주기 분리와 BE 인덱싱·DTO 투영을 양단에서 단독 적용**해 **대용량 데이터 렌더링 2.5초 → 1초대 단축**
 - **모바일 검색 개선**
   수만 건 목록의 렌더링 병목을 제거해 **검색 결과 노출 5초 → 1초(약 80%) 단축**
 
@@ -360,7 +360,7 @@ PHP·jQuery 기반 글로벌 B2B 쇼핑몰은 화면 간 결합도가 높아 기
 - **성능 최적화 직접 적용**
   Lighthouse 기반 병목 분석 후 라우트·컴포넌트 단위 code splitting·next/image 최적화·next/link prefetch·번들 청크 분할·Lazy Loading 적용
 - **글로벌 요구 대응·관측성 운영**
-  i18next 기반 **영·중·일 다국어 구조와 SEO 대응**, Lighthouse·GA·Adobe Analytics·Datadog으로 성능·SEO·오류 지표화, Vercel 배포 자동화
+  i18next 기반 **영·중·일 다국어 구조와 SEO 대응**, **Lighthouse·GA·Adobe Analytics·Datadog으로 성능·SEO·오류 지표화**, **Vercel 배포 자동화**
 
 #### 성과
 
@@ -384,10 +384,10 @@ PHP·jQuery 기반 글로벌 B2B 쇼핑몰은 화면 간 결합도가 높아 기
 | --- | --- |
 | AI 활용 개발 | Claude Code · Codex · Harness Engineering · SSE · LangChain · RAG · VectorDB |
 | 프론트엔드 | React · Next.js · Vue 3 · React Native · TypeScript · JavaScript |
+| 백엔드 | Node.js · Express · Nest.js · Java · Spring Boot · Python · FastAPI · REST API |
+| 데이터베이스 | MySQL · Oracle · PostgreSQL · SQLite · MongoDB |
 | 상태관리·데이터 페칭 | TanStack Query · Redux · Recoil · Zustand |
 | UI·시각화 | Tailwind CSS · ECharts · RealGrid · i18next |
-| 백엔드 | Node.js · Express · Nest.js · Java · Spring Boot · Python · FastAPI · REST API |
-| 데이터베이스 | MySQL · Oracle |
 | 품질·검증 | Playwright · Vitest · Jest · Storybook · Chromatic · ESLint |
 | 배포·인프라 | Jenkins · Docker · GitLab CI/CD · Vercel · AWS S3 · EC2 · Nginx |
 | 분석·관측 | Datadog · GA4 · Adobe Analytics · PostHog · Lighthouse |

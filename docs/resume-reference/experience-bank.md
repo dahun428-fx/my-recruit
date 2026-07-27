@@ -78,11 +78,15 @@ facts in drafted application text.
 - Technologies: React, TypeScript, TanStack Query, Recoil, SSE, Chart.js,
   Tailwind CSS, Nginx, FastAPI [사용 위치 확인 필요], Chromatic [UI 테스트 —
   A/B 실험 여부 확인 필요], Web Vitals [운영 방식 확인 필요],
-  Docker [배포 인프라 — EXP-02 Blue-Green 무중단 배포 상세 참조]
+  Docker [배포 인프라 — EXP-02 Blue-Green 무중단 배포 상세 참조], MongoDB
+  (NoSQL)
   (Nginx·FastAPI·Chromatic·Web Vitals user-attested 2026-07-24,
   grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조.
   Docker user-attested 2026-07-27, 이력서 재작성 세션에서 소유자 구두 확인 —
-  문서 근거 없음, pending documentary source)
+  문서 근거 없음, pending documentary source.
+  MongoDB(NoSQL) user-attested 2026-07-27, 같은 세션 — 귀속 확정(이 서비스,
+  AI코치=AI 건강검진 챗봇). 문서 근거 없음, pending documentary source.
+  "Unattributed Technologies" 보류 섹션에 있던 항목을 귀속 확정에 따라 이관.)
   **[정정 — user-attested 2026-07-27, 소유자 갭 정정]** 이전에 이 항목에
   임시 귀속으로 기록됐던 Nest.js·Zustand는 바이오에이지 서비스 소속임을
   소유자가 확인해 EXP-06("2025 대웅제약 성과 평가 기반 사업 기여")으로
@@ -157,12 +161,16 @@ facts in drafted application text.
     거쳐 실서비스로 전환된 뒤의 활성 사용자 수임을 확인. (2) 계획 대비 2주
     조기 달성 대상은 PoC 고도화가 아닌 실서비스 활성화임을 확인. 문서 근거
     없음, pending documentary source.
+  - user-attested 2026-07-27 (같은 세션, 귀속 확정) — MongoDB(NoSQL) 사용처를
+    소유자가 이 서비스(AI코치=AI 건강검진 챗봇)로 확정. "Unattributed
+    Technologies" 보류 섹션에서 이관됨. 문서 근거 없음, pending documentary
+    source.
 - Reusable keywords: AI 서비스 제품화, LLM 챗봇, SSE Streaming, Markdown Renderer,
   XSS 필터링, Config-Driven UI, Base-Theme, feature flag, PoC 고도화,
   컴포넌트 추상화, 변경 이유 기반 공통화, 오류 분류 체계, 오류 처리 경계,
   Nginx, FastAPI, Chromatic, Web Vitals, LLM 릴레이, AI 오케스트레이션,
   i18n, PostHog, GA4, Vitest, Storybook, 다국어, 코드베이스 규모, 다나아데이터
-  스쿼드, Docker
+  스쿼드, Docker, MongoDB, NoSQL
 - Notes for tailoring: AI/플랫폼/프론트엔드 아키텍처 직무에서 최우선 사례로 사용.
   `2026_상반기종합평가`는 2026년 상반기 평가 자료이므로 2025.07~2025.10 프로젝트의
   후속 안정화/확장 성과를 함께 입증하는 보조 근거로만 사용. 신규 고객사 실명 "웰체크"는
@@ -185,6 +193,10 @@ facts in drafted application text.
   않음(EXP-06과 정합).
   **병합 노트**: AI 건강검진 챗봇=AI코치는 동일 서비스. "2025 대웅제약 성과 평가
   기반 사업 기여" 항목의 AI코치 화면·기능 수치와 연결해 사용 가능.
+  **MongoDB 가드레일(user-attested 2026-07-27)**: MongoDB(NoSQL)는 이 서비스
+  (AI코치=AI 건강검진 챗봇) 사용으로 귀속 확정됐으나 구체 용도(어느 데이터,
+  어느 기능)는 아직 특정되지 않았고 문서 근거도 없다 — 고부담 외부 문서에서는
+  뒷받침 자료 확인을 요청할 것.
   **활성 사용자·조기 달성 가드레일(user-attested 2026-07-27)**: (1) 3,493명은
   "PoC 참여자 수"가 아니라 실서비스 전환 후 실제 활성 사용자 수(임직원 대상
   실사용 규모)로 서술할 것 — "3,493명 규모 PoC 운영"처럼 PoC로만 한정해
@@ -517,6 +529,13 @@ facts in drafted application text.
   프로젝트 DB는 Oracle. 기존 기록의 "MySQL" 표기는 오기였으므로 Oracle로
   정정함(MyBatis 사용 사실은 유지, 변경 없음). 문서 근거 없음, 소유자 구두
   확인.
+  **[SQLite 재확인 — user-attested 2026-07-27, 이력서 재작성 세션]**: 소유자가
+  이력서 기술 스택 표(데이터베이스 행)를 재작성하며 SQLite 사용 사실을
+  구두로 재확인. 단, 이 재확인 시점에 특정 프로젝트를 다시 지목하지는
+  않았음 — 은행 내 유일한 기존 SQLite 기록인 이 항목(EXP-04, React Native
+  로컬 저장소 추정)에 동일 사실로 결부해 기록함. 만약 추후 다른 프로젝트
+  귀속이 확인되면 그쪽으로 재이관할 것. 문서 근거 없음, pending documentary
+  source.
 - Result:
   - 대용량 데이터 조회와 모바일 검색 체감 성능 개선
 - Metrics:
@@ -545,6 +564,10 @@ facts in drafted application text.
     규모(삼성물산 프로젝트 팀원 10명) 신규 확인. DB 정정: 기존 "MySQL" 표기는
     오기이며 실제 DB는 Oracle(MyBatis는 그대로 유지). 문서 근거 없음, pending
     documentary source.
+  - user-attested 2026-07-27 (같은 세션, 기술 스택 재확인) — SQLite 사용
+    사실을 소유자가 재확인(구체 프로젝트 재지목은 없었음, 은행 내 유일한
+    기존 SQLite 기록인 이 항목에 결부). 문서 근거 없음, pending documentary
+    source.
 - Reusable keywords: 데이터 시각화, Vue 3, ECharts, RealGrid, React Native,
   REST API, Lazy Rendering, DB 인덱싱, DTO projection, 풀스택, 성능 개선,
   FlatList 가상화, 클라이언트 렌더링 최적화, 측정 기반 병목 진단,
@@ -726,8 +749,9 @@ facts in drafted application text.
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인,
     원본 평가 문서에 없던 신규 항목)
   - 개발 세미나 12회 운영, 기술 문서 48건 축적
-- Technologies: AI코치, WebView, React, Next.js, Nest.js, Zustand, AWS S3,
-  AWS EC2, 서버리스 배포, Jenkins CI/CD, Storybook, PostHog, Tailwind CSS
+- Technologies: AI코치, WebView, React, Next.js, Nest.js, Zustand, PostgreSQL,
+  AWS S3, AWS EC2, 서버리스 배포, Jenkins CI/CD, Storybook, PostHog,
+  Tailwind CSS
   - React · Next.js · Nest.js: 바이오에이지(생체나이) 서비스의 기술 스택에 포함됨
     (user-attested 2026-07-25, 포트폴리오 재작성 세션).
     [확인 필요 — 각 스택의 구체 역할: 어느 부분이 Next.js 렌더링이고 어느 부분이
@@ -746,6 +770,10 @@ facts in drafted application text.
     (user-attested 2026-07-27, 이력서 재작성 세션 — 소유자 구두 확인, 문서
     근거 없음). 원래 EXP-01에 임시 귀속으로 기록됐던 항목을 소유자 정정에
     따라 이 항목으로 이관함. 구체 사용 화면·범위는 [확인 필요].
+  - PostgreSQL: 바이오에이지(생체나이) 서비스에서 사용 중임을 소유자가 귀속
+    확정 (user-attested 2026-07-27, 같은 세션). "Unattributed Technologies"
+    보류 섹션에서 이관됨. 구체 용도(어느 데이터, 어느 기능)는 [확인 필요].
+    문서 근거 없음, pending documentary source.
   - AWS S3 실사용 및 서버리스 환경 개발·배포·빌드 파이프라인 경험 확인됨
     (user-attested 2026-07-24, 바이오에이지 프로젝트).
   - AWS EC2 활용 경험 확인됨 (user-attested 2026-07-24).
@@ -783,8 +811,15 @@ facts in drafted application text.
     2차 PoC 검증 모집단이 실서비스로 전환된 뒤의 실제 활성 사용자 수임을 확인
     (EXP-01 Metrics [활성 사용자 수 — 정정] 항목과 동일 사건). 문서 근거 없음,
     pending documentary source.
-- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand
+  - user-attested 2026-07-27 (같은 세션, 귀속 확정) — PostgreSQL 사용처를
+    소유자가 이 서비스(바이오에이지)로 확정. "Unattributed Technologies"
+    보류 섹션에서 이관됨. 문서 근거 없음, pending documentary source.
+- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL
 - Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다.
+  **PostgreSQL 가드레일(user-attested 2026-07-27)**: PostgreSQL은 바이오에이지
+  서비스 사용으로 귀속 확정됐으나 구체 용도(어느 데이터, 어느 기능)는 아직
+  특정되지 않았고 문서 근거도 없다 — 고부담 외부 문서에서는 뒷받침 자료
+  확인을 요청할 것.
 
 ### 비즈36.5 Node.js(Express) BFF 신규 구축 및 AI 챗봇 Python 로직 기여
 
@@ -899,6 +934,37 @@ Use this section for short, validated bullet material that can be remixed.
 - React Native 앱 검색 응답 시간을 5초에서 1초로 80% 단축했다.
 - PHP 기반 B2B 커머스를 Next.js/React/TypeScript 구조로 전환하며 평균 로딩 속도를 약 50% 개선했다.
 - 2025년 비즈케어·AI코치·생체나이·에스크미 전반에서 원문 기준 총 4.66억 원 매출 기여를 기록했다.
+
+## Unattributed Technologies (Pending Project Attribution)
+
+Use this section for stack items the owner has confirmed as real experience but
+has **not yet attributed to a specific project/EXP entry**. Do not guess or
+assign these to an EXP entry based on plausibility — a prior mistake (Nest.js /
+Zustand initially recorded under the wrong EXP entry, corrected 2026-07-27)
+showed that guessing attribution creates rework and reviewer-facing
+inconsistency. Once the owner names the project, move the row into that EXP's
+Technologies field (with a note) and delete it from here.
+
+| Technology | Status | Source | Note |
+| --- | --- | --- | --- |
+| _(현재 비어 있음 — 2026-07-27 기준 대기 항목 없음)_ | | | |
+
+**해소 이력(참고용, 표에서 제거됨)**: PostgreSQL과 MongoDB(NoSQL)가 이 표에
+있었으나 2026-07-27 같은 세션에서 소유자가 귀속을 확정해 이관됨 — PostgreSQL
+→ EXP-06("2025 대웅제약 성과 평가 기반 사업 기여", 바이오에이지) Technologies,
+MongoDB(NoSQL) → EXP-01("AI 건강검진 챗봇 제품화 및 플랫폼 확장", AI코치와
+동일 서비스) Technologies. 두 항목 모두 [확인 필요] — 사용 프로젝트 미상
+표시는 해제됐고, 출처는 `user-attested 2026-07-27 구두 확인, 문서 근거 없음`
+그대로 유지됨. 상세는 각 EXP의 Technologies/Evidence 참조.
+
+**Note (SQLite는 이 표에 없었음)**: SQLite는 은행에 기존 기록이 있어(EXP-04
+"삼성물산 데이터·모바일 서비스 고도화" Technologies, `sources/이력서_20260624.pdf`
+근거) 이 표에 넣지 않고 해당 EXP-04 항목에 2026-07-27 재확인 노트로
+결부시켰다 — 상세는 EXP-04 Technologies/Evidence 참조.
+
+**섹션 유지 방침**: 위 해소로 표가 비었지만, 귀속 미상 스택을 추정 없이
+대기시키는 이 섹션의 컨벤션 자체는 앞으로도 유용하므로 삭제하지 않고
+유지한다. 새로운 귀속 미상 기술이 확인되면 이 표에 행을 추가할 것.
 
 ## Metrics To Verify
 
