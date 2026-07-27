@@ -804,3 +804,95 @@ p.tech > strong:first-child {
   display: block;
   margin-bottom: 1mm;
 }
+
+/* 1-page visual fill — keep the existing content, use the available paper
+   more deliberately instead of adding more sections. */
+.first-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 18mm;
+  padding-bottom: 17mm;
+}
+
+.first-page .top-title {
+  padding-bottom: 4.5mm;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.first-page .top-title h1 {
+  font-size: 20pt;
+  line-height: 1.25;
+}
+
+.first-page .info-box {
+  min-height: 38mm;
+  margin-top: 4.5mm;
+}
+
+.first-page .photo {
+  height: 38mm;
+}
+
+.first-page .personal {
+  padding-top: 4.5mm;
+  padding-bottom: 4.5mm;
+}
+
+.first-page .name-row h2 {
+  font-size: 13.5pt;
+}
+
+.first-page .contact-grid {
+  margin-top: 4.8mm;
+  font-size: 7.8pt;
+  line-height: 1.45;
+}
+
+.first-page .contact-grid dd.wide {
+  grid-column: auto;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.first-page > .section {
+  margin-top: 9mm;
+}
+
+.first-page > .section + .section {
+  margin-top: 10.5mm;
+}
+
+.first-page > .section > h2 {
+  padding-bottom: 2.4mm;
+  font-size: 13.2pt;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.first-page .copy {
+  margin-top: 3.4mm;
+}
+
+.first-page .copy p {
+  font-size: 8.2pt;
+  line-height: 1.7;
+}
+
+.first-page .core-item {
+  margin-top: 4.4mm;
+}
+
+.first-page .core-item h3 {
+  font-size: 9.6pt;
+  line-height: 1.5;
+}
+
+.first-page .core-chips,
+.first-page .core-evidence {
+  font-size: 8.3pt;
+  line-height: 1.6;
+}
+
+.first-page .core-evidence {
+  margin-top: 2.2mm;
+}
