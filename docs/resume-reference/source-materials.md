@@ -10,6 +10,8 @@ be used when drafting resumes or cover letters.
 | `이력서_20260624.pdf` | Existing resume PDF | `sources/이력서_20260624.pdf` | `extracted/이력서_20260624.txt` |
 | `2026_상반기종합평가.xlsx` | 2026 first-half performance review | `sources/2026_상반기종합평가.xlsx` | `extracted/2026_상반기종합평가.md` |
 | `연종합평가2025_정다훈.xlsx` | 2025 annual performance review | `sources/연종합평가2025_정다훈.xlsx` | `extracted/연종합평가2025_정다훈.md` |
+| `월별피드백_정다훈.xlsx` | 대웅제약 재직 중 월별 자가 피드백 13개월치 (2025.07~2026.07) | `sources/월별피드백_정다훈.xlsx` | `daewoong-history.md` (본인 · 잘한 점 칼럼만 추출, 원문 보존) |
+| `정다훈_직무급 지원서_잡멘토(멘토).docx` | 사내 직무급 지원용 변화혁신과제 보고서 (2026-03 작성, STAR 구조) | `sources/직무급지원서_변화혁신과제_정다훈.docx` | `daewoong-history.md` 부록 A |
 
 ## Use Guidance
 
