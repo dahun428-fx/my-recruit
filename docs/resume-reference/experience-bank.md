@@ -246,6 +246,11 @@ facts in drafted application text.
     2026-07-24).
   - 사용자 권한, 메뉴, 브랜딩, 데이터 출력 정책을 공통 기준으로 정리
   - Jenkins 빌드/검증/배포 파이프라인과 WebView 호환성 검증 기준 수립
+  - **[반응형 웹 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    미디어 쿼리 기반으로 PC/모바일 화면 크기를 구분 대응하는 반응형 웹 개발을
+    수행. 특히 이 서비스는 WebView로 모바일에서 제공되었기 때문에 모바일
+    뷰포트 대응을 중점적으로 신경 씀.
+    문서 근거 없음, pending documentary source.
   - **[배포 자동화 — user-attested 2026-07-25, grill-me base-resume 세션]**
     기존에 FileZilla로 수동 이관·빌드하던 배포를 본인이 직접 Jenkins
     빌드·검증·배포 파이프라인으로 전환. 배포 리드타임 10분→2분(80% 단축) —
@@ -305,7 +310,7 @@ facts in drafted application text.
 - Reusable keywords: B2B 플랫폼, 풀스택 내재화, Spring Boot, MySQL, Web/Admin,
   WebView, Jenkins CI/CD, SaaS형 구조, island-loader 패턴, 점진적 SPA 전환,
   임직원 건강검진 통합플랫폼, 레거시 전면 개편, 배포 자동화, Playwright E2E,
-  비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포
+  비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포, 반응형 웹, 미디어 쿼리
 - Notes for tailoring: 풀스택/플랫폼/운영 안정화 직무에 적합. 108개 페이지·
   82개 화면 전환은 개인 단독 기여이므로 "본인이 단독으로 수행"이라는 개인
   기여 프레이밍을 사용할 수 있다. island-loader 패턴 채택은 당시 모놀리식·
@@ -371,6 +376,13 @@ facts in drafted application text.
   - Codex·Claude Code 등 AI 코딩 에이전트를 활용한 개발과, 생성 코드의 검증·금지
     패턴·보안 기준 수립 (user-attested 2026-07-22 — AX본부 JD 대응 세션에서 사용자
     직접 확인. 문서 근거 미확보, pending documentary source)
+  - **[GitLab MR 기반 코드 리뷰 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    대웅제약 재직 중 GitLab MR(Merge Request) 기반 코드 리뷰 문화를 실무로
+    경험 — 리뷰를 받는 쪽(작성자)과 동료 코드를 리뷰하는 쪽(리뷰어) 모두
+    수행(양방향). 추가로 AI 코드 리뷰 도구를 MR 리뷰 흐름에 도입·활용하는
+    경험 있음(AI 코드 리뷰가 기존 GitLab MR 리뷰 프로세스에 편입됨).
+    ※ GitHub PR 실무 경험은 아님 — 반드시 "GitLab MR"로 정확히 표기할 것.
+    문서 근거 없음, pending documentary source.
   - 외부 컨퍼런스 참석·학습으로 얻은 인사이트를 사내 개발 세미나(12회)로 이식하는
     구조 운영 — 외부 발표가 아닌 내부 공유 세미나임. 세미나 12회 수치는 "2025 대웅제약
     성과 평가 기반 사업 기여" 항목의 Actions와 동일 출처.
@@ -431,7 +443,7 @@ facts in drafted application text.
     documentary source.
 - Reusable keywords: Playwright, Storybook, FE AX, SOP, 품질 자동화, 운영 데이터
   대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입, Figma, Jira,
-  Slack, Confluence, Notion, 협업 도구
+  Slack, Confluence, Notion, 협업 도구, GitLab MR, 코드 리뷰, AI 코드 리뷰
 - Notes for tailoring: 생산성/품질/AI 개발 프로세스 개선을 강조할 때 사용.
   **AI 테크 리더 포지셔닝(user-attested 2026-07-25, grill-me base-resume 세션)**:
   소유자가 이 항목을 "AI 자동화 수준 + 조직 자산화 + 리더십·학습 능력 + 조직
@@ -644,6 +656,10 @@ facts in drafted application text.
     경계 구현 판단"으로 스코프를 한정함 — 아키텍처 귀속 가드레일과
     일관.) 검증 관점: 초기 HTML·LCP·hydration 시간·인터랙션 지연
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
+  - **[반응형 웹 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    미디어 쿼리 기반으로 PC/모바일 화면 크기를 구분 대응하는 반응형 웹
+    개발을 수행.
+    문서 근거 없음, pending documentary source.
 - Technologies: Next.js, React, TypeScript, JavaScript, Redux,
   RxJS [실사용 확인(user-attested 2026-07-25, grill-me base-resume 세션) —
   구체적 쓰임(어느 기능·패턴) [확인 필요]], i18next, PHP, jQuery, Twig,
@@ -658,6 +674,10 @@ facts in drafted application text.
     확인, 원본 이력서 표현 유래 (user-attested 2026-07-25, grill-me
     base-resume 세션). 귀속: 기능 고도화 프로젝트.
     측정 도구·기간 상세 [확인 필요 — 면접 대비 확인 항목]
+  - **[서비스 규모 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    월 방문자 약 112만, 상품 SKU 약 10만. 재직 당시 소유자가 Google
+    Analytics·Adobe Analytics 대시보드를 직접 확인해 파악한 수치.
+    문서 근거 없음, pending documentary source.
 - Evidence / links:
   - `sources/이력서_20260624.pdf`
   - `extracted/이력서_20260624.txt`
@@ -684,10 +704,15 @@ facts in drafted application text.
   - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 팀
     규모(한국미스미 프로젝트 팀원 6명) 재확인. 기존 Role의 "본인 포함 6명
     팀원이 수행" 기록과 일치, 변경 없음.
+  - user-attested 2026-08-10 (티빙 grill-me 세션) — 반응형 웹(미디어 쿼리 기반
+    PC/모바일 대응) 개발 수행 확인. 서비스 규모: 월 방문자 약 112만·상품 SKU
+    약 10만을 소유자가 재직 당시 GA·Adobe Analytics 대시보드에서 직접 확인.
+    두 사실 모두 문서 근거 없음, pending documentary source.
 - Reusable keywords: B2B 커머스, Next.js 전환, 레거시 개선, 성능 최적화, SEO,
   모니터링, 크로스보더 프로젝트, 한일 협업, React 리드, 마이그레이션,
   SSR/CSR 렌더링 경계, LCP, hydration, 렌더링 분리, 아키텍처 통일,
-  Datadog 관측성, UI/UX 현대화, 일본어 직접 소통, JLPT, 체류 시간, RxJS
+  Datadog 관측성, UI/UX 현대화, 일본어 직접 소통, JLPT, 체류 시간, RxJS,
+  반응형 웹, 미디어 쿼리, 월 방문자 112만, 대규모 트래픽
 - Notes for tailoring: 커머스/프론트엔드 성능 개선 사례로 활용. **아키텍처
   귀속 가드레일(user-attested 2026-07-23)**: 전체 아키텍처 구조는 일본 본사가
   설계했으므로 본인을 아키텍처 원설계자로 표기하지 않는다 — "한국 web 마이그
@@ -713,6 +738,12 @@ facts in drafted application text.
   **RxJS 가드레일(user-attested 2026-07-25)**: RxJS 실사용은 확인됐으나
   구체적 쓰임(어느 기능·패턴)은 [확인 필요]. 면접에서 구체 사용 패턴을
   질문받을 수 있으므로 소유자 확인 후 외부 문서에 상세 서술할 것.
+  **서비스 규모 가드레일(user-attested 2026-08-10)**: 월 방문자 약 112만·
+  상품 SKU 약 10만은 소유자가 재직 당시 GA·Adobe Analytics 대시보드에서
+  직접 확인한 수치다. 이력서·자기소개서에서 이 수치를 사용할 때는 반드시
+  "GA·Adobe Analytics 기준" 스코프를 병기할 것. 문서 근거 없음(pending
+  documentary source)이므로 고부담 외부 문서에서는 소유자에게 뒷받침 자료
+  확인을 요청할 것.
 
 ### 2025 대웅제약 성과 평가 기반 사업 기여
 
@@ -739,6 +770,13 @@ facts in drafted application text.
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
   - 생체나이(바이오에이지) 서비스 UI와 데이터 운영 리스크 제거 — 외주로 도입된 V2
     버전을 본인이 유지보수·수정하여 서울성모병원에 납품.
+    **[Electron CA]** 바이오에이지 CA(Client Agent)는 Electron 기반 데스크톱
+    애플리케이션이며, 소유자가 해당 서비스를 유지보수한 경험 있음
+    (user-attested 2026-08-10, 네이버웹툰 grill-me 세션). 세부 작업 범위
+    (메인 프로세스/IPC/자동 업데이트/패키징/렌더링·캐싱·오프라인 여부)는
+    [확인 필요] — 이력서에는 "Electron 기반 Client Agent 유지보수" 범위로만
+    노출하고, 세부 Electron 역량(IPC 설계·패키징 등)을 단정 서술하지 않는다.
+    면접 대비로 세부 범위 소유자 정리 권장.
     **[AWS 인프라]** 바이오에이지 프로젝트에서 AWS S3를 활용해 서버리스 환경에서
     개발·배포·빌드를 수행했으며 AWS EC2도 함께 활용함
     (user-attested 2026-07-24, 소유자 갭 인터뷰).
@@ -751,7 +789,8 @@ facts in drafted application text.
   - 개발 세미나 12회 운영, 기술 문서 48건 축적
 - Technologies: AI코치, WebView, React, Next.js, Nest.js, Zustand, PostgreSQL,
   AWS S3, AWS EC2, 서버리스 배포, Jenkins CI/CD, Storybook, PostHog,
-  Tailwind CSS
+  Tailwind CSS, Electron (바이오에이지 CA 유지보수 — user-attested 2026-08-10,
+  세부 범위 [확인 필요], 문서 근거 없음)
   - React · Next.js · Nest.js: 바이오에이지(생체나이) 서비스의 기술 스택에 포함됨
     (user-attested 2026-07-25, 포트폴리오 재작성 세션).
     [확인 필요 — 각 스택의 구체 역할: 어느 부분이 Next.js 렌더링이고 어느 부분이
@@ -776,7 +815,17 @@ facts in drafted application text.
     문서 근거 없음, pending documentary source.
   - AWS S3 실사용 및 서버리스 환경 개발·배포·빌드 파이프라인 경험 확인됨
     (user-attested 2026-07-24, 바이오에이지 프로젝트).
+    **[AWS 스코프 정밀화 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    S3·EC2는 구성된 환경 위에서 배포 파이프라인을 운영한 범위이며, 버킷/
+    인스턴스를 본인이 직접 설계·구축한 것은 아님. 이력서 동사는 "활용·운영"을
+    쓰고 "구축"은 쓰지 않는다. 문서 근거 없음, pending documentary source.
   - AWS EC2 활용 경험 확인됨 (user-attested 2026-07-24).
+    (AWS EC2도 위 S3 스코프 정밀화와 동일한 "운영 범위" 가드레일 적용:
+    인스턴스 직접 설계·구축 아님, 동사는 "활용·운영"으로 한정.
+    user-attested 2026-08-10, 티빙 grill-me 세션)
+  - **[CloudFront 갭 — user-attested 2026-08-10, 티빙 grill-me 세션]**
+    CloudFront 활용 경험 없음 확정 — 미기재 대상. 향후 CloudFront 관련
+    JD 대응 시 갭으로 처리할 것. 문서 근거 없음.
   - [GCP 갭] GCP 활용 경험 없음 — 소유자가 명시적으로 "GCP는 활용해본 적 없음"
     확인. 향후 GCP 관련 JD 대응 시 갭으로 처리할 것.
     (user-attested 2026-07-24, 소유자 갭 인터뷰)
@@ -814,12 +863,17 @@ facts in drafted application text.
   - user-attested 2026-07-27 (같은 세션, 귀속 확정) — PostgreSQL 사용처를
     소유자가 이 서비스(바이오에이지)로 확정. "Unattributed Technologies"
     보류 섹션에서 이관됨. 문서 근거 없음, pending documentary source.
-- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL
+- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL, Electron, Client Agent
 - Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다.
   **PostgreSQL 가드레일(user-attested 2026-07-27)**: PostgreSQL은 바이오에이지
   서비스 사용으로 귀속 확정됐으나 구체 용도(어느 데이터, 어느 기능)는 아직
   특정되지 않았고 문서 근거도 없다 — 고부담 외부 문서에서는 뒷받침 자료
   확인을 요청할 것.
+  **AWS 스코프 가드레일(user-attested 2026-08-10, 티빙 grill-me 세션)**:
+  S3·EC2는 구성된 환경 위에서 배포 파이프라인을 운영한 범위이며, 버킷/인스턴스를
+  본인이 직접 설계·구축한 것은 아님. 이력서·자기소개서에서 동사는 "활용·운영"을
+  쓰고 "구축"은 쓰지 않는다. CloudFront는 무경험 확정(미기재 대상). 두 사실 모두
+  문서 근거 없음, pending documentary source.
 
 ### 비즈36.5 Node.js(Express) BFF 신규 구축 및 AI 챗봇 Python 로직 기여
 

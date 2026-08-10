@@ -358,3 +358,161 @@ facts in drafted application text.
 - Screen profile: AI-Product (근거: ax-harness 프리셋의 Screen profile 제안이 AI-Product. JD가 "AI를 활용해 프로토타입을 배포·운영하고 재사용 표준으로 정리"하는 AI 제품화·하네스 엔지니어링 직무로, AI-Product 루브릭의 AI 제품화·구축 오너십·운영 깊이 축이 JD 핵심과 일치함)
 - Pass bar: 80 (default)
 - Draft status: **완료(정직한 상향지원본) — outputs/gs-retail-ax-full-resume.{md-draft,html,css,pdf} (10p, 정본 페이지 템플릿, headless Chrome 렌더).** full lane. 흐름: 갭 인터뷰(2026-07-24, S3/EC2·RAG/pandas 적재) → writer 재조립 → reviewer(팩트/무결성, must-fix 0)·ats(필수 8/13 강·2 약·3 정직갭) → 적대검증(fresh Claude, 서버리스 우산어·EC2 모순·RAG 톤 지적 반영) → 점수 게이트 **recruiter 71 / tech 73 둘 다 FAIL(bar 80, 블로커 0)** → P-01대로 구조적 블로커(GCP·DynamoDB·Lambda 실경력 부재, 날조 불가)로 3라운드 강행 대신 점수·블로커 보고, 소유자 "정직한 상향지원" 확정으로 진행 → 요약 서버리스 우산어 최종 정리 → 최종 무결성 재검(통과) → designer 렌더. companion: outputs/gs-retail-ax-new-prose.md. 이전 초안(ax-harness-engineering-resume-draft.md, 76/59캡)은 별도 파일로 보존. 자기소개서는 소유자 요청 시 이력서 확정 후 작성(서버리스·GCP 갭 정직 방어 서술). Codex 미사용(P-02). [2026-07-24 하우스 포맷 개정] 소유자 피드백 10건 반영 — 합니다체 전환·강점 볼드·요약 강점부각·섹션 재편(인적사항→요약→핵심성과→경력→기술→경력기술서→학력·교육·자격·어학)·헤드라인 축약·[주요 업무] 라벨·학력(여의도고)·교육(중앙에이치티에이) 추가. reviewer 재검 통과, designer 재렌더(12p). 이 피드백에서 하우스 규칙 승격: T-05(산문 합니다체)·F-07(섹션 순서)·F-01([주요 업무] 라벨)·F-03(헤드라인 간결) — feedback-rules.md.
+
+### 스마일게이트 / [AI센터] AI 웹서비스 개발 담당 (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-08-04 수집 — 스마일게이트 채용 페이지
+- Application deadline: 2026.08.31
+- Target position: AI 웹서비스 개발 담당 (경력) / AI센터 — AX 포털 고도화 및 신규 AI 웹서비스 개발·운영
+- Role preset: fullstack   (2026-08-04 브리프 승인. 승인된 예외: ①핵심 성과·기술 표에서 Java·Spring 상단 가시화 ②스마일게이트 AI센터 연결 동기 문장 추가 ③비전공 보완 신호(정보처리기사·Java 교육과정) 1페이지권 강화 ④EXP-01 AI 웹서비스 레이어를 fullstack 표준 순서보다 전진)
+- Required skills:
+  - 컴퓨터 관련 학과 대학교 졸업(학사) 이상
+  - Java 개발 경력 3년 이상 (혹은 그에 준하는 역량)
+  - Java / Spring Framework / Spring Boot 사용 경험
+  - Java를 활용한 웹서비스 설계 및 개발 경험
+  - Restful API 활용 경험
+- Preferred skills:
+  - React, Vue.js 등 JavaScript 기반 프론트엔드 기술 경험
+  - UML 기반의 분석 설계 경험
+  - DB 스키마 설계 경험
+  - AI 서비스 프로토타입 개발에 관심
+  - K8S, CI/CD에 관심
+  - 신기술 도전에 두려움 없는 분
+- Company / team signals:
+  - AI센터: AX 포털 고도화 + AI 활용 웹서비스·서비스 플랫폼 비즈니스 구조 설계 및 개발
+  - AI 기술을 탑재한 웹 기반 서비스 개발·관리
+  - Java/Spring 백엔드 축 + React/Vue.js 프론트엔드 축의 풀스택 지향 조합
+  - 스마일게이트: 글로벌 게임·엔터테인먼트 기업, AI센터는 내부 AX 플랫폼 성격
+- Job scope:
+  1. AX 포털 고도화 및 신규 기능 추가
+  2. AI 활용 웹서비스 및 서비스 플랫폼 비즈니스 구조 설계·개발
+  3. AI 기술을 탑재한 웹 기반 서비스 개발·관리
+- Candidate evidence to emphasize:
+  - EXP-02: Java·Spring Boot·MySQL·REST API End-to-End 개발, DB 스키마(MySQL 데이터 모델) 직접 설계 → 자격요건 정면 충족
+  - EXP-04: Spring REST API 필터링·정렬·역할별 조회 설계, DB 인덱싱·DTO 투영 → Java/Spring 백엔드 실무 심도
+  - EXP-01: React 기반 AI 웹서비스 구조 설계·개발·운영, AI 챗봇 제품화·SSE·LLM 서버 협업 → AI 웹서비스 개발 직접 부합
+  - EXP-05: React/Next.js 프론트엔드 + Vue 3 경험 → 우대 FE 기술 충족
+  - EXP-03: Jenkins CI/CD·GitLab CI/CD·Playwright E2E 파이프라인 → CI/CD 관심 신호
+  - 정보처리기사(2020.08) + 웹 응용SW엔지니어링 교육과정(2020.03~09, Java 기반 웹 개발) → 컴공 비전공 보완 신호
+- Risks or gaps:
+  - [구조적 갭] 컴퓨터 관련 학과 요건: 성공회대 일어일본학과. 정보처리기사 + 응용SW엔지니어링 과정(Java 기반 웹 개발)으로 보완하나 직접 충족 아님. 이력서 상단 교육·자격 신호 강화 필요.
+  - [갭 인터뷰 완료 2026-08-04] UML: 소유자가 실무 경험은 있다고 답했으나 **미기재로 결정** ("uml 실무 경험은 따로 쓰지말자") — 이력서·자소서에 쓰지 않는다.
+  - [갭 인터뷰 완료 2026-08-04] Java 실무 기간: 소유자 확인 — 내담 초기 20개월(2020.10~2022.05)에 Java/Spring 실무가 있었음(세부 미제공, experience-bank 미적재·이력서 미기재 유지). **Spring 서사는 비즈36.5(EXP-02) 중심으로 싣기로 결정.** 3년 요건은 "그에 준하는 역량" 트랙 + 면접 방어.
+  - [갭 인터뷰 완료 2026-08-04] K8S: 접점 없음 — 미기재, CI/CD 실무(Jenkins·GitLab CI/CD·Docker·Blue-Green)로만 우대 대응.
+  - base 원본 채점 이슈: 이력서 상단 1/3에 "Java" 단어 자체 미노출(요약 스택 나열 부재), 동기·문화 신호 전무.
+- Keywords to include:
+  - Java, Spring Framework, Spring Boot, RESTful API, 웹서비스 설계·개발, DB 스키마 설계, MySQL, React, Vue.js, CI/CD, AI 웹서비스, AI 서비스, 풀스택
+- Screen profile: Balanced   (2026-08-04 소유자 승인 — JD가 Java/Spring 스택 고정형이라 AI-Product 루브릭 부적합)
+- Pass bar: 80 (default)
+- Draft status: **완료 (2026-08-04)** — outputs/smilegate-full-resume.{html,css,pdf} (9p, 오버플로우 0, base 캐논 재사용).
+  초안 outputs/smilegate-full-resume-draft.md + companion smilegate-new-prose.md.
+  reviewer 3회(무결성 2·최종 1)·적대 검증 1회·게이트 3라운드: 인사 74→75.5→74.5 FAIL / 기술 72→77.5→83 PASS.
+  AND 게이트 미통과(잔여 감점은 구조적: 비전공·Java 연수·내담 초기 공백, 날조 불가) →
+  **소유자 결정: 정직한 상향지원으로 출고** (2026-08-04, 카카오페이·GS리테일 전례). 헤드라인 base 유지 확정(대안 A 미채택).
+  후속(2026-08-04 소유자 지시): 요약 볼드 5곳 추가, 미스미 기간 라인 "3개 프로젝트" 제거(변형 한정),
+  자기소개서 base 정본 합본 — outputs/smilegate-full-resume-with-self-intro.{html,css,pdf} (12p = 이력서 9p + 자소서 3p, 자소서는 base verbatim·타겟 편집 없음).
+
+### 네이버웹툰 / 프런트엔드 개발자 (글로벌 웹 플랫폼) (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-08-10 수집 — NAVER WEBTOON Careers
+- Application deadline: 2026.07.27 ~ 2026.08.17 (23:59)
+- Target position: 프런트엔드 개발자 (경력) / 글로벌 웹 플랫폼 팀 — 웹툰CONNECT(창작자·비즈니스 파트너 포털: 원고 관리·정산·계약), 팬 커뮤니티 서비스, 라인망가 웹 서비스. 근무지 정자동 그린팩토리
+- Role preset: fe-platform   (2026-08-10 그릴링 세션 승인. 승인된 예외: ①강조 순서를 프리셋 기본(EXP-01 선두)이 아닌 **경력 역순**(대웅 → 삼성물산 → 미스미)으로 — 소유자 지시 ②헤드라인·요약·핵심 성과에서는 미스미(EXP-05: 레거시→Next.js 아키텍처 개편·SSR·다국어·성능)를 리드 스토리로 ③일본어 협업 카드(JLPT 1급·무인양품 도쿄 근무)를 어학·요약에 명시)
+- Required skills:
+  - FE 개발 경력 4년 이상 혹은 그에 준하는 역량
+  - React, TypeScript 능숙, Next.js 등 SSR 환경·Node.js 서버 사이드 동작 이해
+  - 공통 컴포넌트 설계·코드 구조 개선
+  - 복잡한 비즈니스 요구사항의 견고한 프런트엔드 모델링
+  - 렌더링 성능·사용자 경험 품질
+  - 기획·디자인·타 개발 조직과의 협업 리드
+- Preferred skills:
+  - 대규모 코드베이스 아키텍처 설계·구조 개편 주도
+  - 정산·계약 등 복잡한 비즈니스 도메인
+  - Cursor·Claude Code·Copilot 등 AI 도구·LLM API 실무 활용
+  - Electron 등 웹 기술 기반 데스크톱 앱
+  - EPUB·Canvas·WebGL 등 콘텐츠 뷰어·미디어 렌더링
+  - Node.js BFF 개발·운영, Docker·K8s 컨테이너 배포
+  - 다국어 서비스 개발, 영어·일본어 협업 커뮤니케이션
+- Company / team signals:
+  - 글로벌 콘텐츠 서비스(국내+일본+글로벌 팬), 일본 현지 기획·디자인 조직과 협업
+  - 질문이 자연스러운 수평 문화, 스스로 문제를 과제로 만들어 설득·리드
+  - 코드리뷰·기술 공유·스터디, AI 코딩 도구 적극 도입(AX 과제 발굴·주도)
+  - Next.js SSR 서버가 BFF 역할, 사내 Docker 기반 클라우드 배포·모니터링 직접 수행
+- Job scope:
+  1. 웹툰CONNECT FE 개발·고도화 (원고 관리·정산·계약의 복잡한 요구사항 → 직관적 UX)
+  2. 팬 커뮤니티·라인망가 웹 서비스 (다국어·다지역, 일본 조직 협업)
+  3. Electron 기반 데스크톱 뷰어 (렌더링·캐싱·오프라인) — 참여 가능성 항목
+  4. React·TypeScript·Next.js(SSR)+BFF 설계·개발·운영, Docker 배포·모니터링
+  5. AI 도구·LLM 활용 AX 과제 발굴·주도
+- Candidate evidence to emphasize:
+  - EXP-05 미스미: PHP/jQuery 레거시 → Next.js/React/TypeScript 전환 주도, SSR·성능(8초→2초)·다국어·SEO·모니터링 → 필수(SSR·성능·아키텍처 개편) + 우대(대규모 개편 주도·다국어) 정면 대응. **리드 스토리**
+  - EXP-01/03: Config-Driven UI·Base-Theme·공통 컴포넌트·Storybook, "변경 이유가 같은 것만 공통화" 기준 → 공통 컴포넌트 설계·코드 구조 개선
+  - EXP-01·자소서 항목 3: 고객사별 기능·가격 정책의 제품 규칙화, 비즈36.5 권한·메뉴·정책 구조화 → 복잡한 비즈니스 요구사항의 FE 모델링 (정산·계약 도메인 전이 어필)
+  - EXP-07: Node.js(Express) BFF 신규 구축 → Node BFF 우대 (C-01: "신규 BFF 구축" 범위)
+  - EXP-02: Docker 기반 Blue-Green 무중단 배포·Jenkins → Docker 배포 요건
+  - EXP-03: Claude Code·Cursor 실무, FE AX SOP·하네스, 세미나 12회·문서 48건 → AI 도구/AX 과제 정면 대응
+  - EXP-06: 바이오에이지 CA(Electron) 유지보수 (user-attested 2026-08-10) → Electron 우대 한 줄
+  - JLPT 1급(2018.08)·무인양품 도쿄 지사 근무·TOEIC 825 → 일본어 협업 우대 (라인망가·일본 조직)
+- Risks or gaps:
+  - 경력 4년+ 요건: 총 5년 9개월로 충족 — 연차 리스크 없음
+  - [갭 인터뷰 완료 2026-08-10] Electron: 바이오에이지 CA 유지보수 실경험 확인(user-attested). 세부 범위 미확인 — "유지보수" 한 줄 노출만, IPC·패키징 등 단정 금지. 면접 대비 세부 정리 권장
+  - [갭 인터뷰 완료 2026-08-10] Canvas·WebGL·EPUB: 무경험 확정 — 미기재. ECharts·RealGrid 대용량 시각화는 그대로 두되 "Canvas 경험"으로 표기하지 않음
+  - [갭 인터뷰 완료 2026-08-10] 정산·계약 직접 경험 없음 — 비즈36.5 정책 구조화·미스미 견적·주문으로 도메인 전이 어필만, 정산·계약 개발 이력 창작 금지
+  - K8s 무경험(2026-08-04 확정) — 미기재, Docker·Blue-Green 실무로만 대응
+  - 웹툰·콘텐츠 도메인 무경험 — 우대 아님, 글로벌 B2B 커머스·다국어로 전이
+- Keywords to include:
+  - React, TypeScript, Next.js, SSR, Node.js, BFF, 공통 컴포넌트, 디자인시스템, Storybook, 레거시 전환, 아키텍처 개편, 렌더링 성능, 다국어, i18n, 일본어, JLPT, Docker, CI/CD, Claude Code, Cursor, AI 도구, AX, Electron, 코드리뷰, 협업 리드
+- Screen profile: Platform-DS   (2026-08-10 소유자 승인 — 공통 컴포넌트·아키텍처 개편·안정 운영 중심 JD)
+- Pass bar: 80 (default)
+- needs_scope 지표: 스코프 병기 유지 (2026-08-10 소유자 승인 — 두산·카카오페이 전례. base 자소서 verbatim에 수치 포함되므로 문서 간 정합 목적)
+- 자기소개서: base 정본 verbatim 합본 (2026-08-10 소유자 승인 — 타겟 편집 없음, 스마일게이트 방식)
+- Draft status: 진행 중 (2026-08-10 그릴링 세션에서 브리프 승인, fast lane)
+
+### 티빙(TVING) / Frontend Engineer — Web Core Development (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-08-10 수집 — 티빙 대규모 경력 채용
+- Application deadline: 2026-08-17(월) 23:00 KST — 채용 완료 시 조기 마감 가능 명시
+- Target position: Frontend Engineer / Web Core Development 단독 지원 (Player Development 미기입 — 소유자 확정 2026-08-10). PC Web·Mobile Web·App WebView 핵심 사용자 경험 개발·운영
+- Role preset: fe-platform   (2026-08-10 브리프 승인. 생산 방식은 base-resume edit-from-base. 승인된 예외: ①EXP-05 미스미 성능·대규모를 EXP-02보다 전진 배치 ②WebView·반응형·GitLab MR·AWS를 자격요건 정면 대응으로 명시 ③AI 개발 프로세스(FE AX SOP·AI 코드 리뷰)를 담당업무 1번 대응으로 상위 노출)
+- Required skills:
+  - 웹 프론트엔드 3년 이상 8년 미만 — **후보 5년 9개월로 정합, 연차 리스크 없음**
+  - 적정 기술·엔지니어링 역량 균형
+  - 모바일 앱 웹뷰 기반 FE 개발
+  - 반응형 웹 개발 경험
+  - AWS 서비스 활용 경험
+  - GitHub PR 코드 리뷰 문화
+  - 협업 커뮤니케이션
+- Preferred skills: AI 활용 비즈니스 임팩트, 대규모 트래픽 서비스, 실행 책임감, 팀 협업, 구조적 UI 설계·디자인 시스템
+- Company / team signals: 대규모 스트리밍 플랫폼 성능 개선·글로벌 확장 아키텍처, 안정적 서비스 운영. Web Core: 회원·계정·구독·결제 사용자 여정, SEO, MFE 기반 Web Platform, CI/CD 자동화·성능 최적화·품질 관리 체계. 담당업무 1번이 "AI 기술을 활용한 개발 프로세스 개선". 상세 경력기술서 제출 필수(협업 프로젝트 ROLE 명확화). 1차 면접은 티빙 사례 기반 설계 과제(토론·손 설계)
+- Job scope:
+  1. AI 기술 활용 개발 프로세스 개선
+  2. TVING 웹·스마트TV 서비스 개발·운영
+  3. 모바일 앱 웹뷰 기능 개발·운영
+  4. FE 성능 최적화·배포 환경 고도화
+  5. 공통 모듈·패키지 설계·개발
+- Candidate evidence to emphasize:
+  - EXP-05 미스미: 성능(8초→2초·평균 로딩 50%)·SEO·월 방문자 112만(GA·Adobe Analytics 기준, user-attested 2026-08-10)·반응형 → 성능·대규모·SEO·반응형
+  - EXP-02 비즈36.5: WebView 앱 운영·호환성 검증·반응형(미디어 쿼리, WebView 모바일 전제) → 웹뷰 자격요건 정면
+  - EXP-03: FE AX SOP·Codex/Claude Code·GitLab MR 양방향 코드 리뷰+AI 코드 리뷰 도입·Playwright CI 게이트 → AI 개발 프로세스(담당업무 1)·코드 리뷰 문화·품질 체계
+  - EXP-01: AI 챗봇 제품화(30초→6초·활성 3,493명)·Config-Driven UI·Base-Theme·Storybook → AI 비즈니스 임팩트(우대)·공통 모듈·디자인 시스템
+  - AWS: S3·EC2 배포 파이프라인 운영(구성된 환경 위, user-attested 2026-08-10) → AWS 활용 요건
+- Risks or gaps (갭 인터뷰 2026-08-10 완료):
+  - 반응형: **해소** — 비즈36.5·미스미 미디어 쿼리 기반 PC/모바일 대응 (user-attested 2026-08-10, experience-bank 적재)
+  - GitHub PR: GitLab MR 실무(양방향 리뷰+AI 코드 리뷰)로 정직 인접 표기 — "GitHub PR" 직접 주장 금지
+  - AWS: S3·EC2 "활용·운영" 동사만, "구축" 금지. CloudFront 무경험 — 미기재
+  - MFE: 무경험 확정 — **이력서 완전 미기재** (소유자 결정 2026-08-10). island-loader 서사는 유지하되 MFE 연결 표현 금지. 면접 방어: island-loader 점진 전환을 인접 논리로 준비
+  - 스트리밍/미디어 도메인 무경험: 우대 아님·자격요건 아님, 도메인 창작 금지
+  - needs_scope 지표: base 문면(스코프 병기) 그대로 승계 (2026-08-10 브리프 확정)
+- Keywords to include: Frontend Engineer, WebView(웹뷰), 반응형 웹, 성능 최적화, SEO, AWS, 코드 리뷰, AI 개발 프로세스, 공통 모듈, 디자인 시스템, Config-Driven UI, Storybook, CI/CD, Playwright, 대규모 트래픽, Next.js, React, TypeScript
+- Screen profile: Scale-Perf   (2026-08-10 소유자 승인 — 조직 소개·담당업무가 대규모 스트리밍 성능·안정성 축, 성과임팩트·성과신뢰성 가중이 티빙 스크리너 시선과 부합)
+- Pass bar: 80 (default)
+- 헤드라인/포지션 (2026-08-10 소유자 승인): 포지션 `Frontend Engineer` / 헤드라인 `웹·웹뷰 서비스의 성능 최적화와 AI 기반 개발 생산성 개선을 함께 다루는 Frontend Engineer`
+- 산출물 (2026-08-10 브리프 확정): ①이력서+상세 경력기술서(정본 템플릿 PDF) ②자기소개서 base 정본 verbatim 합본(타겟 편집 없음, 스마일게이트 전례)
+- Draft status: **게이트 통과, diff 승인 대기 (2026-08-10)** — outputs/tving-full-resume-draft.md + companion tving-new-prose.md.
+  edit-from-base(fast lane → 1R 게이트 FAIL로 full lane 전환). reviewer 3회(1차 must-fix 2건: AWS 비즈36.5 오귀속·"반응형 구조 완비" 과장 / 2차 전체 재검 / 최종 무결성 통과)·ats(필수 7/7·우대 5/5)·적대 검증 1회(critical 1: 삼성물산 WebView 무근거 삽입 → base 복원, major: AI 코드 리뷰 자동화 융합 축소).
+  점수 게이트(Scale-Perf/80) 3라운드: 인사 71.7→77.5→**83.2 PASS** / 기술 73(레지스트리 블로커)→78.5→**81.5 PASS** — AND 게이트 통과, 블로커 0.
+  주요 라운드 수정: base 편집 노트 잔존 제거, "2초대(네트워크 수신 기준)"·"Lighthouse 91점(AI 챗봇 화면 기준)"·"사용성·만족도(2차 PoC 검증 기준)" 스코프 병기, 핵심 성과 재배열(①성능 ②AI 프로세스 ③WebView ④챗봇), 티빙 지향 동기 문장, 경력기술서 2번 기간 2026.01~2026.06.
+  기각(base 소유자 확정 승계): 매출 1.0억 문면·"풀스택 총괄"·경력 라인 "2.5초→1초"·체류 32%.
+  면접 대비 메모: 웹뷰 "성능 최적화" 수치는 본문에 없음(호환성 검증·운영까지만) — 비즈36.5 WebView 서빙 성능 연결 논리 준비. MFE는 island-loader 점진 전환 인접 논리로 방어. 내담 초기 20개월 공백 질문 대비.
+  잔여 확인(소유자): 미스미 112만·SKU 10만 문서 근거(pending documentary source — GA/Adobe 스크린샷 확보 권장), AI 코드 리뷰 도구명.
+  다음 단계: 소유자 diff 승인(스톱 ②) → designer 렌더(이력서 9p + 자소서 base verbatim 합본).
