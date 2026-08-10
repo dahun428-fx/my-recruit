@@ -406,6 +406,16 @@ The portfolio harness uses specialist subagents in `.claude/agents/`:
 | `portfolio-story-reviewer` | Critique recruiter-facing project narrative | -- (reports findings) | **read-only** |
 | `portfolio-ux-reviewer` | Critique HTML/PDF layout, visual hierarchy, accessibility, print fit | -- (reports findings) | **read-only** |
 | `portfolio-synthesizer` | Combine findings into prioritized feedback | final review report in `outputs/` | read-write |
+| `portfolio-recruiter-view` | Advisory 0-100 evaluation from a non-technical recruiter's view (인사담당자) | -- (reports score + feedback) | **read-only** |
+| `portfolio-tech-view` | Advisory 0-100 evaluation from an EM/tech-lead's view (기술담당자) | -- (reports score + feedback) | **read-only** |
+| `portfolio-headhunter-view` | Advisory 0-100 evaluation from a headhunter/market view (헤드헌터), incl. format fit vs industry norms | -- (reports score + feedback) | **read-only** |
+
+The three `*-view` evaluators are an **advisory panel**, separate from the
+critic pipeline below: run them (in parallel) when the owner wants a scored
+multi-perspective assessment of the portfolio. Their 80-point bar is a
+reference line, not a gate — low scores mean "report and prioritize," never
+"block and stop." The headhunter evaluator expects a market-research summary
+injected by the orchestrator (see its agent file).
 
 Portfolio source files outside this repository are read-only inputs unless the
 user explicitly asks to import or edit them. Record the path and file list in

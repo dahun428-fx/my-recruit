@@ -1,0 +1,31 @@
+/* Combined 이력서(9p) + 자기소개서(3p) — reuses the base-resume canon
+   template wholesale and adds only the essay-page layer below.
+   (DESIGN.md: same tokens, no new colors/typefaces/fills.) */
+@import url("base-resume.css");
+
+/* 자기소개서 pages — one 항목 per page, prose-first density (larger body
+   than the résumé's spec-style 8.05–8.3pt: essays are read, not scanned). */
+.essay {
+  margin-top: 8mm;
+}
+
+.essay-title {
+  padding-bottom: 3mm;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: 12.6pt;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.essay p {
+  margin-top: 4.2mm;
+  color: var(--body);
+  font-size: 9pt;
+  line-height: 1.88;
+}
+
+.essay p strong {
+  color: var(--text);
+  font-weight: 800;
+}

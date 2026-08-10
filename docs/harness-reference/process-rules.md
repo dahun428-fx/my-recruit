@@ -81,6 +81,7 @@
 - 적용: 2026-07-22 ✓ AX본부 이력서를 recruiter(76)·tech(59 캡) 게이트로 2라운드 채점, 구조적 블로커(서버리스 실경험 부재)로 미통과하자 3라운드 강행 대신 점수·블로커 보고·중단
 - 적용: 2026-07-23 ✓ 넥스트증권 이력서(인사 72→86·기술 84)·자기소개서(인사 78→80.3·기술 74→81.5) 모두 3라운드 내 둘 다 PASS로 통과 후 출고
 - 적용: 2026-07-24 ✓ GS리테일 AX본부 이력서를 recruiter 71·tech 73 게이트로 채점, 구조적 블로커(GCP·DynamoDB·Lambda 실경력 부재, 날조 불가)로 미통과하자 3라운드 강행 대신 점수·블로커 보고·정지, 소유자 "정직한 상향지원" 결정으로 진행(AX본부 전례와 동일 처리)
+- 적용: 2026-08-04 ✓ 스마일게이트 AI센터 이력서를 Balanced(80) 게이트로 3라운드 채점(인사 74→75.5→74.5 / 기술 72→77.5→83 PASS), AND 게이트 미통과로 강행 대신 점수·블로커(0건, 잔여 감점은 구조적: 비전공·Java 연수) 보고 후 정지 — 미달 초안을 통과로 출고하지 않음
 - 범위: Claude
 
 ### P-02 · 위임 · NEVER · probation
@@ -93,6 +94,9 @@ same-model `reviewer`/critics와 점수 게이트(`recruiter-screen`·`tech-scre
 - 적용: 2026-07-24 ✓ GS리테일 AX 이력서 하드닝(적대검증·크리틱·점수 게이트)을 Codex 없이 Claude 서브에이전트(general-purpose 적대검증 + reviewer/ats + recruiter/tech-screen)로 수행
 - 적용: 2026-07-25 ✓ base-resume(마스터 이력서) 전 섹션 자문·하드닝을 Codex 없이 Claude 서브에이전트(recruiter-screen·tech-screen·헤드헌터 페르소나 3종 반복 투입)로 수행 — 재교정 없음
 - 적용: 2026-07-27 ✓ base-resume 전면 재작성 하드닝을 Codex 없이 Claude 서브에이전트(general-purpose 적대 검증 + reviewer 사실 검증)로 수행, 지적 70건을 삼분 처리
+- 적용: 2026-07-27 ✓ (별도 세션) 자기소개서 범용 마스터 v2 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 사실 검증 + general-purpose 적대 검증 + recruiter/tech-screen 3라운드 게이트)로 수행, 적대 지적 삼분 처리
+- 적용: 2026-08-01 ✓ 자기소개서 base 항목 3 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 사실 검증 2회 + recruiter/tech-screen 3라운드 + 헤드헌터 페르소나)로 수행 — 재교정 없음
+- 적용: 2026-08-04 ✓ 포트폴리오 3인 자문 평가 리포트 하드닝을 Codex 없이 Claude 서브에이전트 적대 검증 2라운드(1R 10건 수용, 2R critical 0)로 수행. 같은 날 별도 세션에서 스마일게이트 이력서 하드닝도 Codex 없이 Claude 서브에이전트(reviewer 2회 + general-purpose 적대 검증 + recruiter/tech-screen 3라운드)로 수행
 - 범위: Claude
 
 ### P-03 · 위임 · PREFER · probation
@@ -101,6 +105,9 @@ same-model `reviewer`/critics와 점수 게이트(`recruiter-screen`·`tech-scre
 기본으로 제안한다. 소유자가 생략을 원하면 따른다.
 - 출처: 2026-07-25 base-resume 세션 — 같은 지시("인사담당자·기술담당자·
   헤드헌터에게 리뷰 받아봐") 5회 반복 후 소유자 승인
+- 적용: 2026-08-01 ✓ 자기소개서 base 항목 3 신규 초안에 3자 자문(reviewer/
+  recruiter-screen/tech-screen, v3부터 소유자 지정 "인사·기술·헤드헌터"
+  조합)을 라운드마다 실행 — 재교정 없음
 - 범위: Claude
 
 ## 관찰 로그 (규칙 후보 전 단계)

@@ -115,7 +115,11 @@ Portfolio review has its own subagent harness, also defined in
 `.claude/agents/`: `portfolio-curator`, `portfolio-fact-checker`,
 `portfolio-story-reviewer`, `portfolio-ux-reviewer`, and
 `portfolio-synthesizer`. The canonical roster and handoff order live in
-`AGENTS.md`.
+`AGENTS.md`. A separate **read-only advisory panel** —
+`portfolio-recruiter-view`, `portfolio-tech-view`,
+`portfolio-headhunter-view` — scores the portfolio 0-100 from the
+인사담당자/기술담당자/헤드헌터 perspectives; advisory only, not a gate (see
+`AGENTS.md`).
 
 Claude-specific portfolio notes:
 
