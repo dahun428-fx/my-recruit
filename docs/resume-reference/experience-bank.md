@@ -366,6 +366,19 @@ facts in drafted application text.
     82개 화면 전환의 반복 UI 검증 자동화에 적용된 것이며, EXP-02의 [UI 회귀
     검증] 블록과 동일 사건임. 이중 계상 방지: EXP-02와 EXP-03에서 각각
     독립 도입처럼 표기하지 않는다.
+  - **[UI/UX E2E 테스트 도구 — 본인 구축]** 채팅 화면을 JSON 시나리오로
+    step 단위 자동 조작하는 UI/UX E2E 테스트 도구를 본인이 직접 구축.
+    멀티 viewport 실행(desktop 1280×800 / tablet 768×1024 / mobile
+    375×812)과 시각 회귀 검증(baseline diff, 픽셀 비교 threshold 기본
+    2%) 기능을 갖춤. 위 Playwright 기반 E2E 자동화의 구체 구현체 중
+    하나로 판단됨 — 별도 사건으로 확대 해석 금지.
+    (user-attested 2026-08-11, 문서 근거 미확보)
+  - **[LLM 채팅 응답 검수 도구 — 본인 구축]** 엑셀(.xlsx) 질문 목록을
+    챗봇 화면에 자동 입력하고, 마크다운·표·버튼이 포함된 LLM 응답을
+    회귀 검수(스크린샷/JSON/HTML 갤러리 저장)하는 도구를 본인이 직접
+    구축. UI 전반 E2E가 아닌 LLM 응답 회귀 검수 전용 도구 — 바로 위
+    UI/UX E2E 테스트 도구와는 별개 사건.
+    (user-attested 2026-08-11, 문서 근거 미확보)
   - Storybook 중심의 컴포넌트 개발/검증 절차 수립 — 기획자와의 UI 확정 소통
     수단으로 시작해 디자인시스템급 공통 컴포넌트 체계로 발전
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
@@ -441,9 +454,16 @@ facts in drafted application text.
   - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 협업
     도구(Figma·Jira·Slack·Confluence·Notion) 사용 확인. 문서 근거 없음, pending
     documentary source.
+  - user-attested 2026-08-11 (소유자 구두 확인, 문서 근거 미확보) — 본인이 직접
+    구축한 UI/UX E2E 테스트 도구(JSON 시나리오 기반 채팅 화면 step 자동 조작,
+    멀티 viewport desktop/tablet/mobile, 시각 회귀 baseline diff threshold 2%)와
+    LLM 채팅 응답 검수 도구(엑셀 질문 목록 자동 입력, 마크다운·표·버튼 포함 LLM
+    응답 회귀 검수, 스크린샷/JSON/HTML 갤러리 저장) 두 건 모두 본인 제작임을 확인.
 - Reusable keywords: Playwright, Storybook, FE AX, SOP, 품질 자동화, 운영 데이터
   대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입, Figma, Jira,
-  Slack, Confluence, Notion, 협업 도구, GitLab MR, 코드 리뷰, AI 코드 리뷰
+  Slack, Confluence, Notion, 협업 도구, GitLab MR, 코드 리뷰, AI 코드 리뷰,
+  UI/UX E2E 테스트 도구, 시각 회귀 테스트, visual regression, 멀티 viewport,
+  LLM 응답 회귀 검수
 - Notes for tailoring: 생산성/품질/AI 개발 프로세스 개선을 강조할 때 사용.
   **AI 테크 리더 포지셔닝(user-attested 2026-07-25, grill-me base-resume 세션)**:
   소유자가 이 항목을 "AI 자동화 수준 + 조직 자산화 + 리더십·학습 능력 + 조직
@@ -777,6 +797,17 @@ facts in drafted application text.
     [확인 필요] — 이력서에는 "Electron 기반 Client Agent 유지보수" 범위로만
     노출하고, 세부 Electron 역량(IPC 설계·패키징 등)을 단정 서술하지 않는다.
     면접 대비로 세부 범위 소유자 정리 권장.
+    **[Electron CA 기능 확정]** 위 [확인 필요]를 부분 해소: 이 Electron 기반
+    데스크톱 클라이언트의 명칭은 "Report Export Service Manager"이며, 기능은
+    "리포트 자동 추출"(스케줄러 주기 기반으로 리포트 파일을 자동 다운로드해
+    이미지/PDF로 저장)로 서술 가능. 다만 메인 프로세스/IPC/자동 업데이트/
+    패키징/렌더링·캐싱/오프라인 여부 등 구현 세부는 여전히 미확인이므로
+    이 범위를 넘는 단정 서술은 금지. 소유자가 유지보수한 앱이므로(위
+    [Electron CA] 참조) 이력서 동사는 "유지보수"를 유지하고 "구축"은 쓰지
+    않는다. (user-attested 2026-08-11, 문서 근거 미확보)
+    **[운영관리 시스템 화면]** 바이오에이지 운영관리 시스템의 리포트 관리·
+    표준코드 관리 화면을 본인이 개발/수정함.
+    (user-attested 2026-08-11, 문서 근거 미확보)
     **[AWS 인프라]** 바이오에이지 프로젝트에서 AWS S3를 활용해 서버리스 환경에서
     개발·배포·빌드를 수행했으며 AWS EC2도 함께 활용함
     (user-attested 2026-07-24, 소유자 갭 인터뷰).
@@ -791,6 +822,11 @@ facts in drafted application text.
   AWS S3, AWS EC2, 서버리스 배포, Jenkins CI/CD, Storybook, PostHog,
   Tailwind CSS, Electron (바이오에이지 CA 유지보수 — user-attested 2026-08-10,
   세부 범위 [확인 필요], 문서 근거 없음)
+  - Electron [확인 필요] 부분 해소: 명칭 "Report Export Service Manager",
+    기능 "리포트 자동 추출"(스케줄러 기반 리포트 파일 자동 다운로드·
+    이미지/PDF 저장) — 위 [Electron CA 기능 확정] 블록 참조. 구현 세부
+    (IPC/패키징 등)는 여전히 미확인. 이력서 동사는 "유지보수" 유지, "구축"
+    금지. (user-attested 2026-08-11, 문서 근거 미확보)
   - React · Next.js · Nest.js: 바이오에이지(생체나이) 서비스의 기술 스택에 포함됨
     (user-attested 2026-07-25, 포트폴리오 재작성 세션).
     [확인 필요 — 각 스택의 구체 역할: 어느 부분이 Next.js 렌더링이고 어느 부분이
@@ -863,7 +899,13 @@ facts in drafted application text.
   - user-attested 2026-07-27 (같은 세션, 귀속 확정) — PostgreSQL 사용처를
     소유자가 이 서비스(바이오에이지)로 확정. "Unattributed Technologies"
     보류 섹션에서 이관됨. 문서 근거 없음, pending documentary source.
-- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL, Electron, Client Agent
+  - user-attested 2026-08-11 (소유자 구두 확인, 문서 근거 미확보) — 바이오에이지
+    운영관리 시스템의 리포트 관리·표준코드 관리 화면을 본인이 개발/수정했음을
+    확인. Electron 기반 데스크톱 클라이언트의 명칭이 "Report Export Service
+    Manager"이며 기능은 "리포트 자동 추출"(스케줄러 기반 리포트 파일 자동
+    다운로드·이미지/PDF 저장)임을 확인 — 위 [Electron CA]의 [확인 필요]를
+    기능 범위에 한해 해소(구현 세부는 여전히 미확인).
+- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL, Electron, Client Agent, Report Export Service Manager, 리포트 자동 추출, 운영관리 시스템, 리포트 관리, 표준코드 관리
 - Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다.
   **PostgreSQL 가드레일(user-attested 2026-07-27)**: PostgreSQL은 바이오에이지
   서비스 사용으로 귀속 확정됐으나 구체 용도(어느 데이터, 어느 기능)는 아직

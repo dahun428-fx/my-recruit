@@ -97,6 +97,7 @@ same-model `reviewer`/critics와 점수 게이트(`recruiter-screen`·`tech-scre
 - 적용: 2026-07-27 ✓ (별도 세션) 자기소개서 범용 마스터 v2 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 사실 검증 + general-purpose 적대 검증 + recruiter/tech-screen 3라운드 게이트)로 수행, 적대 지적 삼분 처리
 - 적용: 2026-08-01 ✓ 자기소개서 base 항목 3 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 사실 검증 2회 + recruiter/tech-screen 3라운드 + 헤드헌터 페르소나)로 수행 — 재교정 없음
 - 적용: 2026-08-04 ✓ 포트폴리오 3인 자문 평가 리포트 하드닝을 Codex 없이 Claude 서브에이전트 적대 검증 2라운드(1R 10건 수용, 2R critical 0)로 수행. 같은 날 별도 세션에서 스마일게이트 이력서 하드닝도 Codex 없이 Claude 서브에이전트(reviewer 2회 + general-purpose 적대 검증 + recruiter/tech-screen 3라운드)로 수행
+- 적용: 2026-08-11 ✓ 포트폴리오 확장판(신규 리드 5개 + 25장 렌더) 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 사실 검증 must-fix 4건 + UX·인사·기술·헤드헌터 4자 평가)로 수행 — 재교정 없음
 - 범위: Claude
 
 ### P-03 · 위임 · PREFER · probation

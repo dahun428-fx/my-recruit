@@ -508,11 +508,11 @@ facts in drafted application text.
 - Pass bar: 80 (default)
 - 헤드라인/포지션 (2026-08-10 소유자 승인): 포지션 `Frontend Engineer` / 헤드라인 `웹·웹뷰 서비스의 성능 최적화와 AI 기반 개발 생산성 개선을 함께 다루는 Frontend Engineer`
 - 산출물 (2026-08-10 브리프 확정): ①이력서+상세 경력기술서(정본 템플릿 PDF) ②자기소개서 base 정본 verbatim 합본(타겟 편집 없음, 스마일게이트 전례)
-- Draft status: **게이트 통과, diff 승인 대기 (2026-08-10)** — outputs/tving-full-resume-draft.md + companion tving-new-prose.md.
+- Draft status: **최종 렌더 완료 (2026-08-11)** — 소유자 diff 승인(스톱 ②, 2026-08-11) 후 designer 렌더: outputs/tving-full-resume.pdf(9p) + outputs/tving-full-resume-with-self-intro.pdf(12p, 자소서 base-self-introduction.md verbatim 합본). 스마일게이트 정본 템플릿(CSS byte-for-byte 재사용), 문면 변경 없음 검증 완료. 초안: outputs/tving-full-resume-draft.md + companion tving-new-prose.md.
   edit-from-base(fast lane → 1R 게이트 FAIL로 full lane 전환). reviewer 3회(1차 must-fix 2건: AWS 비즈36.5 오귀속·"반응형 구조 완비" 과장 / 2차 전체 재검 / 최종 무결성 통과)·ats(필수 7/7·우대 5/5)·적대 검증 1회(critical 1: 삼성물산 WebView 무근거 삽입 → base 복원, major: AI 코드 리뷰 자동화 융합 축소).
   점수 게이트(Scale-Perf/80) 3라운드: 인사 71.7→77.5→**83.2 PASS** / 기술 73(레지스트리 블로커)→78.5→**81.5 PASS** — AND 게이트 통과, 블로커 0.
   주요 라운드 수정: base 편집 노트 잔존 제거, "2초대(네트워크 수신 기준)"·"Lighthouse 91점(AI 챗봇 화면 기준)"·"사용성·만족도(2차 PoC 검증 기준)" 스코프 병기, 핵심 성과 재배열(①성능 ②AI 프로세스 ③WebView ④챗봇), 티빙 지향 동기 문장, 경력기술서 2번 기간 2026.01~2026.06.
   기각(base 소유자 확정 승계): 매출 1.0억 문면·"풀스택 총괄"·경력 라인 "2.5초→1초"·체류 32%.
   면접 대비 메모: 웹뷰 "성능 최적화" 수치는 본문에 없음(호환성 검증·운영까지만) — 비즈36.5 WebView 서빙 성능 연결 논리 준비. MFE는 island-loader 점진 전환 인접 논리로 방어. 내담 초기 20개월 공백 질문 대비.
   잔여 확인(소유자): 미스미 112만·SKU 10만 문서 근거(pending documentary source — GA/Adobe 스크린샷 확보 권장), AI 코드 리뷰 도구명.
-  다음 단계: 소유자 diff 승인(스톱 ②) → designer 렌더(이력서 9p + 자소서 base verbatim 합본).
+  다음 단계: 소유자 최종 PDF 확인 → 제출 (마감 2026-08-17 23:00 KST, 조기 마감 가능).
