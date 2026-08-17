@@ -313,10 +313,41 @@ facts in drafted application text.
     기준 수립"(EXP-03) 항목의 "Playwright 단독 도입"과 동일 사건이며 이
     프로젝트(EXP-02)에 적용된 것(별도 도구·사건 아님) — 두 항목 상호 참조.
     이중 계상 방지: 두 항목에서 각각 독립 도입처럼 표기하지 않는다.
+  - **[WebView→React Native 마이그레이션 및 RN 앱 스토어 출시·운영 —
+    user-attested 2026-08-17, CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
+    인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.]**
+    비즈36.5를 WebView 방식에서 React Native로 마이그레이션한 경험. RN 앱을
+    App Store(iOS)·Google Play(Android)에 출시·운영. 스토어 등록·심사(리뷰)
+    대응·버전/배포 관리·크래시 모니터링·업데이트 운영 전 과정을 본인이 직접
+    수행. 사용자 규모 약 4,000명(소유자 구두 확인, 문서 근거 없음).
+    **[EXP-02 관계 스코프 가드레일 — 미확정]**: 이 WebView→RN 마이그레이션과
+    기존 EXP-02 기록의 "108페이지·82화면 web을 island-loader로 React 점진
+    전환"·"WebView로 모바일 제공"과의 관계(동일 서비스의 모바일 앱 계층인지,
+    시점 선후 관계)는 미확정 [확인 필요]. 이력서/문면에서 "web 점진
+    전환(island-loader)"과 "WebView→RN 마이그레이션"을 모순되게 병렬하거나
+    하나의 단일 타임라인으로 단정하지 말 것 — 면접 대비 항목으로 둔다.
+    **[사용자 규모 혼동 방지 가드레일]**: 비즈36.5 앱 사용자 약 4,000명은
+    EXP-01의 "AI코치 활성 사용자 3,493명"과 다른 서비스의 수치다 — 두 수치를
+    혼용하거나 합산하지 말 것. 삼성물산 앱 약 100명(EXP-04)도 별개.
+  - **[WebView 인터페이스 및 네이티브 모듈 브릿지 직접 설계·구현 —
+    user-attested 2026-08-17, 같은 세션. 문서 근거 없음, pending documentary
+    source.]**
+    WebView 단계의 웹↔네이티브 인터페이스(WebView 인터페이스 계열)와 RN
+    마이그레이션 후 네이티브 모듈 브릿지를 직접 설계·구현. 브릿지로
+    주고받은 데이터 범주: 카메라·파일·푸시 토큰·로그인/인증 토큰·딥링크·
+    스크롤/네비게이션 이벤트 등(EXP-04 삼성물산과 동일 범주).
+    **[브릿지 방식 표기 가드레일]**: 비즈36.5 프로젝트에서는 WebView 인터페이스
+    + RN 네이티브 모듈 브릿지 두 방식 모두 경험. postMessage/JS Interface
+    (Android)/WKScriptMessageHandler(iOS) 등 구체 API 명칭은 소유자가 명시
+    확인하지 않았으므로 "WebView 인터페이스"·"네이티브 모듈 브릿지" 수준으로만
+    서술하고 특정 API를 단정하지 말 것([확인 필요]).
 - Technologies: React, TypeScript, jQuery, Thymeleaf, Java, Spring Boot, REST API,
   MySQL, Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
   Docker (운영 서버 Blue-Green 무중단 배포, user-attested 2026-07-27 — 문서
-  근거 없음)
+  근거 없음),
+  React Native, App Store 출시·운영, Google Play 출시·운영, 네이티브 모듈 브릿지,
+  WebView 인터페이스
+  (user-attested 2026-08-17, CJ푸드빌 지원 세션 갭 인터뷰 — 문서 근거 없음)
 - Result:
   - 외주 의존 서비스의 기능 변경과 배포를 내부 대응 가능한 운영 구조로 전환
   - 고객사별 CI/메뉴/기능 노출 변경에 반복 대응 가능한 SaaS형 기반 확보
@@ -324,6 +355,12 @@ facts in drafted application text.
   - 9주 내 108개 페이지, 82개 화면을 임직원 건강 플랫폼으로 전환 — island-loader 패턴 기반 컴포넌트 재사용 구조로 달성했으며 108개 페이지·82개 화면 전환은 본인 단독 수행 (근거: 위 Role/Actions, user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
   - 건강관리 신규 기능 3건을 데이터 모델부터 서버/API/화면까지 End-to-End 개발
   - 고객사별 CI/메뉴/기능 노출 변경을 1주 내 대응 가능한 구조 구축
+  - **[RN 앱 사용자 규모 — user-attested 2026-08-17, CJ푸드빌(뚜레쥬르 APP
+    리빌딩) 지원 세션 갭 인터뷰에서 소유자 직접 확인. 문서 근거 없음,
+    pending documentary source.]**
+    비즈36.5 RN 앱 사용자 약 4,000명.
+    ※ 이 수치는 EXP-01 AI코치 활성 사용자 3,493명과 다른 서비스의 수치 —
+    혼용·합산 금지. EXP-04 삼성물산 앱 약 100명과도 별개.
 - Evidence / links:
   - `sources/이력서_20260624.pdf`
   - `extracted/이력서_20260624.txt`
@@ -350,10 +387,26 @@ facts in drafted application text.
     배포 구조 상세: 개발 서버 Jenkins 파이프라인 빌드·배포, 운영 서버 Docker
     기반 Blue-Green 무중단 배포(본인 직접 수행). 문서 근거 없음, pending
     documentary source.
+  - user-attested 2026-08-17 (CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
+    인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.)
+    — (1) 비즈36.5를 WebView 방식에서 React Native로 마이그레이션한 경험.
+    RN 앱을 App Store·Google Play 출시·운영, 스토어 등록·심사 대응·버전/
+    배포 관리·크래시 모니터링·업데이트 운영 전 과정 본인 직접 수행.
+    사용자 약 4,000명. (2) WebView 단계 웹↔네이티브 인터페이스(WebView
+    인터페이스 계열)와 RN 마이그레이션 후 네이티브 모듈 브릿지를 직접
+    설계·구현. 브릿지 데이터 범주: 카메라·파일·푸시 토큰·로그인/인증 토큰·
+    딥링크·스크롤/네비게이션 이벤트 등. 구체 API 명칭(postMessage/JS Interface/
+    WKScriptMessageHandler 등)은 소유자 명시 확인 없음([확인 필요]).
+    (3) "WebView로 모바일 제공" 기록(island-loader web 점진 전환)과의 선후
+    관계 및 동일 서비스 모바일 앱 계층 여부는 미확정([확인 필요] — 면접
+    대비 항목).
 - Reusable keywords: B2B 플랫폼, 풀스택 내재화, Spring Boot, MySQL, Web/Admin,
   WebView, Jenkins CI/CD, SaaS형 구조, island-loader 패턴, 점진적 SPA 전환,
   임직원 건강검진 통합플랫폼, 레거시 전면 개편, 배포 자동화, Playwright E2E,
-  비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포, 반응형 웹, 미디어 쿼리
+  비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포, 반응형 웹, 미디어 쿼리,
+  React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
+  크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지,
+  WebView 인터페이스, WebView→RN 마이그레이션
 - Notes for tailoring: 풀스택/플랫폼/운영 안정화 직무에 적합. 108개 페이지·
   82개 화면 전환은 개인 단독 기여이므로 "본인이 단독으로 수행"이라는 개인
   기여 프레이밍을 사용할 수 있다. island-loader 패턴 채택은 당시 모놀리식·
@@ -372,6 +425,18 @@ facts in drafted application text.
   빌드·배포 / 운영 서버 Docker 기반 Blue-Green 무중단 배포는 문서 근거 없는
   소유자 구두 확인 사실이다. 고부담 외부 문서에서는 뒷받침 자료 확인을
   요청할 것.
+  **WebView→RN 마이그레이션 관계 가드레일(user-attested 2026-08-17)**:
+  이 마이그레이션과 기존 "island-loader로 108페이지·82화면 web 점진 전환" +
+  "WebView로 모바일 제공" 기록과의 시점 선후 관계 및 동일 서비스 모바일 앱
+  계층 여부는 미확정([확인 필요]). 두 사실(web island-loader 전환, WebView→RN
+  마이그레이션)을 하나의 단일 타임라인으로 단정하거나 모순되게 병렬하지 말 것
+  — 면접 대비 항목으로 둔다.
+  **RN 앱 사용자·브릿지 가드레일(user-attested 2026-08-17)**: 비즈36.5 앱
+  사용자 약 4,000명은 문서 근거 없는 소유자 구두 확인이며, EXP-01 AI코치
+  활성 사용자 3,493명·EXP-04 삼성물산 앱 약 100명과 각각 별개 서비스의
+  수치다 — 혼용·합산 금지. WebView 인터페이스·네이티브 모듈 브릿지의 구체
+  API 명칭은 소유자 명시 확인 없음([확인 필요]) — "WebView 인터페이스"·
+  "네이티브 모듈 브릿지" 수준으로만 서술할 것.
 
 ### 품질·개발·운영 자동화 및 FE AX 기준 수립
 
@@ -649,9 +714,31 @@ facts in drafted application text.
     대응 속도와 공통 규칙 일관성을 함께 유지하는 설계 판단. 검증 관점:
     플랫폼별 요구 대응 속도·공통 규칙 일관성
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
+  - **[RN 앱 스토어 출시·운영 — user-attested 2026-08-17, CJ푸드빌(뚜레쥬르
+    APP 리빌딩) 지원 세션 갭 인터뷰에서 소유자 직접 확인. 문서 근거 없음,
+    pending documentary source.]**
+    삼성물산 현장 앱을 React Native로 개발해 App Store(iOS)·Google Play(Android)
+    양쪽에 출시·운영. 스토어 등록·심사(리뷰) 대응·버전/배포 관리·크래시
+    모니터링·업데이트 운영 전 과정을 본인이 직접 수행. 사용자 규모 약
+    100명(소유자 구두 확인, 문서 근거 없음).
+    **[사용자 규모 가드레일]**: 삼성물산 앱 약 100명은 EXP-02 비즈36.5
+    앱 약 4,000명·EXP-01 AI코치 활성 사용자 3,493명과 각각 별개 서비스의
+    수치다 — 혼용·합산 금지.
+  - **[네이티브 모듈 브릿지 직접 설계·구현 — user-attested 2026-08-17, 같은
+    세션. 문서 근거 없음, pending documentary source.]**
+    RN 네이티브 모듈 브릿지를 직접 설계·구현. 브릿지로 주고받은 데이터
+    범주: 카메라·파일·푸시 토큰·로그인/인증 토큰·딥링크·스크롤/네비게이션
+    이벤트 등.
+    **[브릿지 방식 표기 가드레일]**: 삼성물산 프로젝트의 브릿지는 RN
+    네이티브 모듈 브릿지로 소유자가 확인. postMessage/JS Interface(Android)/
+    WKScriptMessageHandler(iOS) 등 구체 API 명칭은 소유자가 명시 확인하지
+    않았으므로 "네이티브 모듈 브릿지" 수준으로만 서술하고 특정 API를
+    단정하지 말 것([확인 필요]).
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
-  Firebase FCM
+  Firebase FCM,
+  App Store 출시·운영, Google Play 출시·운영, 네이티브 모듈 브릿지
+  (user-attested 2026-08-17, CJ푸드빌 지원 세션 갭 인터뷰 — 문서 근거 없음)
   **[DB 정정 — user-attested 2026-07-27, 이력서 재작성 세션]**: 삼성물산
   프로젝트 DB는 Oracle. 기존 기록의 "MySQL" 표기는 오기였으므로 Oracle로
   정정함(MyBatis 사용 사실은 유지, 변경 없음). 문서 근거 없음, 소유자 구두
@@ -668,6 +755,9 @@ facts in drafted application text.
 - Metrics:
   - 대용량 데이터 대시보드 렌더링 시간 2.5초 -> 1초대
   - React Native 앱 검색 응답 시간 5초 -> 1초, 80% 단축
+  - **[앱 사용자 규모 — user-attested 2026-08-17, CJ푸드빌 지원 세션 갭
+    인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary
+    source.]** 삼성물산 현장 앱 사용자 약 100명.
 - Evidence / links:
   - `sources/이력서_20260624.pdf`
   - `extracted/이력서_20260624.txt`
@@ -695,11 +785,21 @@ facts in drafted application text.
     사실을 소유자가 재확인(구체 프로젝트 재지목은 없었음, 은행 내 유일한
     기존 SQLite 기록인 이 항목에 결부). 문서 근거 없음, pending documentary
     source.
+  - user-attested 2026-08-17 (CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
+    인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.)
+    — (1) RN 현장 앱을 App Store·Google Play 양쪽에 출시·운영, 스토어 등록·
+    심사 대응·버전/배포 관리·크래시 모니터링·업데이트 운영 전 과정 본인 직접
+    수행. 사용자 약 100명. (2) RN 네이티브 모듈 브릿지를 직접 설계·구현.
+    브릿지 데이터 범주: 카메라·파일·푸시 토큰·로그인/인증 토큰·딥링크·스크롤/
+    네비게이션 이벤트 등. 구체 API 명칭(postMessage/JS Interface/
+    WKScriptMessageHandler 등)은 소유자 명시 확인 없음([확인 필요]).
 - Reusable keywords: 데이터 시각화, Vue 3, ECharts, RealGrid, React Native,
   REST API, Lazy Rendering, DB 인덱싱, DTO projection, 풀스택, 성능 개선,
   FlatList 가상화, 클라이언트 렌더링 최적화, 측정 기반 병목 진단,
   getItemLayout, 상태 관리 경계, React Query, debounce, race condition 방지,
-  클라이언트/서버 검색 경계, 웹/RN 공통화, Oracle
+  클라이언트/서버 검색 경계, 웹/RN 공통화, Oracle,
+  React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
+  크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지
 - Notes for tailoring: 데이터 플랫폼, 모바일 앱, 대시보드 직무에 활용.
   2.5초→1초대 수치를 인용할 때는 측정 조건(데이터 규모·네트워크)이 문서로
   특정되지 않았음을 인지하고, 조건을 창작하거나 새 수치를 추가하지 않는다.
@@ -712,6 +812,16 @@ facts in drafted application text.
   — 과거 기록의 "MySQL" 표기를 그대로 재사용하지 말 것. 팀 규모(10명)는 문서
   근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료 확인을
   요청할 것.
+  **RN 앱 스토어 출시·운영 가드레일(user-attested 2026-08-17)**: 삼성물산 앱
+  사용자 약 100명은 EXP-02 비즈36.5 앱 약 4,000명·EXP-01 AI코치 활성 사용자
+  3,493명과 서로 다른 서비스의 수치다 — 혼용·합산 금지. 두 수치 모두 문서
+  근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료 확인을
+  요청할 것.
+  **네이티브 모듈 브릿지 가드레일(user-attested 2026-08-17)**: 삼성물산
+  프로젝트에서는 RN 네이티브 모듈 브릿지를 사용했음이 확인됨. 단,
+  postMessage/JS Interface(Android)/WKScriptMessageHandler(iOS) 등 구체 API
+  명칭은 소유자 명시 확인 없음 — "네이티브 모듈 브릿지" 수준으로만 서술하고
+  특정 API를 단정하지 말 것([확인 필요]).
 
 ### 한국미스미 글로벌 B2B 커머스 개선 및 Next.js 전환
 

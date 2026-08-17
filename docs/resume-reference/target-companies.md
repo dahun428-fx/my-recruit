@@ -525,3 +525,58 @@ facts in drafted application text.
   면접 대비 메모: 웹뷰 "성능 최적화" 수치는 본문에 없음(호환성 검증·운영까지만) — 비즈36.5 WebView 서빙 성능 연결 논리 준비. MFE는 island-loader 점진 전환 인접 논리로 방어. 내담 초기 20개월 공백 질문 대비.
   잔여 확인(소유자): 미스미 112만·SKU 10만 문서 근거(pending documentary source — GA/Adobe 스크린샷 확보 권장), AI 코드 리뷰 도구명.
   다음 단계: 소유자 최종 PDF 확인 → 제출 (마감 2026-08-17 23:00 KST, 조기 마감 가능).
+
+### CJ푸드빌 / 프론트엔드 개발자 — 뚜레쥬르 APP 리빌딩 (경력)
+
+- Source job posting: 사용자 제공 JD 텍스트 기준, 2026-08-17 수집 — CJ푸드빌 채용
+- Application deadline: 2026-08-19(수) 마감
+- Target position: 프론트엔드 개발자 (경력) / CJ푸드빌 베이커리·외식 브랜드 통합 디지털 채널(웹/앱/어드민) 개발·운영 / 뚜레쥬르 APP 리빌딩 참여
+- Role preset: fe-platform 제안(브리프 승인 시 확정)
+  (선택 근거: 통합 디지털 채널 웹/앱/어드민 개발·운영, 공통 모듈·디자인 토큰·브릿지 레이어 설계, 레거시 리빌딩, 안정 운영, AI 기능 도입 — fe-platform 신호 일치)
+- Required skills:
+  - 학사 이상 (컴공·산공·소프트웨어공학 관련)
+  - 프론트엔드 4년 이상
+  - React·Next.js·TypeScript·TanStack Query로 웹 서비스 개발
+  - 앱·웹 함께 다루며 코드·타입·디자인 시스템 일관성 유지 경험
+  - 운영 환경 성능·안정성·UX·보안 고려 설계
+  - Claude Code·ChatGPT Codex 등 AI 개발 도구 활용
+- Preferred skills:
+  - React Native 앱 출시·운영
+  - 네이티브-웹 통신 구조(RN 브릿지, WebView 인터페이스) 설계
+  - JSP 기반 레거시 웹 점진 마이그레이션
+  - F&B 또는 e커머스 운영 경험
+  - ISMS-P·시큐어코딩 등 보안 요구사항 대응
+  - AI 기반 기능(챗봇·추천·자동화) 구현·연동
+  - 웹·앱 및 온·오프라인 연계(O2O) 서비스 개발
+- Company / team signals:
+  - CJ푸드빌: CJ그룹 계열, 뚜레쥬르·빕스·제일제면소·더플레이스 브랜드 운영
+  - 뚜레쥬르 APP 리빌딩: 앱/웹 공유 공통 모듈·디자인 토큰·브릿지 레이어 설계·고도화 강조
+  - 기획·디자인·백엔드 협업 / 코드 리뷰·기술 논의로 높은 코드 기준 정립·개발 문화 향상 중시
+  - 전형: 서류→CJ CFT(컬처핏)→면접→평판조회→검진→처우
+- Job scope:
+  1. 푸드빌 베이커리·외식 브랜드 통합 디지털 채널(웹/앱/어드민) 개발·운영
+  2. 뚜레쥬르 APP 리빌딩 참여
+  3. 웹·앱 공유 공통 모듈·디자인 토큰·브릿지 레이어 설계·고도화
+  4. 서비스 성능·품질 개선, 장애 대응, 레거시 리빌딩
+  5. 기획·디자인·백엔드 협업
+  6. 코드 리뷰·기술 논의로 코드 기준 정립·개발 문화 향상
+- Candidate evidence to emphasize:
+  - EXP-04 삼성물산: React Native iOS/Android 개발·배포, 웹/RN 공통화(비즈니스 로직·타입 공유, UI 분리), TanStack Query — React Native·웹/앱 코드·타입 일관성 정면 대응
+  - EXP-02 비즈36.5: jQuery/Thymeleaf → React 점진 전환(island-loader 패턴), WebView 운영·호환성 검증, Jenkins CI/CD Blue-Green — 레거시 리빌딩·점진 마이그레이션 인접, WebView 브릿지 인접
+  - EXP-01 AI 챗봇: Config-Driven UI·Base-Theme으로 고객사별 테마·기능 분리, Storybook 기반 공통 컴포넌트 — 디자인 시스템 일관성·공통 모듈
+  - EXP-03: GitLab MR 코드 리뷰 문화(양방향 리뷰·AI 코드 리뷰 도입), FE AX 개발 표준 문서화·세미나 12회·문서 48건 — 코드 기준 정립·개발 문화 향상 정면 대응
+  - EXP-03: Claude Code·Codex AI 개발 도구 실무 활용·생성 코드 검증 기준 — AI 개발 도구 활용 자격요건 정면
+  - EXP-05 미스미: PHP/jQuery 레거시 → Next.js/React 전환, 성능(8초→2초)·SEO, B2B 커머스(e커머스 우대) — 레거시 전환·e커머스 경험
+  - EXP-01: AI 건강검진 챗봇 실서비스(AI 기반 기능 구현·연동 우대) — XSS 필터링(보안 인접, C-05 준수)
+- Risks or gaps:
+  - [구조적 갭] 컴공 관련 학과 요건: 성공회대 일어일본학과. 정보처리기사(2020.08) + 응용SW엔지니어링 과정으로 보완. 스마일게이트 전례와 동일 처리 — 상단 자격 신호 강화 필요
+  - [갭 인터뷰 필요] 아래 "갭 인터뷰 항목" 참조
+  - JSP 레거시: 은행은 jQuery/Thymeleaf·PHP/jQuery 레거시 전환만 — JSP 직접 경험 없음으로 추정. 서버사이드 템플릿 레거시 점진 전환 전이로만 표기, 소유자가 JSP 실경험 있으면 archivist 적재 후 반영
+  - 보안(ISMS-P·시큐어코딩): XSS 필터링(EXP-01)·AI 생성 코드 검증 기준(EXP-03)으로 인접 어필만; ISMS-P 인증 대응 직접 경험 없음
+  - O2O 서비스: 배달·O2O 플랫폼 직접 경력 없음. e커머스(미스미)·WebView(비즈36.5) 전이 어필만
+- Keywords to include:
+  - React, Next.js, TypeScript, TanStack Query, React Native, WebView, 공통 모듈, 디자인 시스템, 레거시 리빌딩, 점진 마이그레이션, 성능 최적화, 코드 리뷰, 개발 문화, AI 개발 도구, Claude Code, Codex, e커머스, 브릿지 레이어, Config-Driven UI, Storybook
+- Screen profile: Platform-DS 제안(소유자 승인 대기)
+  (근거: 통합 디지털 채널 운영·공통 모듈·디자인 시스템·레거시 리빌딩·안정 운영 JD — Platform-DS 루브릭의 디자인시스템·서비스 안정성 축이 JD 핵심과 일치)
+- Pass bar: 80 (default)
+- Draft status: 브리프 대기 (2026-08-17 작성)
