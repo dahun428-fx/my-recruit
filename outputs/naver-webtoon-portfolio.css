@@ -1,0 +1,1020 @@
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR");
+}
+
+/* Tokens derived from DESIGN.md (document-first A4, ink-on-paper).
+   Layout/sizing follows the compact résumé structure; colors, rules,
+   typography family, square corners and no-fill rules follow DESIGN.md. */
+:root {
+  --text: #1f1f1f;       /* primary ink: body, headings, emphasis */
+  --body: #3f4650;       /* secondary / supporting copy (subtext) */
+  --muted: #777777;      /* labels, page numbers, footer */
+  --line: #d7d7d7;       /* standard rule */
+  --line-soft: #eeeeee;  /* hairline under topic titles */
+  --line-strong: #1f1f1f;/* strong divider under headers */
+  --accent: #1f3d55;     /* deep navy — sparing identity emphasis only */
+  --background: #fff;
+  --canvas: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  padding: 24px 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18mm;
+}
+
+.page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 18mm 19mm 17mm;
+  overflow: hidden;
+  background: var(--background);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+/* DESIGN.md: emphasis is bolder ink, NOT a different color. */
+strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.top-title {
+  padding-bottom: 6mm;
+}
+
+.top-title h1 {
+  font-size: 21pt;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: 31mm 1fr;
+  min-height: 40mm;
+  border: 1px solid var(--line);
+}
+
+.photo {
+  width: 31mm;
+  height: 40mm;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-right: 1px solid var(--line);
+}
+
+.personal {
+  padding: 4.8mm 6.4mm;
+}
+
+.name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+}
+
+.name-row h2 {
+  font-size: 13.5pt;
+  font-weight: 800;
+}
+
+.name-row span {
+  color: var(--muted);
+  font-size: 7.6pt;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 18mm 1fr 18mm 1fr;
+  gap: 2.8mm 5mm;
+  margin-top: 5.6mm;
+  font-size: 7.8pt;
+  line-height: 1.42;
+}
+
+.contact-grid dt {
+  color: var(--muted);
+}
+
+.contact-grid dd {
+  color: var(--body);
+  font-weight: 700;
+}
+
+.contact-grid dd.wide {
+  grid-column: span 3;
+}
+
+.page-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: 5mm;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.page-head h1 {
+  font-size: 14.5pt;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.page-head p {
+  margin-top: 1mm;
+  color: var(--body);
+  font-size: 8.1pt;
+}
+
+.page-head span {
+  color: var(--muted);
+  font-size: 8.2pt;
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 7mm;
+}
+
+.section h2 {
+  padding-bottom: 2.4mm;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13.2pt;
+  font-weight: 700;
+}
+
+.copy {
+  display: grid;
+  gap: 2.8mm;
+  margin-top: 3.4mm;
+}
+
+.copy p,
+.meta p {
+  color: var(--body);
+  font-size: 8pt;
+  line-height: 1.72;
+}
+
+.achievement-list,
+.bullet-list {
+  margin-top: 3.6mm;
+  padding-left: 4.2mm;
+}
+
+.achievement-list li,
+.bullet-list li {
+  color: var(--body);
+  font-size: 7.8pt;
+  line-height: 1.6;
+  padding-left: 1mm;
+}
+
+.achievement-list li + li,
+.bullet-list li + li {
+  margin-top: 1.55mm;
+}
+
+/* First-page: compact summary paragraphs to fit 3 long paragraphs */
+.first-page .copy p {
+  font-size: 7.8pt;
+  line-height: 1.66;
+}
+
+.record {
+  margin-top: 5.4mm;
+  padding-bottom: 4.8mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.record:last-child {
+  border-bottom: 0;
+}
+
+/* record header: title left, date right on the same row (no left indent) */
+.record-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5mm;
+}
+
+.record-title h3 {
+  font-size: 10.5pt;
+  line-height: 1.42;
+}
+
+.record-title span {
+  flex: none;
+  color: var(--muted);
+  font-size: 7.8pt;
+  font-weight: 700;
+}
+
+.record > p {
+  margin-top: 1.2mm;
+  color: var(--body);
+  font-size: 7.8pt;
+  line-height: 1.66;
+}
+
+.first-page .top-title {
+  padding-bottom: 5mm;
+}
+
+.first-page .section {
+  margin-top: 6mm;
+}
+
+.plain-page .section:first-of-type {
+  margin-top: 0;
+}
+
+.career-section {
+  margin-top: 6mm;
+}
+
+.career-section .copy {
+  margin-top: 0;
+}
+
+.career-section .copy p {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* Skills — DESIGN.md: no fills, no left-border callouts. Group with spacing
+   and a single bottom hairline. */
+.skill-block {
+  margin-top: 5.4mm;
+  padding-bottom: 4.8mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-block:last-of-type {
+  border-bottom: 0;
+}
+
+.skill-block h2 {
+  padding: 0;
+  border: 0;
+  color: var(--text);
+  font-size: 11pt;
+  font-weight: 800;
+}
+
+.skill-stack {
+  margin-top: 1.8mm;
+  color: var(--accent);
+  font-size: 7.8pt;
+  font-weight: 700;
+  line-height: 1.52;
+}
+
+.skill-block ul {
+  margin-top: 2.2mm;
+  padding-left: 4.2mm;
+}
+
+.skill-block li {
+  color: var(--body);
+  font-size: 7.75pt;
+  line-height: 1.55;
+  padding-left: 0.8mm;
+}
+
+.skill-block li + li {
+  margin-top: 0.9mm;
+}
+
+.skills-page .skill-block {
+  margin-top: 4.4mm;
+  padding-bottom: 3.8mm;
+}
+
+/* Projects (경력기술서) */
+.project {
+  margin-top: 7mm;
+}
+
+.company-line {
+  color: var(--accent);
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.project-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5mm;
+  margin-top: 4mm;
+}
+
+.project-title h2 {
+  padding: 0;
+  border: 0;
+  font-size: 12.6pt;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.project-title span {
+  flex: none;
+  color: var(--muted);
+  font-size: 7.8pt;
+  font-weight: 700;
+}
+
+.role {
+  margin-top: 2.7mm;
+  color: var(--body);
+  font-size: 7.8pt;
+  line-height: 1.68;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 21mm 1fr;
+  gap: 5.5mm;
+  margin-top: 4.4mm;
+}
+
+.block h3 {
+  color: var(--text);
+  font-size: 8.35pt;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.block p,
+.block li {
+  color: var(--body);
+  font-size: 7.75pt;
+  line-height: 1.7;
+}
+
+.block p + p {
+  margin-top: 2.3mm;
+}
+
+.block ul {
+  padding-left: 4mm;
+}
+
+.block li + li {
+  margin-top: 1.3mm;
+}
+
+/* tech line — DESIGN.md: no filled box, no left border. Use a single top rule. */
+.tech {
+  margin-top: 4.2mm;
+  padding: 3mm 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--body);
+  font-size: 7.55pt;
+  line-height: 1.62;
+}
+
+.simple-line {
+  margin-top: 3.8mm;
+  padding: 3.6mm 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--body);
+  font-size: 8pt;
+  line-height: 1.72;
+}
+
+.simple-line strong {
+  display: inline-block;
+  min-width: 28mm;
+}
+
+.language-list {
+  display: grid;
+  gap: 0;
+  margin-top: 3.8mm;
+}
+
+.language-item {
+  display: grid;
+  grid-template-columns: 32mm 1fr;
+  gap: 6mm;
+  align-items: center;
+  padding: 3.6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.language-item strong {
+  display: block;
+  color: var(--text);
+  font-size: 8pt;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.language-item span {
+  display: block;
+  margin-top: 0.6mm;
+  color: var(--muted);
+  font-size: 7.8pt;
+  line-height: 1.45;
+}
+
+.language-item p {
+  color: var(--body);
+  font-size: 8pt;
+  line-height: 1.5;
+}
+
+footer {
+  position: absolute;
+  right: 18mm;
+  bottom: 8mm;
+  left: 18mm;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.8mm;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 6.8pt;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: white;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  main {
+    display: block;
+  }
+
+  .page {
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
+
+/* --- base-resume revision: merged page 1 & career role line --- */
+.core-item {
+  margin-top: 3.4mm;
+}
+.core-item h3 {
+  color: var(--text);
+  font-size: 8.7pt;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.core-item .bullet-list {
+  margin-top: 1.1mm;
+}
+
+/* Last page: 학력 / 교육 / 자격증 / 어학 all as equal main titles
+   (match the page-head h1 look — 14.5pt + strong bottom rule). */
+.major-section {
+  margin-top: 9mm;
+}
+.major-section .major {
+  padding-bottom: 5mm;
+  border-bottom: 1px solid var(--line-strong);
+  font-size: 14.5pt;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--text);
+}
+.major-section .record {
+  margin-top: 4.4mm;
+}
+
+.record .role-line {
+  color: var(--muted);
+  font-size: 8.2pt;
+  line-height: 1.5;
+  margin: 1mm 0 0;
+}
+
+/* =====================================================================
+   Review hardening (2026-07-25) — overflow safety, long-string wrapping,
+   flex min-width, readability bump. Print-first constraints kept:
+   fixed A4 .page height stays (footer is absolutely pinned; every render
+   is verified against an auto-height overflow check before shipping).
+   ===================================================================== */
+
+/* 2 · long unbreakable strings (URLs, tech tokens) may break when needed,
+   Korean still keep-all elsewhere */
+body { overflow-wrap: anywhere; }
+.contact-grid dd,
+.skill-stack,
+.tech,
+.role-line { overflow-wrap: anywhere; }
+
+/* 3 · flex title rows: let the title shrink instead of colliding w/ date */
+.name-row h2,
+.record-title h3,
+.project-title h2 { min-width: 0; overflow-wrap: anywhere; }
+.name-row { min-width: 0; }
+
+/* 4 · date/meta spans: tabular figures + a touch larger for legibility */
+.record-title span,
+.project-title span {
+  font-size: 8.2pt;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5 · body & bullet readability — up from 7.55–7.8pt (still A4-dense) */
+.copy p,
+.meta p { font-size: 8.3pt; line-height: 1.74; }
+.first-page .copy p { font-size: 8.1pt; line-height: 1.68; }
+.achievement-list li,
+.bullet-list li { font-size: 8.2pt; line-height: 1.62; }
+.skill-block li { font-size: 8.1pt; line-height: 1.56; }
+.block p,
+.block li { font-size: 8.2pt; line-height: 1.66; }
+.block h3 { font-size: 8.6pt; }
+.record > p { font-size: 8.2pt; line-height: 1.68; }
+.tech { font-size: 8pt; line-height: 1.6; }
+.core-item h3 { font-size: 8.9pt; }
+
+/* 6 · footer: never let a long section label collide with the page number */
+footer { gap: 8mm; }
+footer span:first-child { min-width: 0; overflow-wrap: anywhere; }
+footer span:last-child { flex: none; font-variant-numeric: tabular-nums; }
+
+/* 7 · screen preview only: avoid clipped horizontal scroll on small windows */
+@media screen {
+  body { overflow-x: auto; }
+}
+
+/* =====================================================================
+   Layout hardening (2026-07-25 batch 2) — visual hierarchy, robust
+   title/date alignment, project label column, last-page consistency.
+   ===================================================================== */
+
+/* #4 · title ↔ date: grid so a long title wraps instead of shoving the
+   date off; the date column keeps its own width and top baseline. */
+.record-title,
+.project-title {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 8mm;
+}
+.record-title span,
+.project-title span { align-self: start; }
+
+/* #3 · project label column slightly wider, labels top-aligned, uniform
+   body start line across every block. */
+.block {
+  grid-template-columns: 24mm 1fr;
+  column-gap: 5mm;
+  align-items: start;
+}
+
+/* #2 · clearer heading hierarchy — section titles get a MEDIUM rule
+   (between the page header's strong rule and the project title's none). */
+.section h2 { border-bottom-color: var(--line); }
+
+/* #7 · last page: 학력·교육·자격증·어학 are four EQUAL section titles
+   under one neutral page header — not page-strength, so they don't
+   outweigh the résumé's real section/project titles. */
+.plain-head h1 { color: var(--body); font-weight: 700; }
+.major-section { margin-top: 7.5mm; }
+.major-section .major {
+  padding-bottom: 2.4mm;
+  border-bottom: 1px solid var(--line);
+  font-size: 13.2pt;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--text);
+}
+.major-section .record { margin-top: 3.6mm; }
+
+/* #1 · first page — give 핵심 성과 a clearer break from 요약 (its own
+   breathing room above the section rule). */
+.first-page .section + .section { margin-top: 8mm; }
+
+/* #5 · density balance — the two dense 경력기술서 pages (6 실행 + 5 성과)
+   run close to the footer at 8.2pt; ease block body a hair and widen the
+   page's bottom safety margin so no page crowds the footer rule. */
+.page { padding-bottom: 18mm; }
+.block p,
+.block li { font-size: 8.05pt; line-height: 1.62; }
+
+/* =====================================================================
+   Portfolio-specific components (on top of base-resume design language)
+   ===================================================================== */
+
+/* project meta row: 기간 · 역할 · 핵심 기술 · 담당 범위 */
+.meta-row {
+  display: grid;
+  grid-template-columns: 20mm 1fr;
+  gap: 1.6mm 5mm;
+  margin-top: 3.4mm;
+  padding: 3mm 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.meta-row dt {
+  color: var(--muted);
+  font-size: 7.9pt;
+  line-height: 1.55;
+}
+.meta-row dd {
+  color: var(--body);
+  font-size: 8.2pt;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+/* service intro paragraph */
+.service-intro {
+  margin-top: 3.2mm;
+  color: var(--body);
+  font-size: 8.3pt;
+  line-height: 1.7;
+}
+
+/* screenshot frame — square corners, hairline border per DESIGN.md */
+.shot {
+  margin-top: 4mm;
+  border: 1px solid var(--line);
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shot-caption {
+  margin-top: 1.6mm;
+  color: var(--muted);
+  font-size: 7.4pt;
+  line-height: 1.5;
+}
+
+/* portfolio page headline under project title */
+.project-headline {
+  margin-top: 2.6mm;
+  color: var(--text);
+  font-size: 10.8pt;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* =====================================================================
+   portfolio-v3 — multi-image screenshot galleries (on top of .shot).
+   Same frame language as .shot (square corners, hairline border, no
+   shadow/fill per DESIGN.md); grid/row layouts only add positioning.
+   ===================================================================== */
+
+/* grid of same-aspect shots (mobile trio, admin-builder pair) */
+.shot-grid {
+  display: grid;
+  gap: 3.2mm;
+  margin-top: 4mm;
+}
+.shot-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.shot-grid.cols-3 .shot {
+  width: 100%;
+  max-width: 32mm;
+}
+.shot-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.shot-grid.cols-2 .shot {
+  width: 100%;
+  max-width: 50mm;
+}
+.shot-grid.cols-1 {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.shot-grid.cols-1 .shot {
+  width: 100%;
+  max-width: 105mm;
+}
+.shot-grid .shot {
+  margin: 0;
+  border: 1px solid var(--line);
+}
+.shot-grid .shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* row pairing shots of different aspect ratio (PC + mobile) at a shared
+   print height, so neither is stretched off its native ratio */
+.shot-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4mm;
+  margin-top: 4mm;
+}
+.shot-row .shot {
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--line);
+}
+.shot-row .shot img {
+  display: block;
+  width: auto;
+  height: 40mm;
+}
+
+/* =====================================================================
+   portfolio-extended — cover page + chapter gallery components.
+   Builds on the v3 tokens/components above (same colors, rules, square
+   corners, no fills). New here: a document-header style cover page (per
+   DESIGN.md documentHeader/topicTitle), a page-head variant carrying a
+   chapter number, and flexible image-cluster layouts (hero+stack,
+   flex rows) sized per-image via inline width so browsers keep native
+   aspect ratio instead of hand-computed heights.
+   ===================================================================== */
+
+/* ---- Cover page (표지) ---- */
+.cover-page .page-head {
+  display: none;
+}
+
+.cover-top {
+  padding-bottom: 6mm;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.cover-top h1 {
+  font-size: 21pt;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cover-headline {
+  margin-top: 2.6mm;
+  color: var(--text);
+  font-size: 12.5pt;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.cover-contact {
+  margin-top: 3.6mm;
+  color: var(--body);
+  font-size: 8.6pt;
+  line-height: 1.6;
+}
+
+.cover-contact .sep {
+  margin: 0 5px;
+  color: var(--muted);
+}
+
+.cover-career {
+  margin-top: 1.6mm;
+  color: var(--muted);
+  font-size: 8.6pt;
+  font-weight: 700;
+}
+
+.cover-section {
+  margin-top: 8mm;
+}
+
+.cover-section h2 {
+  padding-bottom: 2.4mm;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13.2pt;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cover-toc {
+  margin-top: 4mm;
+  display: grid;
+  gap: 0;
+}
+
+.cover-toc-item {
+  display: grid;
+  grid-template-columns: 14mm 1fr 12mm;
+  align-items: baseline;
+  column-gap: 4mm;
+  padding: 3.4mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cover-toc-item .num {
+  color: var(--accent);
+  font-size: 9.5pt;
+  font-weight: 800;
+}
+
+.cover-toc-item .title {
+  color: var(--text);
+  font-size: 9.6pt;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.cover-toc-item .title span {
+  display: block;
+  margin-top: 0.6mm;
+  color: var(--body);
+  font-size: 8pt;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.cover-toc-item .pg {
+  color: var(--muted);
+  font-size: 8.4pt;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cover-intro p {
+  margin-top: 3.6mm;
+  color: var(--body);
+  font-size: 9pt;
+  line-height: 1.82;
+}
+
+/* ---- Chapter page head (page-head variant carrying a chapter number) --- */
+.chapter-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: 4mm;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.chapter-head .chapter-no {
+  color: var(--accent);
+  font-size: 9pt;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.chapter-head h2 {
+  margin-top: 1mm;
+  font-size: 15.5pt;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chapter-head .chapter-sub {
+  margin-top: 1.2mm;
+  color: var(--body);
+  font-size: 8.8pt;
+  line-height: 1.5;
+}
+
+.chapter-head .pg {
+  flex: none;
+  color: var(--muted);
+  font-size: 8.2pt;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Chapter lead paragraph (렌더 정본 인용 블록, verbatim text) ---- */
+.chapter-lead {
+  margin-top: 5.2mm;
+  color: var(--text);
+  font-size: 9.4pt;
+  line-height: 1.82;
+}
+
+/* ---- Chapter meta row (기간 · 역할 · 핵심 스택, 챕터 헤더 바로 아래 1줄) ---- */
+.chapter-meta {
+  margin-top: 3mm;
+  padding: 2.4mm 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--body);
+  font-size: 8pt;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ---- Image gallery components ---- */
+.gallery-caption {
+  margin-top: 1.1mm;
+  color: var(--muted);
+  font-size: 7.2pt;
+  line-height: 1.42;
+}
+
+/* hero + stack cluster: one large representative shot beside a stacked
+   column of 1-2 secondary shots, sized per-instance via inline width so
+   the browser keeps native aspect ratio (no hand-computed heights). */
+.gallery-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5mm;
+  margin-top: 6mm;
+}
+
+.gallery-cluster .shot {
+  margin: 0;
+  flex: none;
+}
+
+.gallery-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3mm;
+}
+
+.gallery-stack .shot {
+  margin: 0;
+}
+
+/* flexible row: any number of shots, mixed aspect ratios, shared visual
+   baseline; each .shot sets its own width via inline style. */
+.gallery-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4mm;
+  margin-top: 6mm;
+}
+
+.gallery-row .shot {
+  margin: 0;
+  flex: none;
+}
+
+.gallery-row.top {
+  align-items: flex-start;
+}
+
+.gallery-block + .gallery-block {
+  margin-top: 0.9mm;
+}
+
+.gallery-block {
+  margin-top: 4mm;
+}
+
+.gallery-block .gallery-cluster,
+.gallery-block .gallery-row {
+  margin-top: 0;
+}

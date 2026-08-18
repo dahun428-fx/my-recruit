@@ -83,11 +83,19 @@ facts in drafted application text.
   - LLM 릴레이 서버·AI 오케스트레이션 구현에 협업(백엔드·LLM 개발자와 공동,
     FE 단독 구현 아님). 상세 실체 [확인 필요 — 구현 범위·기여 비중 소유자
     확인 예정]. (user-attested 2026-07-24, grill-me base-resume 세션)
+  - **[폼 검증 공통 구조 — user-attested 2026-08-13, 빗썸 2차 갭 인터뷰,
+    귀속 확정]** react-hook-form과 yup/zod를 사용해 폼 검증을 공통 구조로
+    구성하고, 이를 Context에서 핸들링할 수 있도록 설계·구현함. 소유자가
+    이 프로젝트(AI코치=AI 건강검진 챗봇, 이 은행의 병합 노트 기준 동일
+    서비스)로 귀속을 확정함 — 기존 "Unattributed Technologies" 보류 표에
+    있던 항목을 이 항목으로 이관. 어떤 화면/기능에 적용됐는지는 소유자가
+    특정하지 않았으므로 창작 금지.
 - Technologies: React, TypeScript, TanStack Query, Recoil, SSE, Chart.js,
   Tailwind CSS, Nginx, FastAPI [사용 위치 확인 필요], Chromatic [UI 테스트 —
   A/B 실험 여부 확인 필요], Web Vitals [운영 방식 확인 필요],
   Docker [배포 인프라 — EXP-02 Blue-Green 무중단 배포 상세 참조], MongoDB
-  (NoSQL)
+  (NoSQL), react-hook-form, yup, zod (폼 검증 공통 구조 — Context 핸들링,
+  user-attested 2026-08-13 빗썸 2차 갭 인터뷰, 귀속 확정)
   (Nginx·FastAPI·Chromatic·Web Vitals user-attested 2026-07-24,
   grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조.
   Docker user-attested 2026-07-27, 이력서 재작성 세션에서 소유자 구두 확인 —
@@ -193,12 +201,17 @@ facts in drafted application text.
     미확보 상태이므로 이력서 문면(경력기술서 포함)에서 제외하고, 반복 QA
     3시간→30분(EXP-03, `metric-qa-time`) 등 확정치로 대체하기로 소유자
     결정.
+  - user-attested 2026-08-13 (빗썸 2차 갭 인터뷰) — react-hook-form·
+    yup/zod를 사용한 폼 검증 공통 구조(Context 핸들링)를 이 프로젝트
+    (AI코치=AI 건강검진 챗봇)로 귀속 확정. "Unattributed Technologies"
+    보류 표에서 이관됨. 적용 화면/기능은 미특정. 문서 근거 없음.
 - Reusable keywords: AI 서비스 제품화, LLM 챗봇, SSE Streaming, Markdown Renderer,
   XSS 필터링, Config-Driven UI, Base-Theme, feature flag, PoC 고도화,
   컴포넌트 추상화, 변경 이유 기반 공통화, 오류 분류 체계, 오류 처리 경계,
   Nginx, FastAPI, Chromatic, Web Vitals, LLM 릴레이, AI 오케스트레이션,
   i18n, PostHog, GA4, Vitest, Storybook, 다국어, 코드베이스 규모, 다나아데이터
-  스쿼드, Docker, MongoDB, NoSQL
+  스쿼드, Docker, MongoDB, NoSQL, react-hook-form, yup, zod, 폼 검증,
+  공통 검증 구조, Context 핸들링
 - Notes for tailoring: AI/플랫폼/프론트엔드 아키텍처 직무에서 최우선 사례로 사용.
   `2026_상반기종합평가`는 2026년 상반기 평가 자료이므로 2025.07~2025.10 프로젝트의
   후속 안정화/확장 성과를 함께 입증하는 보조 근거로만 사용. 신규 고객사 실명 "웰체크"는
@@ -247,10 +260,17 @@ facts in drafted application text.
   PoC 고도화 완료 기준이 아니다 — 두 표현을 혼용하지 않는다. 두 정정 모두
   문서 근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료
   확인을 요청할 것.
+  **폼 검증 공통 구조 가드레일(user-attested 2026-08-13, 빗썸 2차 갭
+  인터뷰)**: react-hook-form·yup/zod 기반 공통 검증 구조(Context 핸들링)는
+  이 프로젝트(AI코치=AI 건강검진 챗봇) 귀속으로 확정됐다. 적용된 구체
+  화면/기능은 특정되지 않았으므로 화면명을 창작하지 말고 "공통 폼 검증
+  구조 설계" 수준으로만 서술할 것. 문서 근거 없음(pending documentary
+  source).
 
 ### B2B 임직원 건강 플랫폼 풀스택 내재화
 
-- Period: 2025.11 ~ 2026.02
+- Period: 2025.11 ~ 2026.02 (2026-08-14 소유자 확정 — 티빙 출고본에 있던
+  "2026.01~2026.06" 표기는 오기였음을 확인. 이 기간이 정답)
 - Context: 외주 중심으로 운영되던 검진 예약 서비스를 내부 개발/운영 가능한 임직원
   건강 플랫폼으로 전환.
   **[병합 노트 — user-attested 2026-07-25, grill-me base-resume 세션]**: 이
@@ -288,6 +308,13 @@ facts in drafted application text.
     (user-attested 2026-07-23, headhunter-advisor 인터뷰; 확인 해소
     2026-07-24).
   - 사용자 권한, 메뉴, 브랜딩, 데이터 출력 정책을 공통 기준으로 정리
+    **[Admin 권한·정책 구조화 기제 — user-attested 2026-08-14, 빗썸 3차
+    갭 인터뷰]** 위 정리를 구현한 구체 기제 세 가지를 에이전트가 제시하자
+    소유자가 "다 했어"로 확인함: (a) 역할·리소스 매핑 구조 설계, (b)
+    라우트 가드 + 서버 검증 이중화, (c) 대량 목록의 필터·페이징 처리.
+    각 기제의 세부 구현 방식(어떤 역할·리소스 매핑 규칙, 어떤 라우트
+    가드 로직, 어떤 필터 기준)은 특정되지 않았으므로 [확인 필요] —
+    구현 세부를 창작해 서술하지 말 것.
   - Jenkins 빌드/검증/배포 파이프라인과 WebView 호환성 검증 기준 수립
   - **[반응형 웹 — user-attested 2026-08-10, 티빙 grill-me 세션]**
     미디어 쿼리 기반으로 PC/모바일 화면 크기를 구분 대응하는 반응형 웹 개발을
@@ -313,6 +340,22 @@ facts in drafted application text.
     기준 수립"(EXP-03) 항목의 "Playwright 단독 도입"과 동일 사건이며 이
     프로젝트(EXP-02)에 적용된 것(별도 도구·사건 아님) — 두 항목 상호 참조.
     이중 계상 방지: 두 항목에서 각각 독립 도입처럼 표기하지 않는다.
+  - **[React Native 개발/유지보수 — user-attested 2026-08-13, 빗썸 갭
+    인터뷰; 구조 확정 — user-attested 2026-08-13, 빗썸 2차 갭 인터뷰]**
+    이 서비스(비즈36.5) 앱은 **WebView 하이브리드 구조**이며, 그 안의
+    React Native 레이어 개발·유지보수는 **본인이 전담**함("내가 다했어" —
+    소유자 확인). 이전 [확인 필요] 상태였던 "WebView 구조와 React Native의
+    관계"는 이 확인으로 "WebView 하이브리드 앱 내부의 RN 레이어" 관계로
+    해소됨. 다만 어떤 화면/기능이 RN으로 구현됐는지, 관여 시작 시점·기간은
+    여전히 소유자가 특정하지 않았으므로 화면명·기간·수치를 창작하지 말
+    것 — 그 부분만 [확인 필요]로 유지.
+    **[WebView↔RN 경계 구조 확정 — user-attested 2026-08-14, 빗썸 3차 갭
+    인터뷰]** 앱의 빌드·배포는 React Native가 셸(shell) 역할로 수행하고,
+    대부분의 코드/화면은 WebView로 구성됨. 파일 시스템 접근 등 네이티브
+    기능이 필요한 core 부분만 RN에서 직접 처리 — 경계 기준은 **"네이티브
+    기능 필요 여부"**임을 소유자가 확인. 브릿지 통신 방식, WebView↔RN 간
+    세션 공유, 라우팅 세부는 여전히 특정되지 않았으므로 [확인 필요] —
+    구체 구현 방식을 창작해 서술하지 말 것.
   - **[WebView→React Native 마이그레이션 및 RN 앱 스토어 출시·운영 —
     user-attested 2026-08-17, CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
     인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.]**
@@ -344,8 +387,13 @@ facts in drafted application text.
 - Technologies: React, TypeScript, jQuery, Thymeleaf, Java, Spring Boot, REST API,
   MySQL, Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
   Docker (운영 서버 Blue-Green 무중단 배포, user-attested 2026-07-27 — 문서
-  근거 없음),
-  React Native, App Store 출시·운영, Google Play 출시·운영, 네이티브 모듈 브릿지,
+  근거 없음), React Native (WebView 하이브리드 앱 내 RN 레이어 개발/유지보수
+  전담, user-attested 2026-08-13 빗썸 2차 갭 인터뷰 — 화면 범위·기간 [확인
+  필요]; 앱 빌드·배포는 RN이 셸 역할, 대부분 화면은 WebView, 네이티브
+  기능(예: 파일 시스템 접근) 필요 core만 RN 처리 — 경계 기준 확정,
+  user-attested 2026-08-14 빗썸 3차 갭 인터뷰, 브릿지 통신·세션 공유·
+  라우팅 세부 [확인 필요],
+  App Store 출시·운영, Google Play 출시·운영, 네이티브 모듈 브릿지,
   WebView 인터페이스
   (user-attested 2026-08-17, CJ푸드빌 지원 세션 갭 인터뷰 — 문서 근거 없음)
 - Result:
@@ -387,6 +435,22 @@ facts in drafted application text.
     배포 구조 상세: 개발 서버 Jenkins 파이프라인 빌드·배포, 운영 서버 Docker
     기반 Blue-Green 무중단 배포(본인 직접 수행). 문서 근거 없음, pending
     documentary source.
+  - user-attested 2026-08-13 (빗썸 갭 인터뷰) — React Native를 사용해 이
+    서비스(비즈36.5)의 개발/유지보수에 관여함을 소유자가 확인. 기간·화면
+    범위 미특정, 기존 WebView 구조와의 관계 [확인 필요]. 문서 근거 없음.
+  - user-attested 2026-08-13 (빗썸 2차 갭 인터뷰) — 위 [확인 필요]를 해소:
+    이 서비스(비즈36.5) 앱은 WebView 하이브리드 구조이며, 그 안의 React
+    Native 레이어 개발·유지보수를 본인이 전담함("내가 다했어"). 화면/기능
+    범위·관여 기간은 여전히 미특정 [확인 필요]. 문서 근거 없음.
+  - user-attested 2026-08-14 (빗썸 3차 갭 인터뷰) — (1) WebView↔RN 경계
+    기준 확정: 앱 빌드·배포는 RN이 셸 역할로 수행, 대부분의 코드/화면은
+    WebView로 구성, 파일 시스템 접근 등 네이티브 기능이 필요한 core만
+    RN에서 처리 — 경계 기준은 "네이티브 기능 필요 여부". 브릿지 통신
+    방식·세션 공유·라우팅 세부는 미특정 [확인 필요]. (2) Admin 권한·정책
+    구조화 기제 확정: "사용자 권한·메뉴·브랜딩·데이터 출력 정책 공통
+    기준 정리"를 구현한 기제로 역할·리소스 매핑 구조 설계, 라우트 가드 +
+    서버 검증 이중화, 대량 목록 필터·페이징 처리 3가지를 본인이 "다
+    했어"로 확인. 세부 구현 방식은 미특정 [확인 필요]. 문서 근거 없음.
   - user-attested 2026-08-17 (CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
     인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.)
     — (1) 비즈36.5를 WebView 방식에서 React Native로 마이그레이션한 경험.
@@ -404,6 +468,9 @@ facts in drafted application text.
   WebView, Jenkins CI/CD, SaaS형 구조, island-loader 패턴, 점진적 SPA 전환,
   임직원 건강검진 통합플랫폼, 레거시 전면 개편, 배포 자동화, Playwright E2E,
   비즈케어, 비즈36.5, Docker, Blue-Green 무중단 배포, 반응형 웹, 미디어 쿼리,
+  React Native, WebView 하이브리드, RN 레이어 전담, 네이티브 기능 필요
+  여부(WebView↔RN 경계 기준), 역할·리소스 매핑, 라우트 가드, 서버 검증
+  이중화, 대량 목록 필터·페이징,
   React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
   크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지,
   WebView 인터페이스, WebView→RN 마이그레이션
@@ -425,6 +492,23 @@ facts in drafted application text.
   빌드·배포 / 운영 서버 Docker 기반 Blue-Green 무중단 배포는 문서 근거 없는
   소유자 구두 확인 사실이다. 고부담 외부 문서에서는 뒷받침 자료 확인을
   요청할 것.
+  **React Native 가드레일(user-attested 2026-08-13, 2차 갭 인터뷰로 구조
+  확정)**: 이 서비스(비즈36.5) 앱은 WebView 하이브리드 구조이며, 그 안의
+  React Native 레이어 개발·유지보수를 본인이 전담했다 — "WebView 하이브리드
+  앱 내 RN 레이어 전담 개발/유지보수"로 서술 가능(구조 관계는 해소됨).
+  단, 관여 기간·화면 범위는 여전히 소유자가 특정하지 않았다 — 기간(예:
+  "N개월간")이나 화면 수·화면명을 창작하지 말 것. 문서 근거 없음.
+  **WebView↔RN 경계 기준 가드레일(user-attested 2026-08-14, 빗썸 3차 갭
+  인터뷰)**: "앱 빌드·배포는 RN(셸), 대부분 화면은 WebView, 네이티브 기능이
+  필요한 core만 RN 처리"로 서술 가능하다 — 경계 기준은 "네이티브 기능 필요
+  여부"다. 브릿지 통신 방식·세션 공유·라우팅 세부는 미특정이므로 구체
+  구현 방식을 창작하지 말 것.
+  **Admin 권한·정책 구조화 기제 가드레일(user-attested 2026-08-14, 빗썸
+  3차 갭 인터뷰)**: 사용자 권한·메뉴·브랜딩·데이터 출력 정책 정리의 구현
+  기제로 "역할·리소스 매핑 구조 설계", "라우트 가드 + 서버 검증 이중화",
+  "대량 목록의 필터·페이징 처리" 세 가지를 서술할 수 있으나, 각 기제의
+  세부 구현 방식(매핑 규칙, 가드 로직, 필터 기준)은 미특정이므로 구현
+  세부를 창작하지 말 것.
   **WebView→RN 마이그레이션 관계 가드레일(user-attested 2026-08-17)**:
   이 마이그레이션과 기존 "island-loader로 108페이지·82화면 web 점진 전환" +
   "WebView로 모바일 제공" 기록과의 시점 선후 관계 및 동일 서비스 모바일 앱
@@ -440,7 +524,13 @@ facts in drafted application text.
 
 ### 품질·개발·운영 자동화 및 FE AX 기준 수립
 
-- Period: 2026년 상반기
+- Period: 2026.01 ~ 2026.06 (2026-08-14 소유자 확정)
+  **[역할 지속 여부 — user-attested 2026-08-14, 빗썸 세션]**: 이 항목의
+  프로젝트 기간(2026.06 종료)과 별개로, **팀 AX 전환 리드 역할 자체는
+  2026-08-14 현재도 지속 중**임을 소유자가 확인. 이력서/자기소개서 요약의
+  "AX 전환을 리드하고 있습니다" 등 현재형 문면은 이 사실에 근거하며,
+  프로젝트 종료일(2026.06)만 보고 시점 불일치로 판정하지 말 것 —
+  프로젝트(기간 한정)와 역할(지속 중)을 구분해서 볼 것.
 - Context: AI코치, 비즈36.5, 바이오에이지 운영 서비스와 공통 컴포넌트 증가
   **[가드레일 상호 참조 — user-attested 2026-08-12, 네이버웹툰 지원 세션]**:
   이 3개 서비스에 걸친 공통 컴포넌트 레이어(아래 Storybook 항목)에서 무엇을
@@ -714,6 +804,27 @@ facts in drafted application text.
     대응 속도와 공통 규칙 일관성을 함께 유지하는 설계 판단. 검증 관점:
     플랫폼별 요구 대응 속도·공통 규칙 일관성
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
+  - **[iOS/Android 배포·플랫폼 운영 범위 — user-attested 2026-08-13, 빗썸
+    2차 갭 인터뷰]** React Native 앱의 iOS·Android 배포 과정에서 발생하는
+    플랫폼별 이슈 대응을 본인이 직접 수행함("다했어" — 소유자 확인),
+    범주: (a) 스토어(앱스토어/플레이스토어)·사내 배포 절차 대응, (b) OS
+    버전·기기별 동작 차이 대응, (c) Firebase FCM 푸시 수신·백그라운드
+    처리, (d) 릴리스 전 확인 절차. 소유자가 위 범주 전체를 직접 수행한
+    것으로 확인했으나 각 범주의 구체 사례(어떤 이슈였는지, 몇 건·언제)는
+    특정하지 않았음 — **범주 수준 사실로만 기록**하고, 구체 사례·건수·
+    기간은 [확인 필요]. 세부를 창작해 서술하지 말 것.
+    **[구체 유형 확정 — user-attested 2026-08-14, 빗썸 3차 갭 인터뷰]**
+    위 범주 (b)(c)(d)에 대해 에이전트가 제시한 세 유형을 소유자가 "다
+    겪은 문제"로 확인함:
+    - (b) OS 버전·기기별 차이 대응: 백그라운드 실행 제한, 권한 모델
+      차이, 노치/세이프에어리어 대응 유형을 실제 겪음
+    - (c) FCM 푸시: 포그라운드/백그라운드/종료 상태별 수신 분기 처리,
+      알림 탭 시 화면 이동 처리를 실제 수행
+    - (d) 릴리스 전 확인 절차: 체크 항목 운영, 스토어 심사 반려 대응
+      경험 있음
+    이 확인으로 (b)(c)(d)는 "겪은 유형" 수준까지 구체화됐으나, 각 유형의
+    더 깊은 세부(어떤 OS 버전, 어떤 반려 사유, 발생 건수·시기)는 여전히
+    특정되지 않았음 — **[확인 필요] 유지**, 세부를 창작해 서술하지 말 것.
   - **[RN 앱 스토어 출시·운영 — user-attested 2026-08-17, CJ푸드빌(뚜레쥬르
     APP 리빌딩) 지원 세션 갭 인터뷰에서 소유자 직접 확인. 문서 근거 없음,
     pending documentary source.]**
@@ -736,7 +847,11 @@ facts in drafted application text.
     단정하지 말 것([확인 필요]).
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
-  Firebase FCM,
+  Firebase FCM (푸시 수신·백그라운드 처리 포함 배포·운영 이슈 대응 범주에
+  본인 관여 확인 — user-attested 2026-08-13, 빗썸 2차 갭 인터뷰; 포그라운드/
+  백그라운드/종료 상태별 수신 분기 처리, 알림 탭 시 화면 이동 처리까지
+  유형 확정 — user-attested 2026-08-14, 빗썸 3차 갭 인터뷰. 더 깊은 구체
+  사례(건수·시기) [확인 필요]),
   App Store 출시·운영, Google Play 출시·운영, 네이티브 모듈 브릿지
   (user-attested 2026-08-17, CJ푸드빌 지원 세션 갭 인터뷰 — 문서 근거 없음)
   **[DB 정정 — user-attested 2026-07-27, 이력서 재작성 세션]**: 삼성물산
@@ -785,6 +900,18 @@ facts in drafted application text.
     사실을 소유자가 재확인(구체 프로젝트 재지목은 없었음, 은행 내 유일한
     기존 SQLite 기록인 이 항목에 결부). 문서 근거 없음, pending documentary
     source.
+  - user-attested 2026-08-13 (빗썸 2차 갭 인터뷰) — React Native 앱의
+    iOS·Android 배포 과정 플랫폼별 이슈 대응 범주(스토어/사내 배포 절차,
+    OS 버전·기기별 차이 대응, Firebase FCM 푸시 수신·백그라운드 처리,
+    릴리스 전 확인 절차)를 본인이 전부 직접 수행했음을 확인("다했어").
+    각 범주의 구체 사례·건수·기간은 미특정 [확인 필요]. 문서 근거 없음.
+  - user-attested 2026-08-14 (빗썸 3차 갭 인터뷰) — 위 범주 (b)(c)(d)의
+    구체 유형을 소유자가 "다 겪은 문제"로 확인: (b) OS 버전·기기별 차이
+    대응 = 백그라운드 실행 제한·권한 모델 차이·노치/세이프에어리어 대응;
+    (c) FCM 푸시 = 포그라운드/백그라운드/종료 상태별 수신 분기 처리·알림
+    탭 시 화면 이동 처리; (d) 릴리스 전 확인 절차 = 체크 항목 운영·스토어
+    심사 반려 대응 경험. 각 유형의 더 깊은 세부(OS 버전·반려 사유·
+    건수·시기)는 여전히 미특정 [확인 필요]. 문서 근거 없음.
   - user-attested 2026-08-17 (CJ푸드빌(뚜레쥬르 APP 리빌딩) 지원 세션 갭
     인터뷰에서 소유자 직접 확인. 문서 근거 없음, pending documentary source.)
     — (1) RN 현장 앱을 App Store·Google Play 양쪽에 출시·운영, 스토어 등록·
@@ -797,7 +924,11 @@ facts in drafted application text.
   REST API, Lazy Rendering, DB 인덱싱, DTO projection, 풀스택, 성능 개선,
   FlatList 가상화, 클라이언트 렌더링 최적화, 측정 기반 병목 진단,
   getItemLayout, 상태 관리 경계, React Query, debounce, race condition 방지,
-  클라이언트/서버 검색 경계, 웹/RN 공통화, Oracle,
+  클라이언트/서버 검색 경계, 웹/RN 공통화, Oracle, iOS/Android 배포 이슈
+  대응, 스토어 배포, 사내 배포, OS/기기 대응, Firebase FCM 푸시,
+  백그라운드 처리, 릴리스 전 확인, 백그라운드 실행 제한, 권한 모델 차이,
+  노치·세이프에어리어 대응, FCM 상태별 수신 분기, 알림 탭 화면 이동,
+  릴리스 체크 항목, 스토어 심사 반려 대응,
   React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
   크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지
 - Notes for tailoring: 데이터 플랫폼, 모바일 앱, 대시보드 직무에 활용.
@@ -812,6 +943,22 @@ facts in drafted application text.
   — 과거 기록의 "MySQL" 표기를 그대로 재사용하지 말 것. 팀 규모(10명)는 문서
   근거 없는 소유자 구두 확인이므로 고부담 외부 문서에서는 뒷받침 자료 확인을
   요청할 것.
+  **iOS/Android 배포·플랫폼 운영 범위 가드레일(user-attested 2026-08-13)**:
+  스토어/사내 배포 절차, OS 버전·기기별 차이 대응, Firebase FCM 푸시 수신·
+  백그라운드 처리, 릴리스 전 확인 절차는 본인이 직접 수행한 범주로 서술
+  가능하나, 이는 소유자의 범주 단위 확인("다했어")이며 구체 이슈 사례·건수·
+  기간은 특정되지 않았다 — "OS 버전 이슈를 N건 해결" 같은 구체 사례나 수치를
+  창작하지 말 것. 고부담 외부 문서·면접 대비로는 소유자에게 구체 사례 확인을
+  요청할 것.
+  **구체 유형 확정 가드레일(user-attested 2026-08-14, 빗썸 3차 갭
+  인터뷰)**: (b) OS 버전·기기별 차이 대응은 "백그라운드 실행 제한·권한
+  모델 차이·노치/세이프에어리어 대응" 유형으로, (c) FCM 푸시는
+  "포그라운드/백그라운드/종료 상태별 수신 분기 처리·알림 탭 시 화면 이동
+  처리" 유형으로, (d) 릴리스 전 확인 절차는 "체크 항목 운영·스토어 심사
+  반려 대응 경험" 유형으로 서술 가능하다. 단 어떤 OS 버전이었는지, 반려
+  사유가 무엇이었는지, 발생 건수·시기는 여전히 미특정이므로 그 이상의
+  세부(버전 번호, 반려 사유, 건수)를 창작하지 말 것 — 면접 대비로는
+  소유자에게 추가 확인을 요청할 것.
   **RN 앱 스토어 출시·운영 가드레일(user-attested 2026-08-17)**: 삼성물산 앱
   사용자 약 100명은 EXP-02 비즈36.5 앱 약 4,000명·EXP-01 AI코치 활성 사용자
   3,493명과 서로 다른 서비스의 수치다 — 혼용·합산 금지. 두 수치 모두 문서
@@ -1213,6 +1360,44 @@ facts in drafted application text.
   LangChain/VectorDB/RAG 참여 경험(EXP-07)과 혼용하지 않는다 — 사이드
   프로젝트(개인)와 업무 참여(팀)를 구분해 서술.
 
+### React Native/Expo 사이드 프로젝트 (개인, 귀속 미확정)
+
+- Period: [확인 필요 — 시점 불명]
+- Context: 개인 사이드 프로젝트에서 Expo를 사용한 경험이 있음. 위 "AI
+  소프트웨어 사이드 프로젝트 (개인)" 항목과 동일 프로젝트인지 여부는
+  소유자가 확인하지 않았으므로 별개 항목으로 유지한다 — 추후 동일
+  프로젝트로 확인되면 병합할 것. (user-attested 2026-08-13, 빗썸 갭
+  인터뷰)
+- Problem: [확인 필요 — 구체 문제/목적 미확인]
+- Role: [확인 필요 — 단독/협업 여부 미확인]
+- Actions:
+  - Expo 기반 개발 경험 있음. 구체 사용 범위(어떤 화면·기능)는 [확인 필요].
+  - EAS Build·EAS Update는 사용해본 적 없음(무경험, 소유자 명시 확인) —
+    "EAS로 빌드·배포해봤다"는 식으로 서술 금지.
+  - Expo Router 사용 여부는 미확인(소유자가 확답하지 않음) — 사용 경험으로
+    서술 금지, [확인 필요]로 유지.
+  (전 항목 user-attested 2026-08-13, 빗썸 갭 인터뷰)
+- Technologies: Expo [구체 버전·구성 요소 확인 필요]. EAS Build/EAS Update는
+  명시적으로 미사용.
+- Result: [확인 필요]
+- Metrics: [확인 필요 — 정량 지표 없음]
+- Evidence / links:
+  - user-attested 2026-08-13 (빗썸 갭 인터뷰) — 개인 사이드 프로젝트에서
+    Expo 사용 경험 확인. EAS Build·EAS Update 무경험을 소유자가 명시적으로
+    확인. Expo Router 사용 여부는 미확인 상태로 남음. 문서 근거 없음,
+    pending documentary source.
+- Reusable keywords: Expo, React Native, 사이드 프로젝트, 모바일
+- Notes for tailoring: **EAS Build/Update 미사용 가드레일**: "EAS로
+  빌드해봤다/배포해봤다"는 서술을 절대 사용하지 말 것 — 소유자가 명시적으로
+  무경험이라고 확인한 사실이다. **Expo Router 가드레일**: 사용 여부가
+  미확인이므로 사용 경험으로 단정 서술하지 않는다. **귀속 가드레일**: 이
+  프로젝트가 EXP-02(비즈36.5)·EXP-04(삼성물산)의 React Native 업무 경험과
+  같은 프로젝트가 아님 — 개인 사이드 프로젝트로 명확히 구분해 서술한다.
+  **[제외 결정 — 모바일 보안/인증, user-attested 2026-08-13, 빗썸 갭
+  인터뷰]**: 모바일 보안(인증·생체인증) 관련 경험은 소유자가 이번 지원
+  케이스에서 제외하기로 결정함 — 이력서·자기소개서 등 어떤 문면에도 경험
+  주장으로 적재하지 않는다. 향후 재질문 방지를 위한 기록.
+
 ## Achievement Fragments
 
 Use this section for short, validated bullet material that can be remixed.
@@ -1248,7 +1433,7 @@ Technologies field (with a note) and delete it from here.
 
 | Technology | Status | Source | Note |
 | --- | --- | --- | --- |
-| _(현재 비어 있음 — 2026-07-27 기준 대기 항목 없음)_ | | | |
+| (표 현재 비어 있음) | — | — | — |
 
 **해소 이력(참고용, 표에서 제거됨)**: PostgreSQL과 MongoDB(NoSQL)가 이 표에
 있었으나 2026-07-27 같은 세션에서 소유자가 귀속을 확정해 이관됨 — PostgreSQL
@@ -1257,6 +1442,13 @@ MongoDB(NoSQL) → EXP-01("AI 건강검진 챗봇 제품화 및 플랫폼 확장
 동일 서비스) Technologies. 두 항목 모두 [확인 필요] — 사용 프로젝트 미상
 표시는 해제됐고, 출처는 `user-attested 2026-07-27 구두 확인, 문서 근거 없음`
 그대로 유지됨. 상세는 각 EXP의 Technologies/Evidence 참조.
+
+react-hook-form·yup·zod가 이 표에 있었으나 2026-08-13 빗썸 2차 갭 인터뷰에서
+소유자가 귀속을 확정해 이관됨 — 세 항목 모두 → EXP-01("AI 건강검진 챗봇
+제품화 및 플랫폼 확장", AI코치와 동일 서비스) Technologies/Actions("폼 검증
+공통 구조" 블록). 적용 화면/기능은 [확인 필요]로 EXP-01에 남아 있음. 출처는
+`user-attested 2026-08-13 구두 확인, 문서 근거 없음` 그대로 유지됨. 상세는
+EXP-01의 Actions/Technologies/Evidence 참조.
 
 **Note (SQLite는 이 표에 없었음)**: SQLite는 은행에 기존 기록이 있어(EXP-04
 "삼성물산 데이터·모바일 서비스 고도화" Technologies, `sources/이력서_20260624.pdf`
