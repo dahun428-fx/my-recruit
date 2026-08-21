@@ -6,6 +6,7 @@ Do not add speculative positioning or unsupported claims.
 ## Identity
 
 - Name: 정다훈
+- Birth date: 1991.04.29 (user-provided 2026-08-21, GS글로벌 지정양식 세션)
 - Preferred English name:
 - Location: 경기 구리시 인창동
 - Military service: 군필 — 2011.09 ~ 2013.06 육군 병장 만기제대 (`extracted/이력서_20260624.txt`로 확인됨)
@@ -135,8 +136,10 @@ drafted application text.
 | Date | Institution / Issuer | Credential | Notes |
 | --- | --- | --- | --- |
 | 2010.03 ~ 2017.02 | 성공회대학교 | 일어일본학과 졸업, 경영학과 복수전공 | 학점 3.8 / 4.5 |
-| 2010 | 여의도고등학교 | 졸업 |  |
+| 2007.03 ~ 2010.02 | 여의도고등학교 | 졸업 | 재학 기간 user-attested 2026-08-21 (GS글로벌 세션) |
 | 2020.08 | 한국산업인력공단 | 정보처리기사 | 취득월 2020.08 (user-attested 2026-07-22). 원본 이력서 PDF에는 취득월 미표기였으나 소유자 확인 |
+| 2016.11.18 | 한국금융연수원 계열 | 자산관리사(FP) | 자격번호 1604027370, 자격기준일 2016-11-18. IT 입문 전(경영학 복수전공 시기) 취득 (user-provided 2026-08-21, 스크린샷 증빙) |
+| 2023.06.18 | Microsoft | Microsoft Certified: Azure Fundamentals (AZ-900) | 상태 Active, 자격 증명 ID 4566FD1BE3000F66, 인증 번호 BFC5A4-H4872F, learn.microsoft.com 배지로 온라인 검증 가능 (user-provided 2026-08-21, 스크린샷 증빙). [스코프 가드] Fundamentals(입문) 등급 — "Azure 실무 운영 경험" 근거로 사용 금지 |
 | 2024.05 | TOEIC | 825점 | `extracted/이력서_20260624.txt`(취득일 2024.05 명시)로 확인됨 |
 | 2018.08 | JLPT | 1급 | `extracted/이력서_20260624.txt`(취득일 2018.08 명시)로 확인됨 |
 | 2018.09 ~ 2019.06 | 해외경험 | 일본 워킹홀리데이 · 무인양품(無印良品) 도쿄 지사 근무, 비즈니스 일본어 실무 활용 | 이력서 PDF 기재, 기간은 user-attested 2026-07-23(headhunter-advisor 인터뷰); 무인양품 도쿄 근무·비즈니스 일본어 세부는 user-attested 2026-07-25. 근무 형태는 워킹홀리데이 아르바이트(비정규직) — 이 세부는 은행에 보존하고 면접 방어에 사용, 문면은 "도쿄 지사 근무"로 표기. 자격/교육이 아니라 별도 경험으로만 사용 |
