@@ -29,6 +29,7 @@ user confirmation.
 | `metric-b2b-new-features` | 건강관리 신규 기능 3건 End-to-End 개발 | confirmed | 신규 건강관리 기능 3건을 데이터 모델부터 화면까지 End-to-End 개발 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-b2b-client-change-response` | 고객사별 CI/메뉴/기능 변경 1주 내 대응 가능한 구조 | source_stated | 고객사별 CI·메뉴·기능 변경을 1주 내 대응 가능한 구조 구축 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-bizcare-rn-users` | 비즈36.5 RN 앱 사용자 약 4,000명 | confirmed | 비즈36.5(WebView→React Native 마이그레이션) 앱 사용자 약 4,000명 — "약" 한정어를 반드시 표기. 문서 근거 없음(구두 확인, pending documentary source). EXP-01 AI코치 활성 사용자 3,493명·EXP-04 삼성물산 앱 약 100명과 각각 별개 서비스의 수치이므로 혼용·합산 금지 | user-attested 2026-08-17 (CJ푸드빌 지원 세션 갭 인터뷰) |
+| `metric-misumi-dwell-time` | 미스미 사용자 체류 시간 32% 증가 | source_stated | 인터랙션 기능 고도화 이후 사용자 체류 시간 32% 증가(GA 기준) — 측정 도구 GA 확정(user-attested 2026-08-24, 코오롱베니트 갭 인터뷰), 측정 기간·페이지 범위 [확인 필요]. 전후값 미확보라 S-03 전후쌍 형식 불가(예외는 회사 엔트리에 기록) | `extracted/이력서_20260624.txt` 264행 |
 | `metric-e2e-scenarios` | 600여 건 E2E 회귀 시나리오 자동화 | source_stated | Playwright 기반 600여 건의 E2E 회귀 시나리오 자동화 | `src-resume-20260624`, `src-eval-2026-h1` |
 | `metric-qa-time` | 반복 QA 3시간 -> 30분 | confirmed | 반복 QA 시간을 3시간에서 30분으로 단축 (2026-07-24 소유자 최종 확정치 — primary; 원본 평가문서 값 3시간→1시간은 참고용, 문서 근거 미확보) | `src-eval-2026-h1`, user-attested 2026-07-24 |
 | `metric-ops-check-steps` | 운영 데이터 확인 3단계 -> 1단계 | source_stated | 운영 데이터 확인 절차를 3단계에서 1단계로 전환 | `src-resume-20260624`, `src-eval-2026-h1` |
@@ -38,9 +39,9 @@ user confirmation.
 | `metric-samsung-dashboard-render` | 대시보드 렌더링 2.5초 -> 1초대 | source_stated | 대용량 데이터 대시보드 렌더링 시간을 2.5초에서 1초대로 개선 | `src-resume-20260624` |
 | `metric-samsung-rn-search` | React Native 검색 5초 -> 1초 | confirmed | React Native 앱 검색 응답 시간을 5초에서 1초로 단축 | `src-resume-20260624` |
 | `metric-misumi-page-access` | 페이지 접근 8초 -> 2초 | confirmed | 페이지 접근 시간을 8초에서 2초로 단축 | `src-resume-20260624` |
-| `metric-misumi-nextjs-loading` | Next.js 전환 후 평균 로딩 속도 약 50% 개선 | source_stated | Next.js 전환 후 기존 PHP 서비스 대비 평균 로딩 속도 개선 | `src-resume-20260624` |
+| `metric-misumi-nextjs-loading` | Next.js 전환 후 평균 로딩 속도 약 50% 개선 | source_stated | Next.js 전환 후 기존 PHP 서비스 대비 평균 로딩 속도 약 50% 개선(GA 기준) — 측정 도구 GA 확정(user-attested 2026-08-24, 코오롱베니트 갭 인터뷰), 기간·페이지 범위 미확인 | `src-resume-20260624` |
 | `metric-2025-revenue-total` | 2025년 총 4.66억 원 매출 기여 | needs_scope | Do not use externally until attribution and total/breakdown difference are confirmed. | `src-eval-2025` |
-| `metric-2025-revenue-breakdown` | 비즈케어 1.0억, AI코치 0.2억, 생체나이 2.5억, 에스크미 0.9억 | needs_scope | Do not use externally until the 4.66억 total vs 4.6억 breakdown difference is reconciled. 승인 예외: 2026-08-21 GS글로벌 FDE 제출본에 한해 "2025년 조직 성과 기준 대웅제약 대상 신규 판매 매출 1.0억 원 기여" 스코프 병기 문면으로 소유자 사용 승인. | `src-eval-2025` |
+| `metric-2025-revenue-breakdown` | 비즈케어 1.0억, AI코치 0.2억, 생체나이 2.5억, 에스크미 0.9억 | needs_scope | Do not use externally until the 4.66억 total vs 4.6억 breakdown difference is reconciled. 승인 예외: 2026-08-21 GS글로벌 FDE 제출본에 한해 "2025년 조직 성과 기준 대웅제약 대상 신규 판매 매출 1.0억 원 기여" 스코프 병기 문면으로 소유자 사용 승인. 2026-08-24 코오롱베니트 플랫폼 개발/운영 제출본에 동일 문면 예외 확대 소유자 승인. | `src-eval-2025` |
 | `metric-bioage-transition` | 생체나이 고객 112처 중 93처, 83% 안정 전환 | source_stated | 생체나이 기존 고객 112처 중 93처를 안정 전환 | `src-eval-2025` |
 | `metric-fe-error-zero` | 2차 PoC 기준 FE 에러 0건 | needs_scope | Do not use externally until period and error definition are confirmed. | `src-eval-2025` |
 | `metric-jenkins-deploy-time` | Jenkins 배포 리드타임 10분 -> 2분 | confirmed | Jenkins CI/CD 배포 리드타임을 10분에서 2분으로 단축 | `src-eval-2025` |

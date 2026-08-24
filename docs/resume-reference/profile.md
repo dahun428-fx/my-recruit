@@ -68,7 +68,7 @@ Use this section for the candidate's durable professional narrative.
 - Spring Boot
 - Spring Framework
 - MyBatis
-- Node.js (Express, user-attested 2026-07-05 — 비즈36.5에서 React 프론트 전용 BFF API 신규 구축, 팀 공동. Spring Boot 대체 아님)
+- Node.js (Express, user-attested 2026-07-05 — 비즈36.5에서 React 프론트 전용 BFF API 신규 구축, 팀 공동. Spring Boot 대체 아님. 정밀화: 구조 설계·주요 엔드포인트 구현은 본인 주도, 팀은 리뷰·보완 — user-attested 2026-08-24, 코오롱베니트 2차 갭 인터뷰)
 - Electron (user-attested 2026-08-10 — 바이오에이지 CA(Client Agent) 유지보수 경험. 세부 범위 미확인 — "유지보수" 범위로만 표기, 신규 개발·아키텍처 설계 주장 금지)
 - Chart.js
 - ECharts
