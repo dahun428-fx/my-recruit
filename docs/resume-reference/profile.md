@@ -7,7 +7,9 @@ Do not add speculative positioning or unsupported claims.
 
 - Name: 정다훈
 - Birth date: 1991.04.29 (user-provided 2026-08-21, GS글로벌 지정양식 세션)
-- Preferred English name:
+- Preferred English name: Jung Dahun (user-provided 2026-08-25, 코오롱베니트 써치라인 v2 세션)
+- Hanja name: 丁多勳 (user-provided 2026-08-25, 동일 세션)
+- Emergency contact: 모친 010-4209-5052 (user-provided 2026-08-25, 동일 세션)
 - Location: 경기 구리시 인창동
 - Military service: 군필 — 2011.09 ~ 2013.06 육군 병장 만기제대 (`extracted/이력서_20260624.txt`로 확인됨)
 - Contact: 010-4346-0429 / dahun428@naver.com
