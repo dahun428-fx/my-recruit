@@ -797,6 +797,18 @@ facts in drafted application text.
     구조 운영 — 외부 발표가 아닌 내부 공유 세미나임. 세미나 12회 수치는 "2025 대웅제약
     성과 평가 기반 사업 기여" 항목의 Actions와 동일 출처.
     (user-attested 2026-07-24, grill-me base-resume 세션)
+  - **[하네스 성과 기준선·스코프 확정 — user-attested 2026-09-08, 자기소개서
+    개정 게이트 세션]** 소유자가 다음을 직접 확인: (a) 74개 페이지 React
+    전환의 기준선은 예상 6주 → 실제 2주(하네스 전제 설계), RESTful API
+    29건 개발은 예상 4주 → 실제 1주 — `daewoong-history.md`의 documentary
+    기재와 일치함을 소유자가 확인(해당 수치에 한해 인용 가드레일 해소,
+    부록 C 전체 해소는 아님). (b) 테스트 커버리지 54%→84%의 측정 스코프는
+    AI코치 기준. (c) 자기소개서의 "개발 팀원 5명"은 반복 오류·검증 기준
+    정리를 함께 한 인원이 5명이라는 뜻으로 맞음 — 기존 "FE AX SOP·
+    Playwright 검증 체계 팀원 10명 전원 채택" 기록과 상충이 아니라
+    스코프가 다름(정리 협업 5명 / 채택 확산 10명 전원). 두 수치를
+    혼용하거나 서로 교체하지 말 것. 이 기준선·스코프 수치들은
+    metric-registry.md에는 아직 미등재 — 등재는 별도 승인 절차.
 - Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code, MCP(Model Context Protocol), Figma, Jira, Slack, Confluence, Notion
   (Figma·Jira·Slack·Confluence·Notion은 협업 도구 — user-attested 2026-07-27,
   이력서 재작성 세션에서 소유자 구두 확인. 대웅제약 재직 전반의 공통 협업
