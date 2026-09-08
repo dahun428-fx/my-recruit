@@ -462,6 +462,34 @@
   source_persona: [headhunter-startup, headhunter-searchfirm]
   confirmed: 2026-09-08
 
+- exp: EXP-01
+  job_function: IT 개발자
+  headline_angle: >
+    "기능별 차등 가격" 한 줄짜리 전사 요구를 받아 화면·기능을 feature
+    단위로 직접 분해·목록화하고, 테넌트별 허용 feature를 JSON 설정으로
+    제어하는 구조까지 설계한 — 요구사항 분석→아키텍처 번역의 인과
+    사슬이 한 사람 안에서 완결된 사례
+  strengths:
+    - 비즈니스 요구의 분해 작업(feature 단위 목록화)을 본인이 직접
+      수행 — 기획이 정리한 스펙을 구현만 한 것이 아님
+    - 분석 결과를 곧바로 제어 기제(테넌트별 JSON 허용 목록)로
+      구조화한 번역력
+    - 플래그 차단을 컴포넌트 숨김 + 데이터 미전달 이중으로 설계해
+      화면 우회로 기능에 접근하는 경로까지 막은 제어 깊이
+  weak_points_defense: >
+    조합·기본값 처리 세부와 기획에 되물은 구체 장면은 미특정 —
+    자기소개서·면접에서 세부 구현이나 대화 일화를 창작하지 않고
+    "협의를 통해 확정" 수준까지만 서술하며, 면접 전에 실제 구현
+    방식을 별도로 정리해 둔다.
+  target_fit_notes: >
+    관통 서사에서 EXP-02(기획 겸임 엔드투엔드)에 이은 2순위 근거 —
+    "요구 분해를 직접 수행한 개발자". 기존 EXP-01 아키텍처 블록
+    (전사 정책→Config-Driven UI 판단)이 '아키텍처' 축이라면 이 블록은
+    '분석' 축 — writer/tailor는 자소서에서 두 축을 하나의 문단으로
+    이어 쓸 수 있다.
+  source_persona: [headhunter-techlead, headhunter-startup, headhunter-searchfirm]
+  confirmed: 2026-09-08
+
 - exp: 전체/서사
   job_function: IT 개발자
   headline_angle: >
