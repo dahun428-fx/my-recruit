@@ -427,6 +427,17 @@ facts in drafted application text.
     (Android)/WKScriptMessageHandler(iOS) 등 구체 API 명칭은 소유자가 명시
     확인하지 않았으므로 "WebView 인터페이스"·"네이티브 모듈 브릿지" 수준으로만
     서술하고 특정 API를 단정하지 말 것([확인 필요]).
+  - **[기획 참여 — 플랫폼 개편 전반 — user-attested 2026-09-08,
+    headhunter-advisor 포지셔닝 인터뷰]** 비즈36.5 개편에서 개발과 병행해
+    기획 역할을 수행: 이해관계자 요구사항 수집·정리 및 필요시 역제안,
+    화면설계서 직접 작성, 세부사항 커뮤니케이션을 통한 스펙 확정, 기획
+    회의 상시 참여. 요구를 던진 이해관계자가 누구였는지, 역제안으로 원래
+    요구와 다르게 스펙이 확정된 구체 사례는 미특정 [확인 필요] — 이 범위를
+    넘는 단정 서술·일화 창작 금지.
+  - **[기획→개발 프로세스 체인 — user-attested 2026-09-08, 동일 인터뷰]**
+    스펙 확정 후 소프트웨어 개발론에 따른 아키텍처·개발 룰 정립 → 기능
+    추가 여부 논의·반영 → 테이블 설계·API 설계 → 개발·테스트·배포까지
+    엔드투엔드 수행(기획 화면부터 테스트·배포까지 지휘).
 - Technologies: React, TypeScript, jQuery, Thymeleaf, Java, Spring Boot, REST API,
   MySQL, MyBatis (신규 건강관리 기능 3건 SQL 매핑 — user-attested 2026-08-24
   코오롱베니트 갭 인터뷰), Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
