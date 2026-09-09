@@ -258,19 +258,19 @@ PPR_HDR    = PPR(before=240, after=60, keep=True)                      # ■ 회
 PPR_INTRO2 = PPR(before=0, after=20, left=200, keep=True)              # [회사소개]
 PPR_NOTE   = PPR(before=0, after=60, left=200)                         # ※ 각주
 PPR_LABEL  = PPR(before=80, after=60, keep=True)                       # [주요업무]
-PPR_TITLE  = PPR(before=160, after=20, left=200, hanging=200, keep=True)  # 프로젝트 제목
+PPR_TITLE  = PPR(before=130, after=20, left=200, hanging=200, keep=True)  # 프로젝트 제목
 PPR_PERIOD = PPR(before=0, after=50, left=400, keep=True)              # 기간 메타
 PPR_LINE   = PPR(before=0, after=30, left=990, hanging=530)            # 역할/과제/판단/성과 라벨 줄
-PPR_LINE_L = PPR(before=0, after=80, left=990, hanging=530)            # 라벨 줄(마지막, 기술과 간격)
-PPR_TECH   = PPR(before=60, after=0, left=420)                         # 기술 줄
-PPR_REASON = PPR(before=140, after=0, left=200, hanging=200)           # [이직사유]
+PPR_LINE_L = PPR(before=0, after=60, left=990, hanging=530)            # 라벨 줄(마지막, 기술과 간격)
+PPR_TECH   = PPR(before=40, after=0, left=420)                         # 기술 줄
+PPR_REASON = PPR(before=90, after=0, left=200, hanging=200)           # [이직사유]
 PPR_GAP    = PPR(before=0, after=0)
 
 spacer = f'<w:p>{PPR_GAP}</w:p>'
 
 blocks = ''
 for bi, blk in enumerate(C.BLOCKS):
-    blocks += para(PPR_HDR if bi == 0 else PPR(before=140, after=60, keep=True), blk['header'], bold_all=True)
+    blocks += para(PPR_HDR if bi == 0 else PPR(before=260, after=60, keep=True), blk['header'], bold_all=True)
     blocks += para(PPR_INTRO2, blk['intro'], sz=18, color='595959')
     if blk.get('note'):
         blocks += para(PPR_NOTE, blk['note'], sz=17, color='808080')
@@ -286,8 +286,7 @@ for bi, blk in enumerate(C.BLOCKS):
         if pj.get('tech'):
             blocks += para(PPR_TECH, pj['tech'], sz=17, color='595959')
     blocks += para(PPR_REASON, blk['reason'], sz=19)
-    if bi != len(C.BLOCKS) - 1:
-        blocks += spacer
+    # 회사 블록 사이 빈 문단 제거 — 다음 헤더 before 여백으로 대체(페이지 절약)
 doc = doc[:b1s] + blocks + doc[sig_s:]
 print('9. 상세경력 OK')
 
