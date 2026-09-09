@@ -100,6 +100,29 @@ rels·media)만 교체한다.** 지원 파일(styles·numbering·settings·heade
 - **재발 방지**: 고아줄 방지는 pageBreakBefore(반쪽 페이지 유발)보다
   블록 keepNext 체인을 우선 검토.
 
+## 7. 소유자 Word 세션이 열려 있을 때 AppleScript `open`이 무한 대기 (2026-09-09 지오영 세션)
+
+- **재현 조건**: 소유자가 Word로 다른 문서를 편집 중(문서 카운트 ≥1)인 상태에서
+  `open file name`을 보내면 `AppleEvent timed out (-1712)`. 갓 만든 출력물뿐
+  아니라 **검증된 기존 제출본(코오롱 v4)도 동일하게 실패**하므로 파일 결함이
+  아니라 Word 세션 상태 문제다. `count of documents` 같은 조회 이벤트는 정상
+  응답한다(모달이 아닌 "열기 큐 점유" 양상). §2의 `pkill -9 -x "Microsoft Word"`
+  선행은 소유자 미저장 작업을 날릴 수 있어 **사용 금지**.
+- **확인 명령어**: `osascript -e 'with timeout of 8 seconds
+  tell application "Microsoft Word" to (count of documents) & name of document 1
+  end timeout'` — 소유자 문서명이 나오면 이 케이스.
+- **검증 방법**: 소유자 문서가 닫힌 뒤(또는 Word 재시작 후) 같은 스크립트가
+  정상 변환되면 확정.
+- **해결 절차**: 자동 변환을 보류하고 (1) `unzip -t` + 전 XML 파트
+  `ET.fromstring` 파싱 + 텍스트 시퀀스 diff로 구조·문면을 기계 검증한 뒤
+  (2) 소유자에게 "Word의 다른 문서를 닫은 뒤 docx를 직접 열어 확인" 또는
+  변환 재시도 시점을 알린다. `settings.xml`의 `updateFields`는 푸터에
+  NUMPAGES가 없으면 넣지 않는다(열 때 "필드 업데이트" 모달 유발 가능 —
+  이번 양식은 PAGE 필드만 있어 제거).
+- **재발 방지**: 변환 스크립트 첫 단계에 "Word 문서 카운트 > 0이면 변환
+  건너뛰고 보고" 가드를 둔다. AppleScript는 항상 `with timeout of N seconds`로
+  감싸 세션을 붙잡지 않게 한다.
+
 ---
 
 ## 표준 검증 루틴 (수술 1회마다)

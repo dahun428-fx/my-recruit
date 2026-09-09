@@ -47,6 +47,20 @@ facts in drafted application text.
   않으며 EXP-06 기준 별도 유지보수 지원 성격으로 일관됨(모순 없음). 이 조직
   정보는 대웅제약 재직 기간 전반의 프로젝트 항목(EXP-01/EXP-02/EXP-03/EXP-06/
   EXP-07)에 공통 적용됨.
+  **[프로젝트 팀 규모 — user-attested 2026-09-09, 지오영 AI 개발 지원 세션
+  갭 인터뷰]**: 이 프로젝트는 개발자 5명 팀으로 실제 애플리케이션을
+  구현했음을 소유자가 확인("팀원(개발자 5명)과 함께 실제적인 Application을
+  구현"). 위 [조직 구조]의 "다나아데이터 스쿼드 10명"과의 관계(이 5명이
+  스쿼드 10명의 부분집합인지, 프로젝트 전담 별도 팀인지)는 특정되지
+  않았으므로 단정 서술 금지 — [확인 필요].
+  **[학습 배경 — user-attested 2026-09-09, 같은 세션; daewoong-history.md
+  H절 "학습: Udemy MCP & A2A 과정, KT AICE…"(2025-10~2025-11) 문서 근거와
+  결부]**: 소유자가 빅데이터분석기사·AICE를 공부하며 ML·딥러닝 지식을
+  학습했다고 확인("빅데이터분석기사, AICE를 공부하면서 ML·딥러닝 지식을
+  학습"). 두 자격의 **취득 여부는 [확인 필요]** — 학습 사실까지만 서술
+  가능하며, 자격 취득으로 단정하거나 이력서 자격 표에 기재하지 말 것
+  (자격 정보 반영은 profile.md 소관이며 archivist 편집 대상 아님, 승인
+  전까지 상위 에이전트에게 제안만 전달).
 - Problem: 목업 수준의 AI 건강검진 챗봇을 실사용 가능한 서비스로 고도화해야 했고, LLM 답변 지연, Markdown/표/링크 렌더링, 오류 대응, 고객사별 화면 확장 구조가 부족했다.
 - Role: 프론트엔드 유일 담당자로 FE 기술적 의사결정권을 가지고 아키텍처 설계·분석부터 구현·테스트까지 독립적으로 수행, BE/LLM 개발자와 협의하며 AI/백엔드 응답 정책 조율 및 LLM/BE 로직 일부에 참여(팀 공동 기여, 단독 구축 아님), 서비스 품질 및 확장 구조 구축 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
 - Actions:
@@ -90,6 +104,23 @@ facts in drafted application text.
   - LLM 릴레이 서버·AI 오케스트레이션 구현에 협업(백엔드·LLM 개발자와 공동,
     FE 단독 구현 아님). 상세 실체 [확인 필요 — 구현 범위·기여 비중 소유자
     확인 예정]. (user-attested 2026-07-24, grill-me base-resume 세션)
+    **[멀티 에이전트 개발 범위 확정 — user-attested 2026-09-09, 지오영 AI
+    개발 지원 세션 갭 인터뷰]** 위 [확인 필요]를 소유자 발언으로 일부
+    해소: "대웅 AI추진팀으로 참여하여 AI Software 개발에 참여함. 그
+    과정에서 LLM Relay server, API 구축, Multi Agent 설계-구현에 참여.
+    구체적인 RAG, Vector DB를 실제로 구현하는 건 LLM 개발자의 역할이었지만,
+    해당 애플리케이션을 둘러싼 prompt, Context, Harness 엔지니어링 구축을
+    하였음." / "업무 담당은 설계/구현, API 설계, AI Multi Agent 설계, 해당
+    개발은 Python을 이용해서 진행. 해당 SW를 만드는데 참여." 이에 따라
+    본인 담당 범위를 다음으로 확정: 멀티 에이전트 설계·구현 참여, LLM
+    릴레이 서버·API 구축(Python 사용), 프롬프트·컨텍스트·하네스
+    엔지니어링 구축. RAG·VectorDB의 실제 구현은 LLM 개발자 담당이며 본인
+    담당이 아님 — EXP-07("VectorDB·RAG 구현 참여", 참여·경험 톤·심화
+    전문성 주장 금지 가드)과 정합, 상호 참조. **잔존 [확인 필요]**:
+    멀티 에이전트 구조의 구체 형태(라우팅/파이프라인 등)와 본인이 구현한
+    에이전트의 범위는 여전히 미확인 — 구조를 창작해 서술 금지. "설계·구현
+    참여, API 설계, Python 개발"까지는 서술 가능하나 "설계·주도·독립
+    구축"으로 확대하지 말 것.
   - **[폼 검증 공통 구조 — user-attested 2026-08-13, 빗썸 2차 갭 인터뷰,
     귀속 확정]** react-hook-form과 yup/zod를 사용해 폼 검증을 공통 구조로
     구성하고, 이를 Context에서 핸들링할 수 있도록 설계·구현함. 소유자가
@@ -212,13 +243,25 @@ facts in drafted application text.
     yup/zod를 사용한 폼 검증 공통 구조(Context 핸들링)를 이 프로젝트
     (AI코치=AI 건강검진 챗봇)로 귀속 확정. "Unattributed Technologies"
     보류 표에서 이관됨. 적용 화면/기능은 미특정. 문서 근거 없음.
+  - user-attested 2026-09-09 (지오영 AI 개발 지원 세션 갭 인터뷰) — (1)
+    멀티 에이전트 설계·구현 참여, LLM 릴레이 서버·API 구축(Python), 프롬프트·
+    컨텍스트·하네스 엔지니어링 구축은 본인 담당이고 RAG·VectorDB 실제
+    구현은 LLM 개발자 담당임을 확인(발언 원문 인용, 위 Actions [멀티
+    에이전트 개발 범위 확정] 참조). 멀티 에이전트 구조 형태·본인 구현
+    범위는 [확인 필요]로 잔존. (2) 이 프로젝트는 개발자 5명 팀으로
+    구현했음을 확인 — 스쿼드 10명과의 관계는 [확인 필요]. (3)
+    빅데이터분석기사·AICE 학습을 통해 ML·딥러닝 지식을 학습했음을 확인 —
+    자격 취득 여부는 [확인 필요]. 전 항목 문서 근거 없음, pending
+    documentary source.
 - Reusable keywords: AI 서비스 제품화, LLM 챗봇, SSE Streaming, Markdown Renderer,
   XSS 필터링, Config-Driven UI, Base-Theme, feature flag, PoC 고도화,
   컴포넌트 추상화, 변경 이유 기반 공통화, 오류 분류 체계, 오류 처리 경계,
   Nginx, FastAPI, Chromatic, Web Vitals, LLM 릴레이, AI 오케스트레이션,
   i18n, PostHog, GA4, Vitest, Storybook, 다국어, 코드베이스 규모, 다나아데이터
   스쿼드, Docker, MongoDB, NoSQL, react-hook-form, yup, zod, 폼 검증,
-  공통 검증 구조, Context 핸들링
+  공통 검증 구조, Context 핸들링, 멀티 에이전트 설계·구현, 프롬프트
+  엔지니어링, 컨텍스트 엔지니어링, 하네스 엔지니어링, 빅데이터분석기사,
+  AICE 학습
 - Notes for tailoring: AI/플랫폼/프론트엔드 아키텍처 직무에서 최우선 사례로 사용.
   `2026_상반기종합평가`는 2026년 상반기 평가 자료이므로 2025.07~2025.10 프로젝트의
   후속 안정화/확장 성과를 함께 입증하는 보조 근거로만 사용. 신규 고객사 실명 "웰체크"는
@@ -273,6 +316,145 @@ facts in drafted application text.
   화면/기능은 특정되지 않았으므로 화면명을 창작하지 말고 "공통 폼 검증
   구조 설계" 수준으로만 서술할 것. 문서 근거 없음(pending documentary
   source).
+  **멀티 에이전트 담당 범위 가드레일(user-attested 2026-09-09, 지오영 AI
+  개발 지원 세션 갭 인터뷰)**: "멀티 에이전트 설계·구현 참여, LLM 릴레이
+  서버·API 구축(Python), 프롬프트·컨텍스트·하네스 엔지니어링 구축"까지는
+  본인 담당으로 서술 가능하나, RAG·VectorDB의 실제 구현은 LLM 개발자
+  담당이므로 본인 기여로 서술하지 말 것. 멀티 에이전트 구조의 구체 형태·
+  본인이 구현한 에이전트 범위는 [확인 필요] — 창작 금지. "참여" 톤에서
+  "설계·구현 참여, API 설계, Python 개발" 수준까지는 표현을 확대할 수
+  있으나 "설계·주도·독립 구축"으로는 확대하지 말 것.
+  **학습 배경 가드레일(user-attested 2026-09-09, 같은 세션)**: 빅데이터
+  분석기사·AICE는 학습 사실만 확인됐고 취득 여부는 [확인 필요]다 — 자격 **[갱신 — user-attested 2026-09-09, 같은 세션 후속 답변]** KT AICE Associate 취득, 빅데이터분석기사는 필기 합격(실기 전). 소유자 결정: 두 건 모두 자격 표에 기재하지 않고 자소서 학습 서사에만 사용. 취득·합격 시점 [확인 필요].
+  취득으로 단정하거나 이력서 자격 항목에 올리지 말 것.
+
+### 나만의 건강 AI코치 v2 멀티 에이전트 서버(llm-aicoach-007-MAS) 전환 참여
+
+- Period: 2026.04.17 ~ 2026.08.25 (저장소 커밋 범위, 경로
+  `/Users/2302-n0214/Documents/workspaces/my-health-ai-coach-llm-version2`,
+  archivist 로컬 코드 조사일 2026-09-09). 소유자 실제 참여 시기가 이 커밋
+  범위와 일치하는지는 [확인 필요].
+- Context: EXP-01("AI 건강검진 챗봇 제품화 및 플랫폼 확장", 2025.07~2025.10
+  최초 제품화, 의도 분류 기반 v1 `my-health-ai-coach-llm-api`) 이후 v2에서
+  멀티 에이전트 구조로 전환된 서버. 저장소 커밋 저자 분포(git log 기준):
+  kimhyungjun 195/208, soooz 9, 김진희 3, taehan lee 1 — 다나아데이터 LLM
+  개발자 주도. 이 항목은 EXP-01 Actions의 [멀티 에이전트 개발 범위 확정]
+  블록(user-attested 2026-09-09, 지오영 AI 개발 지원 세션 갭 인터뷰)이
+  가리키는 시스템의 코드 근거(documentary)이며, 본인 담당 범위는 그
+  블록에서 확정된 내용과 동일하다 — 상호 참조.
+  **[기여 범위 가드레일 — 최우선, documentary + user-attested 2026-09-09]**
+  이 저장소에는 정다훈 커밋이 0건이다(git identity 2250358@daewoong.co.kr
+  부재). 본인 기여는 소유자 user-attested(2026-09-09)로 "멀티 에이전트
+  설계·구현 참여, LLM 릴레이 서버·API 구축, 프롬프트·컨텍스트·하네스
+  엔지니어링 구축, RAG·VectorDB 구현은 LLM 개발자 담당"까지이며, 소유자가
+  커밋 저자 문제를 인지한 상태에서 아키텍처 사실 사용을 지시했다
+  (2026-09-09 지오영 AI 개발 지원 세션, 소유자 지시 원문: "커밋 신경쓰지
+  말고 여기에서 뽑아먹을 게 있으면 뽑아먹자"). 문면에서는 시스템
+  아키텍처 사실을 "시스템이 이렇게 구성됨" 또는 "참여" 톤으로만 쓰고,
+  특정 모듈을 "본인이 구현"으로 귀속하지 않는다. 면접 방어 문구: "코드
+  커밋은 LLM 개발자, 본인은 설계 논의·응답 정책·연동·검증" 형태로 답변
+  준비 — 참여 형태(설계 논의/리뷰/페어)는 [확인 필요].
+- Role: EXP-01 확정 범위와 동일(상호 참조) — 멀티 에이전트 설계·구현
+  참여, LLM 릴레이 서버·API 구축(Python), 프롬프트·컨텍스트·하네스
+  엔지니어링 구축. RAG·VectorDB 실제 구현은 LLM 개발자 담당이며 본인
+  담당이 아니다. 본인이 구현한 구체 에이전트/모듈 범위, 멀티 에이전트
+  구조의 구체 형태는 [확인 필요] — 창작 금지.
+- Actions (documentary — 저장소 경로:행 근거, archivist 로컬 코드 조사
+  2026-09-09):
+  - FastAPI + SSE 스트리밍(이벤트 12종: progress/intentSlots/
+    memoryContext/orchestratorDecision/token/result/document/sigungu/
+    suggestQuestions/agentError/heartbeat/status), 활성 엔드포인트 5개,
+    Python 3.12, 222파일 31,742 LOC (`README.md:1-4`, `apiEndpoint.py`).
+  - 오케스트레이터 7단계: Pre-filter → Intent 분류(+RAG 병렬) → Context
+    build → Route → asyncio.gather 병렬 실행 → Synthesizer → SSE tail
+    (`chatbot/orchestrator/orchestrator.py:1-8,176-660`).
+  - 서브에이전트 18개·8카테고리(DATA_ANALYSIS 4·SERVICE 5·JUDGMENT 3·
+    CONVERSATION 2·MEDICAL_KNOWLEDGE·NUTRITION·HOSPITAL·
+    SUGGEST_QUESTIONS), env 토글 on/off + DefaultAgent 폴백
+    (`chatbot/agents/__init__.py:18-48`).
+  - 라우팅 4경로(@멘션 강제 / Claude Haiku 통합 분류 / multi-intent+정적
+    ROUTE_MAP / LLM 동적 라우터 confidence + 정적 폴백), INT→Agent 매핑
+    단일 소스 AGENT_CAPABILITIES 27개, 인텐트 30·슬롯 11
+    (`agent_resolver.py`, `agent_capabilities.py`, `intent_settings.json`).
+  - 슬롯 기반 인스턴스 병렬·dedupe, 턴 45초 hard budget, `__anext__` 단위
+    타임아웃, 단일 Agent 스트리밍 fast-path(Synthesizer 우회, TTFT
+    단축), 8초 idle heartbeat, agentError 부분 실패 노출, 턴별 trace_id
+    (`orchestrator.py`).
+  - LLM 3사 통합 어댑터(HCX/Claude/GPT) + 화이트리스트 7모델 + Agent별
+    모델 레지스트리(Orchestrator=Haiku 4.5, Synthesizer=gpt-5.4-nano,
+    분석=HCX-007 등), HCX 429 폴백(007→005) sync/async/stream, connect
+    5s/read 30s, Anthropic prompt caching, 비용 SSOT pricing.py, 토큰
+    카운터, SQLite 트레이스 저장소 + ACK 기반 forwarder(멱등 키·재시도·
+    3일 retention) (`chatbot/agents/_common/llm/*`, `observability/*`).
+  - 메모리 3층 Redis(STM)+MongoDB(LTM, Beanie)+Qdrant(1024차원, 컬렉션
+    2) — Extractor→Decider→백그라운드 worker, Redis 분산 락
+    (`chatbot/memory/`; soooz 기여 큼).
+  - 한국어 하이브리드 RAG: FAISS 9개 인덱스(본문+제목 융합)+Kiwi 형태소
+    BM25, DF 실측 불용어, 고/저 반의어 보정, Jaccard 재랭킹
+    (`_common/DB/rag/rag.py` 747줄), Clova Studio 임베딩.
+  - 가드레일: 룰 기반 pre-filter(PII 정규식 8종·인젝션 패턴, ReDoS
+    방지), LLM 입출력 PII 마스킹/스트리밍 unmask, 출력 필터(의학 단정
+    완화 등), intent별 restrictions, BOLA 접근 제어(userToken, enforce/
+    warn), HMAC 로그 식별자 (`chatbot/policy/`).
+  - Synthesizer 3단계(merge→refine→guard_and_polish), 관측 기반
+    max_tokens 튜닝 기록.
+  - 평가 하네스 eval/ 18파일 7,368 LOC: single vs multi-agent A/B(운영
+    경로 그대로), 블라인드 LLM-judge 5축·모듈식 루브릭+FAIL 게이트,
+    RAGAS-style 4지표, 교차 계열 judge(Gemini), t-검정/Wilcoxon/
+    McNemar/Holm/이차가중 kappa 직접 구현, 데이터셋 120 복합질의×2arm=
+    240건, 논문 docx 자동 반영. CI 자동 실행 없음(수동).
+  - 테스트 301개(unit 288+integration 13, 커밋 20d94d7 스냅샷, HEAD에서
+    untrack), Docker Compose 4서비스+healthcheck, 멀티스테이지
+    non-root, 워크플로우 그래프 시각화 서버(read-only).
+  - **[기여 특정 불가·검증 불가 목록]** memory 패키지(soooz), MongoDB
+    초기 도입(김진희), MCP 서버 없음(런타임 tool-calling 없음 — "MCP
+    서버 구축" 표현 이 저장소 근거로 금지), CI 없음, 성능 수치(TTFT
+    단축폭·토큰 90% 절감)는 커밋 메시지 주장뿐 산출물 없음 — 수치 사용
+    금지.
+- Technologies: Python 3.12, FastAPI, SSE, asyncio, Anthropic Claude
+  (Haiku 4.5·Sonnet), OpenAI GPT, HyperCLOVA X, FAISS, BM25(Kiwi),
+  Qdrant, Redis, MongoDB(Beanie), SQLite, Docker Compose, pytest.
+- Result: [확인 필요 — 이 v2 MAS 전환의 배포·운영 성과(사용자 반응,
+  지표 개선)는 이번 코드 조사 범위 밖이며 소유자 확인 없음. EXP-01의
+  활성 사용자 3,493명 등 기존 Metrics는 v1 시점 수치이며 이 전환과 직접
+  연결되는 성과 수치는 확인된 바 없다 — 창작 금지.]
+- Metrics: 아키텍처 규모 수치(18 에이전트·8 카테고리·12 SSE 이벤트·7
+  화이트리스트 모델·9 FAISS 인덱스·평가 240건·테스트 301개)는 코드
+  실측 documentary — 소유자 기여 비중과 무관한 시스템 규모 사실이므로
+  "시스템은 이런 규모로 구성됨" 수준으로만 인용하고 개인 성과처럼
+  서술하지 말 것. 성능/품질 개선 수치(TTFT 단축폭, 토큰 절감률 등)는
+  없음 — 창작 금지.
+- Evidence / links:
+  - documentary — 로컬 저장소 `/Users/2302-n0214/Documents/workspaces/
+    my-health-ai-coach-llm-version2` 코드 조사, archivist 2026-09-09
+    (지오영 AI 개발 지원 세션, 소유자 지시 "커밋 신경쓰지 말고 여기에서
+    뽑아먹을 게 있으면 뽑아먹자"). 커밋 저자 분포(git log 기준):
+    kimhyungjun 195/208, soooz 9, 김진희 3, taehan lee 1, 정다훈 0.
+    구체 근거 경로는 위 Actions 각 항목의 파일:행 표기 참조.
+  - user-attested 2026-09-09 (지오영 AI 개발 지원 세션 갭 인터뷰) — 본인
+    담당 범위 확정 발언 원문은 EXP-01 Actions [멀티 에이전트 개발 범위
+    확정] 블록·Evidence 참조(중복 인용 방지를 위해 이 항목에서는 재인용
+    생략).
+- Reusable keywords: 멀티 에이전트 오케스트레이션, FastAPI, SSE, LLM
+  릴레이 서버, LLM 3사 통합 어댑터, HCX, Claude, GPT, 프롬프트
+  엔지니어링, 컨텍스트 엔지니어링, 하네스 엔지니어링, 한국어 하이브리드
+  RAG, FAISS, BM25, Qdrant, Redis, MongoDB, 메모리 3층 구조, PII
+  가드레일, BOLA 접근 제어, LLM-judge 평가 하네스, A/B 평가, Docker
+  Compose
+- Notes for tailoring: **[기여 범위 가드레일 최우선 준수]** 이 항목은
+  "시스템이 이렇게 구성돼 있고 그중 본인은 EXP-01에서 확정된 범위(멀티
+  에이전트 설계·구현 참여, LLM 릴레이 서버·API 구축, 프롬프트·컨텍스트·
+  하네스 엔지니어링)를 담당했다"는 프레이밍으로만 사용할 것 — 저장소
+  실측 규모 수치를 "본인이 이만큼 구현했다"는 개인 성과로 오독되게
+  서술하지 않는다. **"MCP 서버 구축" 표현 금지**: 이 시스템에는 런타임
+  tool-calling용 MCP 서버가 없다(이 저장소 근거) — EXP-03의 사내 MCP
+  서버 2종(사내 문서/지식 검색용, 테스트/검증 도구 호출용)과 혼동해 이
+  프로젝트에 "MCP 서버 구축" 경험을 결부하지 말 것. **성능 수치 창작
+  금지**: TTFT 단축·토큰 절감 등은 커밋 메시지 주장뿐 산출물 근거가
+  없다 — 어떤 문서에도 수치로 사용하지 않는다. **EXP-01 상호 참조**:
+  본인 담당 범위·면접 방어 문구는 EXP-01 Actions [멀티 에이전트 개발
+  범위 확정] 블록이 정본이며, 이 항목은 그 범위를 뒷받침하는 시스템
+  아키텍처 코드 근거로만 사용한다.
 
 ### B2B 임직원 건강 플랫폼 풀스택 내재화
 
@@ -581,6 +763,85 @@ facts in drafted application text.
   롤백" 수준까지만 서술 가능 — 헬스체크 조건·자동화 수준은 [확인 필요]로
   창작 금지.
 
+### 비즈36.5 2단계 건강관리실·검진센터 AX 기획
+
+- Period: 2026.08 ~ 진행 중, 기획 확정·상세 기획서 작성 전 단계(2026-09-09
+  기준). 배포·운영 실적 없음 — 사용자 수·절감 수치를 창작해 붙이지 말 것.
+  (user-attested 2026-09-09, 지오영 AI 개발 지원 세션 갭 인터뷰)
+- Context: 비즈36.5(비즈케어) 2단계로 건강관리실·검진센터 AX 전환을 기획
+  중. 소유자 원문: "건강관리실 + 검진센터 AX 전환을 하기 위해서 기획 +
+  설계 + 분석 + 요구사항 분석 + 기능 설계를 수행하며 각 부서와 함께
+  커뮤니케이션하며 비즈36.5를 중점으로 AX 전환을 수행 중." "AX 전환을
+  위해서는 사용자의 암묵지를 DX로 옮기는 기능화가 중요하다고 생각해
+  기획서를 상세하게 구체화하고 있고, 사내의 건강제도 및 건강관리 정보를
+  구체화하였음." **[내재화 vs 기능화 가드레일]** "AI 솔루션 내재화"가
+  아니라 "현업 업무의 DX 기능화 기획(AI로 기획·설계 문서 작성 지원)"으로
+  서술할 것 — 배포된 AI 제품/솔루션으로 과장 금지.
+  (user-attested 2026-09-09, 지오영 AI 개발 지원 세션 갭 인터뷰)
+- Problem: 건강관리실·검진센터 운영이 종이·엑셀 등 수기 프로세스에 의존하고
+  있었고(예: 개인정보 동의서 배포·회수·취합), 기업 담당자가 검진 수검
+  현황·퍼널을 조회하고 미수검자를 독려할 수단이 부족했다.
+  (문서 근거: 아래 Evidence 기획서 2건)
+- Role: 기획·설계·분석·요구사항 분석·기능 설계 담당, 각 부서와 커뮤니케이션.
+  소유자가 방향성으로 언급한 것: 업무 자동화(건강관리실·운영 업무), 기획-
+  개발 설계 문서 자동화, FE에서 "기획 Figma → Agent → Storybook → Test"로
+  이어지는 흐름을 만들어 개발자는 판단만 하면 되는 영역으로 이끔.
+  **[가시적 성과 방향 vs 완료 여부 가드레일]** 이 방향성은 소유자가
+  언급한 지향점 수준이며, 이 프로젝트 범위 내에서 실제 구현·배포까지
+  완료됐다는 근거는 아직 없다([확인 필요]) — "완료했다"가 아니라 "~방향
+  으로 추진 중" 수준까지만 서술할 것.
+  (user-attested 2026-09-09, 지오영 AI 개발 지원 세션 갭 인터뷰)
+- Actions:
+  - **[건강관리실 동의서 시스템 기획 — documentary, 소유자 작성 기획서
+    "건강관리실 동의서 시스템 기획서"(비즈36.5 2단계), Claude 아티팩트]**
+    기업 건강관리실이 종이·엑셀로 하던 개인정보 동의서 배포·회수·취합을
+    비즈케어(비즈36.5) 안으로 옮기는 시스템 기획. 범위: PDF 원문 그대로
+    등록·발행 잠금, 이메일/문자 링크 발송(로그인 후 동의), 종이 동의
+    대리 등록(스캔본 필수), 회수 현황, 취합 마감, 철회, 보건 담당 권한
+    분리, 법무 확인 목록 6건, 범위 제외 6건. 비개발 직군(기획·보건 담당)
+    이 읽는 문서로 작성됨.
+  - **[검진 진행현황 기획 플랜 — documentary, "검진 진행현황 기획
+    플랜"(2026-09-08), `biz36-5-checkup-status-plan-2026-09-08.md` /
+    상위 `biz36-5-phase2-requirements-design-2026-08-28.md`]** 기업
+    담당자가 수검률·단계별 퍼널·부서별 현황을 보고 미수검자에게 독려를
+    보낼 수 있는 기능 기획. KB오케어 레퍼런스 분석, 현장(보건관리자)
+    피드백 반영, 기존 시스템 자산 대조로 신규 개발 최소화(대상자 명부는
+    기존 회원관리 화면 재사용), 회원 API 권한 결함(로그인만 검사하고
+    회사 범위를 강제하지 않던 문제) 발견 → 보강 방안 포함, 수검 판정
+    기준을 병원 확정 단일 신호로 확정, 월별 추이·센터 Top5 재검증 후
+    채택. 상태: "기획 결정 확정·상세 기획서 작성 전"(2026-09-08 기준).
+- Technologies: [확인 필요 — 기획 단계이며 개발 착수 전, 사용 기술 스택
+  미확정]
+- Result: [확인 필요 — 기획 확정 단계이며 배포·운영 성과 없음. 성과
+  서술 금지, 실행 단계 진입 후 갱신 예정]
+- Metrics: [확인 필요 — 배포·운영 이전 단계이므로 사용자 수·절감률 등
+  수치 없음. 수치 창작 금지]
+- Evidence / links:
+  - user-attested 2026-09-09 (지오영 AI 개발 지원 세션 갭 인터뷰) — Context·
+    Role 인용 발언 전문.
+  - documentary — 소유자 작성 "건강관리실 동의서 시스템 기획서"(비즈36.5
+    2단계, Claude 아티팩트). 이 프로젝트의 `sources/`에는 아직 임포트되지
+    않음 — [확인 필요: 원본 파일 임포트 여부].
+  - documentary — "검진 진행현황 기획 플랜"(2026-09-08),
+    `biz36-5-checkup-status-plan-2026-09-08.md` / 상위
+    `biz36-5-phase2-requirements-design-2026-08-28.md`. 원본 파일 경로는
+    소유자 로컬 환경 기준이며 이 프로젝트의 `sources/`에는 아직
+    임포트되지 않음 — [확인 필요: 원본 파일 임포트 여부].
+- Reusable keywords: AX 전환 기획, DX 기능화, 암묵지 기능화, 건강관리실
+  동의서 시스템, 검진 진행현황, 수검률 퍼널, 요구사항 분석, 기능 설계,
+  KB오케어 벤치마킹, 기획-개발 설계 문서 자동화, Figma-Agent-Storybook-Test
+- Notes for tailoring: **[단계 가드레일]** 이 항목은 "기획 확정·상세 기획
+  중" 단계이며 배포·운영 성과가 없다 — 사용자 수·절감 수치를 창작해
+  붙이지 말 것. **[내재화 vs 기능화 가드레일]** "AI 솔루션 내재화"가
+  아니라 "현업 업무의 DX 기능화 기획(AI로 기획·설계 문서 작성 지원)"으로
+  서술할 것. **[가시적 성과 방향 vs 완료 여부 가드레일]** Role에 인용한
+  "업무 자동화·설계 문서 자동화·Figma→Agent→Storybook→Test 흐름"은 소유자가
+  언급한 방향성 수준이며, 이 프로젝트 범위에서 실제 구현·배포 완료를
+  뒷받침하는 근거는 아직 없다 — "완료했다"고 서술하지 말고 "~방향으로
+  추진 중" 수준까지만 사용할 것. **[EXP-02 관계]** 이 프로젝트는 비즈36.5
+  통합플랫폼(EXP-02, 2025.11~2026.02 완료)의 2단계 후속 기획이다 — EXP-02의
+  완료된 실적과 이 항목의 미완료 기획 단계를 혼동해 병렬 서술하지 말 것.
+
 ### 품질·개발·운영 자동화 및 FE AX 기준 수립
 
 - Period: 2026.01 ~ 2026.06 (2026-08-14 소유자 확정)
@@ -752,6 +1013,106 @@ facts in drafted application text.
     구조 운영 — 외부 발표가 아닌 내부 공유 세미나임. 세미나 12회 수치는 "2025 대웅제약
     성과 평가 기반 사업 기여" 항목의 Actions와 동일 출처.
     (user-attested 2026-07-24, grill-me base-resume 세션)
+  - **[PostHog 전수 점검 자동화 — 월별피드백 2026-08 자가 기록,
+    metric-registry `metric-posthog-e2e-cycle`, 소유자 2026-09-09 사용
+    승인(지오영 제출본 검토 세션)]** AI코치 PostHog 데이터 전수 점검을
+    수행해 기존 106건 개선·신규 기능 3건 최종 검수를 완료. PostHog 데이터
+    확인–오류 식별–수정–재검증 109건 사이클을 E2E 프로세스로 자동화(본인
+    직접 설계·구현) → 전수검사 1시간 → 20분(약 67%).
+  - **[비즈36.5 FE React 전환 확장 — 월별피드백 2026-08 자가 기록,
+    metric-registry `metric-fe-payload-reduction`/`metric-auto-test-scale`,
+    소유자 2026-09-09 사용 승인]** 비즈36.5 FE React 화면 71건 개발
+    완료. **[페이지 수 표기 상이 — 확인 필요]** 2026-07 월별피드백은
+    "74개 페이지 전환 완료"로 기록돼 있어 이 71건과 표기가 다르다 — 두
+    수치를 함께 인용할 때는 "표기 상이, 확인 필요"를 병기하거나
+    registry 권고대로 "70여 개 화면" 한정어를 사용할 것, 어느 한쪽을
+    정답으로 단정하지 말 것. 이 전환과 함께 초기 로딩 파일 3.53MB →
+    0.35MB(약 90%), 자동 테스트 58건 → 2,318건, 공용 스크립트 호출
+    2,281건 제거.
+  - **[React 전환의 하네스 전제 설계 — daewoong-history.md 2026-07 원문,
+    metric-registry `metric-react-harness-6w-2w`, 소유자 2026-09-09 사용
+    승인]** 비즈36.5 Web React 전환을 AI 하네스 엔지니어링 전제(분석·
+    개발·테스트·E2E 파이프라인 자동화)로 설계 → 개발 기간 6주 → 2주로
+    단축. 위 [React 전환 확장] 블록의 71건/74개 페이지 표기 상이 이슈와
+    같은 전환 프로젝트를 가리키는 수치이므로 함께 인용 시 동일한 표기
+    상이 가드를 적용할 것.
+  - **[비즈36.5 Storybook 확장 — 월별피드백 2026-08 자가 기록,
+    metric-registry `metric-storybook-biz365`, 소유자 2026-09-09 사용
+    승인]** 비즈36.5 주요 컴포넌트 Storybook 93개 스토리 파일·258개 UI
+    상태를 구축, 구축 과정에서 버그 64건 해소(미노출 폼 컨트롤 46건 등).
+    **[이중 계상 방지]** 이 93개/258개 수치는 EXP-01("AI 건강검진 챗봇
+    제품화 및 플랫폼 확장") Metrics의 "Storybook 스토리 210개"(그
+    프로젝트 자체 코드베이스 실측 수치)와는 별개 사건이다 — 두 수치를
+    합산하거나 동일 사건으로 혼용하지 말 것.
+  - **[바이오에이지 어드민 Storybook 확장 — 월별피드백 2026-08 자가 기록,
+    metric-registry `metric-bioage-storybook`, 소유자 2026-09-09 사용
+    승인]** 바이오에이지 어드민에 Storybook 65건 적용·148개 스토리(초기
+    15개 대비 약 4.3배) 구축, UI 접근성 위반 198건 개선.
+  - **[E2E 도구 사용·검증 기준 SOP 문서화 — 월별피드백 2026-08 자가 기록,
+    metric-registry `metric-e2e-sop-4`, 소유자 2026-09-09 사용 승인]**
+    E2E 도구 사용·검증 기준을 표준 문서 4건으로 작성해 팀에 공유·배포
+    (문면 표기는 `canonical-lines.md` C-10에 따라 "개발 표준"·"검증 절차
+    문서" 사용). 2026 AI Summit Seoul & Expo 참관 보고서 작성(정성 활동,
+    수치 없음).
+  - **[Figma MCP·SKILL.md 리드타임 개선 — daewoong-history.md F절
+    (2025-12·2026-02), metric-registry `metric-figma-mcp-leadtime`/
+    `metric-skillmd-chart-dev`, 소유자 2026-09-09 사용 승인]** (a) Figma
+    MCP 도입 → 신기능 개발 리드타임 1주 → 1일(약 85%); (b) 데이터 시각화
+    공통 로직을 SKILL.md로 문서화·표준화 → 신규 차트 개발 1시간 →
+    10분(약 83%). 팀 AX 전환 리드 활동의 일부.
+  - **[RESTful API 교체 29건 — daewoong-history.md 2026-07 원문,
+    metric-registry `metric-restful-api-29`, 소유자 2026-09-09 사용
+    승인]** AI 기반 명세 분석·구현·테스트 방식을 적용해 나만의건강 AI코치
+    RESTful API 교체 대상 29건 개발·테스트 완료 → ETA 4주 → 1주(약 75%).
+    base-self-introduction 항목 2에 이미 사용된 수치.
+  - **[AI 기반 에러 리포트 파이프라인 — documentary, 저장소
+    `my-health-ai-coach-web` `scripts/error-report/`, 정다훈 5커밋
+    2026-04-07~15, archivist 코드 조사 2026-09-09]** PostHog Error
+    Tracking API로 스택트레이스·파일·라인을 추출 → GitLab Repository
+    Files API로 소스 ±30줄 조회 → OpenAI GPT-4o로 심각도·원인·영향·
+    수정 코드 diff를 JSON으로 분석 → Resend로 HTML 이메일 발송하는
+    파이프라인을 TypeScript로 구축(본인 직접). `.gitlab-ci.yml`에
+    `error-report` 스케줄 잡(6시간 간격 설계)을 정의했으나, Runner에
+    Node가 없어 "현재 실행 불가, 등록된 스케줄 없음"으로 주석 처리돼
+    있음(`.gitlab-ci.yml:251-281`) — **"운영 중"으로 서술 금지, "구축
+    (CI 잡 정의, 러너 제약으로 수동/로컬 실행)" 수준까지만 서술할 것.**
+    위 "장애·오류 트러블슈팅에 AI 결합 절차화"(user-attested 2026-08-21)
+    사실의 코드 근거(documentary)로 연결 가능.
+  - **[LLM 채팅 응답 검수 도구 — documentary 확인, 저장소
+    `my-health-ai-coach-web` `scripts/llm-chat-test/`, archivist 코드
+    조사 2026-09-09]** 위 [LLM 채팅 응답 검수 도구 — 본인 구축]
+    블록(user-attested 2026-08-11)과 **동일 사건**임을 코드로 확인 —
+    엑셀 질문 자동 입력·답변 스크린샷 갤러리 LLM 회귀 검수 도구
+    (Playwright 기반). README 기재 측정치: 50행 풀런 50/50 성공, 평균
+    11.6초/행, 총 9분 38초 소요, 응답 완료 3중 판정 로직. 이중 계상
+    금지 — 별도 사건으로 병렬 서술하지 말고 위 블록에 documentary 확인
+    사실로만 결부할 것.
+  - **[SSE 스트리밍 상호작용 E2E·성능 하네스·PostHog 스펙 대조 도구 —
+    documentary, 저장소 `my-health-ai-coach-web`, archivist 코드 조사
+    2026-09-09]** `e2e/capture/sse-stream-server.ts`(2026-08-12~13,
+    15커밋) — 청크 단위로 흐르는 SSE 목 서버로 스트리밍 도중 상호작용
+    (중지 등)을 E2E 검증. `e2e/perf/`(2026-08-18) — 성능 측정 하네스.
+    `scripts/posthog-census/`(2026-08-14) — PostHog 이벤트 스펙 대조
+    도구. 이 posthog-census 도구가 위 [PostHog 전수 점검 자동화]
+    블록(월별피드백 2026-08, "PostHog 데이터 확인–오류 식별–수정–
+    재검증 109건 사이클")과 같은 사건을 가리키는지는 [확인 필요] —
+    동일 사건으로 단정하거나 별개 성과로 이중 계상하지 말 것, 소유자
+    확인 전까지 두 사실을 나란히 인용할 때는 "관계 미확인" 주석을
+    병기할 것.
+  - **[.claude/ AI 코딩 에이전트 하네스 자산 — documentary, 저장소
+    `my-health-ai-coach-web` `.claude/`, archivist 코드 조사
+    2026-09-09]** CLAUDE.md 룰북(2026-07-15 점검, docs-governance-check
+    hook 언급), 서브에이전트 7개(api-type-guard·component-pattern-
+    checker·design-token-auditor·reviewer·storybook-coverage·
+    tenant-auditor·test-engineer), 스킬 8개(converge-review·create-mr·
+    deploy-dev·deploy-prod·design-to-code·react-doctor·retro·
+    screen-api-spec), 커맨드 3개, 룰 4개, retro-extracts. 위 "Codex·
+    Claude Code 등 AI 코딩 에이전트를 활용한 개발과, 생성 코드의 검증·
+    금지 패턴·보안 기준 수립"(user-attested 2026-07-22) 및 FE AX SOP
+    사실의 코드 근거(documentary)로 연결 가능 — 다만 이 저장소의 구체
+    서브에이전트·스킬 구성을 "본인이 전부 설계했다"고 단정하지 말고
+    "이런 하네스 자산이 팀 저장소에 구축돼 있음" 수준으로 서술할 것
+    (개별 커밋 저자 비중은 archivist가 별도 확인하지 않음).
 - Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code, MCP(Model Context Protocol), Figma, Jira, Slack, Confluence, Notion
   (Figma·Jira·Slack·Confluence·Notion은 협업 도구 — user-attested 2026-07-27,
   이력서 재작성 세션에서 소유자 구두 확인. 대웅제약 재직 전반의 공통 협업
@@ -855,6 +1216,36 @@ facts in drafted application text.
     장애 대응 사례(구체 사건) 서술 금지 — 기존 "장애·오류 트러블슈팅에 AI
     결합 절차화" Actions 블록과 EXP-01의 오류 4분류 처리 경계 설계까지만
     사용.
+  - 월별피드백 2026-08(`월별피드백_정다훈 (7).xlsx`, 시트 "2026년 8월
+    월별피드백", 구분=본인, 잘한 점), 소유자 2026-09-09 사용 승인(지오영
+    AI 개발 지원 세션 갭 인터뷰) — PostHog 전수 점검 자동화(109건
+    사이클, 1시간→20분), 비즈36.5 FE React 화면 71건 개발 완료(초기
+    로딩 파일 3.53MB→0.35MB, 자동 테스트 58건→2,318건, 공용 스크립트
+    호출 2,281건 제거), 비즈36.5 Storybook 93개 스토리·258개 UI 상태(버그
+    64건 해소), 바이오에이지 어드민 Storybook 65건·148개 스토리(접근성
+    위반 198건 개선), E2E 도구 사용·검증 기준 SOP 4건 팀 배포, 2026 AI
+    Summit Seoul & Expo 참관 보고서. 원문 전문은 `daewoong-history.md`
+    「월별 원문」 2026-08 절 참조. 대응 `metric-registry.md` ID:
+    `metric-posthog-e2e-cycle`, `metric-fe-payload-reduction`,
+    `metric-auto-test-scale`, `metric-storybook-biz365`,
+    `metric-bioage-storybook`, `metric-e2e-sop-4` (전부 이번 세션 이전에
+    상위 에이전트가 이미 등재, status `source_stated`).
+  - `daewoong-history.md` F절(2025-12·2026-02)·2026-07 원문, 소유자
+    2026-09-09 사용 승인 — Figma MCP 리드타임 1주→1일(약 85%), SKILL.md
+    표준화 후 신규 차트 개발 1시간→10분(약 83%), React 전환 하네스 전제
+    설계 6주→2주, RESTful API 교체 29건 ETA 4주→1주(약 75%). 부록 C
+    충돌 8건과 무관함을 확인해 선별 적재(2026-08-22 선별 적재 전례와
+    동일 방식). 대응 `metric-registry.md` ID: `metric-figma-mcp-leadtime`,
+    `metric-skillmd-chart-dev`, `metric-react-harness-6w-2w`,
+    `metric-restful-api-29`.
+  - documentary — 로컬 저장소 `/Users/2302-n0214/Documents/workspaces/
+    my-health-ai-coach-web` 코드 조사, archivist 2026-09-09(지오영 AI
+    개발 지원 세션, 소유자 지시 "커밋 신경쓰지 말고 여기에서 뽑아먹을
+    게 있으면 뽑아먹자"). 이 저장소는 정다훈 1,077/1,117 커밋
+    (2025-07-03~2026-09-04)으로 압도적 본인 기여 저장소 — 위 4개
+    documentary 블록(에러 리포트 파이프라인, LLM 채팅 응답 검수 도구
+    확인, SSE·성능·PostHog 대조 도구, `.claude/` 하네스 자산)의 근거.
+    구체 경로·커밋 수는 각 블록 참조.
 - Reusable keywords: Playwright, Storybook, FE AX, SOP, 품질 자동화, 운영 데이터
   대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입, Figma, Jira,
   Slack, Confluence, Notion, 협업 도구, GitLab MR, 코드 리뷰, AI 코드 리뷰,
@@ -864,8 +1255,22 @@ facts in drafted application text.
   호출용 MCP 서버, AI 에이전트 도구 연동, 사내 문서 챗봇 연동, AI
   트러블슈팅 절차화, 데이터 기반 과제 정의, 지표 기반 개선 과제 실행,
   요구사항 작성 가이드, 화면설계서 작성 기준, 작성 기준·템플릿 수립·배포,
-  비개발 현업 교육, 기획자 설계 역량 향상, 협업 효율 개선
+  비개발 현업 교육, 기획자 설계 역량 향상, 협업 효율 개선, PostHog 전수
+  점검 자동화, 비즈36.5 React 전환, Figma MCP, SKILL.md 표준화, RESTful
+  API 명세 기반 자동화, 접근성 개선, 페이로드 최적화, 에러 리포트
+  파이프라인, PostHog Error Tracking, GitLab Repository Files API,
+  GPT-4o 오류 분석, Resend 이메일 발송, SSE 목 서버, 성능 측정 하네스,
+  PostHog 이벤트 스펙 대조, CLAUDE.md 룰북, AI 코딩 에이전트 서브에이전트,
+  AI 코딩 에이전트 스킬
 - Notes for tailoring: 생산성/품질/AI 개발 프로세스 개선을 강조할 때 사용.
+  **2026-08 신규 사실 가드레일(user-attested 2026-09-09)**: 위 PostHog·
+  React 71건·Storybook 두 건·SOP 4건 수치는 `metric-registry.md`에
+  `source_stated`로 등재돼 있다 — "비즈36.5 71건"과 기존 "74개 페이지"
+  (2026-07 기록)는 표기가 다르므로 함께 인용 시 반드시 확인 필요 주석을
+  병기하거나 "70여 개 화면"으로 뭉뚱그려 쓸 것. 비즈36.5 Storybook
+  93개/258개, 바이오에이지 어드민 148개는 EXP-01의 "Storybook 스토리
+  210개"(그 프로젝트 코드베이스 실측 수치)와 서로 다른 사건이므로 합산·
+  혼용 금지.
   **AI 테크 리더 포지셔닝(user-attested 2026-07-25, grill-me base-resume 세션)**:
   소유자가 이 항목을 "AI 자동화 수준 + 조직 자산화 + 리더십·학습 능력 + 조직
   생산성 향상"을 보여주는 AI 테크 리더 항목으로 규정. AI 테크 리더십을 강조하는
@@ -951,6 +1356,25 @@ facts in drafted application text.
   창작해 서술하지 말 것. 장애·운영 관련 서술은 기존 "장애·오류 트러블슈팅에
   AI 결합 절차화"(Actions)와 EXP-01의 오류 4유형 분류·복구 경계 설계
   문면까지만 사용한다.
+  **AI 기반 에러 리포트 파이프라인 가드레일(documentary, 저장소
+  `my-health-ai-coach-web` 코드 조사 2026-09-09)**: "구축(CI 잡 정의,
+  러너 제약으로 수동/로컬 실행)" 수준까지만 서술 — Runner에 Node가
+  없어 GitLab CI 스케줄 잡이 실제로는 돌지 않는 상태이므로 "6시간마다
+  자동 운영 중"처럼 서술하지 말 것.
+  **LLM 채팅 응답 검수 도구 이중 계상 방지 가드레일(documentary)**:
+  `scripts/llm-chat-test/`는 기존 "LLM 채팅 응답 검수 도구"
+  (user-attested 2026-08-11) 블록과 동일 사건이다 — 두 항목을 각각
+  독립 도구처럼 병렬 서술하지 말 것. README 실측치(50/50 성공, 평균
+  11.6초/행)는 이 도구에 한정된 수치이며 다른 QA 도구 수치와 혼용
+  금지.
+  **PostHog 관계 미확인 가드레일(documentary)**: `scripts/posthog-census/`
+  와 기존 "PostHog 전수 점검 자동화 109건 사이클"(월별피드백 2026-08)
+  사실의 관계는 [확인 필요] — 동일 사건 여부가 소유자에게 확인되기
+  전까지 두 수치를 합산하거나 하나로 단정 서술하지 말 것.
+  **`.claude/` 하네스 자산 가드레일(documentary)**: 서브에이전트 7개·
+  스킬 8개 등 구성 목록은 "이런 자산이 팀 저장소에 구축돼 있다"는
+  존재 사실로만 쓸 것 — 개별 자산의 설계자·기여 비중은 archivist가
+  확인하지 않았으므로 "본인이 전부 설계·구축"으로 단정하지 말 것.
 
 ### 삼성물산 데이터·모바일 서비스 고도화
 
@@ -1616,15 +2040,61 @@ facts in drafted application text.
 
 ### AI 소프트웨어 사이드 프로젝트 (개인)
 
-- Period: [확인 필요 — 시작·종료 시점 불명]
+- Period: [확인 필요 — 이 항목 자체의 시작·종료 시점은 여전히 불명]. 아래
+  documentary 3건의 개별 날짜(2026-01-02 / 2025-10-09~10 / 2025-07-04)를
+  후보로 참고할 수 있으나, 이 원본 항목이 가리키던 프로젝트가 이 3건인지는
+  [확인 필요]로 남는다(아래 [3건 documentary 확인] 참조).
 - Context: 업무 외 개인 시간에 AI 소프트웨어를 직접 제작한 사이드 프로젝트.
   (user-attested 2026-07-24, grill-me base-resume 세션)
+  **[3건 documentary 확인 — archivist 로컬 코드 조사 2026-09-09, 지오영 AI
+  개발 지원 세션, 소유자 지시 "커밋 신경쓰지 말고 여기에서 뽑아먹을 게
+  있으면 뽑아먹자"]** 개인 프로토타입 저장소 3건(git identity 정다훈 또는
+  git 자체 없음)을 확인해 이 항목의 [확인 필요](프로젝트명·내용·기간)를
+  부분 해소한다 — 단, 이 원본 항목이 정확히 이 3건을 가리키는지는 소유자가
+  직접 확인하지 않았으므로 [확인 필요]로 남긴다: (1) `chatbot-boilerplate`
+  (2026-01-02, 정다훈 19/19 커밋), (2) `mcp_test`(2025-10-09~10, git 저자
+  없음), (3) `test-vector`(2025-07-04, git 저자 없음). 세부는 아래 Actions
+  참조.
 - Problem: [확인 필요 — 구체 문제/목적 미확인]
-- Role: 개인 단독 제작.
-- Actions: [확인 필요 — 구체 프로젝트명·내용 미확인]
+- Role: 개인 단독 제작. `chatbot-boilerplate`는 git 커밋 19/19 전부
+  정다훈으로 단독 제작이 documentary로 확인됨. `mcp_test`·`test-vector`는
+  git 저장소 자체가 없어(로컬 커밋 이력 없음) 커밋 기준 검증은 불가하며
+  실습·프로토타입 수준의 개인 산출물로 취급한다.
+- Actions:
+  - **[chatbot-boilerplate — documentary, 저장소 `chatbot-boilerplate`,
+    정다훈 19/19 커밋, 2026-01-02, archivist 코드 조사 2026-09-09]**
+    React·TypeScript LLM 챗봇 보일러플레이트 — 프로바이더 어댑터 4종
+    (OpenAI·Anthropic·Gemini·Custom, `src/shared/api/llm/direct/
+    adapters/`), ChatService 추상화(BackendAPI↔LLMAPI 환경변수 전환),
+    SSE 스트리밍, Vite LLM 프록시(/llm-proxy/openai·gemini), Storybook·
+    Vitest 구성.
+  - **[mcp_test — documentary, 저장소 `mcp_test`, 2025-10-09~10,
+    archivist 코드 조사 2026-09-09]** Python FastMCP 터미널 서버(stdio,
+    `run_command` 도구, `mcp_server/terminal_server/terminal_server.py`)
+    + MCP 클라이언트 2종(`client.py` — stdio ClientSession·MCP 도구→
+    Gemini 스키마 변환, `langchain_mcp_client.py` — LangChain MCP
+    adapters + LangGraph create_react_agent + Gemini). 실습·프로토타입
+    수준 — **사내 MCP 서버 2종(EXP-03, 사내 문서/지식 검색용·테스트/
+    검증 도구 호출용)과 별개이며 혼용 금지.**
+  - **[test-vector — documentary, 저장소 `test-vector`, 2025-07-04,
+    archivist 코드 조사 2026-09-09]** Qdrant 로컬 + HuggingFace
+    KR-SBERT 임베딩 + LangChain RetrievalQA + Gemini 1.5로 건강검진
+    판정 기준 엑셀을 전처리·벡터화한 RAG 프로토타입(Gradio 앱,
+    `vector_app.py`·`vectorize_ver2.py`).
+    **[보안 메모 — archivist 2026-09-09]** `vector_app.py`에 Google API
+    키가 평문으로 하드코딩돼 있음을 확인했다. 소유자에게 해당 키의
+    폐기·교체를 권고한다. 이 은행에는 키 값 자체를 인용하지 않는다 —
+    문면 작성 시에도 이 프로젝트의 코드/설정을 그대로 인용하지 말 것.
 - Technologies: LangChain, HuggingFace, RAG, VectorDB (체득 스택으로 소유자가
   언급. user-attested 2026-07-24, grill-me base-resume 세션). 세부 사용 방식
   및 추가 기술 [확인 필요].
+  **[documentary 3건 실측 스택 — archivist 코드 조사 2026-09-09]** React,
+  TypeScript, Vite, Storybook, Vitest (chatbot-boilerplate); Python,
+  FastMCP, LangChain MCP adapters, LangGraph, Gemini (mcp_test); Qdrant,
+  HuggingFace KR-SBERT, LangChain RetrievalQA, Gemini 1.5, Gradio
+  (test-vector). 이 실측 스택이 위 Technologies 첫 줄(LangChain·
+  HuggingFace·RAG·VectorDB, user-attested 2026-07-24)이 가리키는 것과
+  동일 프로젝트인지는 [확인 필요].
 - Result: ML·LLM 스택(LangChain·HuggingFace·RAG·VectorDB)을 사이드 프로젝트를
   통해 직접 체득. (user-attested 2026-07-24, grill-me base-resume 세션)
 - Metrics: [확인 필요 — 정량 지표 없음]
@@ -1632,13 +2102,26 @@ facts in drafted application text.
   - user-attested 2026-07-24 (grill-me base-resume 세션) — 소유자가 AI
     소프트웨어를 사이드 프로젝트로 직접 제작해 ML·LLM 스택을 체득했다고
     확인. 구체 프로젝트명·내용·기간은 미확인 [확인 필요].
+  - documentary — 로컬 저장소 3건(`chatbot-boilerplate`·`mcp_test`·
+    `test-vector`) 코드 조사, archivist 2026-09-09(지오영 AI 개발 지원
+    세션, 소유자 지시 "커밋 신경쓰지 말고 여기에서 뽑아먹을 게 있으면
+    뽑아먹자"). 이 3건이 위 user-attested 항목이 가리키던 프로젝트와
+    동일한지는 소유자 미확인 [확인 필요]. 구체 근거는 위 Actions 각
+    블록 참조.
 - Reusable keywords: LangChain, HuggingFace, RAG, VectorDB, ML, LLM, AI,
-  사이드 프로젝트, 자기계발, 개인 프로젝트
+  사이드 프로젝트, 자기계발, 개인 프로젝트, FastMCP, LangGraph, Gemini,
+  Qdrant, KR-SBERT, RetrievalQA, Gradio, Storybook, Vitest, Vite,
+  프로바이더 어댑터, ChatService 추상화
 - Notes for tailoring: AI/ML 스택 경험을 묻는 JD 대응 시 보조 근거로 활용
-  가능. **반드시 [확인 필요] 항목(프로젝트명·내용·기간)을 소유자에게 확인한
-  뒤에만 외부 문서에 기재할 것.** 비즈36.5 BFF·AI 챗봇 항목의 업무 내
-  LangChain/VectorDB/RAG 참여 경험(EXP-07)과 혼용하지 않는다 — 사이드
-  프로젝트(개인)와 업무 참여(팀)를 구분해 서술.
+  가능. **반드시 [확인 필요] 항목(프로젝트명·내용·기간, 이 3건이 원본
+  항목과 동일 프로젝트인지)을 소유자에게 확인한 뒤에만 외부 문서에 기재할
+  것.** 비즈36.5 BFF·AI 챗봇 항목의 업무 내 LangChain/VectorDB/RAG 참여
+  경험(EXP-07)과 혼용하지 않는다 — 사이드 프로젝트(개인)와 업무 참여(팀)를
+  구분해 서술. **`mcp_test` 혼용 금지 가드레일**: 이 개인 프로토타입은
+  EXP-03의 사내 MCP 서버 2종과 별개다 — "사내 MCP 서버를 구축했다"는
+  서술에 이 프로젝트를 근거로 쓰지 말 것. **보안 가드레일**:
+  `test-vector`의 Google API 키 평문 하드코딩은 소유자에게 폐기·교체를
+  권고한 사실만 기록하고, 어떤 문서에도 이 코드를 인용하지 말 것.
 
 ### React Native/Expo 사이드 프로젝트 (개인, 귀속 미확정)
 

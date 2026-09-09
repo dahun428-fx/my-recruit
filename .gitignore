@@ -17,3 +17,8 @@ tmp/
 # Sensitive raw source materials — keep PII binaries out of the cloud repo.
 # Mobile/cloud pipeline works from the derived md/yaml only. Re-extract on PC.
 docs/resume-reference/sources/
+
+# macOS / 빌드 부산물
+.DS_Store
+.beads/.auto-import-issues.jsonl
+outputs/geoyoung-docx-textdiff.txt

@@ -46,6 +46,16 @@ user confirmation.
 | `metric-fe-error-zero` | 2차 PoC 기준 FE 에러 0건 | needs_scope | Do not use externally until period and error definition are confirmed. | `src-eval-2025` |
 | `metric-jenkins-deploy-time` | Jenkins 배포 리드타임 10분 -> 2분 | confirmed | Jenkins CI/CD 배포 리드타임을 10분에서 2분으로 단축 | `src-eval-2025` |
 | `metric-http2-network-cost` | HTTP/2 전환 네트워크 비용 1,200KB -> 900KB (약 25%) | source_stated | HTTP/2 전환으로 네트워크 비용을 1,200KB에서 900KB로 절감(약 25%) | `src-eval-2025` |
+| `metric-figma-mcp-leadtime` | Figma MCP 도입 후 신기능 개발 리드타임 1주 -> 1일 (약 85%) | source_stated | Figma MCP 도입으로 신기능 개발 리드타임 1주 → 1일(약 85%) — 월별피드백 2025-12 자가 기록, 소유자 2026-09-09 사용 승인(지오영 제출본) | `daewoong-history.md` F절, 월별피드백 2025-12 |
+| `metric-skillmd-chart-dev` | SKILL.md 표준화 후 신규 차트 개발 1시간 -> 10분 (약 83%) | source_stated | 데이터 시각화 공통 로직을 SKILL.md로 표준화해 신규 차트 개발 1시간 → 10분(약 83%) — 월별피드백 2026-02 자가 기록, 소유자 2026-09-09 사용 승인 | `daewoong-history.md` F절 |
+| `metric-react-harness-6w-2w` | React 전환을 AI 하네스 전제로 설계해 개발 6주 -> 2주 | source_stated | 비즈36.5 Web React 전환을 하네스 엔지니어링 전제(분석·개발·테스트·E2E 파이프라인 자동화)로 설계해 6주 → 2주 — 월별피드백 2026-07 자가 기록. 페이지 수는 7월 "74개 페이지 전환 완료" vs 8월 "React 화면 71건 개발 완료"로 표기 상이 — 수치 병기 시 [확인 필요], 문면에는 "70여 개 화면" 한정어 권장. 소유자 2026-09-09 사용 승인 | `daewoong-history.md` 2026-07, 월별피드백 2026-08 |
+| `metric-restful-api-29` | RESTful API 교체 29건 개발·테스트 ETA 4주 -> 1주 | source_stated | AI 기반 명세 분석·구현·테스트로 RESTful API 29건 ETA 4주 → 1주(약 75%) — 월별피드백 2026-07 자가 기록, base-self-introduction 항목 2에 기사용. 소유자 2026-09-09 사용 승인 | `daewoong-history.md` 2026-07 |
+| `metric-auto-test-scale` | 비즈36.5 FE 자동 테스트 58건 -> 2,318건 (약 40배) | source_stated | React 전환과 함께 FE 자동 검증 체계 확대 — 자동 테스트 58건 → 2,318건. 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 (`/Users/2302-n0214/Downloads/월별피드백_정다훈 (7).xlsx`) |
+| `metric-fe-payload-reduction` | 비즈36.5 초기 로딩 파일 3.53MB -> 0.35MB (약 90%) | source_stated | React 전환·공용 스크립트 호출 2,281건 제거로 초기 로딩 파일 3.53MB → 0.35MB(약 90%) — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
+| `metric-posthog-e2e-cycle` | PostHog 전수검사 1시간 -> 20분 (약 67%), 확인–오류 식별–수정–재검증 109건 사이클 자동화 | source_stated | PostHog 데이터 확인·오류 식별·수정·재검증 반복 사이클(109건)을 E2E 프로세스로 자동화해 전수검사 1시간 → 20분(약 67%) — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
+| `metric-e2e-sop-4` | E2E 도구 사용·검증 기준 SOP 4건 팀 배포 | source_stated | E2E 도구 사용·검증 기준을 표준 문서 4건으로 작성해 팀 공유·배포(문면 표기는 C-10에 따라 "개발 표준"·"검증 절차 문서") — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
+| `metric-storybook-biz365` | 비즈36.5 Storybook 93개 스토리 파일·258개 UI 상태, 구축 중 버그 64건 해소 | source_stated | 비즈36.5 주요 컴포넌트 Storybook 93개 스토리·258개 UI 상태 구축, 과정에서 오류·버그 64건 해소 — 월별피드백 2026-08 자가 기록(EXP-03의 "Storybook 스토리 210개"는 3개 서비스 합산 구두 수치로 별개·혼용 금지), 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
+| `metric-bioage-storybook` | 바이오에이지 어드민 Storybook 148개 스토리(65건 적용), UI 접근성 위반 198건 개선 | source_stated | 바이오에이지 어드민 65건 Storybook 적용·148개 스토리(초기 15개 대비 약 4.3배), 접근성 위반 198건 개선 — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
 
 ## Sensitive Or Confirmation-Required Claims
 
