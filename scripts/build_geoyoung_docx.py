@@ -260,8 +260,10 @@ PPR_NOTE   = PPR(before=0, after=60, left=200)                         # ※ 각
 PPR_LABEL  = PPR(before=80, after=60, keep=True)                       # [주요업무]
 PPR_TITLE  = PPR(before=130, after=20, left=200, hanging=200, keep=True)  # 프로젝트 제목
 PPR_PERIOD = PPR(before=0, after=50, left=400, keep=True)              # 기간 메타
-PPR_LINE   = PPR(before=0, after=30, left=990, hanging=530)            # 역할/과제/판단/성과 라벨 줄
-PPR_LINE_L = PPR(before=0, after=60, left=990, hanging=530)            # 라벨 줄(마지막, 기술과 간격)
+PPR_RES      = PPR(before=0, after=20, left=420, hanging=180)          # → 성과 선행 줄
+PPR_RES_LAST = PPR(before=0, after=90, left=420, hanging=180)          # → 성과(마지막, 실행과 간격)
+PPR_EXEC     = PPR(before=0, after=20, left=460, hanging=200)          # - 실행 불릿
+PPR_EXEC_L   = PPR(before=0, after=60, left=460, hanging=200)          # - 실행(마지막, 기술과 간격)
 PPR_TECH   = PPR(before=40, after=0, left=420)                         # 기술 줄
 PPR_REASON = PPR(before=90, after=0, left=200, hanging=200)           # [이직사유]
 PPR_GAP    = PPR(before=0, after=0)
@@ -279,10 +281,14 @@ for bi, blk in enumerate(C.BLOCKS):
         blocks += para(PPR_TITLE, pj['title'], bold_all=True)
         if pj.get('period'):
             blocks += para(PPR_PERIOD, pj['period'], sz=17, color='808080')
-        for li, (label, text) in enumerate(pj['lines']):
-            last = (li == len(pj['lines']) - 1)
-            ppr_l = (PPR_LINE if pj.get('tech') else PPR_LINE_L) if last else PPR_LINE
-            blocks += para(ppr_l, f'**{label}** : {text}', sz=19)
+        execs = pj.get('execs', [])
+        for ri, r in enumerate(pj.get('results', [])):
+            last_res = (ri == len(pj['results']) - 1)
+            blocks += para(PPR_RES_LAST if (last_res and execs) else PPR_RES, r, sz=19)
+        for ei, e in enumerate(execs):
+            last_ex = (ei == len(execs) - 1)
+            blocks += para(PPR_EXEC if (last_ex and pj.get('tech')) else
+                           (PPR_EXEC_L if last_ex else PPR_EXEC), e, sz=19)
         if pj.get('tech'):
             blocks += para(PPR_TECH, pj['tech'], sz=17, color='595959')
     blocks += para(PPR_REASON, blk['reason'], sz=19)

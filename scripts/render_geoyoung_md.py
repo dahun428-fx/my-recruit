@@ -88,8 +88,10 @@ for blk in C.BLOCKS:
     for p in blk['projects']:
         add('상세경력', p['title'], 'heading')
         if p.get('period'): add('상세경력', p['period'], 'meta')
-        for label, text in p['lines']:
-            add('상세경력', f'{label} : {text}')
+        for r in p.get('results', []):
+            add('상세경력', r)
+        for e in p.get('execs', []):
+            add('상세경력', e)
         if p.get('tech'): add('상세경력', p['tech'], 'meta')
         D.append('')
     add('상세경력', blk['reason']); D.append('')
