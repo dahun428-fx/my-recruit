@@ -88,9 +88,10 @@ for blk in C.BLOCKS:
     for p in blk['projects']:
         add('상세경력', p['title'], 'heading')
         if p.get('period'): add('상세경력', p['period'], 'meta')
-        for r in p['results']: add('상세경력', r)
-        for e in p['execs']: add('상세경력', e)
-        add('상세경력', p['tech'], 'meta'); D.append('')
+        for label, text in p['lines']:
+            add('상세경력', f'{label} : {text}')
+        if p.get('tech'): add('상세경력', p['tech'], 'meta')
+        D.append('')
     add('상세경력', blk['reason']); D.append('')
 D.append('## 자기소개서\n')
 for head, paras in C.SELF_INTRO.items():
