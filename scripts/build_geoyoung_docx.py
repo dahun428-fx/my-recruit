@@ -304,10 +304,10 @@ h1s, h1e = find_para(doc, '[본인 소개')
 h2s, h2e = find_para(doc, '[직무수행 역량')
 h3s, h3e = find_para(doc, '[지원동기 및')
 sig_s, sig_e = find_para(doc, '지원자 : 0 0 0')
-prose_ppr = ('<w:pPr><w:wordWrap/>' + _AUTOSPACE_OFF + '<w:spacing w:before="0" w:after="140" w:line="300" w:lineRule="auto"/>'
+prose_ppr = ('<w:pPr><w:wordWrap/>' + _AUTOSPACE_OFF + '<w:spacing w:before="0" w:after="120" w:line="288" w:lineRule="auto"/>'
              '<w:ind w:left="120" w:right="120"/><w:jc w:val="left"/>'
              '<w:textAlignment w:val="baseline"/></w:pPr>')
-subhead_ppr = ('<w:pPr><w:keepNext/><w:wordWrap/>' + _AUTOSPACE_OFF + '<w:spacing w:before="200" w:after="60" w:line="300" w:lineRule="auto"/>'
+subhead_ppr = ('<w:pPr><w:keepNext/><w:wordWrap/>' + _AUTOSPACE_OFF + '<w:spacing w:before="170" w:after="60" w:line="288" w:lineRule="auto"/>'
                '<w:ind w:left="120"/><w:jc w:val="left"/>'
                '<w:textAlignment w:val="baseline"/></w:pPr>')
 h1 = doc[h1s:h1e]; h2 = doc[h2s:h2e]; h3 = doc[h3s:h3e]
@@ -322,7 +322,8 @@ def section(paras):
     return out + spacer
 
 keys = list(C.SELF_INTRO.keys())
-new_si = h1 + section(C.SELF_INTRO[keys[0]]) + h2 + section(C.SELF_INTRO[keys[1]]) + h3 + section(C.SELF_INTRO[keys[2]]) + spacer
+# 서명 앞 여분 빈 문단 제거(페이지 절약) — 섹션 사이 spacer는 유지
+new_si = h1 + section(C.SELF_INTRO[keys[0]]) + h2 + section(C.SELF_INTRO[keys[1]]) + h3 + section(C.SELF_INTRO[keys[2]])
 doc = doc[:h1s] + new_si + doc[sig_s:]
 doc, _ = set_para_text(doc, '지원자 : 0 0 0', C.SIGN)
 print('10. 자기소개서 OK')
