@@ -248,34 +248,36 @@ b1s, _ = find_para(doc, '■ 0000.00', nth=0)
 sig_s, _ = find_para(doc, '자기소개서')          # 섹션 헤딩 "자기소개서  …"
 
 # 문단 서식 정의 — 템플릿 pPr 상속 대신 명시 지정(행간 1.08배, 들여쓰기 계층 고정)
-LINE = '<w:spacing w:before="%d" w:after="%d" w:line="259" w:lineRule="auto"/>'
-def PPR(before=0, after=20, left=0, hanging=0, keep=False, jc='left'):
+LINE = '<w:spacing w:before="%d" w:after="%d" w:line="%d" w:lineRule="auto"/>'
+# line=259 → 1.08배(템플릿 docDefaults 기준), 240 → 1.0배. 상세경력 본문은 240으로 낮춰
+# 내담 블록이 4페이지 안에서 끝나게 한다(자기소개서 앞 페이지 나눔은 양식 고정이라 이동 불가).
+def PPR(before=0, after=20, left=0, hanging=0, keep=False, jc='left', line=259):
     ind = ''
     if left or hanging:
         ind = f'<w:ind w:left="{left}"' + (f' w:hanging="{hanging}"' if hanging else '') + '/>'
     return ('<w:pPr>' + ('<w:keepNext/>' if keep else '') + '<w:wordWrap/>' + _AUTOSPACE_OFF
-            + (LINE % (before, after)) + ind + f'<w:jc w:val="{jc}"/>'
+            + (LINE % (before, after, line)) + ind + f'<w:jc w:val="{jc}"/>'
             + '<w:textAlignment w:val="baseline"/></w:pPr>')
 
 PPR_HDR    = PPR(before=240, after=60, keep=True)                      # ■ 회사 헤더
 PPR_INTRO2 = PPR(before=0, after=20, left=200, keep=True)              # [회사소개]
-PPR_NOTE   = PPR(before=0, after=60, left=200)                         # ※ 각주
-PPR_LABEL  = PPR(before=80, after=60, keep=True)                       # [주요업무]
-PPR_TITLE  = PPR(before=130, after=20, left=200, hanging=200, keep=True)  # 프로젝트 제목
-PPR_PERIOD = PPR(before=0, after=50, left=400, keep=True)              # 기간 메타
+PPR_NOTE   = PPR(before=0, after=60, left=200, line=240)                         # ※ 각주
+PPR_LABEL  = PPR(before=48, after=40, keep=True)                       # [주요업무]
+PPR_TITLE  = PPR(before=80, after=16, left=200, hanging=200, keep=True, line=240)  # 프로젝트 제목
+PPR_PERIOD = PPR(before=0, after=36, left=400, keep=True, line=240)              # 기간 메타
 PPR_RES      = PPR(before=0, after=20, left=420, hanging=180)          # → 성과 선행 줄
 PPR_RES_LAST = PPR(before=0, after=90, left=420, hanging=180)          # → 성과(마지막, 실행과 간격)
-PPR_EXEC     = PPR(before=0, after=20, left=460, hanging=200)          # - 실행 불릿
-PPR_EXEC_L   = PPR(before=0, after=60, left=460, hanging=200)          # - 실행(마지막, 기술과 간격)
-PPR_TECH   = PPR(before=40, after=0, left=420)                         # 기술 줄
-PPR_REASON = PPR(before=90, after=0, left=200, hanging=200)           # [이직사유]
+PPR_EXEC     = PPR(before=0, after=6, left=460, hanging=200, line=240)          # - 실행 불릿
+PPR_EXEC_L   = PPR(before=0, after=36, left=460, hanging=200, line=240)          # - 실행(마지막, 기술과 간격)
+PPR_TECH   = PPR(before=20, after=0, left=420, line=240)                         # 기술 줄
+PPR_REASON = PPR(before=60, after=0, left=200, hanging=200, line=240)           # [이직사유]
 PPR_GAP    = PPR(before=0, after=0)
 
 spacer = f'<w:p>{PPR_GAP}</w:p>'
 
 blocks = ''
 for bi, blk in enumerate(C.BLOCKS):
-    blocks += para(PPR_HDR if bi == 0 else PPR(before=260, after=60, keep=True), blk['header'], bold_all=True)
+    blocks += para(PPR_HDR if bi == 0 else PPR(before=200, after=50, keep=True), blk['header'], bold_all=True)
     blocks += para(PPR_INTRO2, blk['intro'], sz=18, color='595959')
     if blk.get('note'):
         blocks += para(PPR_NOTE, blk['note'], sz=17, color='808080')
