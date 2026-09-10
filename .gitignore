@@ -22,3 +22,6 @@ docs/resume-reference/sources/
 .DS_Store
 .beads/.auto-import-issues.jsonl
 outputs/geoyoung-docx-textdiff.txt
+
+# Word 임시 잠금 파일 (문서 열려 있을 때 생성)
+~$*
