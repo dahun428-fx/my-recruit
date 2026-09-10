@@ -14,8 +14,11 @@ import geoyoung_content as C
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TPL_RESUME, TPL_CONSENT = sys.argv[1], sys.argv[2]
-OUT_RESUME = os.path.join(REPO, 'outputs', f'정다훈(만{C.AGE}세)_AI개발_지오영_(주)피플렙_임덕빈2026.docx')
-OUT_CONSENT = os.path.join(REPO, 'outputs', '정다훈_개인정보수집 동의서 양식(2026년).docx')
+# argv[3]: 출력 접미사(선택). 기존 제출본을 덮어쓰지 않고 새 파일로 내보낼 때 사용.
+#   예) /usr/bin/python3 scripts/build_geoyoung_docx.py <이력서템플릿> <동의서템플릿> _v2
+SUFFIX = sys.argv[3] if len(sys.argv) > 3 else ''
+OUT_RESUME = os.path.join(REPO, 'outputs', f'정다훈(만{C.AGE}세)_AI개발_지오영_(주)피플렙_임덕빈2026{SUFFIX}.docx')
+OUT_CONSENT = os.path.join(REPO, 'outputs', f'정다훈_개인정보수집 동의서 양식(2026년){SUFFIX}.docx')
 PHOTO = os.path.join(REPO, 'outputs', 'assets', 'jungdahun-profile.jpg')
 
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
