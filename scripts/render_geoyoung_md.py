@@ -131,3 +131,71 @@ open(OUT_COMP, 'w', encoding='utf8').write('\n'.join(L) + '\n')
 n_new = sum(1 for _, _, o, k in K if k == 'prose' and o == '신규/수정')
 n_re = sum(1 for _, _, o, k in K if k == 'prose' and o != '신규/수정')
 print(f'draft → {OUT_DRAFT}\ncompanion → {OUT_COMP}\nprose 신규/수정 {n_new} / 재사용 {n_re} / 비산문 {len(K)-n_new-n_re}')
+
+# ---- 검토용 md (제출 문면 그대로 읽는 용도) --------------------------------
+# 소유자 지시(2026-09-10): "docx는 내가 확정할 때까지 계속 md로 쓸 것".
+# 파이프라인 스캐폴딩(출처 태그·파티션 주석) 없이 완성 문서처럼 읽히게 낸다.
+OUT_REVIEW = os.path.join(REPO, 'outputs', 'geoyoung-ai-dev-review.md')
+R = []
+R.append(f'# 지오영 AI 개발 지원서 — 검토용 (㈜피플렙 지정양식 / {C.TODAY} 기준)\n')
+R.append('> docx 확정 전 검토본입니다. 이 파일의 문면이 곧 제출 문면입니다.\n')
+R.append('## 이력서\n')
+R.append('### 기본사항\n')
+R.append('| 항목 | 내용 |\n| --- | --- |')
+for k, v in C.BASIC.items():
+    R.append(f'| {k} | {v} |')
+R.append('\n증명사진은 양식 사진 칸에 삽입됩니다.\n')
+R.append('### 학력사항\n')
+R.append('| 기간 | 출신학교명 | 학과 | 평점/만점 | 소재지 |\n| --- | --- | --- | --- | --- |')
+for r in C.EDU:
+    if any(r): R.append('| ' + ' | '.join(r) + ' |')
+R.append(f'\n### 경력요약 (총 {C.TOTAL_CAREER})\n')
+R.append('| 기간 | 년월수 | 회사명 | 담당업무 | 이직사유 |\n| --- | --- | --- | --- | --- |')
+for r in C.CAREER_ROWS:
+    if any(r): R.append('| ' + ' | '.join(r) + ' |')
+R.append('\n' + C.CAREER_NOTE + '\n')
+R.append('### 핵심역량\n')
+for head, bullets in C.CORE:
+    R.append('**' + head.lstrip('○ ').strip() + '**\n')
+    for b in bullets:
+        R.append('- ' + b.lstrip('- ').strip())
+    R.append('')
+R.append('### 자격사항\n')
+R.append('| 내용 | 취득일자 | 점수/수준/등급 | 발급기관 |\n| --- | --- | --- | --- |')
+for r in C.CERTS: R.append('| ' + ' | '.join(r) + ' |')
+R.append('\n### 교육사항\n')
+R.append('| 기간 | 내용 | 기관 |\n| --- | --- | --- |')
+for r in C.TRAININGS:
+    if any(r): R.append('| ' + ' | '.join(r) + ' |')
+R.append('\n### 기타사항\n')
+R.append('| 날짜 | 내용 | 등급 | 기관 |\n| --- | --- | --- | --- |')
+for r in C.ETC:
+    if any(r): R.append('| ' + ' | '.join(r) + ' |')
+R.append('\n### 상세경력사항\n')
+for blk in C.BLOCKS:
+    R.append('#### ' + blk['header'].lstrip('■ ').strip() + '\n')
+    R.append(blk['intro'])
+    if blk.get('note'): R.append('\n' + blk['note'])
+    R.append('\n**[주요업무]**\n')
+    for p in blk['projects']:
+        R.append('**' + p['title'] + '**  ')
+        if p.get('period'): R.append(f"_{p['period']}_\n")
+        for x in p['results']: R.append('- ' + x)   # 성과 줄도 md 리스트로 묶어 실행 불릿과 같은 블록으로 렌더
+        for x in p['execs']: R.append(x)
+        if p.get('tech'): R.append('\n_' + p['tech'] + '_\n')
+        else: R.append('')
+    R.append(blk['reason'] + '\n')
+R.append('## 자기소개서\n')
+for head, paras in C.SELF_INTRO.items():
+    R.append('### ' + head.strip('[]') + '\n')
+    for p in paras:
+        R.append(p + '\n')
+R.append(C.SIGN + '\n')
+R.append('위 사항은 사실과 다름이 없으며 만약 위 사실이 다를 경우 입사가 취소됨 (양식 고정 문구)\n')
+R.append('---\n')
+R.append('## 개인정보 수집·이용 동의서 (별도 양식)\n')
+for k, v in C.CONSENT.items():
+    R.append(f'- {k}: {v}')
+R.append('- 동의함 체크박스: 체크(동의)\n')
+open(OUT_REVIEW, 'w', encoding='utf8').write('\n'.join(R) + '\n')
+print(f'review  → {OUT_REVIEW}')
