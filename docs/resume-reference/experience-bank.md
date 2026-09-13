@@ -61,6 +61,26 @@ facts in drafted application text.
   가능하며, 자격 취득으로 단정하거나 이력서 자격 표에 기재하지 말 것
   (자격 정보 반영은 profile.md 소관이며 archivist 편집 대상 아님, 승인
   전까지 상위 에이전트에게 제안만 전달).
+  **[배포 아키텍처 — user-attested 2026-09-11, 한미글로벌 AX실 AI 개발
+  지원 세션 갭 인터뷰, 소유자 객관식 직접 확인, 문서 근거 없음(pending
+  documentary source)]**: 이 챗봇(AI코치) 시스템은 FE(Nginx) / Python
+  LLM·에이전트 서버 / 백엔드 / MongoDB·Qdrant가 각각 독립된 컨테이너·
+  서버로 배포되고 HTTP/SSE로 통신하는, 서비스 단위로 분리·독립 배포되는
+  구조였음을 소유자가 확인. **서술 허용 범위**: "서비스 단위로 분리·독립
+  배포되는 구조에서 Docker 컨테이너를 직접 빌드·배포·재기동하며 개발·
+  연동"까지(아래 [오케스트레이션·배포 실행 주체 확정] 참조). **금지**:
+  "MSA/마이크로서비스 아키텍처를 설계했다", "서비스 디스커버리·API
+  Gateway 구성" 등 확인되지 않은 MSA 구성요소로 확대 서술 — 소유자는
+  MSA 정식 경험을 주장하지 않았다. 서비스 간 인증 방식은 여전히 [확인
+  필요] — 창작 금지.
+  **[오케스트레이션·배포 실행 주체 확정 — user-attested 2026-09-13, GS네오텍
+  플랫폼개발(풀스택) 지원 grill-me 세션, 소유자 객관식 직접 확인, 문서
+  근거 없음(pending documentary source)]**: 위 [확인 필요] 중
+  오케스트레이션 도구·배포 실행 주체를 해소함 — 이 시스템은
+  Kubernetes를 사용하지 않고 Docker(Docker Compose 포함) 기반으로
+  컨테이너를 직접 빌드·배포·재기동했으며, 배포 실행 주체는 본인
+  직접임을 소유자가 확인. 서비스 간 인증 방식은 여전히 [확인 필요]로
+  남는다.
 - Problem: 목업 수준의 AI 건강검진 챗봇을 실사용 가능한 서비스로 고도화해야 했고, LLM 답변 지연, Markdown/표/링크 렌더링, 오류 대응, 고객사별 화면 확장 구조가 부족했다.
 - Role: 프론트엔드 유일 담당자로 FE 기술적 의사결정권을 가지고 아키텍처 설계·분석부터 구현·테스트까지 독립적으로 수행, BE/LLM 개발자와 협의하며 AI/백엔드 응답 정책 조율 및 LLM/BE 로직 일부에 참여(팀 공동 기여, 단독 구축 아님), 서비스 품질 및 확장 구조 구축 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
 - Actions:
@@ -121,6 +141,20 @@ facts in drafted application text.
     에이전트의 범위는 여전히 미확인 — 구조를 창작해 서술 금지. "설계·구현
     참여, API 설계, Python 개발"까지는 서술 가능하나 "설계·주도·독립
     구축"으로 확대하지 말 것.
+  - **[FastAPI 담당 범위 확정 — user-attested 2026-09-11, 한미글로벌 AX실
+    AI 개발 지원 세션 갭 인터뷰, 소유자 객관식 직접 확인, 문서 근거
+    없음(pending documentary source)]** 위 [멀티 에이전트 개발 범위 확정]의
+    "LLM 릴레이 서버·API 구축(Python)"이 사용한 프레임워크와 담당 수준을
+    구체화하는 확인: LLM 릴레이 서버·에이전트 서버의 FastAPI 라우트·
+    엔드포인트를 본인이 직접 설계·구현했으며 SSE 스트리밍 응답을 포함함.
+    이 확인으로 아래 Technologies의 "FastAPI [사용 위치 확인 필요]"
+    마커는 해소됨. **잔존 [확인 필요]**: 엔드포인트 개수, 인증·미들웨어
+    구성, 비동기 처리 세부는 여전히 미확인 — 창작 금지. **EXP-07과의
+    경계**: 이 확인은 EXP-01(릴레이·에이전트 서버의 API 프레임워크·구현
+    담당)에 관한 것이며, "비즈36.5 Node.js(Express) BFF 신규 구축 및 AI
+    챗봇 Python 로직 기여" 항목(EXP-07)의 "AI 챗봇(Python) 프롬프트·
+    응답 후처리 로직 참여·기여" 톤 제한(심화 표현 금지)에는 영향을
+    주지 않는다 — 두 항목을 혼동해 서술하지 말 것.
   - **[폼 검증 공통 구조 — user-attested 2026-08-13, 빗썸 2차 갭 인터뷰,
     귀속 확정]** react-hook-form과 yup/zod를 사용해 폼 검증을 공통 구조로
     구성하고, 이를 Context에서 핸들링할 수 있도록 설계·구현함. 소유자가
@@ -129,13 +163,19 @@ facts in drafted application text.
     있던 항목을 이 항목으로 이관. 어떤 화면/기능에 적용됐는지는 소유자가
     특정하지 않았으므로 창작 금지.
 - Technologies: React, TypeScript, TanStack Query, Recoil, SSE, Chart.js,
-  Tailwind CSS, Nginx, FastAPI [사용 위치 확인 필요], Chromatic [UI 테스트 —
+  Tailwind CSS, Nginx, FastAPI (LLM 릴레이·에이전트 서버 엔드포인트 직접
+  설계·구현, SSE 스트리밍 포함 — user-attested 2026-09-11, "[사용 위치
+  확인 필요]" 해소. 엔드포인트 개수·인증/미들웨어·비동기 처리 세부는
+  여전히 [확인 필요]), Chromatic [UI 테스트 —
   A/B 실험 여부 확인 필요], Web Vitals [운영 방식 확인 필요],
   Docker [배포 인프라 — EXP-02 Blue-Green 무중단 배포 상세 참조], MongoDB
   (NoSQL), react-hook-form, yup, zod (폼 검증 공통 구조 — Context 핸들링,
   user-attested 2026-08-13 빗썸 2차 갭 인터뷰, 귀속 확정)
-  (Nginx·FastAPI·Chromatic·Web Vitals user-attested 2026-07-24,
-  grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조.
+  (Nginx·Chromatic·Web Vitals user-attested 2026-07-24,
+  grill-me base-resume 세션; 상세 용도는 [확인 필요] 마커 참조. FastAPI는
+  같은 2026-07-24 세션에서 스택으로 처음 확인됐고, 사용 위치는 위
+  user-attested 2026-09-11 확인으로 별도 해소됨 — [FastAPI 담당 범위
+  확정] Actions 서브블록 참조.
   Docker user-attested 2026-07-27, 이력서 재작성 세션에서 소유자 구두 확인 —
   문서 근거 없음, pending documentary source.
   MongoDB(NoSQL) user-attested 2026-07-27, 같은 세션 — 귀속 확정(이 서비스,
@@ -253,6 +293,22 @@ facts in drafted application text.
     빅데이터분석기사·AICE 학습을 통해 ML·딥러닝 지식을 학습했음을 확인 —
     자격 취득 여부는 [확인 필요]. 전 항목 문서 근거 없음, pending
     documentary source.
+  - user-attested 2026-09-11 (한미글로벌 AX실 AI 개발 지원 세션 갭
+    인터뷰, 소유자 객관식 직접 확인, 문서 근거 없음) — (1) 이 시스템의
+    배포 단위는 FE(Nginx)/Python LLM·에이전트 서버/백엔드/MongoDB·Qdrant가
+    각각 독립 배포되고 HTTP/SSE로 통신하는 구조임을 확인(위 Context
+    [배포 아키텍처] 참조) — MSA 정식 구성요소는 주장하지 않음. (2) LLM
+    릴레이 서버·에이전트 서버의 FastAPI 라우트·엔드포인트를 본인이 직접
+    설계·구현했고 SSE 스트리밍 응답을 포함함을 확인(위 Actions [FastAPI
+    담당 범위 확정] 참조) — 기존 "FastAPI [사용 위치 확인 필요]" 마커
+    해소. 두 사실 모두 문서 근거 없음, pending documentary source.
+  - user-attested 2026-09-13 (GS네오텍 플랫폼개발(풀스택) 지원 grill-me
+    세션, 소유자 객관식 직접 확인, 문서 근거 없음) — 위 [배포 아키텍처]의
+    잔여 [확인 필요] 중 오케스트레이션 도구·배포 실행 주체를 해소: 이
+    시스템은 Kubernetes를 사용하지 않고 Docker(Docker Compose 포함)
+    기반으로 컨테이너를 직접 빌드·배포·재기동했으며, 배포 실행 주체는
+    본인 직접임을 확인(위 Context [오케스트레이션·배포 실행 주체 확정]
+    참조). 서비스 간 인증 방식은 여전히 [확인 필요].
 - Reusable keywords: AI 서비스 제품화, LLM 챗봇, SSE Streaming, Markdown Renderer,
   XSS 필터링, Config-Driven UI, Base-Theme, feature flag, PoC 고도화,
   컴포넌트 추상화, 변경 이유 기반 공통화, 오류 분류 체계, 오류 처리 경계,
@@ -261,7 +317,8 @@ facts in drafted application text.
   스쿼드, Docker, MongoDB, NoSQL, react-hook-form, yup, zod, 폼 검증,
   공통 검증 구조, Context 핸들링, 멀티 에이전트 설계·구현, 프롬프트
   엔지니어링, 컨텍스트 엔지니어링, 하네스 엔지니어링, 빅데이터분석기사,
-  AICE 학습
+  AICE 학습, 서비스 단위 독립 배포, FastAPI 엔드포인트 설계·구현, SSE
+  스트리밍 응답
 - Notes for tailoring: AI/플랫폼/프론트엔드 아키텍처 직무에서 최우선 사례로 사용.
   `2026_상반기종합평가`는 2026년 상반기 평가 자료이므로 2025.07~2025.10 프로젝트의
   후속 안정화/확장 성과를 함께 입증하는 보조 근거로만 사용. 신규 고객사 실명 "웰체크"는
@@ -286,13 +343,31 @@ facts in drafted application text.
   한정. EXP-03의 비즈36.5·AI코치·바이오에이지 3개 서비스 공통 컴포넌트
   레이어 판정 근거로 이 기준을 인용하지 말 것 — 상세는 위 Actions
   [적용 범위 가드레일] 블록 참조.
-  **기술 스택 가드레일**: Nginx·FastAPI·Chromatic·Web Vitals는 추가 확인 필요([확인
+  **기술 스택 가드레일**: Nginx·Chromatic·Web Vitals는 추가 확인 필요([확인
   필요] 마커 참조) — 사용 위치·목적이 특정되지 않았으므로 단정 서술 금지.
+  **FastAPI는 이 목록에서 제외** — user-attested 2026-09-11(한미글로벌
+  AX실 AI 개발 지원 세션 갭 인터뷰)로 사용 위치가 "LLM 릴레이·에이전트
+  서버 엔드포인트 직접 설계·구현, SSE 스트리밍 포함"으로 해소됐다(위
+  Actions [FastAPI 담당 범위 확정] 참조). 단, 엔드포인트 개수·인증/
+  미들웨어·비동기 처리 세부는 여전히 [확인 필요]이므로 그 이상 구체화해
+  서술하지 말 것.
   Docker도 동일하게 구체 사용처가 [확인 필요] 상태이며 문서 근거가 없으므로
   (user-attested 2026-07-27), 고부담 외부 문서에서는 소유자에게 뒷받침 자료
   확인을 요청할 것. **Nest.js·Zustand는 이 항목에 없음** — 2026-07-27 소유자
   정정으로 바이오에이지 소속임이 확인돼 EXP-06으로 이관됨. 이 항목(EXP-01)의
   기술 스택으로 다시 추가하지 말 것.
+  **배포 아키텍처·MSA 서술 범위 가드레일(user-attested 2026-09-11, 한미글로벌
+  AX실 AI 개발 지원 세션 갭 인터뷰; 오케스트레이션·배포 실행 주체는
+  2026-09-13 GS네오텍 플랫폼개발(풀스택) 지원 grill-me 세션에서 해소)**:
+  이 시스템은 FE(Nginx)/Python LLM·에이전트 서버/백엔드/MongoDB·Qdrant가
+  각각 독립 배포되는 구조다 — "서비스 단위로 분리·독립 배포되는 구조에서
+  Docker 컨테이너를 직접 빌드·배포·재기동하며 개발·연동"까지 서술
+  가능하고, "MSA/마이크로서비스 아키텍처 설계", "서비스 디스커버리·API
+  Gateway 구성", "Kubernetes·Helm·kubectl 운영" 등 확인되지 않은
+  구성요소로 확대 서술하지 말 것. 오케스트레이션은 Kubernetes 미사용·
+  Docker(Compose) 기반이며 배포 실행은 본인이 직접 수행했음(위 Context
+  [오케스트레이션·배포 실행 주체 확정] 참조). 서비스 간 인증 방식은
+  여전히 [확인 필요].
   **조직 구조 가드레일(user-attested 2026-07-27)**: "다나아데이터 스쿼드"·
   부서 20명/스쿼드 10명·3개 서비스(비즈36.5·AI코치·바이오에이지) FE 총괄은
   문서 근거 없는 소유자 구두 확인 사실이다. 총괄 범위에 에스크미는 포함되지
@@ -484,6 +559,19 @@ facts in drafted application text.
     신규 건강관리 기능 3건의 Spring Boot 백엔드는 MyBatis 매퍼 기반으로 SQL을
     매핑함(삼성물산 프로젝트와 동일 스택). 트랜잭션 경계·테이블 설계 기준
     세부는 미확인 — 이 범위를 넘는 단정 서술 금지.
+  - **[기능 성격 확정 — user-attested 2026-09-13, GS네오텍 4차 갭 인터뷰,
+    소유자 객관식 직접 확인, 문서 근거 없음(pending documentary source)]**
+    위 신규 건강관리 기능 3건은 건강기록류 기능임을 소유자가 확인(개별
+    기능명은 미특정). 서술 허용: "건강기록 신규 기능 3건". 개별 기능명
+    창작 금지.
+  - **[백엔드 테스트 — user-attested 2026-09-13, GS네오텍 4차 갭 인터뷰,
+    소유자 객관식 직접 확인, 문서 근거 없음(pending documentary source)]**
+    신규 건강기록 기능 3건의 Service·MyBatis 매퍼 대상 JUnit 단위·통합
+    테스트를 본인이 직접 작성함. 서술 허용: "JUnit으로 서비스·MyBatis
+    매퍼 단위·통합 테스트 작성". 금지: 커버리지 수치·테스트 건수 창작,
+    MockMvc/컨트롤러 API 테스트로 확대 서술(확인 안 됨), 다른 프로젝트로
+    확대 적용. 이 확인으로 이 프로젝트의 백엔드 테스트 근거 없음 갭은 이
+    범위(Service·MyBatis 매퍼 단위·통합 테스트)로 해소됨.
   - **[테이블 설계 방식 — user-attested 2026-08-24, 코오롱베니트 2차 갭
     인터뷰]** 신규 건강관리 기능 3건의 테이블은 운영 중인 레거시 스키마를
     변경하지 않고 신규 테이블을 추가해 기존 테이블과 참조 관계로 연결하는
@@ -493,11 +581,27 @@ facts in drafted application text.
     인터뷰]** 신규 테이블 3건의 PK·FK 구성과 조회 조건 컬럼 인덱스를 본인이
     직접 설계함. 정규화 수준·구체 인덱스 컬럼 구성은 여전히 미확인 — 초과
     서술 금지.
+  - **[FK 제약 DB 선언 확인 — user-attested 2026-09-13, GS네오텍 2차 갭
+    인터뷰]** 위 [키·인덱스 설계]에서 설계한 PK·FK는 DB에 FOREIGN KEY
+    제약으로 실제 선언됨(논리적 참조만이 아님). 참조 무결성은 DB가
+    보장하고, 다중 테이블 쓰기의 일관성은 서비스 계층 @Transactional로
+    보장하는 구조. 서술 허용: "PK·FK 제약을 선언한 신규 테이블 설계".
+    금지: "정합성을 애플리케이션 계층에서 보증"류 서술(선언된 FK와
+    모순) — 아래 [아키텍처 결정의 대가] (c)의 "데이터 정합성의
+    애플리케이션 계층 보증 부담" 표현은 이 확인으로 한정된다: 참조
+    무결성 자체는 DB FK가 보장하고, 애플리케이션 계층 부담은 다중
+    테이블 쓰기의 트랜잭션 일관성(@Transactional)에만 해당. 문서 근거
+    없음, pending documentary source.
   - **[인덱스 컬럼·트랜잭션 — user-attested 2026-08-25, 코오롱베니트 v3
     미니 갭 인터뷰]** 주 조회 패턴은 사용자별 최신 기록 1건 조회이며, 이에
     맞춰 사용자 ID+기록일 복합 인덱스로 구성. 다중 테이블 쓰기 기능은
     서비스 계층 @Transactional로 묶어 하나의 트랜잭션으로 처리. 정규화
     수준·격리 수준·전파 옵션 세부는 여전히 미확인 — 초과 서술 금지.
+    **[실행 계획 확인 — user-attested 2026-09-13, GS네오텍 4차 갭 인터뷰,
+    소유자 객관식 직접 확인, 문서 근거 없음(pending documentary source)]**
+    위 사용자 ID+기록일 복합 인덱스는 실행 계획(EXPLAIN)으로 인덱스 적용을
+    확인했음. 서술 허용: "실행 계획으로 인덱스 적용 확인". 금지: 실행
+    계획 수치(cost·rows)·전후 쿼리 시간 창작 — 확인된 바 없음.
   - **[아키텍처 결정의 대가 — user-attested 2026-08-25, 코오롱베니트 v3
     미니 갭 인터뷰 2차]** 각 결정에서 실제로 감수한 비용을 소유자가 확인:
     (a) BFF(Node.js 집계·중계 계층) 도입 — 운영·배포 대상 증가 + 서버
@@ -505,6 +609,10 @@ facts in drafted application text.
     React 공존) — 이중 상태 관리 + 공통 CSS·React 스타일 충돌 격리 작업 +
     공존 기간 유지비 감수. (c) 레거시 스키마 무변경·신규 테이블 참조 연결 —
     조회 시 조인 증가 + 데이터 정합성의 애플리케이션 계층 보증 부담 감수.
+    **[2026-09-13 정정 — 위 [FK 제약 DB 선언 확인] 참조]** 참조 무결성은
+    DB FK 제약이 보장하며, 이 애플리케이션 계층 부담은 다중 테이블 쓰기의
+    트랜잭션 일관성(@Transactional)에 한정된다 — "정합성을 애플리케이션
+    계층에서 보증"으로 확대 서술하지 말 것.
     구체 수치(지연 ms, 유지비 규모)는 미확인 — 정성 서술까지만 허용.
   - 2019년에 작성된 레거시 스파게티 코드를 걷어내고 재활용 가능한 컴포넌트 구조로 빠르게 UI/UX를 개편하는 것을 목표로 설정 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
   - jQuery/Thymeleaf와 React가 화면 단위로 공존하는 점진적 전환 구조 설계 — BE-FE 미분리·비RESTful Spring Boot·Thymeleaf 강결합 제약으로 SPA를 한 번에 도입할 수 없어, island-loader 패턴을 활용해 React를 SPA는 아니지만 화면 단위로 컴포넌트를 재사용할 수 있는 수준으로 구현 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
@@ -516,6 +624,27 @@ facts in drafted application text.
     화면 단위 점진 전환(island-loader)이 최적 경로라고 판단. 이 구조 덕분에
     9주 내 UI/UX 개편을 빠르게 완료할 수 있었음
     (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
+  - **[두 React 전환의 선후 관계 확정 — user-attested 2026-09-13, GS네오텍
+    2차 갭 인터뷰, 객관식 직접 확인, 문서 근거 없음(pending documentary
+    source)]** 비즈36.5의 두 React 전환은 선후 관계의 연속 단계다: ①1단계
+    = 본 항목의 island-loader 패턴 기반 jQuery/Thymeleaf 공존 화면 단위
+    점진 전환(108개 페이지·82개 화면, 9주 내 단독, 2025.11~2026.02). ②2단계
+    = ①이후 진행해 2026년 7월 완료한 비즈36.5 Web React 전환(AI 하네스
+    전제 설계로 개발 기간 6주→2주, "품질·개발·운영 자동화 및 FE AX 기준
+    수립" 항목(EXP-03) [React 전환의 하네스 전제 설계] 블록 참조). 서술
+    허용: "1단계 island-loader 화면 단위 전환 / 이후 2단계 Web React
+    전환". **[미해소 범위]** 위 island-loader 채택 이유 (a) "이후 목표였던
+    Next.js 전환을 쉽게 하기 위한 사전 단계"에서 말한 후속 전환이 이 2단계
+    (Web React 전환)와 동일한 것인지, 그 2단계가 실제로 Next.js 전환이었는지
+    순수 React SPA 전환이었는지는 이번 확인으로도 특정되지 않았으므로
+    단정 금지 — 여전히 [확인 필요]. 2단계 페이지 수 71건/74개 표기 상이
+    ([확인 필요], EXP-03 참조)도 이 확인과 무관하게 그대로 유지. **범위
+    한정**: 이 확인은 island-loader 전환(1단계)과 Web React 전환(2단계)
+    사이의 선후 관계만 다룬다 — 아래 [WebView→React Native 마이그레이션 및
+    RN 앱 스토어 출시·운영] 블록의 [EXP-02 관계 스코프 가드레일]과 Notes for
+    tailoring의 [WebView→RN 마이그레이션 관계 가드레일]이 다루는
+    "WebView→RN 마이그레이션과의 선후 관계"는 이번 확인 범위 밖이며 그대로
+    미확정 [확인 필요]로 유지한다 — 혼동 금지.
   - **[교체 우선순위 기준]** 108페이지·82화면 전체를 변경 빈도가 높거나
     장애가 잦은 영역부터 우선순위 순서대로 단독 전환 — "우선순위 기준"은
     교체 '순서'를 정하는 기준이었을 뿐, 일부만 선별 교체한 것이 아님.
@@ -530,6 +659,14 @@ facts in drafted application text.
     각 기제의 세부 구현 방식(어떤 역할·리소스 매핑 규칙, 어떤 라우트
     가드 로직, 어떤 필터 기준)은 특정되지 않았으므로 [확인 필요] —
     구현 세부를 창작해 서술하지 말 것.
+  - **[서버 검증 방식 확정 — user-attested 2026-09-13, GS네오텍 2차 갭
+    인터뷰]** 위 (b) "서버 검증"의 구체 방식: Spring Security·
+    Interceptor·Filter가 아니라 Controller/Service 코드의 서비스 로직
+    내에서 사용자 역할 조건으로 직접 검사하는 방식. 서술 허용: "화면
+    라우트 가드와 서버 서비스 로직 내 역할 검사의 이중 검증". Spring
+    Security 등 특정 기술명 사용 금지. 역할 저장 방식(테이블 구조 등)은
+    여전히 [확인 필요] — 초과 서술 금지. 문서 근거 없음, pending
+    documentary source.
   - Jenkins 빌드/검증/배포 파이프라인과 WebView 호환성 검증 기준 수립
   - **[WebView 호환성 사례·검증 기준 — user-attested 2026-08-25, 코오롱베니트
     v3 미니 갭 인터뷰]** 재발 방지까지 이어진 대표 사례는 iOS WebView의
@@ -611,7 +748,9 @@ facts in drafted application text.
     서술하고 특정 API를 단정하지 말 것([확인 필요]).
 - Technologies: React, TypeScript, jQuery, Thymeleaf, Java, Spring Boot, REST API,
   MySQL, MyBatis (신규 건강관리 기능 3건 SQL 매핑 — user-attested 2026-08-24
-  코오롱베니트 갭 인터뷰), Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
+  코오롱베니트 갭 인터뷰), JUnit (신규 건강기록 기능 3건 Service·MyBatis
+  매퍼 단위·통합 테스트 작성 — user-attested 2026-09-13 GS네오텍 4차 갭
+  인터뷰, 문서 근거 없음), Tailwind CSS, Jenkins CI/CD, WebView, iOS, Android, Playwright,
   Docker (운영 서버 Blue-Green 무중단 배포, user-attested 2026-07-27 — 문서
   근거 없음), React Native (WebView 하이브리드 앱 내 RN 레이어 개발/유지보수
   전담, user-attested 2026-08-13 빗썸 2차 갭 인터뷰 — 화면 범위·기간 [확인
@@ -697,6 +836,21 @@ facts in drafted application text.
     전환·롤백 기제는 신규 컨테이너 헬스체크 확인 후 트래픽 전환, 이상 시
     이전 컨테이너로 롤백하는 방식임을 확인. 헬스체크 구체 조건·자동화
     수준은 미확인.
+  - user-attested 2026-09-13 (GS네오텍 2차 갭 인터뷰, 객관식 직접 확인,
+    문서 근거 없음) — 비즈36.5의 두 React 전환(island-loader 1단계 →
+    Web React 전환 2단계, EXP-03)이 선후 관계의 연속 단계임을 확인. 상세는
+    위 [두 React 전환의 선후 관계 확정] 블록 참조. island-loader 채택 이유
+    (a) "Next.js 전환 사전 단계"와의 동일성, WebView→RN 마이그레이션과의
+    선후 관계는 이번 확인 범위 밖 — [확인 필요] 유지.
+  - user-attested 2026-09-13 (GS네오텍 4차 갭 인터뷰, 소유자 객관식 직접
+    확인, 문서 근거 없음, pending documentary source) — (1) 신규 건강관리
+    기능 3건은 건강기록류 기능임을 확인(개별 기능명 미특정). (2) 신규
+    건강기록 기능 3건의 Service·MyBatis 매퍼 대상 JUnit 단위·통합 테스트를
+    본인이 직접 작성함을 확인. (3) 사용자 ID+기록일 복합 인덱스는 실행
+    계획(EXPLAIN)으로 인덱스 적용을 확인했음. (4) "비즈케어 UI/UX 전면
+    개편 주도 → 대웅제약 대상 판매 1.0억"(EXP-06)을 외부 이력서에 팀·조직
+    성과로 표기해 사용하는 것을 재확인·승인함(개인 단독 성과 표기는 계속
+    금지 — 기존 EXP-06 팀 KR 가드레일, 아래 병합 노트 가드레일과 동일).
 - Reusable keywords: B2B 플랫폼, 풀스택 내재화, Spring Boot, MySQL, MyBatis,
   Web/Admin,
   WebView, Jenkins CI/CD, SaaS형 구조, island-loader 패턴, 점진적 SPA 전환,
@@ -708,7 +862,8 @@ facts in drafted application text.
   이중화, 대량 목록 필터·페이징,
   React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
   크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지,
-  WebView 인터페이스, WebView→RN 마이그레이션
+  WebView 인터페이스, WebView→RN 마이그레이션, 건강기록, JUnit, 단위 테스트,
+  통합 테스트, 실행 계획, 인덱스 적용 확인
 - Notes for tailoring: 풀스택/플랫폼/운영 안정화 직무에 적합. 108개 페이지·
   82개 화면 전환은 개인 단독 기여이므로 "본인이 단독으로 수행"이라는 개인
   기여 프레이밍을 사용할 수 있다. island-loader 패턴 채택은 당시 모놀리식·
@@ -718,7 +873,11 @@ facts in drafted application text.
   **병합 노트 가드레일(user-attested 2026-07-25)**: 이 플랫폼=비즈36.5(비즈
   케어)이므로 EXP-06의 "비즈케어 판매 1.0억"은 이 프로젝트의 상업적 성과
   앵커다. 단, 금액은 조직/팀 KR 세부 수치이며 개인 단독 성과 아님(EXP-06
-  팀 KR 가드레일 참조).
+  팀 KR 가드레일 참조). **사용 승인(user-attested 2026-09-13, GS네오텍
+  4차 갭 인터뷰)**: 이 성과를 외부 이력서에 "개편한 플랫폼이 대웅제약
+  대상 판매 1.0억 원으로 이어짐(조직 성과)" 수준으로 표기해 사용하는
+  것을 소유자가 재확인·승인함 — 개인 단독 성과로 표기하는 것은 여전히
+  금지.
   **이중 계상 가드레일(user-attested 2026-07-25)**: (1) Jenkins 배포 리드타임
   10분→2분은 EXP-06 Metrics와 동일 사건 — 동일 맥락에서 두 번 수치화하지
   않는다. (2) Playwright AI E2E 82개 화면 자동화는 EXP-03 Playwright 도입과
@@ -762,6 +921,19 @@ facts in drafted application text.
   창작 금지. Blue-Green 배포는 "헬스체크 확인 후 트래픽 전환, 이상 시
   롤백" 수준까지만 서술 가능 — 헬스체크 조건·자동화 수준은 [확인 필요]로
   창작 금지.
+  **백엔드 테스트·인덱스 실행 계획·기능 성격 가드레일(user-attested
+  2026-09-13, GS네오텍 4차 갭 인터뷰, 문서 근거 없음)**: (1) 신규
+  건강관리 기능 3건은 "건강기록 신규 기능 3건" 수준으로만 서술 가능 —
+  개별 기능명을 창작하지 말 것. (2) 이 기능들의 Service·MyBatis 매퍼
+  대상 JUnit 단위·통합 테스트 작성은 "JUnit으로 서비스·MyBatis 매퍼
+  단위·통합 테스트 작성" 수준까지만 서술 가능 — 커버리지 수치·테스트
+  건수·MockMvc/컨트롤러 API 테스트로 확대 서술 금지. (3) 위 사용자
+  ID+기록일 복합 인덱스는 "실행 계획으로 인덱스 적용 확인" 수준까지만
+  서술 가능 — 실행 계획 수치(cost·rows)·전후 쿼리 시간 창작 금지.
+  **[Java/Spring 실무 범위 가드레일 — user-attested 2026-09-13, GS네오텍
+  세션]**: 후보의 Java/Spring 실무는 이 프로젝트(2025.11~2026.02)와
+  삼성물산(EXP-04, 2024.10~2025.04) 둘뿐이다. 상세는 EXP-05(한국미스미)
+  Notes for tailoring의 동일 이름 가드레일을 참조 — 기간 부풀리기 금지.
 
 ### 비즈36.5 2단계 건강관리실·검진센터 AX 기획
 
@@ -970,6 +1142,14 @@ facts in drafted application text.
   - Codex·Claude Code 등 AI 코딩 에이전트를 활용한 개발과, 생성 코드의 검증·금지
     패턴·보안 기준 수립 (user-attested 2026-07-22 — AX본부 JD 대응 세션에서 사용자
     직접 확인. 문서 근거 미확보, pending documentary source)
+  - **[AI 코딩 도구 범위 확정 — user-attested 2026-09-11, 한미글로벌 AX실
+    AI 개발 지원 세션 갭 인터뷰, 소유자 객관식 직접 확인, 문서 근거
+    없음]** 위 Codex·Claude Code 외 AI 코딩 도구로 **GitHub Copilot 사용
+    경험 있음**을 확인. **Cursor는 사용 경험 없음**을 명시적으로 확인 —
+    향후 JD 대응 시 갭으로 처리할 것. GitHub Copilot의 사용 맥락·기간·
+    깊이는 [확인 필요] — "능숙", "주력 도구" 등으로 확대 서술 금지,
+    Claude Code·Codex 기록(자체 MCP 서버 개발·팀 표준화, 위 [MCP 서버
+    개발·연동] 참조)과 같은 수준으로 격상하지 말 것.
   - **[MCP 서버 개발·연동 및 AI 챗봇 문서 연결 — user-attested 2026-08-21,
     GS글로벌 FDE 지원 세션 갭 인터뷰. 객관식 확인, 문서 근거 없음]** 팀 FE AX
     (하네스 엔지니어링) 전환의 일환으로 다음 4가지를 수행함:
@@ -1009,6 +1189,24 @@ facts in drafted application text.
     경험 있음(AI 코드 리뷰가 기존 GitLab MR 리뷰 프로세스에 편입됨).
     ※ GitHub PR 실무 경험은 아님 — 반드시 "GitLab MR"로 정확히 표기할 것.
     문서 근거 없음, pending documentary source.
+  - **[Linux 서버 SSH 운영 — user-attested 2026-09-11, 한미글로벌 AX실
+    AI 개발 지원 세션 갭 인터뷰, 소유자 객관식 직접 확인, 문서 근거
+    없음(pending documentary source)]** EC2·사내 서버에 SSH로 직접
+    접속해 배포, 로그 확인, 서비스·컨테이너 재기동, 권한/환경변수/Nginx
+    설정을 일상적으로 수행함을 소유자가 확인. 대웅제약 재직 전반에 걸친
+    일반 역량 사실이며 특정 프로젝트로 단정 귀속하지 않음 — 어느
+    프로젝트에서 주로 수행했는지는 소유자가 특정하지 않았으므로 [확인
+    필요]. **서술 허용 범위**: "Linux 서버 환경에서 배포·운영"까지.
+    **EXP-06 AWS 스코프 가드레일과의 경계**: EXP-06("2025 대웅제약 성과
+    평가 기반 사업 기여")의 AWS S3·EC2 가드레일은 "구성된 환경 위에서
+    배포 파이프라인을 운영한 범위이며 버킷/인스턴스를 본인이 직접
+    설계·구축한 것은 아님"(인스턴스 프로비저닝 미경험)을 뜻한다. 이번
+    확인은 그와 다른 층위인 **서버 셸(shell) 수준 운영**(SSH 접속·배포·
+    로그·재기동·설정)이며, 인스턴스를 새로 만들거나 설계했다는 의미가
+    아니다 — 두 가드레일을 혼동해 "EC2 인스턴스를 직접 구축·설계했다"로
+    확대 서술하지 말 것. **GCP 갭과 무관**: 이 SSH 운영 사실은 GCP
+    활용 경험 없음(2026-07-24 user-attested, EXP-06 [GCP 갭] 확정)에
+    영향을 주지 않는다 — GCP 갭은 그대로 유지.
   - 외부 컨퍼런스 참석·학습으로 얻은 인사이트를 사내 개발 세미나(12회)로 이식하는
     구조 운영 — 외부 발표가 아닌 내부 공유 세미나임. 세미나 12회 수치는 "2025 대웅제약
     성과 평가 기반 사업 기여" 항목의 Actions와 동일 출처.
@@ -1036,6 +1234,20 @@ facts in drafted application text.
     단축. 위 [React 전환 확장] 블록의 71건/74개 페이지 표기 상이 이슈와
     같은 전환 프로젝트를 가리키는 수치이므로 함께 인용 시 동일한 표기
     상이 가드를 적용할 것.
+    **[선후 관계 — user-attested 2026-09-13, GS네오텍 2차 갭 인터뷰]** 이
+    Web React 전환은 "B2B 임직원 건강 플랫폼 풀스택 내재화"(EXP-02)의
+    island-loader 기반 화면 단위 점진 전환(1단계, 2025.11~2026.02) 이후에
+    진행해 2026년 7월 완료한 2단계다 — EXP-02 [두 React 전환의 선후 관계
+    확정] 블록과 상호 참조. Next.js 전환 여부 등 세부는 EXP-02 해당
+    블록의 [확인 필요] 범위를 그대로 따른다.
+    **[6주의 기준 — user-attested 2026-09-13, GS네오텍 세션, 소유자 객관식
+    직접 확인, 문서 근거 없음]** "개발 기간 6주 → 2주"에서 6주는 ETA(예상
+    일정)가 아니라 **과거 실제 기간 기준** — 비슷한 규모 작업이 기존
+    방식으로 실제 6주 걸렸던 것과의 비교. 서술 허용: "비슷한 규모 작업의
+    기존 소요 기간 6주 → 2주". 서술 금지: "예상 기간 6주"(ETA 표현 —
+    위 [RESTful API 교체 29건]의 ETA 4주→1주와 기준이 다르므로 혼용 금지).
+    비교 대상 작업명·규모는 창작 금지 — 구체 대상 작업은 [확인 필요].
+    pending documentary source.
   - **[비즈36.5 Storybook 확장 — 월별피드백 2026-08 자가 기록,
     metric-registry `metric-storybook-biz365`, 소유자 2026-09-09 사용
     승인]** 비즈36.5 주요 컴포넌트 Storybook 93개 스토리 파일·258개 UI
@@ -1065,6 +1277,25 @@ facts in drafted application text.
     승인]** AI 기반 명세 분석·구현·테스트 방식을 적용해 나만의건강 AI코치
     RESTful API 교체 대상 29건 개발·테스트 완료 → ETA 4주 → 1주(약 75%).
     base-self-introduction 항목 2에 이미 사용된 수치.
+    **[작업 범위 확정 — user-attested 2026-09-13, GS네오텍 2차 갭
+    인터뷰]** 이 29건 교체는 서버 쪽 RESTful API 구현과 프론트 연동
+    교체를 모두 수행. 서술 허용: "AI코치 RESTful API 교체 29건(서버
+    구현·프론트 연동)의 개발·테스트, ETA 4주 → 1주". ETA 스코프 가드는
+    유지. ~~서버 구현 언어·프레임워크(FastAPI 등) 귀속은 확인되지 않았으므로
+    단정 금지.~~ **[아래 갱신으로 해소, 삭제 아님 — 이력 보존]**
+    문서 근거 없음, pending documentary source.
+    **[서버 구현 스택 확정 — user-attested 2026-09-13, GS네오텍 세션,
+    소유자 객관식 직접 확인, 문서 근거 없음]** 위 "서버 구현 언어·
+    프레임워크 귀속 미확인·단정 금지" 상태를 해소한다 — 서버 구현 스택은
+    **Node.js(Express)**. 서술 허용: "AI코치 RESTful API 29건(Node.js
+    (Express) 서버 구현·프론트 연동) 개발·테스트, 예상 기간 4주 → 1주".
+    서술 금지: FastAPI·Spring 등 다른 스택으로의 귀속; 엔드포인트 설계
+    세부(인증 방식·API 명세 방법·오류 응답 규약 등, 모두 미확인)는 창작
+    금지 — 필요 시 [확인 필요]로만 표기. ETA 4주 → 1주 스코프 가드는
+    그대로 유지. Technologies에 이 프로젝트 귀속으로 Node.js(Express) 표기
+    (EXP-07 "비즈36.5 Node.js(Express) BFF 신규 구축"과는 별개 사건 —
+    이중 계상 금지).
+    pending documentary source.
   - **[AI 기반 에러 리포트 파이프라인 — documentary, 저장소
     `my-health-ai-coach-web` `scripts/error-report/`, 정다훈 5커밋
     2026-04-07~15, archivist 코드 조사 2026-09-09]** PostHog Error
@@ -1113,10 +1344,16 @@ facts in drafted application text.
     서브에이전트·스킬 구성을 "본인이 전부 설계했다"고 단정하지 말고
     "이런 하네스 자산이 팀 저장소에 구축돼 있음" 수준으로 서술할 것
     (개별 커밋 저자 비중은 archivist가 별도 확인하지 않음).
-- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code, MCP(Model Context Protocol), Figma, Jira, Slack, Confluence, Notion
+- Technologies: Playwright, Storybook, Jest, ESLint, TypeScript, Jenkins, GitLab CI/CD, GA4, PostHog, Codex, Claude Code, GitHub Copilot, MCP(Model Context Protocol), Linux, Figma, Jira, Slack, Confluence, Notion, Node.js(Express) [AI코치 RESTful API 29건 서버 구현 귀속, user-attested 2026-09-13, 문서 근거 없음 — EXP-07 BFF의 Node.js(Express)와는 별개 사건]
   (Figma·Jira·Slack·Confluence·Notion은 협업 도구 — user-attested 2026-07-27,
   이력서 재작성 세션에서 소유자 구두 확인. 대웅제약 재직 전반의 공통 협업
   도구이며 이 프로젝트에 한정된 것은 아님, 문서 근거 없음.
+  GitHub Copilot 사용 경험 있음 — user-attested 2026-09-11, 한미글로벌
+  AX실 AI 개발 지원 세션 갭 인터뷰, 사용 맥락·기간·깊이 [확인 필요].
+  Cursor는 사용 경험 없음(같은 세션 명시적 확인) — 갭으로 기록.
+  Linux(서버 SSH 운영: 배포·로그 확인·서비스/컨테이너 재기동·권한/
+  환경변수/Nginx 설정) — user-attested 2026-09-11, 같은 세션, 특정
+  프로젝트 귀속은 [확인 필요], 대웅제약 재직 전반의 일반 역량 사실.
   MCP(Model Context Protocol)는 사내 용도 MCP 서버 개발·수정(용도: ①
   사내 문서/지식 검색용, ② 테스트/검증 도구 호출용) 및 Claude Code/Codex
   연동 목적 — user-attested 2026-08-21, GS글로벌 FDE 지원 세션 갭 인터뷰
@@ -1246,6 +1483,13 @@ facts in drafted application text.
     documentary 블록(에러 리포트 파이프라인, LLM 채팅 응답 검수 도구
     확인, SSE·성능·PostHog 대조 도구, `.claude/` 하네스 자산)의 근거.
     구체 경로·커밋 수는 각 블록 참조.
+  - user-attested 2026-09-11 (한미글로벌 AX실 AI 개발 지원 세션 갭
+    인터뷰, 소유자 객관식 직접 확인, 문서 근거 없음) — (1) GitHub
+    Copilot 사용 경험 있음, Cursor 사용 경험 없음(명시적 갭 확인). (2)
+    EC2·사내 서버에 SSH로 직접 접속해 배포·로그 확인·서비스/컨테이너
+    재기동·권한/환경변수/Nginx 설정을 일상적으로 수행함 — 특정 프로젝트
+    귀속은 [확인 필요], 대웅제약 재직 전반의 일반 역량 사실로 기록. 두
+    사실 모두 문서 근거 없음, pending documentary source.
 - Reusable keywords: Playwright, Storybook, FE AX, SOP, 품질 자동화, 운영 데이터
   대시보드, 회귀 테스트, AI 생성 코드 검증, E2E 자동화 단독 도입, Figma, Jira,
   Slack, Confluence, Notion, 협업 도구, GitLab MR, 코드 리뷰, AI 코드 리뷰,
@@ -1261,8 +1505,21 @@ facts in drafted application text.
   파이프라인, PostHog Error Tracking, GitLab Repository Files API,
   GPT-4o 오류 분석, Resend 이메일 발송, SSE 목 서버, 성능 측정 하네스,
   PostHog 이벤트 스펙 대조, CLAUDE.md 룰북, AI 코딩 에이전트 서브에이전트,
-  AI 코딩 에이전트 스킬
+  AI 코딩 에이전트 스킬, GitHub Copilot, Linux, SSH 서버 운영
 - Notes for tailoring: 생산성/품질/AI 개발 프로세스 개선을 강조할 때 사용.
+  **AI 코딩 도구·서버 운영 가드레일(user-attested 2026-09-11, 한미글로벌
+  AX실 AI 개발 지원 세션 갭 인터뷰)**: (1) GitHub Copilot은 "사용 경험
+  있음" 수준으로만 서술 — 맥락·기간·깊이가 미확인이므로 "능숙"·"주력
+  도구"로 확대하거나 Claude Code/Codex 수준(자체 MCP 서버 개발·팀
+  표준화)으로 격상하지 말 것. Cursor는 무경험으로 확정된 갭이므로 JD에
+  Cursor가 언급돼도 사용 경험이 있는 것처럼 서술하지 말 것. (2) Linux
+  서버 SSH 운영(배포·로그 확인·서비스/컨테이너 재기동·권한/환경변수/
+  Nginx 설정)은 "Linux 서버 환경에서 배포·운영" 수준까지만 서술 —
+  EXP-06의 AWS S3·EC2 가드레일("구성된 환경 위에서 배포 파이프라인을
+  운영, 버킷/인스턴스 직접 설계·구축 아님")과는 다른 층위(서버 셸 수준
+  운영 vs 인스턴스 프로비저닝)이므로 혼동해 "EC2 인스턴스를 직접
+  구축·설계"로 확대 서술하지 말 것. 이 사실이 GCP 무경험 갭(EXP-06
+  [GCP 갭], user-attested 2026-07-24)에 영향을 주지 않는다.
   **2026-08 신규 사실 가드레일(user-attested 2026-09-09)**: 위 PostHog·
   React 71건·Storybook 두 건·SOP 4건 수치는 `metric-registry.md`에
   `source_stated`로 등재돼 있다 — "비즈36.5 71건"과 기존 "74개 페이지"
@@ -1382,9 +1639,21 @@ facts in drafted application text.
 - Context: 데이터 플랫폼과 React Native 모바일 애플리케이션 고도화.
   팀 규모: 삼성물산 프로젝트 팀원 10명 (user-attested 2026-07-27, 이력서
   재작성 세션에서 소유자 구두 확인, 문서 근거 없음).
+  **[도메인 확정 — user-attested 2026-09-11, 한미글로벌 AX실 AI 개발
+  지원 세션 갭 인터뷰, 소유자 직접 확인, 문서 근거 없음(pending
+  documentary source)]**: 아래 "현장 앱"과 "장비 목록·인력 목록"은
+  **삼성물산 건설부문의 건설 현장**을 대상으로 한 것임을 소유자가 확인.
+  도메인은 "건설 현장의 장비·인력 데이터를 조회·관리하는 앱과 데이터
+  플랫폼"으로 확정. **서술 허용 범위**: "건설 현장 업무 시스템 개발
+  경험"까지. **금지**: "건설 도메인 전문성", "건설사업관리(PM) 경험",
+  "공정 관리 시스템 설계" 등 — 소유자가 확인한 것은 장비·인력 목록
+  조회/관리와 데이터 대시보드까지이며, 프로젝트 기간은 7개월
+  (2024.10~2025.04) 1건에 한정된다. 구체적인 현장명·프로젝트명·발주처는
+  미확인 — [확인 필요], 창작 금지.
 - Problem: Web 대시보드의 대용량 테이블/시계열 데이터 렌더링과 모바일 앱의
   반복 API 호출 및 플랫폼별 동작 차이가 사용자 대기와 운영 부담을 만들었다.
-  모바일 앱의 장비 목록·인력 목록 검색 화면은 수만 건 규모의 데이터가 한 번에
+  모바일 앱의 장비 목록·인력 목록 검색 화면(삼성물산 건설부문 건설 현장
+  대상, 위 [도메인 확정] 참조)은 수만 건 규모의 데이터가 한 번에
   내려오는 구조였다 (user-attested 2026-07-23 — headhunter-advisor 인터뷰).
 - Role: 대용량 데이터 시각화, Spring REST API/데이터 연동, React Native iOS/Android
   개발 및 배포. FE(Vue 렌더링 최적화)와 BE(DB 인덱싱·DTO 투영) 전 과정을 본인이
@@ -1399,6 +1668,12 @@ facts in drafted application text.
       블로킹을 제거 (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
     - **[BE]** DB 인덱싱 처리와 DTO 기반 필요 필드만 투영(projection)해 응답 자체를
       경량화, 화면 로딩 단축 (user-attested 2026-07-23 — headhunter-advisor 인터뷰)
+      **[실행 계획 확인 — user-attested 2026-09-13, GS네오텍 4차 갭 인터뷰,
+      소유자 객관식 직접 확인, 문서 근거 없음(pending documentary source)]**
+      위 Oracle 조회 쿼리 인덱스는 실행 계획(Explain Plan)으로 인덱스 적용을
+      확인했음. 서술 허용: "실행 계획으로 인덱스 적용 확인". 금지: 인덱스
+      대상 컬럼 창작(여전히 [확인 필요]), 실행 계획 수치(cost·rows)·전후
+      쿼리 시간 창작.
     - 측정 조건(데이터 행 수·네트워크 환경)은 문서로 특정되지 않음 — 2.5초→1초대
       수치는 기존 그대로 유지하되 조건 창작 금지
   - Spring REST API와 필터링/정렬 로직 설계, 역할별 데이터 조회/표현 구조 개발
@@ -1560,6 +1835,17 @@ facts in drafted application text.
     브릿지 데이터 범주: 카메라·파일·푸시 토큰·로그인/인증 토큰·딥링크·스크롤/
     네비게이션 이벤트 등. 구체 API 명칭(postMessage/JS Interface/
     WKScriptMessageHandler 등)은 소유자 명시 확인 없음([확인 필요]).
+  - user-attested 2026-09-11 (한미글로벌 AX실 AI 개발 지원 세션 갭
+    인터뷰, 소유자 직접 확인, 문서 근거 없음, pending documentary
+    source) — "현장 앱"·"장비 목록·인력 목록"은 삼성물산 건설부문의
+    건설 현장을 대상으로 한 것임을 확인. 도메인은 "건설 현장의 장비·
+    인력 데이터를 조회·관리하는 앱과 데이터 플랫폼"으로 확정(위 Context
+    [도메인 확정] 참조). 구체 현장명·프로젝트명·발주처는 미확인
+    [확인 필요].
+  - user-attested 2026-09-13 (GS네오텍 4차 갭 인터뷰, 소유자 객관식 직접
+    확인, 문서 근거 없음, pending documentary source) — 위 Oracle 조회
+    쿼리 인덱스는 실행 계획(Explain Plan)으로 인덱스 적용을 확인했음.
+    인덱스 대상 컬럼은 여전히 미확인 [확인 필요].
 - Reusable keywords: 데이터 시각화, Vue 3, ECharts, RealGrid, React Native,
   REST API, Lazy Rendering, DB 인덱싱, DTO projection, 풀스택, 성능 개선,
   FlatList 가상화, 클라이언트 렌더링 최적화, 측정 기반 병목 진단,
@@ -1570,7 +1856,9 @@ facts in drafted application text.
   노치·세이프에어리어 대응, FCM 상태별 수신 분기, 알림 탭 화면 이동,
   릴리스 체크 항목, 스토어 심사 반려 대응,
   React Native 앱 출시, App Store, Google Play, 스토어 배포 운영,
-  크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지
+  크래시 모니터링, 네이티브-웹 브릿지, 네이티브 모듈, 네이티브 모듈 브릿지,
+  건설 현장 업무 시스템, 건설부문, 장비 관리, 인력 관리, 실행 계획,
+  인덱스 적용 확인
 - Notes for tailoring: 데이터 플랫폼, 모바일 앱, 대시보드 직무에 활용.
   2.5초→1초대 수치를 인용할 때는 측정 조건(데이터 규모·네트워크)이 문서로
   특정되지 않았음을 인지하고, 조건을 창작하거나 새 수치를 추가하지 않는다.
@@ -1609,16 +1897,48 @@ facts in drafted application text.
   postMessage/JS Interface(Android)/WKScriptMessageHandler(iOS) 등 구체 API
   명칭은 소유자 명시 확인 없음 — "네이티브 모듈 브릿지" 수준으로만 서술하고
   특정 API를 단정하지 말 것([확인 필요]).
+  **[도메인 브릿지 활용 가드레일 — user-attested 2026-09-11, 한미글로벌
+  AX실 AI 개발 지원 세션 갭 인터뷰]**: 이 프로젝트의 도메인(삼성물산
+  건설부문 건설 현장의 장비·인력 데이터 조회/관리)은 **건설·엔지니어링·
+  플랜트·부동산개발·건설사업관리(PM) 계열 JD에서 도메인 브릿지로
+  재사용**할 것 — 해당 업종 JD 대응 시 "이 업종 프로젝트 경험이 있다"는
+  근거로 우선 활용. 단, 깊이는 7개월 1건에 한정되므로 "현장 업무
+  시스템을 만들어본 경험" 수준까지만 어필하고, "건설 도메인 전문성"·
+  "건설사업관리(PM) 경험"·"공정 관리 시스템 설계" 등으로 확대해 도메인
+  전문성을 주장하지 말 것.
+  **[별칭 가드 — user-attested 2026-09-13, GS네오텍 세션]**: 원본
+  이력서·과거 출고본(두산로보틱스·NHN·CJ ENM 초안)의 "Vue·ECharts·
+  RealGrid 기반 생산 공정 데이터 시각화 대시보드 개발" / "생산관리
+  대시보드"는 이 삼성물산 데이터 대시보드와 동일한 것이며 별도
+  프로젝트가 아니다. 신규 문서에서 "생산 공정"·"생산관리 대시보드"
+  표현을 삼성물산과 무관한 별도 제조사 프로젝트로 서술하지 말 것 —
+  동일 대시보드를 가리키는 다른 표현으로만 다룰 것.
+  **[Java/Spring 실무 범위 가드레일 — user-attested 2026-09-13, GS네오텍
+  세션]**: 후보의 Java/Spring 실무는 이 프로젝트(2024.10~2025.04)와
+  비즈36.5(EXP-02, 2025.11~2026.02) 둘뿐이다. 상세는 EXP-05(한국미스미)
+  Notes for tailoring의 동일 이름 가드레일을 참조 — 기간 부풀리기 금지.
+  **[인덱스 실행 계획 가드레일 — user-attested 2026-09-13, GS네오텍 4차
+  갭 인터뷰, 문서 근거 없음]**: 위 Oracle 조회 쿼리 인덱스는 "실행
+  계획으로 인덱스 적용 확인" 수준까지만 서술 가능 — 인덱스 대상 컬럼,
+  실행 계획 수치(cost·rows), 전후 쿼리 시간은 여전히 [확인 필요]로
+  창작 금지.
 
 ### 한국미스미 글로벌 B2B 커머스 개선 및 Next.js 전환
 
-- Period: 2022.06 ~ 2024.10
+- Period: 2020.10 ~ 2024.10
+  **[시작일 정정 — user-attested 2026-09-13, GS네오텍 플랫폼개발(풀스택)
+  지원 grill-me 세션, 소유자 객관식 직접 확인. 문서 근거 없음, pending
+  documentary source]**: 기존 기록 "2022.06"은 오기. 업무 내용·3개 프로젝트
+  구성·성과 수치 귀속은 변경 없이 기존 그대로 유지하고, 기간만
+  2020.10~2024.10으로 정정한다. 3개 프로젝트 각각의 세부 시작·종료일은
+  확인되지 않았으므로 [확인 필요] — 창작 금지.
 - Context: 글로벌 B2B 커머스의 레거시 유지보수, 성능/SEO/다국어/모니터링 개선.
   PHP/jQuery 레거시를 Next.js로 전면 전환하는 프로젝트로, **한국미스미와 일본미스미가
   전사적으로 참여한 크로스보더 프로젝트**였음 (user-attested 2026-07-23 —
   headhunter-advisor 인터뷰에서 사용자 직접 확인)
   **[3-프로젝트 구성 — user-attested 2026-07-25, grill-me base-resume 세션]**:
-  2022.06~2024.10 기간은 다음 3개 프로젝트로 구성됨. 성과 수치 귀속:
+  2020.10~2024.10 기간(시작일은 위 [시작일 정정] 참조)은 다음 3개
+  프로젝트로 구성됨. 성과 수치 귀속:
   - **유지보수·성능 개선**: 페이지 접근 시간 8초→2초 단축의 귀속 프로젝트.
   - **Next.js 전환**: PHP 서비스 대비 평균 로딩 속도 약 50% 개선의 귀속
     프로젝트.
@@ -1631,9 +1951,11 @@ facts in drafted application text.
   다국어/배포/모니터링 구조 개선. 한국 팀 내에서 React를 가장 많이 다뤄본 유일한
   숙련자로서 **한국 측 실질적 React 리드(최숙련자)** 역할을 수행 — 공식 직책(PL 등)
   이 아닌 "팀 내 최숙련자로서의 실질적 리드"이며, 공식 직함으로 단정하지 않는다.
-  일본미스미 직원들과 **일본어로 직접** 소통하며 전환을 완료함 — JLPT 1급 실전
+  일본미스미 직원들과 **일본어로 직접** 소통하며 전환을 완료함 — JLPT N1 실전
   활용 사례로 이력서에서 연결 가능 (user-attested 2026-07-25, grill-me base-resume
-  세션). **전체 아키텍처 구조는 일본 본사(일본쪽)가 설계**했고, 한국 web에 맞게
+  세션; 등급 표기는 user-attested 2026-09-13 GS네오텍 세션 정정 — 원본 "1급"은
+  2010년 급수 체계 개편 이전 명칭, 2018년 시험이므로 N1). **전체 아키텍처 구조는
+  일본 본사(일본쪽)가 설계**했고, 한국 web에 맞게
   마이그레이션·변경하는 작업을 본인 포함 6명 팀원이 수행함 (user-attested
   2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
 - Actions:
@@ -1712,9 +2034,11 @@ facts in drafted application text.
     확인.
   - user-attested 2026-07-25 (grill-me base-resume 세션, 경력기술서 5번 확정) —
     (1) 일본미스미 개발자들과의 크로스보더 소통이 일본어로 직접 이루어짐 — JLPT
-    1급 실전 활용 사례. (2) 사용자 체류 시간 32% 증가 — 인터랙션 기능 고도화
+    N1(원본 "1급" 표기 정정, user-attested 2026-09-13 GS네오텍 세션) 실전
+    활용 사례. (2) 사용자 체류 시간 32% 증가 — 인터랙션 기능 고도화
     이후 수치, 원본 이력서 표현 유래, 측정 도구·기간 상세 [확인 필요]. (3)
-    2022.06~2024.10 기간의 3-프로젝트 구성 및 성과 수치 귀속 확정 — 8초→2초
+    2020.10~2024.10 기간(시작일 정정, user-attested 2026-09-13)의 3-프로젝트
+    구성 및 성과 수치 귀속 확정 — 8초→2초
     (유지보수·성능 개선), 50% 개선(Next.js 전환), 체류 시간 32%(기능 고도화).
     (4) RxJS 실사용 확인 — 구체적 쓰임(어느 기능·패턴) [확인 필요].
   - user-attested 2026-07-27 (이력서 재작성 세션에서 소유자 구두 확인) — 팀
@@ -1728,10 +2052,16 @@ facts in drafted application text.
     문서 근거 없음) — 사용자 체류 시간 32% 증가와 평균 로딩 속도 약 50%
     개선의 측정 도구는 GA(Google Analytics)임을 확인. 측정 기간·페이지
     범위는 여전히 [확인 필요].
+  - user-attested 2026-09-13 (GS네오텍 플랫폼개발(풀스택) 지원 grill-me
+    세션, 소유자 객관식 직접 확인. 문서 근거 없음, pending documentary
+    source) — 이 프로젝트의 시작일은 2022.06이 아니라 2020.10임을 정정.
+    업무 내용·3개 프로젝트 구성·성과 수치 귀속은 변경 없음, 기간만
+    2020.10~2024.10으로 정정. 3개 프로젝트 각각의 세부 기간은 미확인
+    [확인 필요].
 - Reusable keywords: B2B 커머스, Next.js 전환, 레거시 개선, 성능 최적화, SEO,
   모니터링, 크로스보더 프로젝트, 한일 협업, React 리드, 마이그레이션,
   SSR/CSR 렌더링 경계, LCP, hydration, 렌더링 분리, 아키텍처 통일,
-  Datadog 관측성, UI/UX 현대화, 일본어 직접 소통, JLPT, 체류 시간, RxJS,
+  Datadog 관측성, UI/UX 현대화, 일본어 직접 소통, JLPT N1, 체류 시간, RxJS,
   반응형 웹, 미디어 쿼리, 월 방문자 112만, 대규모 트래픽
 - Notes for tailoring: 커머스/프론트엔드 성능 개선 사례로 활용. **아키텍처
   귀속 가드레일(user-attested 2026-07-23)**: 전체 아키텍처 구조는 일본 본사가
@@ -1743,9 +2073,11 @@ facts in drafted application text.
   유지, 새 수치 창작 금지. **SSR/CSR 렌더링 경계 가드레일**: 이 구현 판단은
   일본 본사 아키텍처 위에서의 "한국 web 구현 판단"으로만 표기하고,
   아키텍처 설계 자체를 본인이 주도한 것처럼 서술하지 않는다.
-  **일본어 소통 연결(user-attested 2026-07-25)**: 일본미스미 개발자와의
-  소통이 일본어로 직접 이루어진 사실은 JLPT 1급 실전 활용 사례로 이력서에서
-  어학 자격과 연결해 표기 가능. 단, 소통 대상(어떤 업무, 어느 단계)의 구체
+  **일본어 소통 연결(user-attested 2026-07-25; 등급 표기 정정 user-attested
+  2026-09-13 GS네오텍 세션 — 원본 "1급"은 구 체계 명칭, 2018년 시험이므로
+  N1)**: 일본미스미 개발자와의 소통이 일본어로 직접 이루어진 사실은 JLPT N1
+  실전 활용 사례로 이력서에서 어학 자격과 연결해 표기 가능. 단, 소통 대상
+  (어떤 업무, 어느 단계)의 구체
   상세는 면접 대비 항목으로 두고, 연결 표기 시 과장하지 않는다.
   **체류 시간 가드레일(user-attested 2026-07-25; 측정 도구 확정
   user-attested 2026-08-24, 코오롱베니트 갭 인터뷰)**: "사용자 체류 시간
@@ -1760,6 +2092,25 @@ facts in drafted application text.
   **RxJS 가드레일(user-attested 2026-07-25)**: RxJS 실사용은 확인됐으나
   구체적 쓰임(어느 기능·패턴)은 [확인 필요]. 면접에서 구체 사용 패턴을
   질문받을 수 있으므로 소유자 확인 후 외부 문서에 상세 서술할 것.
+  **기간 정정 가드레일(user-attested 2026-09-13, GS네오텍 세션)**: 이
+  프로젝트 기간은 2020.10~2024.10이다. 기존에 여러 세션에서 반복 사용된
+  "2022.06~2024.10" 표기는 오기이므로 신규 문서에서 재사용하지 말 것. 이
+  정정으로 "2020.10~2022.05"를 별도 회사(내담씨앤씨 초기 프로젝트)의
+  독립 구간으로 서술하던 과거 표기도 무효 — 그 구간은 이 프로젝트 기간에
+  포함되며 별도 프로젝트가 아니다. 3개 프로젝트 각각의 세부 시작·종료일은
+  [확인 필요] — 창작 금지.
+  **Java/Spring 실무 범위 가드레일(user-attested 2026-09-13, GS네오텍
+  세션)**: 위 기간 정정으로 2020.10~2022.05 구간(옛 "내담씨앤씨 초기
+  프로젝트")에는 Java/Spring 실무가 없었음이 확인됐다. 2026-08-04
+  스마일게이트 세션에서 나왔던 "내담 초기 20개월(2020.10~2022.05)에
+  Java/Spring 실무가 있었음" 기록(`target-companies.md` 스마일게이트
+  엔트리에만 있었고 이 은행에는 처음부터 미적재 상태)은 2026-09-13
+  GS네오텍 세션에서 소유자가 철회 — 은행에 취소선 대상이 없어 이
+  가드레일로 대체 기록한다.
+  결과적으로 후보의 Java/Spring 실무는 **삼성물산(EXP-04,
+  2024.10~2025.04)**과 **비즈36.5(EXP-02, 2025.11~2026.02)** 두 프로젝트
+  뿐이다 — 총 기간을 부풀리거나 이 두 구간 밖에서 Java/Spring 실무를
+  서술하지 말 것.
   **서비스 규모 가드레일(user-attested 2026-08-10)**: 월 방문자 약 112만·
   상품 SKU 약 10만은 소유자가 재직 당시 GA·Adobe Analytics 대시보드에서
   직접 확인한 수치다. 이력서·자기소개서에서 이 수치를 사용할 때는 반드시
@@ -1867,6 +2218,28 @@ facts in drafted application text.
   - [GCP 갭] GCP 활용 경험 없음 — 소유자가 명시적으로 "GCP는 활용해본 적 없음"
     확인. 향후 GCP 관련 JD 대응 시 갭으로 처리할 것.
     (user-attested 2026-07-24, 소유자 갭 인터뷰)
+  - **[IAM/STS/Cross Account 갭 — user-attested 2026-09-13, GS네오텍
+    플랫폼개발(풀스택) 지원 grill-me 세션, 소유자 객관식 직접 확인, 문서
+    근거 없음(pending documentary source)]** IAM 사용자·역할·정책을
+    직접 생성/수정한 경험, STS AssumeRole·Cross Account 설정 경험 모두
+    없음 — 인프라 담당자가 발급해 준 액세스 키·역할을 사용만 했음을
+    확인. 위 AWS 스코프 가드레일(S3·EC2는 "구성된 환경 위에서 배포·
+    운영"이며 인스턴스/버킷을 본인이 직접 설계·구축한 것은 아님)과 동일
+    층위의 갭 — IAM·STS·Cross Account 설정/설계 경험으로 서술 금지,
+    향후 관련 JD 대응 시 갭으로 처리할 것.
+  - **[데이터 웨어하우스 갭 — user-attested 2026-09-13, GS네오텍
+    플랫폼개발(풀스택) 지원 grill-me 세션, 소유자 객관식 직접 확인, 문서
+    근거 없음(pending documentary source)]** Redshift·BigQuery 등 데이터
+    웨어하우스 사용 경험 없음(GA4의 BigQuery 내보내기 기능 포함, 사용한
+    적 없음) — 미기재 대상, 향후 관련 JD 대응 시 갭으로 처리할 것.
+  - **[Kubernetes 갭 — user-attested 2026-09-13, GS네오텍 플랫폼개발
+    (풀스택) 지원 grill-me 세션, 소유자 객관식 직접 확인, 문서 근거
+    없음(pending documentary source)]** Kubernetes 사용 경험 없음 —
+    Docker·Docker Compose로 컨테이너를 직접 빌드·실행·재기동해 왔음을
+    확인. Kubernetes·Helm·kubectl 운영/구축 경험으로 서술 금지, 향후
+    관련 JD 대응 시 갭으로 처리할 것. EXP-01("AI 건강검진 챗봇 제품화
+    및 플랫폼 확장")의 [오케스트레이션·배포 실행 주체 확정] 블록과
+    정합(그 챗봇도 k8s 미사용·Docker(Compose) 기반) — 상호 참조.
 - Result:
   - 매출 지표와 서비스 안정성, 내재화 속도 개선
 - Metrics:
@@ -1907,8 +2280,15 @@ facts in drafted application text.
     Manager"이며 기능은 "리포트 자동 추출"(스케줄러 기반 리포트 파일 자동
     다운로드·이미지/PDF 저장)임을 확인 — 위 [Electron CA]의 [확인 필요]를
     기능 범위에 한해 해소(구현 세부는 여전히 미확인).
-- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL, Electron, Client Agent, Report Export Service Manager, 리포트 자동 추출, 운영관리 시스템, 리포트 관리, 표준코드 관리
-- Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다.
+  - user-attested 2026-09-13 (GS네오텍 플랫폼개발(풀스택) 지원 grill-me
+    세션, 소유자 객관식 직접 확인) — IAM 사용자·역할·정책 직접 생성/수정,
+    STS AssumeRole·Cross Account 설정 경험 없음(발급받은 액세스 키·역할을
+    사용만 함); Redshift·BigQuery 등 데이터 웨어하우스 사용 경험 없음(GA4
+    BigQuery 내보내기 포함); Kubernetes 사용 경험 없음(Docker·Docker
+    Compose로 컨테이너 직접 빌드·실행·재기동). 전 항목 문서 근거 없음,
+    pending documentary source.
+- Reusable keywords: 매출 기여, 내재화, AI코치, 생체나이, 비즈케어, FE 에러 0건, CI/CD, 기술 세미나, Zustand, PostgreSQL, Electron, Client Agent, Report Export Service Manager, 리포트 자동 추출, 운영관리 시스템, 리포트 관리, 표준코드 관리, IAM 갭, STS 갭, Cross Account 갭, Redshift 갭, BigQuery 갭, Kubernetes 갭
+- Notes for tailoring: 사업성과/조직기여/내재화 관점이 필요한 자기소개서에 활용. 비즈케어와 비즈36.5, 생체나이와 바이오에이지는 문맥에 따라 함께 쓰이는 명칭이므로 제출 문서에서는 하나의 명칭으로 통일. **팀 KR 가드레일(user-attested 2026-07-23, headhunter-advisor 인터뷰)**: Metrics의 총 4.66억 및 세부 항목(비즈케어 1.0억/AI코치 0.2억/생체나이 2.5억/에스크미 0.9억)은 조직/팀 전체 KR 목표 수치이며 본인 개인의 매출 성과가 아니다. 본인은 4개 프로젝트 전부에 FE 개발자로 직간접 기여했지만 기여 강도는 프로젝트마다 다르다(비즈케어=UI/UX 개편 주도, 생체나이=외주 V2 유지보수·수정 후 납품, 에스크미=유지보수 지원, AI코치=비즈케어 파생 패키지 판매). 자기소개서·이력서 작성 시 이 총액/세부 금액을 본인 단독 성과처럼 서술하지 말고, 반드시 "팀/조직 성과에 기여" 프레이밍과 위 Role의 프로젝트별 기여 성격을 함께 명시할 것 — writer/tailor는 팀 성과를 개인 성과처럼 과장하지 않는다. **사용 승인 재확인(user-attested 2026-09-13, GS네오텍 4차 갭 인터뷰)**: 위 비즈케어 1.0억을 외부 이력서에 팀·조직 성과("개편한 플랫폼이 대웅제약 대상 판매 1.0억 원으로 이어짐(조직 성과)")로 표기해 사용하는 것을 소유자가 재확인·승인함 — 상세는 EXP-02(비즈36.5) Notes for tailoring [병합 노트 가드레일] 사용 승인 참조, 개인 단독 성과 표기는 계속 금지.
   **PostgreSQL 가드레일(user-attested 2026-07-27)**: PostgreSQL은 바이오에이지
   서비스 사용으로 귀속 확정됐으나 구체 용도(어느 데이터, 어느 기능)는 아직
   특정되지 않았고 문서 근거도 없다 — 고부담 외부 문서에서는 뒷받침 자료
@@ -1918,6 +2298,23 @@ facts in drafted application text.
   본인이 직접 설계·구축한 것은 아님. 이력서·자기소개서에서 동사는 "활용·운영"을
   쓰고 "구축"은 쓰지 않는다. CloudFront는 무경험 확정(미기재 대상). 두 사실 모두
   문서 근거 없음, pending documentary source.
+  **IAM/STS/Cross Account·데이터 웨어하우스·Kubernetes 갭(user-attested
+  2026-09-13, GS네오텍 플랫폼개발(풀스택) 지원 grill-me 세션)**: 위 AWS
+  스코프 가드레일과 같은 층위로, IAM 사용자·역할·정책 직접 생성/수정,
+  STS AssumeRole·Cross Account 설정 경험 없음(발급받은 액세스 키·역할을
+  사용만 함); Redshift·BigQuery 등 데이터 웨어하우스 사용 경험 없음(GA4
+  BigQuery 내보내기 포함); Kubernetes 사용 경험 없음(Docker·Docker
+  Compose로 컨테이너를 직접 빌드·실행·재기동). 세 가지 모두 미기재
+  대상이며 관련 JD 대응 시 갭으로 처리할 것 — 위 Technologies의 각 갭
+  블록 참조. 문서 근거 없음, pending documentary source.
+  **인스턴스 프로비저닝 vs 서버 셸 운영 경계(user-attested 2026-09-11,
+  한미글로벌 AX실 AI 개발 지원 세션 갭 인터뷰)**: 위 "인스턴스 직접
+  설계·구축 아님"과 EXP-03("품질·개발·운영 자동화 및 FE AX 기준 수립")의
+  [Linux 서버 SSH 운영] 사실(SSH 접속·배포·로그 확인·서비스/컨테이너
+  재기동·권한/환경변수/Nginx 설정)은 서로 다른 층위다 — 전자는 인스턴스
+  프로비저닝(버킷·인스턴스 생성/설계) 무경험, 후자는 이미 구성된 서버에서의
+  셸 수준 운영 경험이다. 두 사실을 합쳐 "EC2 인스턴스를 직접 구축·설계"로
+  확대 서술하지 말 것 — 상세는 EXP-03 해당 블록 참조.
 
 ### 비즈36.5 Node.js(Express) BFF 신규 구축 및 AI 챗봇 Python 로직 기여
 
@@ -2005,6 +2402,10 @@ facts in drafted application text.
     부분 실패 처리·캐싱)는 여전히 미확인. 문서 근거 없음, pending
     documentary source.
   - 문서 근거 미확보 — 이력서 PDF·평가 문서에는 미기재. pending documentary source.
+  - **[이중 계상 방지 — user-attested 2026-09-13, GS네오텍 세션]** EXP-03
+    "품질·개발·운영 자동화 및 FE AX 기준 수립"의 [RESTful API 교체 29건]
+    블록에도 서버 구현 스택 Node.js(Express)가 별도로 확정돼 있다 — 이
+    BFF 항목과는 별개 사건(대상 API가 다름), 합산·혼용 금지.
 - Reusable keywords: Node.js, Express, BFF, TypeScript 스택 통일, 비동기 I/O,
   Python, LLM 프롬프트, 응답 후처리, 표/마크다운 깨짐 수정, 링크/버튼 변환
   로직 수정, 풀스택, VectorDB, RAG, LangChain, 파인튜닝
@@ -2232,7 +2633,7 @@ Do not use these metrics in final copy until their status is changed to
 | --- | --- | --- |
 | 정보처리기사 발급일(월) | `sources/이력서_20260624.pdf` | confirmed — 취득월 2020.08 (user-attested 2026-07-22). 원본 PDF는 미표기였으나 소유자 확인 |
 | TOEIC 825점 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2024.05 |
-| JLPT 1급 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2018.08 |
+| JLPT N1 취득일 | `extracted/이력서_20260624.txt` | confirmed — 취득일 2018.08. 등급 표기 "1급"→"N1" 정정: 원본 "1급"은 2010년 급수 체계 개편 이전 명칭, 2018년 시험이므로 N1 (user-attested 2026-09-13, GS네오텍 세션; profile.md 정정과 정합) |
 | 연봉 5,700만원 포함 여부 | `sources/이력서_20260624.pdf` | user confirmation required |
 | 테스트 커버리지 98%의 기준(라인/브랜치/시나리오) | `extracted/연종합평가2025_정다훈.md`(L68), `extracted/이력서_20260624.txt`(L200) | value confirmed as "98% 수준" — 라인/브랜치/시나리오 세부 기준은 원본 미기재이므로 "98% 수준"으로만 표기, 특정 기준 단정 금지 |
 | 답변 화면 정상 출력률 100%의 검증 범위 | `extracted/2026_상반기종합평가.md`(L10), `extracted/이력서_20260624.txt`(L129) | confirmed — 400건 기준. 사용 시 "400건 발화 검증 기준" 스코프를 항상 함께 표기 |
@@ -2240,7 +2641,7 @@ Do not use these metrics in final copy until their status is changed to
 | 만족도 점수의 척도(5점 만점 여부) | `extracted/연종합평가2025_정다훈.md`(L18,25), `extracted/이력서_20260624.txt`(L127) | values confirmed (3,493명 검증, 사용성 4.18/만족도 4.06/완성도 4.05, "4점 이상" 목표). 명시적 "5점 만점" 문구는 원본에 없으므로 "5점 만점" 단정 금지 |
 | 2025년 총 4.66억 매출과 세부 항목 4.6억의 차이 | `sources/연종합평가2025_정다훈.xlsx` | reconciliation needed |
 | 신규 AI 챗봇 구축 기간 10주->2주 단축의 범위 | `experience-bank.md`(EXP-01 Metrics), headhunter-advisor 인터뷰 (user-attested 2026-07-23) | confirmed — 10주는 챗봇 최초 구현 기간, 2주는 신규 고객사(웰체크) 온보딩 시 Base-Theme을 활용한 FE 커스터마이징 납품 기간(FE 납품 기준, LLM/BE 일정 별도). 사용 시 이 스코프를 항상 함께 표기하고 "챗봇 전체를 2주 만에 구축"이라는 확대 해석 금지 |
-| 2020.10~2022.05 내담씨앤씨 초기 프로젝트 상세 | `sources/이력서_20260624.pdf` | needs source detail |
+| 2020.10~2022.05 내담씨앤씨 초기 프로젝트 상세 | `sources/이력서_20260624.pdf` | 해소 — 한국미스미 기간(시작일 정정, user-attested 2026-09-13 GS네오텍 세션), 별도 프로젝트 없음. 이 구간 Java/Spring 실무 없음(같은 세션에서 앞선 "있었음" 답변 철회, 아래 EXP-05 [기간 정정 가드레일] 및 [Java/Spring 실무 범위 가드레일] 참조) |
 | 반복 QA 시간 최종 확정값 (3시간→30분) 문서 근거 | user-attested 2026-07-24 grill-me base-resume 세션 (최종 override). 세 기록의 관계: ①원본 평가문서 3시간→1시간, ②user-attested 2026-07-23 headhunter-advisor 인터뷰 2시간→30분, ③user-attested 2026-07-24 grill-me 세션 3시간→30분으로 소유자 최종 확정(①시작값+②종착값 결합) | pending documentary source — 소유자가 3시간→30분으로 최종 확정했으나 뒷받침 문서 미확보. 고부담 외부 문서에서는 원본 평가문서 값(3시간→1시간) 우선하거나 소유자 문서 근거 확보 후 사용 권장. 이력서 본문(EXP-03 Metrics)은 이미 3시간→30분으로 반영 완료. |
 | AI 발화 응답 평균 2초대 문서 근거 | user-attested 2026-07-24 grill-me base-resume 세션. 네트워크에서 데이터 수신 기준 — 기존 "출력 시간 10초→4초"와 측정 대상이 다름(10초→4초는 출력 완료까지 전체 시간, 2초대는 네트워크 수신 기준 별도 지표). | pending documentary source — 소유자 직접 확인이나 뒷받침 문서 미확보. 이력서 본문(EXP-01 Metrics)에는 두 수치의 측정 대상 차이 주석과 함께 수록. 두 수치를 동일 맥락에서 혼용 금지. |
 | Playwright 600여 건(평가문서) ↔ E2E 시나리오 5종(코드베이스 실측)의 관계 | 평가문서 원문: "600여 건 회귀 시나리오". 코드베이스 실측: "E2E 시나리오 5종". 소유자 결정 2026-07-24: 이력서·자기소개서에는 5종 사용, 600여 건 폐기. | 미해소 — 5종 시나리오 내 케이스 총합과 600여 건의 관계(5종이 600여 건을 포함하는지, 별개 카운팅인지)는 소유자에게 미확인. 외부 문서에는 소유자 확정 표현 "E2E 시나리오 5종"만 사용하고, 관계 해소 전까지 600여 건 수치는 사용하지 않는다. |

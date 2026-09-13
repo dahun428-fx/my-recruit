@@ -132,3 +132,30 @@ rels·media)만 교체한다.** 지원 파일(styles·numbering·settings·heade
 3. 수술 전후 텍스트 시퀀스 difflib 대조 — 승인된 변경만 존재
 4. Word 완전 종료 → PDF 변환 → 페이지 수 실측 + 변경 페이지 육안 확인
 5. (제출 전) Word에서 열어 저장 — 필드 갱신 확정
+
+## 8. Word 샌드박스 밖 경로 `open`이 무한 대기 + `close` 명령 미지원 (2026-09-13 GS네오텍 보배써치)
+
+- **재현 조건**: Word 문서 카운트 0(소유자 문서 없음)인데도 저장소 경로(`~/Documents/...`)의
+  docx를 `open file name`하면 `AppleEvent timed out (-1712)`. 변환 후
+  `close document 1 saving no` / `close every document saving no` /
+  `close active document saving no`는 모두 `doesn't understand the "close" message (-1708)`,
+  `quit saving no`는 `User canceled (-128)`로 실패해 임시 문서가 Word에 남음.
+- **확인 명령어**: `osascript -e 'tell application "Microsoft Word" to name of every document'`
+  로 남은 문서가 에이전트 임시 파일인지 확인(소유자 문서면 절대 닫지 않음).
+- **검증 방법**: 샌드박스 폴더로 복사 후 변환 → PDF 생성·페이지 수 실측, 이어서 문서 카운트 0 복귀 확인.
+- **해결 절차**: (1) 입력 docx를 `~/Library/Containers/com.microsoft.Word/Data/Documents/`로
+  복사해 그 경로에서 `open` → `save as … file format format PDF`. (2) 닫기는
+  **`close active window saving no`**만 동작. (3) PDF를 `outputs/`로 복사하고 임시 파일 삭제.
+  이미 임시 문서가 남아 대화상자가 떠 있으면 소유자에게 저장 없이 닫아 달라고 요청(강제 종료 금지 — §7).
+- **재발 방지**: 변환 스크립트는 샌드박스 폴더 복사를 기본으로 하고, 닫기 명령을
+  `close active window saving no`로 고정. 변환 전 문서 카운트 0 가드 유지.
+
+## 9. 텍스트박스(txbx) 포함 문단에 문단 정규식을 직접 적용해 XML 구조 파손
+
+- **재현 조건**: 앵커 문단 자체가 `<w:p>` 안에 `mc:AlternateContent`→`w:txbxContent`→내부 `<w:p>`를
+  품은 경우(성명·추천 포지션 텍스트박스), 바깥 문단 문자열에 `<w:p[ >]…?</w:p>` 비탐욕 치환을 걸면
+  바깥 `<w:p` 시작과 첫 내부 `</w:p>`가 짝지어져 `ET.fromstring` "mismatched tag".
+- **확인 명령어**: 파싱 실패 위치 앞뒤 500자 출력(`e.position`) — `</w:txbxContent>` 직전 문단이 깨졌는지 확인.
+- **해결 절차**: 치환 범위를 `<w:txbxContent>(.*?)</w:txbxContent>` 내부로 한정한 뒤 내부 문단만 교체
+  (`scripts/build_gs_neotek_docx.py` `fix_txbx`).
+- **재발 방지**: 텍스트박스·도형이 있는 문단은 항상 txbxContent 단위로 수술하고, 빌드마다 ET 파싱 assert.
