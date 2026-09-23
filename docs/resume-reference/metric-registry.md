@@ -64,5 +64,7 @@ user confirmation.
 | 연봉 5,700만원 | sensitive | External documents require user confirmation. |
 | 생년, 성별, 주소, 연락처 | sensitive | Include only when the destination explicitly requires it. |
 | 정보처리기사 | confirmed | 취득월 2020.08 (user-attested 2026-07-22). 사용 가능. |
+| KT AICE Associate | confirmed | 시험 2026-08-29 합격 (user-provided 2026-09-13 스크린샷). 문면 "2026.08", 점수 미기재(2026-09-23 소유자 지시). |
+| 빅데이터분석기사 필기 합격 | confirmed | 제13회 필기, 공고 2026-09-23 (user-provided 스크린샷). 문면 "필기 합격 · 2026.09" — 자격 취득 표기 금지. |
 | TOEIC 825점 | confirmed | 취득일 2024.05 (user-attested 2026-07-22, confirmed in `experience-bank.md` > Metrics To Verify). |
 | 일본 해외경험 | needs_confirmation | Confirm period/context before use. |
