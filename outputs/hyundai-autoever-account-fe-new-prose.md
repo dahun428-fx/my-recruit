@@ -20,7 +20,7 @@
 
 ## v4 변경 요약 (적대 검증 수용 항목)
 
-- A. SSO 합산 범위 표현: 경력 내담 줄(P24)·5번 헤딩(C35)·[주요 업무](P85)·실행(P86)·자소서 S2 → "두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 … FE 측 구현 — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터". **"동의 화면" 제외 — 소유자 확인 대기(F20)**. 목차(C26) 갱신. — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
+- A. SSO 합산 범위 표현: 경력 내담 줄(P24)·5번 헤딩(C35)·[주요 업무](P85)·실행(P86)·자소서 S2 → "두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 … FE 측 구현 — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터". **"동의 화면" 제외 — 소유자 확인 대기(F20)**. 목차(C26) 갱신.
 - B. 인가 근거: 3번 통합플랫폼 실행에 P65a "권한·정책 구조화" 추가 — 은행 EXP-02 허용 문면("화면 라우트 가드와 서버 서비스 로직 내 역할 검사의 이중 검증"), Spring Security 등 기술명 없음.
 - C. 요약 P3·P4 재작성: Front Office·Back Office 화면, 인증·인가, 공통 컴포넌트·팀 개발 표준으로 마무리(AI 언급 제거). 길이 유지.
 - D. 다나아 경력 AI 줄(P14) 단일 구절로 압축.
@@ -87,7 +87,7 @@
 | P21 | N | GitLab MR 기반 코드 리뷰 — 작성자·리뷰어 양방향 참여 | 은행 EXP-03 [GitLab MR 기반 코드 리뷰](2026-08-10, 대웅 귀속) |
 | P22 | B0 | **AX 전환 리드** (Claude Code·Codex·Harness Engineering) | base |
 | P23 | B0 | 한국미스미 6명 · 삼성물산 10명 규모 프로젝트 팀에서 개발 | base |
-| P24 (v5) | N | 두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 **SSO·OAuth 2.0 인증 연동의 FE 측 구현** — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터, 콜백 state 검증(CSRF 방지)·Access 토큰 메모리·Refresh 토큰 httpOnly 쿠키 보관 연동으로 XSS 노출 축소 | 은행 EXP-04/05 [SSO/OAuth 인증 연동 FE 구현](code/state)+[후속 확인] · `target-companies.md` Gate R1 decisions ④(user-attested 2026-10-29, 은행 적재 진행 중). 합산 범위 서술. "동의 화면" 제외(F20). BE·IdP·OIDC·PKCE·규모·동시 401 단일화 미기재 | — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
+| P24 (v5) | N | 두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 **SSO·OAuth 2.0 인증 연동의 FE 측 구현** — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터, 콜백 state 검증(CSRF 방지)·Access 토큰 메모리·Refresh 토큰 httpOnly 쿠키 보관 연동으로 XSS 노출 축소 | 은행 EXP-04/05 [SSO/OAuth 인증 연동 FE 구현](code/state)+[후속 확인] · `target-companies.md` Gate R1 decisions ④(user-attested 2026-10-29, 은행 적재 진행 중). 합산 범위 서술. "동의 화면" 제외(F20). BE·IdP·OIDC·PKCE·규모·동시 401 단일화 미기재 |
 | P25 | B0 | 한국미스미 **Global B2B 커머스 신규 개발과 레거시 전환**, **일본 본사와 일본어 직접 협업** (PHP·jQuery → Next.js·TypeScript) | base |
 | P26 | BM | **삼성물산 사내 웹·앱 플랫폼 신규 개발·유지보수** (Vue 3·Vuex·React Native·Spring·Oracle) | base + Vuex(은행 EXP-04, 2026-10-29) |
 | P27 (v5) | BM | **대용량 데이터 처리 및 처리 소요 시간 단축** (대시보드 렌더링 2.5초 → 1초대 · 수만 건 검색 응답 5초 → 1초) | base "1초" → "1초대"(Gate R1 decisions ①, 이 이력서 한정 — registry `metric-samsung-dashboard-render` 정합) |
@@ -175,8 +175,8 @@
 
 | # | 라벨 | 문장/줄 | 근거 |
 | --- | --- | --- | --- |
-| P85 (v4) | N | [주요 업무]: 두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 SSO·OAuth 2.0 인증 연동의 FE 측 구현 — OAuth 2.0 Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 저장·자동 갱신 인터셉터 | 은행 EXP-04/05 허용 범위. 합산 범위 서술(A), "동의 화면" 제외(F20) | — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
-| P86 (v4) | N | **인증 화면·콜백 처리** / **Authorization Code 흐름 기반 로그인 화면 UI**와 리다이렉트·콜백(code/state) 처리 구현 | 은행 [후속 확인] · code/state(은행 본인 담당 범위). "동의 화면" 제외(F20) | — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
+| P85 (v4) | N | [주요 업무]: 두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 SSO·OAuth 2.0 인증 연동의 FE 측 구현 — OAuth 2.0 Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 저장·자동 갱신 인터셉터 | 은행 EXP-04/05 허용 범위. 합산 범위 서술(A), "동의 화면" 제외(F20) |
+| P86 (v4) | N | **인증 화면·콜백 처리** / **Authorization Code 흐름 기반 로그인 화면 UI**와 리다이렉트·콜백(code/state) 처리 구현 | 은행 [후속 확인] · code/state(은행 본인 담당 범위). "동의 화면" 제외(F20) |
 | P86a (v5) | N | **토큰 보관·검증 설계** / 콜백 state 검증으로 CSRF를 막고, Access 토큰은 메모리에·Refresh 토큰은 서버가 설정하는 httpOnly 쿠키에 두는 방식으로 연동해 **XSS 노출 축소** | `target-companies.md` Gate R1 decisions ④(user-attested 2026-10-29, 은행 적재 진행 중). 쿠키 설정 주체는 서버로 명시(FE 측 연동). 동시 401 리프레시 단일화 미주장. 위치: 5번 실행 3번째 불릿 |
 | P87 | N | **토큰 자동 갱신** / 토큰 저장과 API 요청 인터셉터 기반 **만료 감지 → 리프레시 → 재시도** 처리, 갱신 실패 시 재로그인 전환 | 은행 [후속 확인] |
 
@@ -278,6 +278,7 @@
 | C38 | B0 | ### 7. 한국미스미 \| 글로벌 B2B 커머스 Next.js 전면 전환 | base 5번(번호만 변경) |
 | C39 | B0 | 기간: 2020.10 ~ 2024.10 · 3개 프로젝트 (내담씨앤씨 SI 프로젝트) | base |
 | C40 | B0 | #### 문제 / #### 주요 실행 / #### 성과 (구조 소제목) | base 골격 |
+| C40a | B0 | ## 헤드라인 / ## 인적사항 / ## 요약 / ## 핵심 성과 / ## 경력 / ## 경력기술서 / ## 기술 / ## 학력 / ## 해외경험 / ## 교육 / ## 자격증 / ## 어학 (섹션 헤딩) + 자기소개서 제목 줄 | base 골격 · 최종 무결성 재검(2026-10-29) 지적 반영 |
 | C41 | N | 기술(1번): React Native · TypeScript · Playwright · Jenkins · GitLab CI/CD | 신규 |
 | C42 | BM | 기술(2번): Codex · Claude Code · MCP · Figma · Playwright · Storybook · TanStack Query · Jest · ESLint · TypeScript · GA4 · PostHog · Jenkins · GitLab CI/CD | base 3번 + MCP·Figma·TanStack Query |
 | C43 | BM | 기술(3번): React · TypeScript · Tailwind CSS · Java · Spring Boot · REST API · MySQL · Node.js · Express · jQuery · Thymeleaf · Playwright · Jenkins · Docker · WebView | base 2번 + Tailwind CSS |
@@ -321,7 +322,7 @@
 - **F15 S-01 인접 표현**: 자소서 "데이터 흐름"(base, 기각 처리)·"하나의 Release Flow로 연결/운영"(소유자 원문 용어, 구체 대상 동반).
 - **F17 귀속 (archivist 정정 + v3)**: staleTime·LCP → 서비스명 없이 대웅 2번(회사 레벨) 성과 P53·P54, 경력 줄 P19는 명세만. Lighthouse 91점 → 챗봇 P84(AI 챗봇 화면 기준, "상위 10%" 미사용). CI 변경 1일 → AI코치(P55, 후속 고도화 표현). 로고·주요 탭 → 온보딩 1일 내 대응 가능한 구조 → 비즈36.5(P46·P56). Base-Theme 80여 개 → AI코치(P45, 은행 원문 기준). 70/50 → 비즈36.5 3번(P66·P73). 24 시나리오 → 서비스 미특정, 대웅 2번(P59). RN → 서비스 미특정, base 배치(다나아).
 - **F19 A26/A27**: 다나아 문제는 진술 사실만(P29), 추론 문장 삭제.
-- **F20 "동의 화면" — 소유자 확인 대기(v4)**: 은행 EXP-04/05 본인 담당 범위에는 "로그인·동의 화면 UI"가 있으나, 오케스트레이터가 실체를 소유자에게 확인 중이라 이력서(P24·P85·P86)·자소서 S2에서 제외. 확인되면 "로그인·동의 화면"으로 복원 가능. — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
+- **F20 "동의 화면" — 해소: 소유자 2026-10-29 "기억 흐림/빼자" → 미사용 확정 (원 기록: 소유자 확인 대기(v4))**: 은행 EXP-04/05 본인 담당 범위에는 "로그인·동의 화면 UI"가 있으나, 오케스트레이터가 실체를 소유자에게 확인 중이라 이력서(P24·P85·P86)·자소서 S2에서 제외. 확인되면 "로그인·동의 화면"으로 복원 가능.
 - **F21 v4 요약 시점·범위**: P4 "지금은 … 집중하고 있습니다"는 시점 민감(F14와 함께 확인). P3 Front/Back Office 분류는 근거 서비스 조합(비즈36.5 Web·App/Admin, AI코치 관리자 프리뷰 도구, 미스미 커머스)으로 구성했으며 개별 화면 수·사용자 규모는 미기재.
 
 ## 갭 인터뷰 항목 (남은 것)
@@ -335,7 +336,7 @@
 
 ## 자기소개서 변경분
 
-대상: `outputs/hyundai-autoever-account-fe-self-intro.md` v4 (S2: 합산 범위·code/state·"동의 화면" 제외 — F20) — base `docs/resume-reference/base-self-introduction.md` 대비. 항목 제목 3개와 기존 문장은 전부 무수정(볼드 포함), **추가 문장 2개**. "약 3,500명"은 소유자 문면 유지. — 해소(2026-10-29 소유자: "기억 흐림/빼자" → 동의 화면 미사용 확정)
+대상: `outputs/hyundai-autoever-account-fe-self-intro.md` v4 (S2: 합산 범위·code/state·"동의 화면" 제외 — F20) — base `docs/resume-reference/base-self-introduction.md` 대비. 항목 제목 3개와 기존 문장은 전부 무수정(볼드 포함), **추가 문장 2개**. "약 3,500명"은 소유자 문면 유지.
 
 | # | 위치 | before | after | 근거 |
 | --- | --- | --- | --- | --- |
