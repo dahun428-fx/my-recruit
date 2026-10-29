@@ -808,3 +808,22 @@ facts in drafted application text.
 - 개선 루프(소유자 지시 "좋은 점수를 받을 때까지", 2026-09-13): 4차 갭 인터뷰(JUnit 서비스·매퍼, EXPLAIN MySQL·Oracle, 판매 1.0억 GS네오텍 승인, 29건 Node.js(Express), 58→2,318 승인, 6주=과거 실제 기간) 후 이력서 L1~L5 — v8 74/75 → v9 74/77(C-01 캡) → v10 74/75.5 → **v11 74/80.5(채택)** → v12 74.5/77.5(기각). 자기소개서 SI2 84/75.5 → SI3 72/81 → SI4 74/77 → 소유자 선택 **SI3**(기술 81 PASS). 인사 74점대 정체·채점 편차 ±3 — 잔여 감점 구조적
 - 제출 양식 변경 (2026-09-14 소유자 결정): **보배써치 대신 GS네오텍 입사지원서 양식을 Word로 재현해 제출** — `outputs/정다훈(만35세)_플랫폼개발_GS네오텍_입사지원서2026.docx`(5p: 기본사항·병역·학력·자격·외국어·해외연수 / 핵심역량(소유자 요청 추가 란)·경력·경험·수상 / 자소서 ①②③ / ④ / ⑤ 경력기술), 빌드 `scripts/build_gs_neotek_form_docx.py`, 렌더 확인 `outputs/gs-neotek-form-render-check.pdf`. 자소서 ①~④는 소유자 작성 원문 무수정(`outputs/gs-neotek-form-self-intro.md`, C-03 강조 볼드만 소유자 요청으로 표시), ②는 장점+단점+보완 포함. 소유자 원문 확인 요청 3건(미반영): ④ "데이터 흐름"(S-01 금지어), ① Blue-Green을 10분→2분 원인으로 병기, ① AWS "구성된 환경" 한정어 누락. 보배써치 자소서 소제목도 범위·역할형으로 교체(2026-09-14)
 - Draft status: **출고 준비 완료(2026-09-13, 정직한 상향지원)** — 초안 `outputs/gs-neotek-fullstack-resume-draft.md`(v11-SI3.2, 최종 무결성 재검 must-fix 해소), companion `outputs/gs-neotek-fullstack-new-prose.md`, 제출본 `outputs/정다훈(만35세)_플랫폼개발_GS네오텍_보배써치2026.docx`(8p, 사진·성명·추천 포지션·섹션 제목/구분선 템플릿 유지, 마젠타 안내 문구만 제거), 렌더 확인 `outputs/gs-neotek-render-check.pdf`, 빌드 `scripts/build_gs_neotek_docx.py`. 면접 대비: Java/Spring 1년 요건 대비 깊이 답변, 3개월 차 이직(퇴사+신규 입사 사실 선답), 복합 인덱스 SQL·실행 계획·@Transactional 롤백·서비스 로직 내 권한 검사 이유·Blue-Green 전환 방식·2,318건 테스트 종류
+
+### 현대오토에버(주) / 계정 시스템 프론트엔드 개발 및 운영 (FE엔지니어링팀, 플레오스 2.0 계정·인증) (경력)
+
+- Source job posting: 잡코리아 Gno=50110080 (https://m.jobkorea.co.kr/info/app_down.asp?Gno=50110080, provenance only). 세션 네트워크 정책으로 원문 접근 불가 → 소유자 제공 앱 스크린샷 3장 전사본 `outputs/hyundai-autoever-account-fe-jd.md`. 수집일 2026-10-29. 일부 문단("Fr…" 이후) 알림 팝업으로 판독 불가
+- Application deadline: [미확인 — 캡처에 없음] / 홈페이지 지원
+- Target position: 계정 시스템 프론트엔드 개발 및 운영 — FE엔지니어링팀(현대차·기아·제네시스 대고객 운영 서비스). 근무지·연차·고용형태 [미확인] (웹 검색 요약의 원티드 표기 "경력 5~15년, 서울 강남구"는 원문 미확인 — 근거로 쓰지 않음)
+- 전형: 서류 → 직무역량테스트(과제 or 코딩)·인성검사 → 1차 → 2차 → 처우협의·채용검진
+- Role preset: fe-platform   (2026-10-29 소유자 승인)
+- Required skills (실무상 필수로 간주 — JD는 "더욱 좋아요"에 배치): React 또는 Vue 웹 서비스 경력 3년+ · JS/TS · REST API 연동·비동기 처리 · SPA 개발·운영 · 상태 관리 라이브러리(Redux/Zustand/Pinia/Vuex) · Git 협업·코드 리뷰 · 사용자 중심 UI/UX
+- Preferred skills ("함께 하고 싶어요"): Figma 등 프로토타입 도구 · 데이터 기반 의사결정 · 다팀 커뮤니케이션
+- Company / team signals: 플레오스 2.0 계정·인증(SSO·OAuth2 인증/인가 화면) · Front/Back Office · 대규모 사용자 성능·운영 안정성 · 공통 컴포넌트·FE 아키텍처 설계·표준화 · 디자인 시스템 구축 · 기술 Governance·표준 Toolchain · 완성차 대고객 운영 서비스. 태그: UX/UI 아키텍처 설계·요구사항 도출·SW 아키텍처 구현/관리
+- Candidate evidence to emphasize: OAuth/SSO 인증 연동 FE 직접 구현(삼성물산·한국미스미, 로그인·동의 화면 UI·리다이렉트·콜백·토큰 저장·갱신·만료 — user-attested 2026-10-29, FE 범위 한정) · 한국미스미 Next.js 전환·공통 Component·상태관리 · 삼성물산 Vue 3 대시보드(상태 관리 Vuex, user-attested 2026-10-29)·성능 · 대웅 Config-Driven UI·Base-Theme·Storybook 공통 컴포넌트 · 다나아 Release Flow·Playwright 품질 Gate · Figma MCP 리드타임 · PostHog·GA4 데이터 기반 개선 · 세미나 12회·SOP(표준화)
+- Risks or gaps: (a) 디자인 시스템 구축 depth — 공통 컴포넌트는 평면 구조(계층형 서술 금지), (b) 대규모 사용자 규모 수치 부재(3,493명·약 4,000명은 사내 규모 — 대규모 트래픽으로 서술 금지), (c) 완성차·모빌리티 도메인 무경험(전이 어필만), (d) 인증 BE/IdP/인가 서버 구현 근거 없음(FE 범위만), (e) Pinia·Redux 직접 사용 근거 확인 필요(Vuex·Zustand·Recoil은 근거 있음), (f) 기술 Governance·표준 Toolchain은 팀 AX 표준(SOP·하네스) 전이로만, (g) 연차 요건 [미확인]
+- Company blockers (잠정 적용 — 브리프 승인 질문에 명시되지 않아 stop ②에서 확인, JD가 명백히 시사하는 것만): ① 인증/인가를 BE·IdP·인가 서버 구현 또는 MSA 경험으로 서술(FE 화면·콜백·토큰 처리 범위 초과) ② 계층형 디자인 시스템(프리미티브/도메인 계층) 또는 대규모 트래픽 수치 날조 ③ 근거 있는 필수 요건(React/Vue·TS·REST·SPA·상태관리·Git 리뷰) 중 하나라도 문면 누락
+- Keywords to include: 계정·인증, SSO, OAuth2, 로그인·동의 화면, 토큰 갱신·만료, Front Office·Back Office, React, Vue 3, TypeScript, SPA, 상태 관리(Vuex·Zustand), REST API, 공통 컴포넌트, 디자인 시스템, Storybook, 성능 최적화, 운영 안정성, Figma, 표준화, 코드 리뷰, PostHog·GA4
+- Screen profile: Platform-DS   (2026-10-29 소유자 승인; 근거: 공통 컴포넌트·디자인 시스템·FE 아키텍처 표준화·기술 Governance 중심 job scope)
+- Pass bar: 80   (2026-10-29 소유자 승인)
+- 브리프 예외: 소유자 최신본(잡코리아 경력기술서 20261029) 반영 — 상세는 `outputs/hyundai-autoever-account-fe-brief.md`
+- Draft status: 브리프 승인(2026-10-29) — 소유자 수정: 경력·경력기술서 최신 회사 순, 헤드라인·포지션 FE 예외(이 회사 한정) 승인, 한국미스미 기간 2020.10~2024.10 확정, 자기소개서 별도 PDF(base 자소서 최소 수정). 초안 작성 중(full lane)

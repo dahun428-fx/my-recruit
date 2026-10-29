@@ -19,6 +19,7 @@ be used when drafting resumes or cover letters.
 | `chatbot-boilerplate` (로컬 git 저장소, 같은 세션, 2026-09-09 archivist 코드 조사) | 개인 사이드 프로젝트 — React/TypeScript LLM 챗봇 보일러플레이트 | 경로 미기록(archivist 로컬 조사, 소유자 워크스페이스) | 추출 파일 없음 — 직접 코드 열람. 커밋 저자: 정다훈 19/19(2026-01-02, 전량 단독). `experience-bank.md` "AI 소프트웨어 사이드 프로젝트 (개인)" 항목 증강분 참조 |
 | `mcp_test` (로컬 git 없음, 같은 세션, 2026-09-09 archivist 코드 조사) | 개인 프로토타입 — Python FastMCP 터미널 서버 + MCP 클라이언트 2종 | 경로 미기록(archivist 로컬 조사, 소유자 워크스페이스) | 추출 파일 없음 — 직접 코드 열람. git 저장소 없음(커밋 이력 미확인, 날짜는 파일시스템 기준 2025-10-09~10 추정). 사내 MCP 서버(EXP-03)와 별개 — 혼용 금지. `experience-bank.md` "AI 소프트웨어 사이드 프로젝트 (개인)" 항목 증강분 참조 |
 | `test-vector` (로컬 git 없음, 같은 세션, 2026-09-09 archivist 코드 조사) | 개인 프로토타입 — Qdrant+KR-SBERT+LangChain RetrievalQA+Gemini 1.5 RAG(Gradio 앱) | 경로 미기록(archivist 로컬 조사, 소유자 워크스페이스) | 추출 파일 없음 — 직접 코드 열람. git 저장소 없음(날짜는 파일시스템 기준 2025-07-04 추정). **보안: `vector_app.py`에 Google API 키 평문 하드코딩 확인 — 소유자에게 키 폐기·교체 권고, 코드 내용 인용 금지.** `experience-bank.md` "AI 소프트웨어 사이드 프로젝트 (개인)" 항목 증강분 참조 |
+| 잡코리아 이력서 편집 화면 스크린샷 7장 (2026-10-29, 현대오토에버 계정 시스템 FE 지원 세션, 원본 이미지 파일 미보관) | 소유자 최신 잡코리아 경력기술서 전체 + 자기소개서 첫 단락(소유자 자기 서술, 독립 문서 근거 아님) | N/A — 원본 이미지 경로 미제공 | `extracted/잡코리아_경력기술서_20261029.md` (화면 전사본). 대부분 기존 은행 사실의 재서술이며 은행에 없던 3묶음만 소유자 확인 후 적재 — `source-log.md` 2026-10-29 행 참조 |
 
 ## Use Guidance
 
