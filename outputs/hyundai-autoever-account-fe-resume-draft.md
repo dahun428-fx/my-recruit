@@ -78,6 +78,7 @@ SSE 스트리밍 · LLM 오류 4유형 분류·복구 · XSS 방어 · Config-Dr
 - 비즈36.5·AI코치·바이오에이지 **3개 서비스 FE 총괄**
 - 고객사별 테마·기능 노출을 설정으로 제어하는 **Base-Theme·Config-Driven UI와 Storybook 공통 컴포넌트 구조 설계**
 - **신규 기능 End-to-End 개발** (FE React·Next.js / BE Node.js·Spring Boot·Nest.js·MySQL·PostgreSQL·MongoDB)
+- **프론트엔드 성능 개선** — React Query staleTime 기반 데이터 신선도 관리 (동일 엔드포인트 연쇄 호출 8개 → 5개 · 중복 호출 약 40% 감소), Web Vitals 개선과 HTTP/2·캐시 최적화 (LCP 2.6초 → 1.5초)
 - CI/CD·테스트 자동화, 운영 서버 **Blue-Green 무중단 배포** (Jenkins·Docker·Playwright)
 - GitLab MR 기반 코드 리뷰 — 작성자·리뷰어 양방향 참여
 - **AX 전환 리드** (Claude Code·Codex·Harness Engineering)
@@ -167,13 +168,9 @@ AI 건강검진 챗봇을 10주 내에 실서비스로 올려야 했습니다. M
 - **SaaS 제품화·신규 고객사 납품**
   테넌트별 콘텐츠·테마·기능 플래그를 제어하는 관리자 프리뷰 도구 개발로 **Config-Driven SaaS 구조 완성**, 신규 고객사 FE 커스터마이징 2주 납품 — 최초 구현 10주 대비
 - **FE 완성도**
-  실사용 **발화 400여 건 검증 전체 통과**, SSE·React Query 캐싱 설계로 AI 응답 평균 2초대
-- **API 호출 최적화**
-  staleTime 기반 신선도 관리로 **동일 엔드포인트 연쇄 호출 8개 → 5개**, 중복 호출 약 40% 감소
-- **로딩 성능 개선**
-  Web Vitals 개선과 HTTP/2·캐시 최적화로 **LCP 2.6초 → 1.5초**, Lighthouse 91점
+  실사용 **발화 400여 건 검증 전체 통과**, SSE·React Query 캐싱 설계로 AI 응답 평균 2초대·Lighthouse 91점
 
-기술: React · TypeScript · TanStack Query · Recoil · SSE · HTTP/2 · Web Vitals · Vitest · Storybook · Playwright · PostHog · LLM
+기술: React · TypeScript · TanStack Query · Recoil · SSE · Vitest · Storybook · Playwright · PostHog · LLM
 
 ### 3. 대웅제약 | 임직원 건강검진 통합플랫폼 React 점진 전환
 
@@ -239,7 +236,7 @@ AI 코딩 에이전트를 도입하면 병목은 코드를 만드는 속도가 �
 - **공통 컴포넌트 표준화**
   **Storybook 스토리 210개**로 재사용 컴포넌트를 카탈로그화하고 기획자와 UI를 조기 확정해, 신규 화면 조립을 공통 컴포넌트 기반으로 전환
 - **Base-Theme 고도화**
-  Base-Theme **공통 컴포넌트 80여 개 개발·정비**, AI코치 로고·주요 탭 3종을 관리자 기능으로 전환하고 사용자 참조 경로 39건 점검·정비
+  Base-Theme **공통 컴포넌트 80여 개 개발·정비**, 비즈36.5 로고·주요 탭 3종을 관리자 기능으로 전환하고 사용자 참조 경로 39건 점검·정비
 - **디자인–개발 연결**
   Figma MCP와 공통 개발 규칙을 연결해 **디자인 기반 신규 기능 개발 절차를 표준화**
 - **데이터 기반 개선**
@@ -253,8 +250,10 @@ AI 코딩 에이전트를 도입하면 병목은 코드를 만드는 속도가 �
   10명 팀에서 단독 설계한 개발 표준과 검증 하네스가 **전원의 개발 방식으로 정착**, 담당자 부재 시에도 같은 기준의 검증·배포 유지
 - **인력 효율 향상**
   반복 UI 검증을 자동 판정으로 대체하고 반복 컴포넌트 개발을 **90분 → 15분(약 83%)**으로 단축, 검증 인력을 개발에 재투입
-- **신규 고객사 대응**
-  AI코치 Config-Driven SaaS 구조화로 **신규 고객사 CI 변경 1일 대응**, 로고·주요 탭 관리자 기능 전환으로 신규 고객사 온보딩 1일 내 대응
+- **AI코치 고객사 대응**
+  AI코치 Config-Driven SaaS 구조화로 **신규 고객사 CI 변경 1일 대응**
+- **비즈36.5 온보딩 대응**
+  로고·주요 탭 관리자 기능 전환으로 신규 고객사 온보딩을 **1일 내 대응 가능한 구조** 확보
 - **디자인–개발 리드타임 단축**
   Figma MCP 연동으로 디자인 기반 **신규 기능 개발 리드타임 1주 → 1일(약 85%)**
 - **협업 리드타임 단축**
