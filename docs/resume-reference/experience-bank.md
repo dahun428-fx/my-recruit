@@ -88,6 +88,14 @@ facts in drafted application text.
   - SSE 기반 실시간 응답, 답변 중지/재시도/오류 상태를 포함한 대화 흐름 설계
   - Markdown 전용 렌더링 계층 구축, 표/목록/링크/차트의 React 컴포넌트 변환
   - XSS 필터링, 404/500/LLM 오류 가드레일 적용
+  - **[XSS 필터링 구현 방식 — user-attested 2026-10-29, 같은 세션 객관식,
+    문서 근거 없음(pending documentary source)]** LLM Markdown 렌더링의 XSS
+    필터링은 **검증된 sanitizer 라이브러리를 사용**했고 직접 구현한 필터가
+    아니다. 라이브러리명 [확인 필요]. `daewoong-history.md` 116행의 단계
+    순서(정규화 → XSS 필터링 → 토큰화 → 노드 매핑 → UI 렌더링)는 소유자
+    작성이나, 문면은 "sanitizer 라이브러리로 필터링 후 허용된 컴포넌트로만
+    매핑" 형태로 쓸 것. **"직접 구현한 XSS 필터" 주장 금지**(파이프라인 설계는
+    본인, 필터 구현은 라이브러리).
   - React Query 캐싱, 코드 스플리팅, 이미지 최적화, HTTP/2 전환
   - Base-Theme과 Config-Driven UI로 고객사별 테마/문구/기능 노출 조건 분리 — 전사 요구사항인 "기능별로 차별점을 두어 애플리케이션 가격을 매기고 싶다"(기능별 차등 가격 정책)에 대응하기 위해 feature flag 형태로 구현, 운영/기획자가 FE 단에서 기능을 분할·제한할 수 있도록 설계 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
   - 위 Config-Driven UI 전환을 위해 이미 완성돼 있던 챗봇 소스코드의 상당 부분을 수정하는 대규모 리팩토링 수행 (user-attested 2026-07-23 — headhunter-advisor 인터뷰에서 사용자 직접 확인)
@@ -225,6 +233,11 @@ facts in drafted application text.
     `metric-ai-build-period`)"은 서로 다른 서비스·사건으로 보이므로(전자
     비즈케어, 후자 AI코치 웰체크) 한 문장·한 무스코프 주장으로 합치지 말
     것. 레지스트리 ID: `metric-configdriven-70-50`.
+  - **[지원 동기 메모(대규모 서비스) — user-attested 2026-10-29, 같은
+    세션; positioning 성격이라 `positioning.md` 반영은 상위 에이전트 판단,
+    archivist는 편집 안 함]** 소유자 개인 사유: "성능 개선이 수많은 사용자의
+    로그인으로 바로 드러나는, 측정 가능한 규모에서 일하고 싶다." 사실
+    증거가 아닌 동기 진술 — 성과 수치나 이력 근거로 쓰지 말 것.
   - **[월별피드백 유래 지표 5건 — 소유자 자가 작성(`daewoong-history.md`),
     소유자 2026-10-29 이력서 사용 승인. `source_stated` 수준이며 그 이상
     확정 아님. 문서 근거 없음(pending documentary source) — 소유자 자기 서술
@@ -1980,8 +1993,13 @@ facts in drafted application text.
     토큰은 httpOnly 쿠키로 둠. **가드**: httpOnly 쿠키 설정 자체는 서버
     소관이므로 "FE가 저장 방식을 설계·연동" 범위로만 서술(쿠키 발급·설정
     구현 주장 금지). **동시 401 리프레시 단일화(큐/프로미스 공유)는 소유자가
-    주장하지 않음 — 서술 금지.** 위 (1)(2)가 EXP-04·EXP-05 중 어느
-    프로젝트인지 [확인 필요].
+    주장하지 않음 — 서술 금지.**
+    **[귀속 확정 — user-attested 2026-10-29, 같은 세션 객관식]** 위 (1) state
+    검증·(2) 토큰 저장 위치(Access 메모리 / Refresh httpOnly 쿠키) 설계 판단은
+    **한국미스미 웹(EXP-05)에서만** 수행했고 **삼성물산에는 해당하지 않는다**
+    (RN 앱은 브라우저 쿠키 격리가 없음) — 삼성물산(EXP-04) 문면에 쓰지 말 것.
+    기본 FE 연동(로그인 화면, 리다이렉트·콜백, 토큰 자동 갱신 인터셉터)의
+    두 프로젝트 간 분배는 여전히 [확인 필요].
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
   Vuex [Vue 3 대시보드 상태 관리, user-attested 2026-10-29, 현대오토에버
@@ -2248,7 +2266,10 @@ facts in drafted application text.
     고려) 설명 가능 — 상세와 가드는 EXP-04 같은 이름 블록 참조(이중 계상
     금지). httpOnly 쿠키 설정은 서버 소관이라 "FE가 저장 방식 설계·연동"으로만
     서술, 동시 401 리프레시 단일화(큐/프로미스 공유)는 주장하지 않음 — 서술
-    금지. 프로젝트 귀속 [확인 필요].
+    금지. **[귀속 확정 — user-attested 2026-10-29]** state 검증·토큰 저장
+    위치 판단은 **이 한국미스미 웹(EXP-05)에서만** 수행(삼성물산 EXP-04 RN
+    앱에는 해당 없음). 기본 FE 연동(로그인 화면, 리다이렉트·콜백, 자동 갱신
+    인터셉터)의 EXP-04와의 분배는 [확인 필요].
 - Technologies: Next.js, React, TypeScript, JavaScript, Redux,
   RxJS [실사용 확인(user-attested 2026-07-25, grill-me base-resume 세션) —
   구체적 쓰임(어느 기능·패턴) [확인 필요]], i18next, PHP, jQuery, Twig,
