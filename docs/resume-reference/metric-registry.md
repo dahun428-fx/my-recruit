@@ -56,6 +56,9 @@ user confirmation.
 | `metric-e2e-sop-4` | E2E 도구 사용·검증 기준 SOP 4건 팀 배포 | source_stated | E2E 도구 사용·검증 기준을 표준 문서 4건으로 작성해 팀 공유·배포(문면 표기는 C-10에 따라 "개발 표준"·"검증 절차 문서") — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
 | `metric-storybook-biz365` | 비즈36.5 Storybook 93개 스토리 파일·258개 UI 상태, 구축 중 버그 64건 해소 | source_stated | 비즈36.5 주요 컴포넌트 Storybook 93개 스토리·258개 UI 상태 구축, 과정에서 오류·버그 64건 해소 — 월별피드백 2026-08 자가 기록(EXP-03의 "Storybook 스토리 210개"는 3개 서비스 합산 구두 수치로 별개·혼용 금지), 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
 | `metric-bioage-storybook` | 바이오에이지 어드민 Storybook 148개 스토리(65건 적용), UI 접근성 위반 198건 개선 | source_stated | 바이오에이지 어드민 65건 Storybook 적용·148개 스토리(초기 15개 대비 약 4.3배), 접근성 위반 198건 개선 — 월별피드백 2026-08 자가 기록, 소유자 2026-09-09 사용 승인 | 월별피드백 2026-08 |
+| `metric-atomic-release-10s-1s` | 정적 배포 Atomic Static Release 전환 — 개발 서버 배포 약 10초, Rollback 약 1초 | needs_scope | 개발 서버 기준 배포 약 10초·Rollback 약 1초(문서 근거 없음, pending documentary source). 전후 비교값·대상 서비스·측정 기준 미확인 — "운영 배포 10초" 확대 및 전후쌍 창작 금지. EXP-02 Blue-Green(`metric-jenkins-deploy-time`)과 별개 사건, 혼용 금지 | user-attested 2026-10-29, `extracted/잡코리아_경력기술서_20261029.md` |
+| `metric-flow-automation-24-248` | 주요 사용자 흐름 24개 시나리오·248개 Step·3개 Viewport 자동화로 동일 검증 범위 30분 -> 5분 | needs_scope | 주요 사용자 흐름 24개 시나리오(248 Step, 3 Viewport) 자동화로 동일 검증 범위 실행 시간 30분 → 5분(문서 근거 없음, pending documentary source). `metric-qa-time`(3시간→30분)과 별개 지표 — 3시간→30분→5분 연쇄 서술 금지. Playwright 결부·측정 방법 미확인 | user-attested 2026-10-29, `extracted/잡코리아_경력기술서_20261029.md` |
+| `metric-configdriven-70-50` | Config-Driven 구조로 UI 수정 범위 약 70% 절감, 커스터마이징 리드타임 약 50% 단축 | needs_scope | 고객사별 로고·컬러·기능 차이를 공통 구조로 흡수해 UI 수정 범위 약 70% 절감·리드타임 약 50% 단축(문서 근거 없음, pending documentary source). 70% 분모·50% 전후값 미확인. `metric-ai-build-period`(FE 2주 납품, 10주 대비)와 같은 사건인지 [확인 필요] — 하나의 무스코프 주장으로 결합 금지 | user-attested 2026-10-29, `extracted/잡코리아_경력기술서_20261029.md` |
 
 ## Sensitive Or Confirmation-Required Claims
 
