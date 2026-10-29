@@ -101,7 +101,7 @@
           <p class="role-line">웹 풀스택 개발자 / 삼성물산·한국미스미 프로젝트</p>
           <ul class="bullet-list">
             <li>한국미스미 6명 · 삼성물산 10명 규모 프로젝트 팀에서 개발</li>
-            <li>두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 <strong>SSO·OAuth 2.0 인증 연동의 FE 측 구현</strong> — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터, 콜백 state 검증(CSRF 방지)·Access 토큰 메모리·Refresh 토큰 httpOnly 쿠키 보관 연동으로 XSS 노출 축소</li>
+            <li>두 SI 프로젝트(삼성물산·한국미스미)에 걸쳐 <strong>SSO·OAuth 2.0 인증 연동의 FE 측 구현</strong> — Authorization Code 흐름의 리다이렉트·콜백(code/state) 처리, 로그인 화면, 토큰 자동 갱신 인터셉터 / 한국미스미 웹에서는 콜백 state 검증(CSRF 방지)·Access 토큰 메모리·Refresh 토큰 httpOnly 쿠키 보관 연동으로 XSS 노출 축소</li>
             <li>한국미스미 <strong>Global B2B 커머스 신규 개발과 레거시 전환</strong>, <strong>일본 본사와 일본어 직접 협업</strong> <span class="stack-paren">(PHP·jQuery → Next.js·TypeScript)</span></li>
             <li><strong>삼성물산 사내 웹·앱 플랫폼 신규 개발·유지보수</strong> <span class="stack-paren">(Vue 3·Vuex·React Native·Spring·Oracle)</span></li>
             <li><strong>대용량 데이터 처리 및 처리 소요 시간 단축</strong> <span class="stack-paren">(대시보드 렌더링 2.5초 → 1초대 · 수만 건 검색 응답 5초 → 1초)</span></li>
@@ -242,7 +242,7 @@
         <div class="block"><h3>[주요 실행]</h3><ul>
           <li><strong>인증 화면·콜백 처리</strong><strong>Authorization Code 흐름 기반 로그인 화면 UI</strong>와 리다이렉트·콜백(code/state) 처리 구현</li>
           <li><strong>토큰 자동 갱신</strong>토큰 저장과 API 요청 인터셉터 기반 <strong>만료 감지 → 리프레시 → 재시도</strong> 처리, 갱신 실패 시 재로그인 전환</li>
-          <li><strong>토큰 보관·검증 설계</strong>콜백 state 검증으로 CSRF를 막고, Access 토큰은 메모리에·Refresh 토큰은 서버가 설정하는 httpOnly 쿠키에 두는 방식으로 연동해 <strong>XSS 노출 축소</strong></li>
+          <li><strong>토큰 보관·검증 설계</strong>한국미스미 웹에서는 콜백 state 검증으로 CSRF를 막고, Access 토큰은 메모리에·Refresh 토큰은 서버가 설정하는 httpOnly 쿠키에 두는 방식으로 연동해 <strong>XSS 노출 축소</strong></li>
         </ul></div>
       </article>
       <article class="project">
