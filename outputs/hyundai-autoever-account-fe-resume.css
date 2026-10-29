@@ -907,3 +907,5 @@ p.tech > strong:first-child {
 .toc-section .copy p { font-size: 7.8pt; line-height: 1.6; color: var(--muted); }
 .page-head + .project { margin-top: 5mm; }
 .project + .project { margin-top: 8mm; padding-top: 5mm; border-top: 1px solid var(--line); }
+.skills-table th,
+.skills-table td { padding: 7mm 0; }
