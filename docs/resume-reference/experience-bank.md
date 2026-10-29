@@ -91,7 +91,9 @@ facts in drafted application text.
   - **[XSS 필터링 구현 방식 — user-attested 2026-10-29, 같은 세션 객관식,
     문서 근거 없음(pending documentary source)]** LLM Markdown 렌더링의 XSS
     필터링은 **검증된 sanitizer 라이브러리를 사용**했고 직접 구현한 필터가
-    아니다. 라이브러리명 [확인 필요]. `daewoong-history.md` 116행의 단계
+    아니다. **[라이브러리명 확정 — user-attested 2026-10-29, 같은 세션
+    객관식, 문서 근거 없음(pending documentary source)]** 사용 라이브러리는
+    **rehype-sanitize**(react-markdown 생태계)다. `daewoong-history.md` 116행의 단계
     순서(정규화 → XSS 필터링 → 토큰화 → 노드 매핑 → UI 렌더링)는 소유자
     작성이나, 문면은 "sanitizer 라이브러리로 필터링 후 허용된 컴포넌트로만
     매핑" 형태로 쓸 것. **"직접 구현한 XSS 필터" 주장 금지**(파이프라인 설계는
@@ -2000,6 +2002,14 @@ facts in drafted application text.
     (RN 앱은 브라우저 쿠키 격리가 없음) — 삼성물산(EXP-04) 문면에 쓰지 말 것.
     기본 FE 연동(로그인 화면, 리다이렉트·콜백, 토큰 자동 갱신 인터셉터)의
     두 프로젝트 간 분배는 여전히 [확인 필요].
+    **[SSO의 성격 — user-attested 2026-10-29, 같은 세션 객관식, 문서 근거
+    없음(pending documentary source)]** 이 SI 프로젝트들의 "SSO"는
+    **고객사 사내 통합 로그인**(한 번 로그인으로 여러 사내 시스템 이용)이며,
+    소유자의 서비스를 고객사 사내 통합 로그인에 OAuth 2.0으로 연동했다. 어느
+    프로젝트(삼성물산/한국미스미 중 어느 쪽 또는 양쪽)인지는 [확인 필요]
+    (소유자는 양쪽 OAuth/SSO 작업을 앞서 진술). 위 가드(FE 측만, IdP명·
+    PKCE/OIDC·동의 화면 금지, 401 단일화 금지, state 검증·토큰 보관은 미스미
+    웹 한정) 모두 유지.
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
   Vuex [Vue 3 대시보드 상태 관리, user-attested 2026-10-29, 현대오토에버
@@ -2270,6 +2280,12 @@ facts in drafted application text.
     위치 판단은 **이 한국미스미 웹(EXP-05)에서만** 수행(삼성물산 EXP-04 RN
     앱에는 해당 없음). 기본 FE 연동(로그인 화면, 리다이렉트·콜백, 자동 갱신
     인터셉터)의 EXP-04와의 분배는 [확인 필요].
+    **[SSO의 성격 — user-attested 2026-10-29, 같은 세션 객관식, 문서 근거
+    없음(pending documentary source)]** "SSO"는 **고객사 사내 통합 로그인**
+    (한 번 로그인으로 여러 사내 시스템 이용)이며 소유자 서비스를 이에 OAuth
+    2.0으로 연동. 어느 프로젝트(미스미 3개 중, 또는 EXP-04)인지는 [확인 필요].
+    상세·가드는 EXP-04 같은 이름 블록 참조(이중 계상 금지); 기존 가드 전부
+    유지.
 - Technologies: Next.js, React, TypeScript, JavaScript, Redux,
   RxJS [실사용 확인(user-attested 2026-07-25, grill-me base-resume 세션) —
   구체적 쓰임(어느 기능·패턴) [확인 필요]], i18next, PHP, jQuery, Twig,
