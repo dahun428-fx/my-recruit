@@ -1954,8 +1954,11 @@ facts in drafted application text.
     계정 시스템 FE 지원 세션 갭 인터뷰(소유자 객관식 직접 확인). 문서 근거
     없음(pending documentary source)]** 소유자는 이 프로젝트(삼성물산 사내
     플랫폼, 2024.10~2025.04)와 한국미스미(EXP-05) **양쪽에서** OAuth/SSO
-    연동을 직접 구현했다고 확인. 본인 담당 범위: 로그인·동의 화면 UI,
-    리다이렉트·콜백 처리(code/state), 토큰 저장·갱신·만료 처리.
+    연동을 직접 구현했다고 확인. 본인 담당 범위: 로그인 화면 UI,
+    리다이렉트·콜백(code/state) 처리, 토큰 저장·자동 갱신 인터셉터·만료
+    재로그인. **[철회 — user-attested 2026-10-29]** 당초 범위에 있던 "동의
+    화면"은 소유자가 "기억 흐림/빼자"로 철회(Authorization Code 흐름에서
+    동의 화면은 통상 IdP가 렌더링) — 사용 금지.
     **본인 담당 아님**: 서버 측 OAuth 클라이언트 설정·토큰 검증(BE).
     **[후속 확인 — user-attested 2026-10-29, 같은 세션 객관식]** 흐름은
     **Authorization Code 흐름**(리다이렉트 → code → 토큰 교환 연결)이며,
@@ -1967,8 +1970,9 @@ facts in drafted application text.
     것처럼 서술 금지), IdP/제공자명, 사용자 규모. 이 EXP-04의 "로그인/인증 토큰" 브릿지 이벤트(위 [브릿지 방식 표기
     가드레일] 범주)와의 관계도 소유자가 밝히지 않아 [확인 필요].
     **가드레일**: "SSO/OAuth2 인증 시스템을 설계했다"·서버 측 인증/인가·토큰
-    검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인·동의 화면,
-    리다이렉트·콜백, 토큰 저장·갱신·만료 처리)"까지.
+    검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인 화면,
+    리다이렉트·콜백 처리, 토큰 저장·자동 갱신 인터셉터·만료 재로그인)"까지.
+    "동의 화면" 서술 금지(철회).
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
   Vuex [Vue 3 대시보드 상태 관리, user-attested 2026-10-29, 현대오토에버
@@ -2212,8 +2216,10 @@ facts in drafted application text.
     계정 시스템 FE 지원 세션 갭 인터뷰(소유자 객관식 직접 확인). 문서 근거
     없음(pending documentary source)]** 소유자는 한국미스미와 삼성물산
     (EXP-04) **양쪽에서** OAuth/SSO 연동을 직접 구현했다고 확인. 본인 담당
-    범위: 로그인·동의 화면 UI, 리다이렉트·콜백 처리(code/state), 토큰 저장·
-    갱신·만료 처리. **본인 담당 아님**: 서버 측 OAuth 클라이언트 설정·토큰
+    범위: 로그인 화면 UI, 리다이렉트·콜백(code/state) 처리, 토큰 저장·자동
+    갱신 인터셉터·만료 재로그인. **[철회 — user-attested 2026-10-29]**
+    "동의 화면"은 소유자가 "기억 흐림/빼자"로 철회 — 사용 금지.
+    **본인 담당 아님**: 서버 측 OAuth 클라이언트 설정·토큰
     검증(BE). **[후속 확인 — user-attested 2026-10-29]** Authorization Code
     흐름(리다이렉트 → code → 토큰 교환 연결) 및 토큰 자동 갱신 인터셉터
     (만료 감지 → 리프레시 → 재시도, 갱신 실패 시 재로그인) 구현 진술 가능 —
@@ -2224,8 +2230,9 @@ facts in drafted application text.
     잡코리아 전사본의 "2022.06~2024.10"은 사용하지 않으며, 소유자가 이 항목
     Period 2020.10~2024.10(은행 값)을 선택·확인했다.
     **가드레일**: "SSO/OAuth2 인증 시스템을 설계했다"·서버 측 인증/인가·토큰
-    검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인·동의 화면,
-    리다이렉트·콜백, 토큰 저장·갱신·만료 처리)"까지.
+    검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인 화면,
+    리다이렉트·콜백 처리, 토큰 저장·자동 갱신 인터셉터·만료 재로그인)"까지.
+    "동의 화면" 서술 금지(철회).
 - Technologies: Next.js, React, TypeScript, JavaScript, Redux,
   RxJS [실사용 확인(user-attested 2026-07-25, grill-me base-resume 세션) —
   구체적 쓰임(어느 기능·패턴) [확인 필요]], i18next, PHP, jQuery, Twig,
