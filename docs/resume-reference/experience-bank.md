@@ -1973,6 +1973,15 @@ facts in drafted application text.
     검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인 화면,
     리다이렉트·콜백 처리, 토큰 저장·자동 갱신 인터셉터·만료 재로그인)"까지.
     "동의 화면" 서술 금지(철회).
+    **[추가 확인 — user-attested 2026-10-29, 같은 세션 객관식, 문서 근거
+    없음(pending documentary source)]** 면접에서 설명 가능: (1) 콜백에서
+    state 값을 저장본과 비교해 위조 요청을 막는 state 검증(CSRF 방지),
+    (2) 토큰 저장 위치를 XSS 노출을 고려해 Access 토큰은 메모리, Refresh
+    토큰은 httpOnly 쿠키로 둠. **가드**: httpOnly 쿠키 설정 자체는 서버
+    소관이므로 "FE가 저장 방식을 설계·연동" 범위로만 서술(쿠키 발급·설정
+    구현 주장 금지). **동시 401 리프레시 단일화(큐/프로미스 공유)는 소유자가
+    주장하지 않음 — 서술 금지.** 위 (1)(2)가 EXP-04·EXP-05 중 어느
+    프로젝트인지 [확인 필요].
 - Technologies: Vue 3, React Native, TypeScript, ECharts, RealGrid, Java, Spring,
   REST API, MyBatis, Oracle, Recoil, TanStack Query (React Query), SQLite,
   Vuex [Vue 3 대시보드 상태 관리, user-attested 2026-10-29, 현대오토에버
@@ -2233,6 +2242,13 @@ facts in drafted application text.
     검증 구현 주장 금지. 허용 서술은 "FE 측 인증 연동 구현(로그인 화면,
     리다이렉트·콜백 처리, 토큰 저장·자동 갱신 인터셉터·만료 재로그인)"까지.
     "동의 화면" 서술 금지(철회).
+    **[추가 확인 — user-attested 2026-10-29, 같은 세션 객관식, 문서 근거
+    없음(pending documentary source)]** state 검증(콜백에서 저장본과 비교,
+    CSRF 방지)·토큰 저장 위치(Access 메모리 / Refresh httpOnly 쿠키, XSS
+    고려) 설명 가능 — 상세와 가드는 EXP-04 같은 이름 블록 참조(이중 계상
+    금지). httpOnly 쿠키 설정은 서버 소관이라 "FE가 저장 방식 설계·연동"으로만
+    서술, 동시 401 리프레시 단일화(큐/프로미스 공유)는 주장하지 않음 — 서술
+    금지. 프로젝트 귀속 [확인 필요].
 - Technologies: Next.js, React, TypeScript, JavaScript, Redux,
   RxJS [실사용 확인(user-attested 2026-07-25, grill-me base-resume 세션) —
   구체적 쓰임(어느 기능·패턴) [확인 필요]], i18next, PHP, jQuery, Twig,
