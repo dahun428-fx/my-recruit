@@ -808,3 +808,28 @@ facts in drafted application text.
 - 개선 루프(소유자 지시 "좋은 점수를 받을 때까지", 2026-09-13): 4차 갭 인터뷰(JUnit 서비스·매퍼, EXPLAIN MySQL·Oracle, 판매 1.0억 GS네오텍 승인, 29건 Node.js(Express), 58→2,318 승인, 6주=과거 실제 기간) 후 이력서 L1~L5 — v8 74/75 → v9 74/77(C-01 캡) → v10 74/75.5 → **v11 74/80.5(채택)** → v12 74.5/77.5(기각). 자기소개서 SI2 84/75.5 → SI3 72/81 → SI4 74/77 → 소유자 선택 **SI3**(기술 81 PASS). 인사 74점대 정체·채점 편차 ±3 — 잔여 감점 구조적
 - 제출 양식 변경 (2026-09-14 소유자 결정): **보배써치 대신 GS네오텍 입사지원서 양식을 Word로 재현해 제출** — `outputs/정다훈(만35세)_플랫폼개발_GS네오텍_입사지원서2026.docx`(5p: 기본사항·병역·학력·자격·외국어·해외연수 / 핵심역량(소유자 요청 추가 란)·경력·경험·수상 / 자소서 ①②③ / ④ / ⑤ 경력기술), 빌드 `scripts/build_gs_neotek_form_docx.py`, 렌더 확인 `outputs/gs-neotek-form-render-check.pdf`. 자소서 ①~④는 소유자 작성 원문 무수정(`outputs/gs-neotek-form-self-intro.md`, C-03 강조 볼드만 소유자 요청으로 표시), ②는 장점+단점+보완 포함. 소유자 원문 확인 요청 3건(미반영): ④ "데이터 흐름"(S-01 금지어), ① Blue-Green을 10분→2분 원인으로 병기, ① AWS "구성된 환경" 한정어 누락. 보배써치 자소서 소제목도 범위·역할형으로 교체(2026-09-14)
 - Draft status: **출고 준비 완료(2026-09-13, 정직한 상향지원)** — 초안 `outputs/gs-neotek-fullstack-resume-draft.md`(v11-SI3.2, 최종 무결성 재검 must-fix 해소), companion `outputs/gs-neotek-fullstack-new-prose.md`, 제출본 `outputs/정다훈(만35세)_플랫폼개발_GS네오텍_보배써치2026.docx`(8p, 사진·성명·추천 포지션·섹션 제목/구분선 템플릿 유지, 마젠타 안내 문구만 제거), 렌더 확인 `outputs/gs-neotek-render-check.pdf`, 빌드 `scripts/build_gs_neotek_docx.py`. 면접 대비: Java/Spring 1년 요건 대비 깊이 답변, 3개월 차 이직(퇴사+신규 입사 사실 선답), 복합 인덱스 SQL·실행 계획·@Transactional 롤백·서비스 로직 내 권한 검사 이유·Blue-Green 전환 방식·2,318건 테스트 종류
+
+### 삼성물산 건설부문 / Agentic AI 서비스 설계 및 개발 (경력)
+
+- Source job posting: 소유자 붙여넣기 JD 텍스트 + 삼성물산 지정양식 docx, 2026-11-12 수집(URL 없음)
+- Application deadline: [미확인]
+- Target position: Agentic AI 서비스 설계 및 개발 — 양식 '지원직무' 드롭다운 값 **"AI서비스 개발"**(선택지: AI서비스 개발 / 정보시스템개발/운영 / 정보기술기획 / 건설디지털기술(기술연구) / 데이터엔지니어)
+- Role preset: ax-harness (소유자 승인 2026-11-12)
+- Required skills: 유관경력 7년 이상(AI 서비스 개발 또는 소프트웨어 개발 등) / LLM 기반 자율·멀티 에이전트 아키텍처 설계·구현 / Context·Harness Engineering 기반 설계·컨텍스트 관리·AI 파이프라인 최적화 / RAG·Function Calling·Tool Use·MCP·Skill 적용·서비스화 / AI 모델·에이전트 서빙 파이프라인·API 설계 / AI 서비스–사내 Application 연동 아키텍처·인터페이스 정의
+- Preferred skills: Agentic AI/LLM 서비스 개발·운영 / Context·Harness Engineering 실무 적용 / AI Agent Framework 활용 / RAG 구축·Vector DB 연동 / 클라우드 AI 서비스 Production 배포·운영
+- Company / team signals: 건설부문 사내 Application과 AI 서비스 연동이 핵심, 목적 특화 AI 서비스 신속 개발
+- Job scope: ① Agentic AI 서비스 설계·개발(자율·멀티 에이전트, Context/Harness) ② AI 서비스 통합·연동 설계(사내 Application 인터페이스, LLM 활용 패턴, 서빙·API)
+- Candidate evidence to emphasize: EXP-01(AI코치 LLM 릴레이·에이전트 서버 API 설계·구현·SSE, 프롬프트·컨텍스트·하네스, v2 서브에이전트 18개 차기 버전 설계 논의·개발 참여) + EXP-03(MCP 서버 2종, 개발 표준 10명 팀 적용, LLM 응답 회귀 평가·E2E 배포 게이트) 전진. 차별점: 삼성물산 건설부문 현장 앱·데이터 플랫폼 SI(내담씨앤씨, 2024.10~2025.04) — 지원동기 연결
+- Risks or gaps:
+  - **[구조적] 유관경력 7년 요건 vs 실제 2020.10~2026.11 = 6년 1개월** — 소유자 결정 "정직한 상향지원"(2026-11-12): 실제 기간만 기재, 부풀리기 금지
+  - RAG·Vector DB 실제 구현은 LLM 개발자 담당(EXP-01 가드) — 본인 구현 주장 금지, 개인 프로토타입(업무 외)만 근거 병기
+  - v2 MAS: 저장소 커밋 0건, "MCP 서버 구축" 결부 금지, 성능 수치 창작 금지, 저장소 규모 수치 개인 성과화 금지
+  - Function Calling(앱 코드 수준)·Agent Framework 실무 운영·클라우드 AI 서비스(Bedrock 등)·AWS 직접 구축 — 은행 무근거. AWS는 "구성된 환경 위에서" 한정, AZ-900은 Fundamentals
+  - 다나아데이터 회사 개요(업종·매출·인원) 은행 무근거 / 경력표 지역·근무형태(정규/계약) 은행 무근거 — [확인 필요]
+- Keywords to include: Agentic AI, 멀티 에이전트, Context Engineering, Harness Engineering, MCP, Skill, RAG, Vector DB(근거 범위 내), AI 서빙·API 설계, 사내 Application 연동, SSE, FastAPI, LangChain, Production 배포·운영
+- Screen profile: AI-Product   (소유자 승인 2026-11-12)
+- Pass bar: 80
+- 양식 규칙 (2026-11-12): 지정양식 값만 채움(F-09). 졸업/수료·정규/계약·필/미필·Y/N은 해당 값 하나만 기재. 장학금 없음(비움), 동의서·확인란 '예', 작성일 2026.11.12, 서명칸 비움(docx 주입은 최상위). 경력 상세 4블록(4번 비움). 연봉 미기재(C-08, 양식에 칸 없음).
+- 배치 결정: AI코치(2025.07~10)·비즈36.5 개편·AI 개발 도구(2026.01~05) = 대웅제약 블록, 비즈36.5 2단계(2026.08~)·Web React 전환 2단계(2026.07 완료) = 다나아데이터 블록. 대웅→다나아는 "계열사 조직 이관"(한미 승인 표기) — 실제 퇴사·신규 입사 사실은 면접 선답.
+- 한미 초안 대비 정정/제외: 한국미스미 시작 2022.06→2020.10(profile 정정 반영), "기능 4건 적용"(은행 가드: 기획 단계, 적용 성과 금지) 제외, 세미나 12회·기술 문서 48건 제외(JD 무관·수치 충돌 미해소), JLPT 1급→N1(profile 2026-09-13).
+- Draft status: 진행 중 (2026-11-12) — outputs/samsung-cnt-agentic-ai-resume-draft.md, companion outputs/samsung-cnt-agentic-ai-new-prose.md. 크리틱·점수 게이트 대기.
