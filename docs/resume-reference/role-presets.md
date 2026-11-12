@@ -26,6 +26,7 @@ kakaopay 초안은 점수 게이트 FAIL(66/68) 상태였으므로 그 타겟팅
 - 뺄 것 / 축소할 것:
 - 키워드 매핑: (JD 요건 ↔ 근거 요약)
 - Screen profile 제안: <Balanced|AI-Product|Platform-DS|Scale-Perf> + Pass bar
+- Tech grader 제안: <tech-screen|ai-tech-screen> + 근거 한 줄 (JD 핵심이 AI/에이전트/LLM 서비스 구축·운영일 때만 ai-tech-screen; 승인 시 base-resume-ai.md에서 시작)
 - 레인(잠정): <fast|full> + 근거 한 줄 (초안 후 재판정됨)
 - 리스크/갭: (공통 가드 외 회사 고유분만)
 - 갭 인터뷰 항목: (은행/experience-bank에 근거 없는 JD 요건 → 소유자 질문 목록)
@@ -74,6 +75,7 @@ kakaopay 초안은 점수 게이트 FAIL(66/68) 상태였으므로 그 타겟팅
 - 키워드 코어: AI 서비스 제품화, LLM·SSE Streaming, Markdown Renderer,
   AI Agent, FE AX SOP, 디자인 시스템, 테스트 자동화, Product Engineer
 - Screen profile: **AI-Product**
+- Tech grader: JD가 AI 서비스 구축·운영 중심이면 `ai-tech-screen` 제안 가능(승인 필요)
 
 ### fullstack — 풀스택/플랫폼 엔지니어
 
@@ -131,6 +133,7 @@ kakaopay 초안은 점수 게이트 FAIL(66/68) 상태였으므로 그 타겟팅
 - 키워드 코어: AI Coding Agent(Codex·Claude Code), 검증·금지 패턴·보안 기준,
   E2E 자동화, 판정 기준, Python·SQL 데이터 가공, 재사용 표준
 - Screen profile: **AI-Product** 제안(승인 필요)
+- Tech grader: JD가 AI 서비스 구축·운영 중심이면 `ai-tech-screen` 제안 가능(승인 필요)
 - 주의: ax 초안은 유일하게 하다체 — 재사용 시 문체 결정 필요
 
 ## 프리셋 밖 신호 (브리프에서 예외로 다뤄야 하는 것)

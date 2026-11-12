@@ -27,7 +27,9 @@ separate from final application prose.
 
 `Screen profile:` and `Pass bar:` position the `recruiter-screen` /
 `tech-screen` graders to this company (see
-`docs/resume-reference/screen-profiles.md`). They are set only with owner
+`docs/resume-reference/screen-profiles.md`). `Tech grader: ai-tech-screen`
+(owner-approved, AI-service roles) swaps the 기술 grader and the start-point
+base; `Screen profile` then positions only `recruiter-screen`. They are set only with owner
 approval; an untagged entry is graded with `Balanced` at bar 80 plus a warning.
 
 `Role preset:` links the entry to a targeting preset in
@@ -830,7 +832,7 @@ facts in drafted application text.
   - 다나아데이터 회사 개요(업종·매출·인원) 은행 무근거 / 경력표 지역·근무형태(정규/계약) 은행 무근거 — [확인 필요]
 - Keywords to include: Agentic AI, 멀티 에이전트, Context Engineering, Harness Engineering, MCP, Skill, RAG, Vector DB(근거 범위 내), AI 서빙·API 설계, 사내 Application 연동, SSE, FastAPI, LangChain, Production 배포·운영
 - Screen profile: AI-Product   (소유자 승인 2026-11-12)
-- Tech grader: ai-tech-screen   (소유자 지시 2026-11-12 "AI 직무 전용 basetheme과 검증용 에이전트" — AI 서비스 직무 재작성분부터 적용. R1~R3는 tech-screen 기록)
+- Tech grader: ai-tech-screen   (소유자 승인 2026-11-12 — 소유자 지시 "AI 직무 전용 basetheme과 검증용 에이전트". P-01 캡은 R3에서 소진: ai-tech-screen 채점은 캡 비산입 보강 라운드이며 R1~R3 tech-screen 점수와 추세 비교 금지)
 - Pass bar: 80
 - 양식 규칙 (2026-11-12): 지정양식 값만 채움(F-09). 졸업/수료·정규/계약·필/미필·Y/N은 해당 값 하나만 기재. 장학금 없음(비움), 동의서·확인란 '예', 작성일 2026.11.12, 서명칸 비움(docx 주입은 최상위). 경력 상세 4블록(4번 비움). 연봉 미기재(C-08, 양식에 칸 없음).
 - 배치 결정: AI코치(2025.07~10)·비즈36.5 개편·AI 개발 도구(2026.01~05) = 대웅제약 블록, 비즈36.5 2단계(2026.08~)·Web React 전환 2단계(2026.07 완료) = 다나아데이터 블록. 대웅→다나아는 "계열사 조직 이관"(한미 승인 표기) — 실제 퇴사·신규 입사 사실은 면접 선답.

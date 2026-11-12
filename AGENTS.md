@@ -124,7 +124,7 @@ write only within their owned files. Dispatch them via the agent/Task tool.
 | `ats` | Keyword-coverage check vs a JD | — (reports findings) | **read-only** |
 | `recruiter-screen` | HR/recruiter screening score (인사담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
 | `tech-screen` | Technical hiring-manager score (기술담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
-| `ai-tech-screen` | AI-service technical hiring-manager score (AI 기술담당자); replaces `tech-screen` in the gate for AI roles | — (reports score) | **read-only** |
+| `ai-tech-screen` | AI-service technical hiring-manager score (AI 기술담당자); replaces `tech-screen` in the gate for entries tagged `Tech grader: ai-tech-screen` | — (reports score) | **read-only** |
 | `designer` | Render visual / print artifacts | artifacts in `outputs/` | read-write |
 
 Producers must follow the no-fabrication rule in
@@ -172,7 +172,9 @@ final (rendered by `designer`, or delivered to the owner as done). After
 `reviewer`/`ats` findings are addressed, dispatch **both** graders in parallel
 on the current draft:
 
-- `recruiter-screen` (인사담당자) and `tech-screen` (기술담당자) each return a
+- `recruiter-screen` (인사담당자) and the 기술 grader (`tech-screen`, or
+  `ai-tech-screen` per the tag rule below — P-01's "tech-screen" means this
+  기술담당자 slot) each return a
   `0-100` score, a `PASS`/`FAIL` verdict, and blockers.
 - **AI-service roles swap the 기술담당자 slot to `ai-tech-screen`.** Routing
   is by an explicit, **owner-approved** entry tag `Tech grader: ai-tech-screen`
@@ -192,7 +194,8 @@ on the current draft:
   of `base-resume.md`; everything else in the Resume Engine flow is unchanged.
 - **Positioned to the target company.** Both graders position themselves to the
   target company using `docs/resume-reference/screen-profiles.md`: the entry's
-  `Screen profile:` tag selects the rubric **weights**, the persona lens is
+  `Screen profile:` tag selects the rubric **weights** (for `recruiter-screen`
+  and `tech-screen`; `ai-tech-screen` uses its fixed rubric), the persona lens is
   grounded **only** in the entry's signals/scope/skills, and company-specific
   auto-FAIL **blockers** derive from its `Required skills` / `Risks or gaps`.
   An entry with **no `Screen profile:` tag or `TBD` signals** is graded with
@@ -213,7 +216,8 @@ on the current draft:
 Tunable knobs: rubric weights and presets live in `screen-profiles.md`; the
 default pass bar (80) and per-company `Pass bar:` overrides are set there and in
 `target-companies.md`; the gate mode (AND / 3 rounds) lives in this section.
-New companies get a `Screen profile:` proposed by `tailor` and approved by the
+New companies get a `Screen profile:` (and, for AI-service roles, a
+`Tech grader: ai-tech-screen`) proposed by `tailor` and approved by the
 owner before it is written into the entry.
 
 ## Resume Engine (재조립 엔진: 브리프 → fast lane → 2-스톱)
@@ -224,8 +228,8 @@ start from the owner's standard résumé
 or, for an entry tagged `Tech grader: ai-tech-screen`, from the AI 직무 base
 `docs/resume-reference/base-resume-ai.md` (same edit-from-base rules) — and
 its render template `outputs/base-resume.{html,css}`. The default flow is to
-**copy base-resume.md and edit only its "가변" levers** to fit the JD (see the
-base-resume.md header's "새 JD로 이력서 쓰는 법" + 편집 규칙), then render by
+**copy the start-point base (base-resume.md, or base-resume-ai.md when tagged)
+and edit only its "가변" levers** to fit the JD (see that base's header's "새 JD로 이력서 쓰는 법" + 편집 규칙), then render by
 reusing the `base-resume.html/css` structure (DESIGN.md canonical
 implementation). The reassembly machinery below —
 `docs/resume-reference/canonical-lines.md` (owner-approved sentence bank) and
@@ -242,7 +246,7 @@ JD 수집 (tailor가 target-companies.md에 기록)
    ↓
 ① 타겟팅 브리프 선승인  ← role-presets.md 프리셋 + 예외 하이라이트
    ↓
-초안 = base-resume.md 복제 → JD에 맞춰 "가변" 레버만 편집
+초안 = base-resume.md 복제(태그 시 base-resume-ai.md) → JD에 맞춰 "가변" 레버만 편집
    (갭만 신규 작문; canonical-lines.md는 검증·승격 기준)
    ↓
 크리틱 (fast lane 축소 적용) → 수정 → 점수 게이트

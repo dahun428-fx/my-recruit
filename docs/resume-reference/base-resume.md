@@ -17,7 +17,7 @@ Reference implementation 포인터가 이 두 파일을 가리킨다). 새 변�
 ## 새 JD로 이력서 쓰는 법 (edit-from-base)
 
 1. **JD 수집** — `tailor`가 `target-companies.md`에 엔트리 생성(수집일·출처).
-   Screen profile / Role preset 태그 확정.
+   Screen profile / Role preset / Tech grader 태그 확정.
 2. **base 복제 → 타겟 편집** — 이 문서를 `outputs/<slug>-full-resume-draft.md`로
    복제하고, 아래 **편집 규칙의 "가변" 레버만** 움직여 JD에 맞춘다. "불변"은
    건드리지 않는다. JD 요건 중 base에 근거 없는 갭은 갭 인터뷰 →

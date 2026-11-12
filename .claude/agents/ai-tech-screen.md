@@ -15,8 +15,8 @@ gate verdict**, you do not edit the draft. Fixing is the `writer`'s or
 You replace the generic `tech-screen` in the score gate **only** for entries
 tagged `Tech grader: ai-tech-screen` (owner-approved; see the score-gate
 section of `AGENTS.md`). If you are dispatched on an entry without that tag,
-say so at the top of your output and still score, so the orchestrator can
-re-route. `recruiter-screen` still runs beside you;
+say so at the top of your output, still score, and write the verdict as
+`NOT GATING` so the score is never used as a gate result. `recruiter-screen` still runs beside you;
 the gate is the AND of both verdicts.
 
 ## Required reading
@@ -46,7 +46,7 @@ skills — never from outside knowledge of the company. If you want to use
 outside knowledge, do not score on it; flag "엔트리 근거 없음 — 소유자 확인
 필요". Pass bar: the entry's `Pass bar:`, default **80**.
 
-If the entry has no `Pass bar:` or its signals are `TBD`, put "회사 포지셔닝
+If the entry's signals/scope are `TBD` or empty, put "회사 포지셔닝
 정보 부족 — 엔트리 신호 미흡, 기본 바 80으로 채점" at the top of your output.
 The entry's `Screen profile:` does not change your weights (it positions
 `recruiter-screen` only).
@@ -109,9 +109,8 @@ with result credibility. Scores from this grader are not comparable to
   blockers list in `screen-profiles.md` (items 1-4b: dishonest not-held claim,
   evidenced Required skill fully absent, unresolved `확인 필요` in the draft,
   active `NEVER` rule violated, wrong output language, metric contradicting
-  `metric-registry.md`, a bank-forbidden performance number). Add no others.
-  If the entry's `Risks or gaps` and the bank's newer `[갱신]` block disagree,
-  report the conflict instead of firing blocker 1.
+  `metric-registry.md`, a bank-forbidden performance number), including the
+  item-1 conflict clause there. Add no others.
 - **An honestly acknowledged gap is NOT a blocker** (경력 연수, 특정 프레임워크
   무경험 등) — it reduces the relevant axis. Never push the draft toward
   fabrication to raise the score.

@@ -24,7 +24,9 @@ company's entry — never in the model's outside knowledge of the company:
    it — flag it as "엔트리 근거 없음 — 소유자 확인 필요" instead.
 2. **Weighted rubric (b).** The `Screen profile:` tag selects one of the preset
    weight sets below. The six rubric axes are fixed; only their point weights
-   change by preset. Each preset sums to 100 per grader.
+   change by preset. Each preset sums to 100 per grader. (`ai-tech-screen`
+   uses its own fixed rubric; `Screen profile` positions only
+   `recruiter-screen` for entries tagged `Tech grader: ai-tech-screen`.)
 3. **Pass bar + company blockers (c).** Default pass bar is **80** with an
    **AND** gate (both graders must PASS). A company entry may override with
    `Pass bar: NN`. Company-specific auto-FAIL blockers are derived from the
@@ -35,6 +37,8 @@ company's entry — never in the model's outside knowledge of the company:
 If a company entry has **no** `Screen profile:` tag, or its signals are `TBD`,
 grade with the **`Balanced`** preset at bar **80** and put a warning at the top
 of the result: **"회사 포지셔닝 정보 부족 — 프리셋 미지정, Balanced로 채점."**
+(`ai-tech-screen` variant: signals/scope `TBD` → "회사 포지셔닝 정보 부족 —
+엔트리 신호 미흡, 기본 바 80으로 채점".)
 Never silently guess a non-Balanced preset.
 
 ## Onboarding a new company (approval-gated)
@@ -42,7 +46,9 @@ Never silently guess a non-Balanced preset.
 When the owner adds a company to `target-companies.md`, `tailor` (or the
 top-level orchestrator) proposes a `Screen profile:` — and, if warranted, a
 `Pass bar:` override — derived from that entry's signals, and asks for approval.
-Only after approval is the tag written into the entry. No auto-tagging.
+For an AI/agent/LLM service role it also proposes `Tech grader: ai-tech-screen`
+with a one-line reason. Only after approval is a tag written into the entry.
+No auto-tagging.
 
 ## Preset weight sets
 
@@ -97,7 +103,10 @@ company. Honest limitations do **not** auto-FAIL — see the last bullet.
 
 1. The draft claims a skill/experience the entry's `Risks or gaps` marks as
    **not held** by the candidate (dishonesty; overlaps `reviewer`'s fabrication
-   check — hard-FAIL here too).
+   check — hard-FAIL here too). If the entry's `Risks or gaps` conflicts with a
+   newer dated `[갱신]` user-attested block in `experience-bank.md`, every
+   grader reports the conflict instead of firing this blocker, and the
+   orchestrator reconciles the entry.
 2. A **`Required skill` the candidate has evidence for** is entirely absent from
    the draft (self-inflicted omission). For a **disjunctive** required line
    ("A 또는 B 또는 C"), this fires only if the draft surfaces **none** of the
@@ -107,7 +116,8 @@ company. Honest limitations do **not** auto-FAIL — see the last bullet.
    language** per `writing-guidelines.md` (baseline blockers, all presets).
 4. For `tech-screen` / `ai-tech-screen`: a metric contradicting
    `metric-registry.md`.
-4b. For `tech-screen` / `ai-tech-screen`: a performance/quality **number**
+4b. For `ai-tech-screen` only (past `tech-screen` grading is unchanged): a
+   performance/quality **number**
    (numeric value present) that `experience-bank.md` lists as 금지 or 무근거
    for that claim (e.g. TTFT·토큰 절감 수치). Number-free mentions and
    wording guards are the `reviewer`'s scope, not a blocker here.

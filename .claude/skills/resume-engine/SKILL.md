@@ -15,7 +15,7 @@ canonical verbatim)은 각 서브에이전트 파일과 참조 문서가 정본�
 `Tech grader: ai-tech-screen`(소유자 승인, AI 서비스 직무)이 붙으면 AI 직무
 base `docs/resume-reference/base-resume-ai.md`를 복제한다 — 태그 제안·승인은
 스톱 ① 브리프에서 받는다. `writer`/`tailor`는
-백지에서 재조립하는 대신 base를 JD에 맞게 **편집**(base-resume.md 헤더의
+백지에서 재조립하는 대신 base를 JD에 맞게 **편집**(시작점 base 헤더의
 "가변" 레버만 이동, "불변" 유지)하고, 갭만 신규 작문한다. 렌더는
 `outputs/base-resume.{html,css}` 구조를 재사용한다(DESIGN.md 캐논).
 `canonical-lines.md`는 신규/변경 문장의 검증·승격 기준으로 계속 쓰인다.
@@ -37,7 +37,8 @@ base `docs/resume-reference/base-resume-ai.md`를 복제한다 — 태그 제안
    갭 인터뷰 항목이 있으면 이 시점에 함께 질문한다 (한 번에 묶어서).
    - 갭 답변은 user-attested로 `archivist`를 통해 `experience-bank.md`에
      적재한 뒤 진행한다.
-   - Screen profile / Role preset 태그도 이 승인으로 확정하고 엔트리에 쓴다.
+   - Screen profile / Role preset / Tech grader 태그도 이 승인으로 확정하고
+     엔트리에 쓴다(Tech grader는 AI 서비스 직무일 때만 제안).
 4. **자율 핑퐁 (원칙적으로 소유자 개입 없음)** —
    a. `writer`/`tailor`가 재조립 초안 + `outputs/<slug>-new-prose.md`(신규
       작문 / candidate 재사용 / 신규 구조·목록 항목, 3섹션) 생성. 초안이
@@ -83,7 +84,7 @@ base `docs/resume-reference/base-resume-ai.md`를 복제한다 — 태그 제안
    은행 후보를 preview로 보여준다.
 3. 갭을 만나면 즉시 갭 인터뷰 (자동 모드와 동일하게 experience-bank 적재).
 4. 전 섹션 확정 후, 자동 모드 4단계로 합류하기 **전에 미니 브리프 확인**을
-   한 번 받는다: Screen profile / Role preset 태그 확정(엔트리에 기록),
+   한 번 받는다: Screen profile / Role preset / Tech grader 태그 확정(엔트리에 기록),
    레인(잠정) 고지, 인터뷰 중 누적된 프리셋 예외 요약 — 스톱 ①의 부수 효과
    (게이트 포지셔닝·승격 루프의 예외 기록)를 여기서 수행한다.
 5. 이후 자동 모드 4-6단계(자율 핑퐁 → diff 승인 → 렌더)로 합류한다.
