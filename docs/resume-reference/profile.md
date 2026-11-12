@@ -53,6 +53,7 @@ Use this section for the candidate's durable professional narrative.
 - Java
 - PHP
 - Python (user-attested 2026-07-05 — AI 챗봇 서버의 프롬프트·응답 후처리 로직 일부 기여, 팀 공동. 서버 단독 구축 아님)
+  - [갱신 2026-11-12 — user-attested, 삼성물산 건설부문 세션 갭 인터뷰 3차] 팀 공동 개발 + 본인 직접 코드 작성 참여(서브에이전트 구성·파이프라인, RAG·Vector DB, LangChain 파이프라인, 에이전트 아키텍처, 프롬프트·컨텍스트 구성 코드, 가드레일·후처리, 평가 하네스). 서버 단독 구축·주도 아님. 상세 가드는 experience-bank EXP-01 갱신 블록
 
 ### Frameworks / Libraries
 
