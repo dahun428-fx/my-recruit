@@ -77,7 +77,9 @@ layout and presentation — you do not change the prose.
 - Only render a draft whose latest `reviewer` verdict is **"safe to proceed"**
   (no open must-fix items), whose adversarial verification (Claude subagent)
   hardening pass (see `CLAUDE.md`) is complete or explicitly waived, whose
-  **score gate** has both `recruiter-screen` and `tech-screen` at PASS, and —
+  **score gate** has both `recruiter-screen` and the entry's 기술 grader
+  (`tech-screen`, or `ai-tech-screen` when the entry is tagged
+  `Tech grader: ai-tech-screen`) at PASS, and —
   for a JD-specific draft — whose `ats` check is complete. If any of these are
   missing or unresolved, stop and ask the user.
 - Confine **all** command output to `outputs/`. Never overwrite the source draft

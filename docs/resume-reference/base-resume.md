@@ -23,7 +23,9 @@ Reference implementation 포인터가 이 두 파일을 가리킨다). 새 변�
    건드리지 않는다. JD 요건 중 base에 근거 없는 갭은 갭 인터뷰 →
    `experience-bank.md` 적재 후 반영(무근거 요건을 조용히 빼지 않는다).
 3. **크리틱 → 점수 게이트** — `reviewer`+`ats` → 수정 → `recruiter-screen`+
-   `tech-screen`(회사 Screen profile로 포지셔닝) 통과(P-01). 새 섹션·항목
+   `tech-screen`(회사 Screen profile로 포지셔닝) 통과(P-01). AI 서비스 직무
+   (엔트리 `Tech grader: ai-tech-screen`, 소유자 승인)는 이 문서 대신
+   `base-resume-ai.md`에서 시작하고 기술담당자 슬롯은 `ai-tech-screen`. 새 섹션·항목
    초안은 확정 전 3자 자문 리뷰 기본(P-03).
 4. **렌더** — `designer`가 `base-resume.html/css` 구조를 재사용해
    `outputs/<slug>-full-resume.{html,css}` 생성, 매 렌더 자동 높이

@@ -11,7 +11,10 @@ canonical verbatim)은 각 서브에이전트 파일과 참조 문서가 정본�
 반복하지 않는다.
 
 **시작점 = base 이력서.** 새 변형의 출발 초안은 표준 정본
-`docs/resume-reference/base-resume.md`를 복제한 것이다. `writer`/`tailor`는
+`docs/resume-reference/base-resume.md`를 복제한 것이다. 엔트리에
+`Tech grader: ai-tech-screen`(소유자 승인, AI 서비스 직무)이 붙으면 AI 직무
+base `docs/resume-reference/base-resume-ai.md`를 복제한다 — 태그 제안·승인은
+스톱 ① 브리프에서 받는다. `writer`/`tailor`는
 백지에서 재조립하는 대신 base를 JD에 맞게 **편집**(base-resume.md 헤더의
 "가변" 레버만 이동, "불변" 유지)하고, 갭만 신규 작문한다. 렌더는
 `outputs/base-resume.{html,css}` 구조를 재사용한다(DESIGN.md 캐논).
@@ -50,7 +53,7 @@ canonical verbatim)은 각 서브에이전트 파일과 참조 문서가 정본�
       (fast lane 한정 축소 — full lane은 CLAUDE.md 루프 전체 적용). 수용된
       지적은 여기서 수정한다 — **채점 전에** 끝내야 점수가 최종본 기준이
       된다.
-   d. `recruiter-screen` + `tech-screen` 병렬 (해당 회사 Screen profile로
+   d. `recruiter-screen` + tech-screen(엔트리 `Tech grader: ai-tech-screen`이면 `ai-tech-screen`) 병렬 (해당 회사 Screen profile로
       포지셔닝). fast lane 채점은 **P-01 3라운드 캡의 1라운드째로 집계**한다.
       FAIL이면 full lane으로 전환해 **크리틱 단계부터**(전체 스코프 reviewer
       포함) 재진입, 남은 2라운드 안에 미통과면 점수·블로커를 보고하고 멈춘다.

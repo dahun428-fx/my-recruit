@@ -75,6 +75,7 @@ ask the user to run the `archivist` rather than inventing material.
 
 After drafting, hand off for review: recommend the user run `reviewer` (fact +
 guideline check) and `ats` (keyword coverage), then the `recruiter-screen` +
-`tech-screen` score gate, and an adversarial verification pass (a fresh Claude
+`tech-screen` score gate (`ai-tech-screen` instead when the entry is tagged
+`Tech grader: ai-tech-screen`), and an adversarial verification pass (a fresh Claude
 subagent). Your final message should name the draft file and list any
 `[확인 필요]` placeholders that still block completion.

@@ -20,6 +20,7 @@ separate from final application prose.
 - Risks or gaps:
 - Keywords to include:
 - Screen profile:   (Balanced | AI-Product | Platform-DS | Scale-Perf — see screen-profiles.md; owner-approved)
+- Tech grader:      (optional: ai-tech-screen — owner-approved, AI-service roles only; absent = tech-screen)
 - Pass bar:         (optional override of the default 80)
 - Draft status:
 ```
@@ -822,12 +823,14 @@ facts in drafted application text.
 - Candidate evidence to emphasize: EXP-01(AI코치 LLM 릴레이·에이전트 서버 API 설계·구현·SSE, 프롬프트·컨텍스트·하네스, v2 서브에이전트 18개 차기 버전 설계 논의·개발 참여) + EXP-03(MCP 서버 2종, 개발 표준 10명 팀 적용, LLM 응답 회귀 평가·E2E 배포 게이트) 전진. 차별점: 삼성물산 건설부문 현장 앱·데이터 플랫폼 SI(내담씨앤씨, 2024.10~2025.04) — 지원동기 연결
 - Risks or gaps:
   - **[구조적] 유관경력 7년 요건 vs 실제 2020.10~2026.11 = 6년 1개월** — 소유자 결정 "정직한 상향지원"(2026-11-12): 실제 기간만 기재, 부풀리기 금지
-  - RAG·Vector DB 실제 구현은 LLM 개발자 담당(EXP-01 가드) — 본인 구현 주장 금지, 개인 프로토타입(업무 외)만 근거 병기
+  - ~~RAG·Vector DB 실제 구현은 LLM 개발자 담당(EXP-01 가드) — 본인 구현 주장 금지~~ → [갱신 2026-11-12, 소유자 갭 인터뷰 3차] AI코치 팀 공동 개발에서 서브에이전트·파이프라인·RAG·Vector DB·LangChain·에이전트 아키텍처·프롬프트·컨텍스트·가드레일·평가 하네스 직접 코드 작성 참여(동료 계정 반영). 단독 구축·주도 주장 금지, 구체 담당 모듈은 미확인
+  - v2 MAS 커밋 0건 사유: 동료 계정 반영(user-attested) — 면접 선답 필요
   - v2 MAS: 저장소 커밋 0건, "MCP 서버 구축" 결부 금지, 성능 수치 창작 금지, 저장소 규모 수치 개인 성과화 금지
   - Function Calling(앱 코드 수준)·Agent Framework 실무 운영·클라우드 AI 서비스(Bedrock 등)·AWS 직접 구축 — 은행 무근거. AWS는 "구성된 환경 위에서" 한정, AZ-900은 Fundamentals
   - 다나아데이터 회사 개요(업종·매출·인원) 은행 무근거 / 경력표 지역·근무형태(정규/계약) 은행 무근거 — [확인 필요]
 - Keywords to include: Agentic AI, 멀티 에이전트, Context Engineering, Harness Engineering, MCP, Skill, RAG, Vector DB(근거 범위 내), AI 서빙·API 설계, 사내 Application 연동, SSE, FastAPI, LangChain, Production 배포·운영
 - Screen profile: AI-Product   (소유자 승인 2026-11-12)
+- Tech grader: ai-tech-screen   (소유자 지시 2026-11-12 "AI 직무 전용 basetheme과 검증용 에이전트" — AI 서비스 직무 재작성분부터 적용. R1~R3는 tech-screen 기록)
 - Pass bar: 80
 - 양식 규칙 (2026-11-12): 지정양식 값만 채움(F-09). 졸업/수료·정규/계약·필/미필·Y/N은 해당 값 하나만 기재. 장학금 없음(비움), 동의서·확인란 '예', 작성일 2026.11.12, 서명칸 비움(docx 주입은 최상위). 경력 상세 4블록(4번 비움). 연봉 미기재(C-08, 양식에 칸 없음).
 - 배치 결정: AI코치(2025.07~10)·비즈36.5 개편·AI 개발 도구(2026.01~05) = 대웅제약 블록, 비즈36.5 2단계(2026.08~)·Web React 전환 2단계(2026.07 완료) = 다나아데이터 블록. 대웅→다나아는 "계열사 조직 이관"(한미 승인 표기) — 실제 퇴사·신규 입사 사실은 면접 선답.

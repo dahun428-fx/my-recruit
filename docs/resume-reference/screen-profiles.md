@@ -1,8 +1,9 @@
 # Screen Profiles (회사별 채점 프리셋)
 
 This file is the **single source of truth** for how the two screening graders
-(`recruiter-screen` = 인사담당자, `tech-screen` = 기술담당자) are positioned per
-target company. The grader agents read this file; do **not** copy the weight
+(`recruiter-screen` = 인사담당자, `tech-screen` = 기술담당자 — or
+`ai-tech-screen` for entries tagged `Tech grader: ai-tech-screen`) are
+positioned per target company. The grader agents read this file; do **not** copy the weight
 tables into the agent files (they would drift).
 
 Each target-company entry in `target-companies.md` may carry a
@@ -58,10 +59,11 @@ Axes: 6초스캔 / 직무적합신호 / 성과임팩트 / 경력스토리 / 동�
 | `Platform-DS` | 15 | 25 | 15 | 20 | 10 | 15 |
 | `Scale-Perf` | 15 | 25 | 25 | 15 | 10 | 10 |
 
-> AI 직무(Role preset `ai-product`/`ax-harness` 또는 Screen profile
-> `AI-Product`)의 기술담당자 슬롯은 `ai-tech-screen`이 맡는다 — 축·가중치는
-> 그 에이전트 파일의 고정 루브릭을 쓰고, 아래 표는 일반 `tech-screen`용이다.
-> Company blockers는 이 문서 규칙을 그대로 적용한다.
+> 엔트리에 소유자 승인 태그 `Tech grader: ai-tech-screen`이 있으면 기술담당자
+> 슬롯은 `ai-tech-screen`이 맡는다(Role preset·Screen profile만으로는 전환하지
+> 않음). 축·가중치는 그 에이전트 파일의 고정 루브릭을 쓰고, 아래 표는 일반
+> `tech-screen`용이다. Screen profile은 `recruiter-screen` 가중치에만 쓰인다.
+> Company blockers는 이 문서 규칙을 그대로 적용한다(4·4b 포함).
 
 ### tech-screen (기술담당자)
 
@@ -103,7 +105,12 @@ company. Honest limitations do **not** auto-FAIL — see the last bullet.
 3. Unresolved `확인 필요` placeholders, an active `NEVER` rule in
    `feedback-rules.md` violated, or the draft written in the **wrong output
    language** per `writing-guidelines.md` (baseline blockers, all presets).
-4. For `tech-screen`: a metric contradicting `metric-registry.md`.
+4. For `tech-screen` / `ai-tech-screen`: a metric contradicting
+   `metric-registry.md`.
+4b. For `tech-screen` / `ai-tech-screen`: a performance/quality **number**
+   (numeric value present) that `experience-bank.md` lists as 금지 or 무근거
+   for that claim (e.g. TTFT·토큰 절감 수치). Number-free mentions and
+   wording guards are the `reviewer`'s scope, not a blocker here.
 
 **Not a blocker (score penalty only):** an **honestly acknowledged** gap
 (e.g. 경력 연수 부족, 비전공, 특정 프레임워크 무경험). Having the gap must not

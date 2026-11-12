@@ -154,7 +154,8 @@ reviewer + ats  → parallel read-only critique
    ↓
 (writer / tailor revise)
    ↓
-recruiter-screen + tech-screen  → SCORE GATE (parallel, read-only)
+recruiter-screen + tech-screen  → SCORE GATE (parallel, read-only;
+                                   AI-service entries: ai-tech-screen)
    ↓  ← both PASS?  no → (writer / tailor revise) → re-score
    ↓  ← both PASS?  yes ↓
 designer   → render the final visual artifact
@@ -173,13 +174,22 @@ on the current draft:
 
 - `recruiter-screen` (인사담당자) and `tech-screen` (기술담당자) each return a
   `0-100` score, a `PASS`/`FAIL` verdict, and blockers.
-- **AI roles use `ai-tech-screen` in place of `tech-screen`.** When the entry's
-  `Role preset` is `ai-product` or `ax-harness`, or its `Screen profile` is
-  `AI-Product`, the 기술담당자 slot is `ai-tech-screen` (fixed AI-service
-  rubric defined in its agent file; blockers still from `screen-profiles.md`).
-  The gate stays the AND of `recruiter-screen` + `ai-tech-screen`. AI-role
-  drafts start from `docs/resume-reference/base-resume-ai.md` (AI 직무 base)
-  instead of `base-resume.md`.
+- **AI-service roles swap the 기술담당자 slot to `ai-tech-screen`.** Routing
+  is by an explicit, **owner-approved** entry tag `Tech grader: ai-tech-screen`
+  — set at brief approval (stop ①) when the JD's core scope is building or
+  operating an AI/agent/LLM service. `tailor` may propose it for
+  `ai-product`/`ax-harness` presets, but neither `Role preset` nor
+  `Screen profile` alone switches the grader; an absent or unapproved tag means
+  `tech-screen`. Past entries are grandfathered on `tech-screen`. The gate
+  stays the AND of `recruiter-screen` + the slotted 기술 grader; blockers still
+  come from `screen-profiles.md`.
+- **Grader swap and the P-01 cap.** Swapping graders does not reset the
+  3-round cap. Re-scoring a capped entry with the new grader counts only as an
+  owner-directed reinforcement round outside the cap (P-01 precedent), and
+  scores from the two graders are not compared as a trend.
+- **AI-service start point.** An entry tagged `Tech grader: ai-tech-screen`
+  starts from `docs/resume-reference/base-resume-ai.md` (AI 직무 base) instead
+  of `base-resume.md`; everything else in the Resume Engine flow is unchanged.
 - **Positioned to the target company.** Both graders position themselves to the
   target company using `docs/resume-reference/screen-profiles.md`: the entry's
   `Screen profile:` tag selects the rubric **weights**, the persona lens is
@@ -210,7 +220,9 @@ owner before it is written into the entry.
 
 **표준 시작점 = base 이력서 (edit-from-base).** New-company resume variants
 start from the owner's standard résumé
-`docs/resume-reference/base-resume.md` (전 섹션 확정된 base-theme 정본) and
+`docs/resume-reference/base-resume.md` (전 섹션 확정된 base-theme 정본) —
+or, for an entry tagged `Tech grader: ai-tech-screen`, from the AI 직무 base
+`docs/resume-reference/base-resume-ai.md` (same edit-from-base rules) — and
 its render template `outputs/base-resume.{html,css}`. The default flow is to
 **copy base-resume.md and edit only its "가변" levers** to fit the JD (see the
 base-resume.md header's "새 JD로 이력서 쓰는 법" + 편집 규칙), then render by

@@ -107,7 +107,10 @@ Claude-specific notes:
   `PASS` (each ≥ 80, no blockers). On `FAIL`, have `writer`/`tailor` fix the
   blockers and re-score, up to 3 rounds; if still failing, report scores and
   stop rather than shipping a sub-threshold draft. See the **Score gate** in
-  `AGENTS.md` for the canonical rule.
+  `AGENTS.md` for the canonical rule. For entries tagged
+  `Tech grader: ai-tech-screen` (owner-approved AI-service roles), the
+  기술담당자 slot is `ai-tech-screen` and the draft starts from
+  `docs/resume-reference/base-resume-ai.md`.
 - `reviewer` is a same-model pass and **complements** the adversarial
   verification loop above; run a fresh Claude subagent hardening pass after
   `reviewer`.
