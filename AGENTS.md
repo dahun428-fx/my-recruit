@@ -192,6 +192,7 @@ on the current draft:
 - **AI-service start point.** An entry tagged `Tech grader: ai-tech-screen`
   starts from `docs/resume-reference/base-resume-ai.md` (AI 직무 base) instead
   of `base-resume.md`; everything else in the Resume Engine flow is unchanged.
+  While its 「상태」 says it is not yet owner-confirmed, every line copied from it is treated as companion (a) new prose and the draft runs the **full lane** (no fast-lane exemption for unconfirmed base lines).
 - **Positioned to the target company.** Both graders position themselves to the
   target company using `docs/resume-reference/screen-profiles.md`: the entry's
   `Screen profile:` tag selects the rubric **weights** (for `recruiter-screen`
@@ -199,7 +200,8 @@ on the current draft:
   grounded **only** in the entry's signals/scope/skills, and company-specific
   auto-FAIL **blockers** derive from its `Required skills` / `Risks or gaps`.
   An entry with **no `Screen profile:` tag or `TBD` signals** is graded with
-  `Balanced` at bar 80 plus a warning.
+  `Balanced` at bar 80 plus a warning (`ai-tech-screen`: fixed rubric plus the
+  variant warning in `screen-profiles.md` Fallback).
 - **Gate = AND.** The draft passes only when **both** verdicts are `PASS`
   (each total **≥ the entry's pass bar, default 80**, with no blockers). A
   single `FAIL` fails the gate.
@@ -235,7 +237,8 @@ implementation). The reassembly machinery below —
 `docs/resume-reference/canonical-lines.md` (owner-approved sentence bank) and
 `docs/resume-reference/role-presets.md` (per-role presets + brief template) —
 remains the **verification/promotion substrate**: new or changed prose is
-checked against the bank, and confirmed new lines feed back into base-resume.md
+checked against the bank, and confirmed new lines feed back into the
+start-point base (base-resume.md, or base-resume-ai.md once owner-confirmed)
 and canonical-lines. The owner still reviews **two small artifacts** (a
 targeting brief, then a new-prose diff) instead of full drafts.
 
@@ -492,7 +495,10 @@ mobile sessions, where the local PC toolchain is absent:
 
 Before drafting or editing a resume, cover letter, self-introduction, or
 job-specific application document, read the reference files under
-`docs/resume-reference/` in this order:
+`docs/resume-reference/` in this order. Precedence on conflict: a newer dated
+`[갱신]` user-attested block in `experience-bank.md` wins over older guidance
+in `positioning.md` or a target entry's `Risks or gaps`; report the conflict so
+the orchestrator can reconcile that file with owner approval.
 
 1. `README.md`
 2. `ai-use-rules.md`

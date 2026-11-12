@@ -44,7 +44,9 @@ Follow the canonical "Resume Reference Material" reading order in `AGENTS.md`
    `canonical-lines.md`/`experience-bank.md`). Hand the brief to the
    orchestrator for owner approval **before** producing the variant. For an
    AI/agent/LLM service role, propose `Tech grader: ai-tech-screen` in the
-   brief; once approved, start from `docs/resume-reference/base-resume-ai.md`.
+   brief; once approved, start from `docs/resume-reference/base-resume-ai.md`
+   (while that base is not owner-confirmed, list every copied line in the
+   companion as new prose and treat the draft as full lane).
 3. Map the candidate's evidence to each requirement. Identify the strongest
    matches and any genuine gaps.
 4. Produce a tailored variant per the approved brief. **Reassembly first**:

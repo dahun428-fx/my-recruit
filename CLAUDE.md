@@ -110,7 +110,8 @@ Claude-specific notes:
   `AGENTS.md` for the canonical rule. For entries tagged
   `Tech grader: ai-tech-screen` (owner-approved AI-service roles), the
   기술담당자 slot is `ai-tech-screen` and the draft starts from
-  `docs/resume-reference/base-resume-ai.md`.
+  `docs/resume-reference/base-resume-ai.md` (full lane while that base is not
+  yet owner-confirmed).
 - `reviewer` is a same-model pass and **complements** the adversarial
   verification loop above; run a fresh Claude subagent hardening pass after
   `reviewer`.

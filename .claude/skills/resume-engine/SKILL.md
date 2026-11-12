@@ -14,7 +14,8 @@ canonical verbatim)은 각 서브에이전트 파일과 참조 문서가 정본�
 `docs/resume-reference/base-resume.md`를 복제한 것이다. 엔트리에
 `Tech grader: ai-tech-screen`(소유자 승인, AI 서비스 직무)이 붙으면 AI 직무
 base `docs/resume-reference/base-resume-ai.md`를 복제한다 — 태그 제안·승인은
-스톱 ① 브리프에서 받는다. `writer`/`tailor`는
+스톱 ① 브리프에서 받는다. base-resume-ai.md 「상태」가 소유자 확정 전이면
+복제한 전 문장을 companion (a)로 취급하고 full lane으로 처리한다. `writer`/`tailor`는
 백지에서 재조립하는 대신 base를 JD에 맞게 **편집**(시작점 base 헤더의
 "가변" 레버만 이동, "불변" 유지)하고, 갭만 신규 작문한다. 렌더는
 `outputs/base-resume.{html,css}` 구조를 재사용한다(DESIGN.md 캐논).

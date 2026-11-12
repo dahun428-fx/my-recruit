@@ -116,7 +116,7 @@ company. Honest limitations do **not** auto-FAIL — see the last bullet.
    language** per `writing-guidelines.md` (baseline blockers, all presets).
 4. For `tech-screen` / `ai-tech-screen`: a metric contradicting
    `metric-registry.md`.
-4b. For `ai-tech-screen` only (past `tech-screen` grading is unchanged): a
+4b. For `ai-tech-screen` only (not applied by `tech-screen`): a
    performance/quality **number**
    (numeric value present) that `experience-bank.md` lists as 금지 or 무근거
    for that claim (e.g. TTFT·토큰 절감 수치). Number-free mentions and
