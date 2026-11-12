@@ -124,6 +124,7 @@ write only within their owned files. Dispatch them via the agent/Task tool.
 | `ats` | Keyword-coverage check vs a JD | — (reports findings) | **read-only** |
 | `recruiter-screen` | HR/recruiter screening score (인사담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
 | `tech-screen` | Technical hiring-manager score (기술담당자); 0-100 + PASS/FAIL gate | — (reports score) | **read-only** |
+| `ai-tech-screen` | AI-service technical hiring-manager score (AI 기술담당자); replaces `tech-screen` in the gate for AI roles | — (reports score) | **read-only** |
 | `designer` | Render visual / print artifacts | artifacts in `outputs/` | read-write |
 
 Producers must follow the no-fabrication rule in
@@ -172,6 +173,13 @@ on the current draft:
 
 - `recruiter-screen` (인사담당자) and `tech-screen` (기술담당자) each return a
   `0-100` score, a `PASS`/`FAIL` verdict, and blockers.
+- **AI roles use `ai-tech-screen` in place of `tech-screen`.** When the entry's
+  `Role preset` is `ai-product` or `ax-harness`, or its `Screen profile` is
+  `AI-Product`, the 기술담당자 slot is `ai-tech-screen` (fixed AI-service
+  rubric defined in its agent file; blockers still from `screen-profiles.md`).
+  The gate stays the AND of `recruiter-screen` + `ai-tech-screen`. AI-role
+  drafts start from `docs/resume-reference/base-resume-ai.md` (AI 직무 base)
+  instead of `base-resume.md`.
 - **Positioned to the target company.** Both graders position themselves to the
   target company using `docs/resume-reference/screen-profiles.md`: the entry's
   `Screen profile:` tag selects the rubric **weights**, the persona lens is

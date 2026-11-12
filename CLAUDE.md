@@ -92,7 +92,8 @@ context every session:
 ## Agent Team
 
 Specialist subagents live in `.claude/agents/` (`archivist`, `writer`,
-`tailor`, `reviewer`, `ats`, `recruiter-screen`, `tech-screen`, `designer`).
+`tailor`, `reviewer`, `ats`, `recruiter-screen`, `tech-screen`, `ai-tech-screen`,
+`designer`).
 Dispatch them with the agent/Task tool. The **canonical roster, file ownership,
 and handoff order live in `AGENTS.md`** — do not duplicate them here.
 

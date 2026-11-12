@@ -58,6 +58,11 @@ Axes: 6초스캔 / 직무적합신호 / 성과임팩트 / 경력스토리 / 동�
 | `Platform-DS` | 15 | 25 | 15 | 20 | 10 | 15 |
 | `Scale-Perf` | 15 | 25 | 25 | 15 | 10 | 10 |
 
+> AI 직무(Role preset `ai-product`/`ax-harness` 또는 Screen profile
+> `AI-Product`)의 기술담당자 슬롯은 `ai-tech-screen`이 맡는다 — 축·가중치는
+> 그 에이전트 파일의 고정 루브릭을 쓰고, 아래 표는 일반 `tech-screen`용이다.
+> Company blockers는 이 문서 규칙을 그대로 적용한다.
+
 ### tech-screen (기술담당자)
 
 Axes: 기술깊이 / 문제해결 / 아키텍처 / 성과신뢰성 / 레벨적합 / 협업·오너십
