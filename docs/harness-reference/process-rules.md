@@ -114,6 +114,7 @@ same-model `reviewer`/critics와 점수 게이트(`recruiter-screen`·`tech-scre
 - 적용: 2026-08-25 ✓ (별도 세션) 코오롱베니트 써치라인 v2 템플릿 충실 재조립 하드닝을 Codex 없이 Claude 서브에이전트 적대 검증 2라운드(1R 지적 11건 삼분 처리, 2R CRITICAL 0)로 수행 — 재교정 없이 통과
 - 적용: 2026-09-09 ✓ 지오영 AI 개발 이력서 하드닝(v1~v5)을 Codex 없이 Claude 서브에이전트로 수행 — reviewer 5회·general-purpose 적대 검증 3회·recruiter/tech-screen 8회·Explore 저장소 조사 1회·archivist 적재 3회
 - 적용: 2026-09-13 ✓ GS네오텍 이력서·자소서 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 전수·변경분 재검 8회, general-purpose 적대 검증 2회, ats, recruiter/tech-screen 게이트·개선 루프 다수, 헤드헌터 평가 2회, archivist 적재 8회)로 수행 — 재교정 없음
+- 적용: 2026-11-12 ✓ 삼성물산 건설부문 Agentic AI 지원서 하드닝을 Codex 없이 Claude 서브에이전트(reviewer 4회·ats·general-purpose 적대 검증·recruiter/tech-screen 3라운드·archivist 적재 5회)로 수행 — 재교정 없음
 - 범위: Claude
 
 ### P-03 · 위임 · PREFER · probation
